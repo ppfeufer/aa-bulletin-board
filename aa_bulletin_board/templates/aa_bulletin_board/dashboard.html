@@ -1,0 +1,46 @@
+{% extends 'aa_bulletin_board/base.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block aabulletinboard_header %}
+    {% translate "Bulletins" as translated_header %}
+    {% include 'aa_bulletin_board/partials/header/h1.html' with header_text=translated_header %}
+{% endblock %}
+
+{% block aabulletinboard_body %}
+    {% if bulletins %}
+        <div class="">
+            <div class="row panel-equal">
+                {% for bulletin in bulletins %}
+                    <div class="panel-bulletin-excerpt col-md-4">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    {{ bulletin.title }}
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <p>
+                                    {{ bulletin.content|striptags|truncatewords:25 }}
+                                </p>
+
+                            </div>
+
+                            <div class="panel-footer-read-more-button panel-footer-no-background">
+                                <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
+{% endblock %}
