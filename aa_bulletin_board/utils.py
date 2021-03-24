@@ -2,8 +2,9 @@
 utilities
 """
 
-from django.conf import settings
 from esistatus.tasks import logger
+
+from django.conf import settings
 
 
 def clean_setting(

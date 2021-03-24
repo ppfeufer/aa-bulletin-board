@@ -2,9 +2,10 @@
 hook into AA
 """
 
+from django.utils.translation import ugettext_lazy as _
+
 from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
-from django.utils.translation import ugettext_lazy as _
 
 from aa_bulletin_board import __title__, urls
 
