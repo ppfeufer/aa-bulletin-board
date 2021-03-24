@@ -2,13 +2,12 @@
 the models
 """
 
+from ckeditor.fields import RichTextField
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
-
-from ckeditor.fields import RichTextField
 
 
 def get_sentinel_user() -> User:

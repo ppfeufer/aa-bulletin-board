@@ -1,9 +1,8 @@
-from aa_bulletin_board.models import Bulletin
-
 from ckeditor.widgets import CKEditorWidget
-
 from django import forms
 from django.forms import ModelForm
+
+from aa_bulletin_board.models import Bulletin
 
 
 class BulletinForm(ModelForm):
