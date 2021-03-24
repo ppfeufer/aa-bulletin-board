@@ -8,6 +8,8 @@ from django.utils import timezone
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
 
+from ckeditor.fields import RichTextField
+
 
 def get_sentinel_user() -> User:
     """
@@ -55,8 +57,9 @@ class Bulletin(models.Model):
 
     title = models.CharField(max_length=255)
     slug = models.CharField(max_length=255)
-    content = models.TextField(blank=True, default="")
+    content = RichTextField()
     created_date = models.DateTimeField(default=timezone.now)
+    updated_date = models.DateTimeField(blank=True, null=True)
     created_by = models.ForeignKey(
         User,
         related_name="+",
@@ -82,7 +85,8 @@ class Bulletin(models.Model):
         add the slug on save
         """
 
-        bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)
-        self.slug = bulletin_slug
+        if self.slug == "":
+            bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)
+            self.slug = bulletin_slug
 
-        super().save()  # Call the "real" save() method.
+        super().save()
