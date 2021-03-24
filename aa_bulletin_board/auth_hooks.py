@@ -2,12 +2,11 @@
 hook into AA
 """
 
+from allianceauth import hooks
+from allianceauth.services.hooks import MenuItemHook, UrlHook
 from django.utils.translation import ugettext_lazy as _
 
-from aa_bulletin_board import urls, __title__
-
-from allianceauth.services.hooks import MenuItemHook, UrlHook
-from allianceauth import hooks
+from aa_bulletin_board import __title__, urls
 
 
 class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-methods

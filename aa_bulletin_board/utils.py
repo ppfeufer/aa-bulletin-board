@@ -3,7 +3,6 @@ utilities
 """
 
 from django.conf import settings
-
 from esistatus.tasks import logger
 
 

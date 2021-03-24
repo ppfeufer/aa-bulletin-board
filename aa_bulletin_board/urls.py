@@ -6,7 +6,6 @@ from django.urls import path
 
 from aa_bulletin_board import views
 
-
 app_name: str = "aa_bulletin_board"
 
 urlpatterns = [
