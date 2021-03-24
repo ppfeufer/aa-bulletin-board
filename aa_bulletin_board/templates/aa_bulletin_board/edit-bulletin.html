@@ -6,9 +6,9 @@
 
 {% block page_title %}
     {% if bulletin %}
-        {% translate "Edit Bulletin" %} » {{ bulletin.title }}
+        {% translate "Edit Bulletin" %} » {{ bulletin.title }} » {% translate "Bulletin Board" %}
     {% else %}
-        {% translate "Create New Bulletin" %}
+        {% translate "Create New Bulletin" %} » {% translate "Bulletin Board" %}
     {% endif %}
 {% endblock %}
 
