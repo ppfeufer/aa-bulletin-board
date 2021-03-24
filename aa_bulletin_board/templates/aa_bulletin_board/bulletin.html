@@ -10,16 +10,27 @@
 {% endblock %}
 
 {% block aabulletinboard_body %}
+    {% if perms.aa_bulletin_board.manage_bulletins %}
+        <div class="aa-bulletin-board-management text-right">
+            <a class="btn btn-success btn-read-more" href="{% url 'aa_bulletin_board:create_bulletin' %}">{% translate 'Add Bulletin' %}</a>
+        </div>
+    {% endif %}
+
     {% if bulletin %}
         <div class="panel panel-default">
             <div class="panel-heading">
                 <div class="panel-title">
                     <a class="btn btn-default btn-sm" href="{% url 'aa_bulletin_board:dashboard' %}">{% translate 'Back' %}</a>
+
+                    {% if perms.aa_bulletin_board.manage_bulletins %}
+                        <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
+                        <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
+                    {% endif %}
                 </div>
             </div>
 
             <div class="panel-body">
-                {% autoescape off %}{{ bulletin.content|linebreaks }}{% endautoescape %}
+                {{ bulletin.content|safe }}
             </div>
         </div>
     {% endif %}

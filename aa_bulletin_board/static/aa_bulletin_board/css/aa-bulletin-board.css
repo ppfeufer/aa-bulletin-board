@@ -1,21 +1,21 @@
 @media all {
-    .aa-bulletin-board .panel-equal {
+    .aa-bulletin-board .panels-equal-height {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .aa-bulletin-board .panel-equal .panel {
+    .aa-bulletin-board .panels-equal-height .panel {
         width: 100%;
         height: 100%;
     }
 
-    .aa-bulletin-board .panel-equal .panel-bulletin-excerpt {
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
         width: 100%;
         margin-bottom: 2rem;
     }
 
     .aa-bulletin-board .panel-bulletin-excerpt .panel-body {
-        padding-bottom: 5rem;
+        padding-bottom: 2.5rem;
     }
 
     .aa-bulletin-board .panel-bulletin-excerpt .panel-footer-read-more-button {
@@ -26,6 +26,14 @@
         padding: 10px 15px;
     }
 
+    .aa-bulletin-board .django-ckeditor-widget {
+        display: initial !important;
+    }
+
+    .aa-bulletin-board-management {
+        margin-bottom: 2rem;
+    }
+
     /*.aa-bulletin-board .panel-bulletin-excerpt .panel-footer-no-background {*/
     /*    background: transparent;*/
     /*    border: none;*/
@@ -33,13 +41,13 @@
 }
 
 @media all and (min-width: 768px) {
-    .aa-bulletin-board .panel-equal .panel-bulletin-excerpt {
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
         width: calc(100% / 2);
     }
 }
 
 @media all and (min-width: 1200px) {
-    .aa-bulletin-board .panel-equal .panel-bulletin-excerpt {
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
         width: calc(100% / 3);
     }
 }

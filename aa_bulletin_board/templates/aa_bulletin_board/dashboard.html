@@ -9,35 +9,70 @@
 {% endblock %}
 
 {% block aabulletinboard_body %}
-    {% if bulletins %}
-        <div class="">
-            <div class="row panel-equal">
-                {% for bulletin in bulletins %}
-                    <div class="panel-bulletin-excerpt col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <div class="panel-title">
-                                    {{ bulletin.title }}
-                                </div>
-                            </div>
-
-                            <div class="panel-body">
-                                <p>
-                                    {{ bulletin.content|striptags|truncatewords:25 }}
-                                </p>
-
-                            </div>
-
-                            <div class="panel-footer-read-more-button panel-footer-no-background">
-                                <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
-
-                            </div>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
+    {% if perms.aa_bulletin_board.manage_bulletins %}
+        <div class="aa-bulletin-board-management text-right">
+            <a class="btn btn-success btn-read-more" href="{% url 'aa_bulletin_board:create_bulletin' %}">{% translate 'Add Bulletin' %}</a>
         </div>
     {% endif %}
+
+    {% if bulletins %}
+        <div class="row panels-equal-height">
+            {% for bulletin in bulletins %}
+                <div class="panel-bulletin-excerpt col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                {{ bulletin.title }}
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <p>
+                                {{ bulletin.content|safe|truncatewords:25 }}
+                            </p>
+                        </div>
+
+                        <div class="panel-footer-read-more-button panel-footer-no-background">
+                            <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
+
+                            {% if perms.aa_bulletin_board.manage_bulletins %}
+                                <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
+                                <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block extra_javascript %}
+    <script type="application/javascript">
+        $(document).ready(function() {
+            let resizeBulletinPanel = function() {
+                $('.panels-equal-height').each(function () {
+                    let highestBox = 0;
+
+                    $('.panel-bulletin-excerpt', this).each(function () {
+                        if ($(this).height() > highestBox) {
+                            highestBox = $(this).height();
+                        }
+                    });
+
+                    $('.panel-bulletin-excerpt', this).height(highestBox);
+                });
+            }
+
+            resizeBulletinPanel();
+
+            $(window).on('resize', function(e) {
+                $('.panel-bulletin-excerpt').css({"height": ""});
+
+                resizeBulletinPanel();
+            });
+        });
+    </script>
 {% endblock %}
 
 {% block extra_css %}
