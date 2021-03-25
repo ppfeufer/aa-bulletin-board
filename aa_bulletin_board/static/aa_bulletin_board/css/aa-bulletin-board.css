@@ -29,6 +29,11 @@
     .aa-bulletin-board-management {
         margin-bottom: 2rem;
     }
+
+    .aa-bulletin-board img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media all and (min-width: 768px) {

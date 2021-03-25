@@ -2,7 +2,7 @@
 the models
 """
 
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 from django.contrib.auth.models import User
 from django.db import models
@@ -57,7 +57,7 @@ class Bulletin(models.Model):
 
     title = models.CharField(max_length=255)
     slug = models.CharField(max_length=255)
-    content = RichTextField()
+    content = RichTextUploadingField(blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     updated_date = models.DateTimeField(blank=True, null=True)
     created_by = models.ForeignKey(
