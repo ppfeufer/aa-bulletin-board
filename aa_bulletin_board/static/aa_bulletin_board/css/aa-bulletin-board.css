@@ -32,7 +32,7 @@
 
     .aa-bulletin-board img {
         max-width: 100%;
-        height: auto;
+        height: auto !important; /* to override inline style added by CKeditor */
     }
 }
 
