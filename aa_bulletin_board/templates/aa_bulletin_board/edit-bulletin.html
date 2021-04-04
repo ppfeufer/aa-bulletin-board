@@ -1,0 +1,53 @@
+{% extends 'aa_bulletin_board/base.html' %}
+
+{% load bootstrap %}
+{% load i18n %}
+{% load static %}
+
+{% block page_title %}
+    {% if bulletin %}
+        {% translate "Edit Bulletin" %} » {{ bulletin.title }} » {% translate "Bulletin Board" %}
+    {% else %}
+        {% translate "Create New Bulletin" %} » {% translate "Bulletin Board" %}
+    {% endif %}
+{% endblock %}
+
+{% block aabulletinboard_header %}
+    {% if bulletin %}
+        {% include 'aa_bulletin_board/partials/header/h1.html' with header_text=bulletin.title %}
+    {% else %}
+        {% include 'aa_bulletin_board/partials/header/h1.html' with header_text='Create New Bulletin' %}
+    {% endif %}
+{% endblock %}
+
+{% block aabulletinboard_body %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <a class="btn btn-default btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate 'Back' %}</a>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <form autocomplete="off" action="{% if bulletin %}{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:create_bulletin' %}{% endif %}" method="post">
+                {% csrf_token %}
+
+                {{ form|bootstrap }}
+
+                <div class="form-group text-right clearfix">
+                    <button class="btn btn-success" type="submit">{% if bulletin %}{% translate 'Update Bulletin' %}{% else %}{% translate 'Create Bulletin' %}{% endif %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_javascript %}
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="application/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
+{% endblock %}

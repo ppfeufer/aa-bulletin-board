@@ -1,0 +1,17 @@
+{% extends 'allianceauth/base.html' %}
+
+{% load i18n %}
+
+{% block page_title %}{% translate "Bulletin Board" %}{% endblock %}
+
+{% block content %}
+    <div class="aa-bulletin-board">
+        <div class="aa-bulletin-board-header">
+            {% block aabulletinboard_header %}{% endblock %}
+        </div>
+
+        <div class="aa-bulletin-board-body">
+            {% block aabulletinboard_body %}{% endblock %}
+        </div>
+    </div>
+{% endblock %}

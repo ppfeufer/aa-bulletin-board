@@ -1,0 +1,49 @@
+@media all {
+    .aa-bulletin-board .panels-equal-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .aa-bulletin-board .panels-equal-height .panel {
+        width: 100%;
+    }
+
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .aa-bulletin-board .panel-bulletin-excerpt .panel-body {
+        height: 145px;
+        overflow: hidden;
+    }
+
+    .aa-bulletin-board .panel-bulletin-excerpt .panel-footer-read-more-button {
+        padding: 0.625rem 1rem;
+    }
+
+    .aa-bulletin-board .django-ckeditor-widget {
+        display: initial !important;
+    }
+
+    .aa-bulletin-board-management {
+        margin-bottom: 2rem;
+    }
+
+    .aa-bulletin-board img {
+        max-width: 100%;
+        height: auto !important; /* to override inline style added by CKeditor */
+    }
+}
+
+@media all and (min-width: 768px) {
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+        width: calc(100% / 2);
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+        width: calc(100% / 3);
+    }
+}

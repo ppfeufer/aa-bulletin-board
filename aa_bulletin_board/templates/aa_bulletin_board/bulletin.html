@@ -1,0 +1,42 @@
+{% extends 'aa_bulletin_board/base.html' %}
+
+{% load i18n %}
+{% load static %}
+
+{% block page_title %}{{ bulletin.title }} » {% translate "Bulletin Board" %}{% endblock %}
+
+{% block aabulletinboard_header %}
+    {% include 'aa_bulletin_board/partials/header/h1.html' with header_text=bulletin.title %}
+{% endblock %}
+
+{% block aabulletinboard_body %}
+    {% if perms.aa_bulletin_board.manage_bulletins %}
+        <div class="aa-bulletin-board-management text-right">
+            <a class="btn btn-success btn-read-more" href="{% url 'aa_bulletin_board:create_bulletin' %}">{% translate 'Add Bulletin' %}</a>
+        </div>
+    {% endif %}
+
+    {% if bulletin %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a class="btn btn-default btn-sm" href="{% url 'aa_bulletin_board:dashboard' %}">{% translate 'Back' %}</a>
+
+                    {% if perms.aa_bulletin_board.manage_bulletins %}
+                        <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
+                        <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="panel-body">
+                {{ bulletin.content|safe }}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
+{% endblock %}
