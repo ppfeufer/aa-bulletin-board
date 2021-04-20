@@ -2,9 +2,36 @@
 utilities
 """
 
-from esistatus.tasks import logger
+import logging
 
 from django.conf import settings
+
+from allianceauth.services.hooks import get_extension_logger
+
+from aa_bulletin_board import __title__
+
+
+class LoggerAddTag(logging.LoggerAdapter):
+    """
+    add custom tag to a logger
+    """
+
+    def __init__(self, my_logger, prefix):
+        super().__init__(my_logger, {})
+        self.prefix = prefix
+
+    def process(self, msg, kwargs):
+        """
+        process log items
+        :param msg:
+        :param kwargs:
+        :return:
+        """
+
+        return "[%s] %s" % (self.prefix, msg), kwargs
+
+
+logger = LoggerAddTag(get_extension_logger(__name__), __title__)
 
 
 def clean_setting(
@@ -45,7 +72,7 @@ def clean_setting(
             cleaned_value = getattr(settings, name)
         else:
             logger.warning(
-                "You setting for {name} is not valid. Please correct it. "
+                "Your setting for {name} is not valid. Please correct it. "
                 "Using default for now: {value}".format(name=name, value=default_value)
             )
             cleaned_value = default_value
