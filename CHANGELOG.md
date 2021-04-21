@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [0.1.0-beta.4] - 2021-04-22
+
+### Changed
+
+- Dashboard layout, so it looks nice and doesn't break things when there are HTML
+  tags in the excerpts
+
+
 ## [0.1.0-beta.3] - 2021-04-21
 
 ### Fixed
