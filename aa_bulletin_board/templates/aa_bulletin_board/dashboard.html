@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="panel-body">
-                            {{ bulletin.content|safe|truncatewords:"25" }}
+                            {{ bulletin.content|striptags|truncatewords:"25" }}
                         </div>
 
                         <div class="panel-footer-read-more-button panel-footer-no-background">
