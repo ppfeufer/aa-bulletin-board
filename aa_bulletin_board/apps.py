@@ -14,4 +14,4 @@ class AaBulletinBoardConfig(AppConfig):
 
     name = "aa_bulletin_board"
     label = "aa_bulletin_board"
-    verbose_name = f"ESI Statusv{__version__}"
+    verbose_name = f"Bulletin Board v{__version__}"
