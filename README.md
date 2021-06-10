@@ -90,14 +90,16 @@ from django.conf.urls import include, url
 from allianceauth import urls
 
 urlpatterns = [
-    path("ckeditor/", include("ckeditor_uploader.urls")),  # *** New URL override BEFORE THE MAIN IMPORT
-    url(r'', include(urls)),
+    path(
+        "ckeditor/", include("ckeditor_uploader.urls")
+    ),  # *** New URL override BEFORE THE MAIN IMPORT
+    url(r"", include(urls)),
 ]
 
-handler500 = 'allianceauth.views.Generic500Redirect'
-handler404 = 'allianceauth.views.Generic404Redirect'
-handler403 = 'allianceauth.views.Generic403Redirect'
-handler400 = 'allianceauth.views.Generic400Redirect'
+handler500 = "allianceauth.views.Generic500Redirect"
+handler404 = "allianceauth.views.Generic404Redirect"
+handler403 = "allianceauth.views.Generic403Redirect"
+handler400 = "allianceauth.views.Generic400Redirect"
 ```
 
 
