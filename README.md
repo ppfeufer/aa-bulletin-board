@@ -85,16 +85,17 @@ Now let's move on to editing the global URL configuration of Alliance Auth. To d
 you need to open `/home/allianceserver/myauth/myauth/urls.py` and change the following:
 
 ```python
-from django.urls import re_path  # *** New Import
-from django.contrib.auth.decorators import login_required  # *** New Import
-from django.views.decorators.cache import never_cache  # *** New Import
-from ckeditor_uploader import views  # *** New Import
-
 from django.conf.urls import include, url
 from allianceauth import urls
 
+# *** New Imports for cKeditor
+from django.urls import re_path
+from django.contrib.auth.decorators import login_required
+from django.views.decorators.cache import never_cache
+from ckeditor_uploader import views
+
 urlpatterns = [
-    # *** New URL override BEFORE THE MAIN IMPORT
+    # *** New URL override for cKeditor BEFORE THE MAIN IMPORT
     re_path(r"^upload/", login_required(views.upload), name="ckeditor_upload"),
     re_path(
         r"^browse/",
