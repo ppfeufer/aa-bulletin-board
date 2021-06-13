@@ -213,12 +213,12 @@ about the available permissions.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md)
+See [CHANGELOG.md](https://github.com/ppfeufer/aa-bulletin-board/blob/master/CHANGELOG.md)
 
 
 ## Contributing
 
 You want to contribute to this project? That's cool!
 
-Please make sure to read the [contribution guidelines](CONTRIBUTING.md)
-(I promise, it's not much, just some basics)
+Please make sure to read the [contribution guidelines](https://github.com/ppfeufer/aa-bulletin-board/blob/master/CONTRIBUTING.md) (I promise,
+it's not much, just some basics)
