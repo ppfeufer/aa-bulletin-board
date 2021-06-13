@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   CKEDITOR_CONFIGS = {"default": {"width": "100%", "height": "45vh"}}
   ````
 
+
 ## [0.1.0-beta.6] - 2021-06-13
 
 ### Fixed
