@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Code formatting and cleanup
+- Slug field in DB to make sure it's unique and uses the right validator
 
 
 ## [0.1.0-beta.7] - 2021-06-13

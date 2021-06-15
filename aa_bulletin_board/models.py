@@ -58,7 +58,7 @@ class Bulletin(models.Model):
     """
 
     title = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
     content = RichTextUploadingField(blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     updated_date = models.DateTimeField(blank=True, null=True)
@@ -80,9 +80,7 @@ class Bulletin(models.Model):
         verbose_name = _("Bulletin")
         verbose_name_plural = _("Bulletins")
 
-    def save(
-        self, force_insert=False, force_update=False, using=None, update_fields=None
-    ):
+    def save(self, *args, **kwargs) -> None:
         """
         Add the slug on save
         """
@@ -91,4 +89,4 @@ class Bulletin(models.Model):
             bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)
             self.slug = bulletin_slug
 
-        super().save()
+        super().save(*args, **kwargs)
