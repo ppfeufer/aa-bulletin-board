@@ -1,5 +1,5 @@
 """
-the models
+The models
 """
 
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -13,7 +13,7 @@ from django.utils.translation import gettext as _
 
 def get_sentinel_user() -> User:
     """
-    get user or create one
+    Get user or create one
     :return:
     """
 
@@ -22,7 +22,7 @@ def get_sentinel_user() -> User:
 
 def get_bulletin_slug_from_title(bulletin_title: str) -> str:
     """
-    get the slug from the title
+    Get the slug from the title
     :param bulletin_title:
     :return:
     """
@@ -38,7 +38,9 @@ def get_bulletin_slug_from_title(bulletin_title: str) -> str:
 
 
 class General(models.Model):
-    """Meta model for app permissions"""
+    """
+    Meta model for app permissions
+    """
 
     class Meta:
         verbose_name = "Bulletins"
@@ -82,7 +84,7 @@ class Bulletin(models.Model):
         self, force_insert=False, force_update=False, using=None, update_fields=None
     ):
         """
-        add the slug on save
+        Add the slug on save
         """
 
         if self.slug == "":

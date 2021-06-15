@@ -27,7 +27,6 @@
                         </div>
 
                         <div class="panel-body">
-{#                            {{ bulletin.content|striptags|truncatewords:"25" }}#}
                             {{ bulletin.content|safe }}
                         </div>
 
@@ -49,7 +48,7 @@
 {% block extra_javascript %}
     <script type="application/javascript">
         $(document).ready(function() {
-            let resizeBulletinPanel = function() {
+            let resizeBulletinPanel = function () {
                 $('.panels-equal-height').each(function () {
                     let highestBox = 0;
 
@@ -65,7 +64,7 @@
 
             resizeBulletinPanel();
 
-            $(window).on('resize', function(e) {
+            $(window).on('resize', function (e) {
                 $('.panel-bulletin-excerpt').css({"height": ""});
 
                 resizeBulletinPanel();

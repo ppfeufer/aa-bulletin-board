@@ -1,5 +1,5 @@
 """
-the views
+The views
 """
 
 from django.contrib import messages
@@ -16,7 +16,7 @@ from aa_bulletin_board.forms import Bulletin, BulletinForm
 @permission_required("aa_bulletin_board.basic_access")
 def dashboard(request):
     """
-    index view
+    Index view
     """
 
     bulletins = Bulletin.objects.all().order_by("-created_date")
@@ -29,16 +29,16 @@ def dashboard(request):
 @permission_required("aa_bulletin_board.manage_bulletins")
 def create_bulletin(request):
     """
-    edit an existing bulletin
+    Edit an existing bulletin
     :param request:
     :return:
     """
 
     if request.method == "POST":
-        # create a form instance and populate it with data
+        # Create a form instance and populate it with data
         form = BulletinForm(request.POST)
 
-        # check whether it's valid:
+        # Check whether it's valid:
         if form.is_valid():
             bulletin__title = form.cleaned_data["title"]
             bulletin__content = form.cleaned_data["content"]
@@ -75,7 +75,7 @@ def create_bulletin(request):
 @permission_required("aa_bulletin_board.basic_access")
 def view_bulletin(request, slug):
     """
-    view a bulletin
+    View a bulletin
     """
 
     try:
@@ -96,7 +96,7 @@ def view_bulletin(request, slug):
 @permission_required("aa_bulletin_board.manage_bulletins")
 def edit_bulletin(request, slug):
     """
-    edit an existing bulletin
+    Edit an existing bulletin
     :param request:
     :param slug:
     :return:
@@ -106,10 +106,10 @@ def edit_bulletin(request, slug):
         bulletin = Bulletin.objects.get(slug=slug)
 
         if request.method == "POST":
-            # create a form instance and populate it with data
+            # Create a form instance and populate it with data
             form = BulletinForm(request.POST, instance=bulletin)
 
-            # check whether it's valid:
+            # Check whether it's valid:
             if form.is_valid():
                 bulletin__title = form.cleaned_data["title"]
                 bulletin__content = form.cleaned_data["content"]
@@ -152,7 +152,7 @@ def edit_bulletin(request, slug):
 @permission_required("aa_bulletin_board.manage_bulletins")
 def remove_bulletin(request, slug):
     """
-    remove bulletin
+    Remove bulletin
     :param request:
     :param slug:
     :return:

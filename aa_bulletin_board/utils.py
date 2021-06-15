@@ -1,5 +1,5 @@
 """
-utilities
+Utilities
 """
 
 import logging
@@ -13,7 +13,7 @@ from aa_bulletin_board import __title__
 
 class LoggerAddTag(logging.LoggerAdapter):
     """
-    add custom tag to a logger
+    Add custom tag to a logger
     """
 
     def __init__(self, my_logger, prefix):
@@ -22,7 +22,7 @@ class LoggerAddTag(logging.LoggerAdapter):
 
     def process(self, msg, kwargs):
         """
-        process log items
+        Process log items
         :param msg:
         :param kwargs:
         :return:
@@ -41,7 +41,8 @@ def clean_setting(
     max_value: int = None,
     required_type: type = None,
 ):
-    """cleans the input for a custom setting
+    """
+    Cleans the input for a custom setting
 
     Will use `default_value` if settings does not exit or has the wrong type
     or is outside define boundaries (for int only)
@@ -52,6 +53,7 @@ def clean_setting(
 
     Returns cleaned value for setting
     """
+
     if default_value is None and not required_type:
         raise ValueError("You must specify a required_type for None defaults")
 

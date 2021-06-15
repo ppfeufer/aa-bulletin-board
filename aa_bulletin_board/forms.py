@@ -1,3 +1,7 @@
+"""
+Forms definition
+"""
+
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 from django import forms
@@ -8,7 +12,7 @@ from aa_bulletin_board.models import Bulletin
 
 class BulletinForm(ModelForm):
     """
-    form for bulletins
+    Form for bulletins
     """
 
     title = forms.CharField()

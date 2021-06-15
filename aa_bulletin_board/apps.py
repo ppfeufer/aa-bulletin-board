@@ -1,5 +1,5 @@
 """
-app config
+App config
 """
 
 from django.apps import AppConfig
@@ -9,7 +9,7 @@ from aa_bulletin_board import __version__
 
 class AaBulletinBoardConfig(AppConfig):
     """
-    application config
+    Application config
     """
 
     name = "aa_bulletin_board"
