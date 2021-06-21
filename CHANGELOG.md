@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [0.1.0-beta.8] - Unreleased
+
+### Fixed
+
+- Spelling
+- urlconfig setup in README.md
+
+### Changed
+
+- Code formatting and cleanup
+- Slug field in DB to make sure it's unique and uses the right validator
+
+
 ## [0.1.0-beta.7] - 2021-06-13
 
 ### Changed

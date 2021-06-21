@@ -1,5 +1,5 @@
 """
-the tasks
+The tasks
 """
 
 import logging

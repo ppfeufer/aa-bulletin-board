@@ -1,5 +1,5 @@
 """
-the models
+The models
 """
 
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -13,7 +13,7 @@ from django.utils.translation import gettext as _
 
 def get_sentinel_user() -> User:
     """
-    get user or create one
+    Get user or create one
     :return:
     """
 
@@ -22,7 +22,7 @@ def get_sentinel_user() -> User:
 
 def get_bulletin_slug_from_title(bulletin_title: str) -> str:
     """
-    get the slug from the title
+    Get the slug from the title
     :param bulletin_title:
     :return:
     """
@@ -38,7 +38,9 @@ def get_bulletin_slug_from_title(bulletin_title: str) -> str:
 
 
 class General(models.Model):
-    """Meta model for app permissions"""
+    """
+    Meta model for app permissions
+    """
 
     class Meta:
         verbose_name = "Bulletins"
@@ -56,7 +58,7 @@ class Bulletin(models.Model):
     """
 
     title = models.CharField(max_length=255)
-    slug = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
     content = RichTextUploadingField(blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     updated_date = models.DateTimeField(blank=True, null=True)
@@ -78,15 +80,13 @@ class Bulletin(models.Model):
         verbose_name = _("Bulletin")
         verbose_name_plural = _("Bulletins")
 
-    def save(
-        self, force_insert=False, force_update=False, using=None, update_fields=None
-    ):
+    def save(self, *args, **kwargs) -> None:
         """
-        add the slug on save
+        Add the slug on save
         """
 
         if self.slug == "":
             bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)
             self.slug = bulletin_slug
 
-        super().save()
+        super().save(*args, **kwargs)

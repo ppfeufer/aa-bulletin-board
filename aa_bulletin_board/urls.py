@@ -1,5 +1,5 @@
 """
-pages url config
+Pages url config
 """
 
 from django.urls import path
