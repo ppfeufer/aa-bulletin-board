@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- CSS for cKeditor reverted, it's better as a config in `local.py
+- CSS for cKeditor reverted, it's better as a config in `local.py`
   Add the following to your `local.py`
   ```python
   CKEDITOR_CONFIGS = {"default": {"width": "100%", "height": "45vh"}}
