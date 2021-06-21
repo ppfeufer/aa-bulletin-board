@@ -19,14 +19,14 @@ these kind of changes. For you own sanity, and mine :-)
 
 ## Contents
 - [Overview](#overview)
-  - Features
-  - Screenshots
+    - Features
+    - Screenshots
 - [Installation](#installation)
-  - [Step 1 - Install the package](#step-1---install-the-package)
-  - [Step 2 - Configure Alliance Auth](#step-2---configure-alliance-auth)
-  - [Step 3 - Configure your webserver](#step-3---configure-your-webserver)
-  - [Step 4 - Finalize the installation](#step-4---finalize-the-installation)
-  - [Step 5 - Set up permissions](#step-5---set-up-permissions)
+    - [Step 1 - Install the package](#step-1---install-the-package)
+    - [Step 2 - Configure Alliance Auth](#step-2---configure-alliance-auth)
+    - [Step 3 - Configure your webserver](#step-3---configure-your-webserver)
+    - [Step 4 - Finalize the installation](#step-4---finalize-the-installation)
+    - [Step 5 - Set up permissions](#step-5---set-up-permissions)
 - [Permissions](#permissions)
 - [Changelog](#changelog)
 - [Contributing](#contributing)
@@ -94,14 +94,14 @@ from allianceauth import urls
 from django.urls import re_path
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.cache import never_cache
-from ckeditor_uploader import views
+from ckeditor_uploader import views as ckeditor_views
 
 urlpatterns = [
     # *** New URL override for cKeditor BEFORE THE MAIN IMPORT
-    re_path(r"^upload/", login_required(views.upload), name="ckeditor_upload"),
+    re_path(r"^upload/", login_required(ckeditor_views.upload), name="ckeditor_upload"),
     re_path(
         r"^browse/",
-        never_cache(login_required(views.browse)),
+        never_cache(login_required(ckeditor_views.browse)),
         name="ckeditor_browse",
     ),
     # Alliance Auth URLs

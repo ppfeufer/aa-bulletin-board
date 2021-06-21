@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Spelling
+- urlconfig setup in README.md
 
 ### Changed
 
