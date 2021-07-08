@@ -32,7 +32,7 @@ If applicable, add screenshots to help explain your problem.
 
 ### Please complete the following information:
 
-- AA Bulletin Board Version:
+- App Version:
 - Alliance Auth Version:
 - Browser and Version:
 
