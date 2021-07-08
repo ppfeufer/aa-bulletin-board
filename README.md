@@ -80,7 +80,112 @@ CKEDITOR_UPLOAD_PATH = "uploads/"
 CKEDITOR_RESTRICT_BY_USER = True
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
 
-CKEDITOR_CONFIGS = {"default": {"width": "100%", "height": "45vh"}}
+# Default editor configuration
+# You can extend and change this to your needs
+# Some of the options are commented out, feel free to play around with them
+CKEDITOR_CONFIGS = {
+    "default": {
+        "width": "100%",
+        "height": "45vh",
+        "youtube_responsive": True,
+        "youtube_privacy": True,
+        "youtube_related": False,
+        "youtube_width": 1920,
+        "youtube_height": 1080,
+        "extraPlugins": ",".join(
+            [
+                "uploadimage",  # the upload image feature
+                # your extra plugins here
+                "div",
+                "autolink",
+                "autoembed",
+                "embedsemantic",
+                "clipboard",
+                "elementspath",
+                "codesnippet",
+            ]
+        ),
+        "toolbar": "default",
+        "toolbar_default": [
+            {
+                "name": "styles",
+                "items": [
+                    "Styles",
+                    "Format",
+                    # "Font",
+                    # "FontSize",
+                ],
+            },
+            {
+                "name": "basicstyles",
+                "items": [
+                    "Bold",
+                    "Italic",
+                    "Underline",
+                    "Strike",
+                    # "Subscript",
+                    # "Superscript",
+                    # "-",
+                    # "RemoveFormat",
+                ],
+            },
+            {
+                "name": "clipboard",
+                "items": [
+                    # "Cut",
+                    # "Copy",
+                    # "Paste",
+                    # "PasteText",
+                    # "PasteFromWord",
+                    # "-",
+                    "Undo",
+                    "Redo",
+                ],
+            },
+            {
+                "name": "links",
+                "items": [
+                    "Link",
+                    "Unlink",
+                    "Anchor",
+                ],
+            },
+            {
+                "name": "insert",
+                "items": [
+                    "Image",
+                    "Youtube",
+                    "Table",
+                    "HorizontalRule",
+                    "Smiley",
+                    "SpecialChar",
+                    # "PageBreak",
+                    # "Iframe",
+                ],
+            },
+            {
+                "name": "colors",
+                "items": [
+                    "TextColor",
+                    "BGColor",
+                ],
+            },
+            {
+                "name": "document",
+                "items": [
+                    "Source",
+                    # "-",
+                    # "Save",
+                    # "NewPage",
+                    # "Preview",
+                    # "Print",
+                    # "-",
+                    # "Templates",
+                ],
+            },
+        ],
+    }
+}
 ```
 
 Now let's move on to editing the global URL configuration of Alliance Auth. To do so,
