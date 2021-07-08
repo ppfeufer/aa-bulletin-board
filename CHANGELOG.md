@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [0.1.0-beta.9] - 2021-07-08
+
+### Added
+
+- Full example for ``CKEDITOR_CONFIGS`` to README.md
+
+### Changed
+
+- Compatibility with Python 3.9 and Django 3.2 confirmed
+
+
 ## [0.1.0-beta.8] - 2021-06-21
 
 ### Fixed
