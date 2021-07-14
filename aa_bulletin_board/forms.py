@@ -19,7 +19,8 @@ class BulletinForm(ModelForm):
 
     content = forms.CharField(
         widget=CKEditorUploadingWidget(
-            attrs={"rows": 10, "cols": 20, "style": "width: 100%;"}
+            config_name="aa_bulletin_board",
+            attrs={"rows": 10, "cols": 20, "style": "width: 100%;"},
         )
     )
 
