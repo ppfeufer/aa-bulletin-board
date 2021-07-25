@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [0.1.0-beta.11] - 2021-07-25
+
+### Updated
+
+- Configuration instructions in README.md to make it easier to understand if you
+  have multiple apps that use CKEditor, like `aa-forum`, and how to combine these
+  configurations
+
+
 ## [0.1.0-beta.10] - 2021-07-15
 
 ### Changed
