@@ -23,19 +23,15 @@
                         <div class="panel-heading">
                             <div class="panel-title">
                                 {{ bulletin.title }}
+                                {% if bulletin.groups.all %}
+                                    <i class="far fa-eye aa-bulletin-board-marker-group-restrictions" data-title="{% translate "This bulletin is restricted to the following group(s):" %}<br>{{ bulletin.groups.all|join:', ' }}"></i>
+                                {% endif %}
                             </div>
                         </div>
 
                         <div class="panel-body">
                             {{ bulletin.content|safe }}
                         </div>
-
-{#                        {% if bulletin.groups.all %}#}
-{#                            <div class="panel-footer">#}
-{#                                {% translate "This bulletin is restricted to one the following group(s):" %}<br>#}
-{#                                {{ bulletin.groups.all|join:", " }}#}
-{#                            </div>#}
-{#                        {% endif %}#}
 
                         <div class="panel-footer-read-more-button panel-footer-no-background">
                             <p>
@@ -79,6 +75,11 @@
                 $('.panel-bulletin-excerpt').css({"height": ""});
 
                 resizeBulletinPanel();
+            });
+
+            $(".aa-bulletin-board-marker-group-restrictions").tooltip({
+                placement: 'bottom',
+                html: true
             });
         });
     </script>
