@@ -4,6 +4,8 @@ The views
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.models import Group
+from django.db.models import Prefetch
 from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -20,7 +22,9 @@ def dashboard(request):
     """
 
     bulletins = (
-        Bulletin.objects.prefetch_related("groups", "groups__authgroup")
+        Bulletin.objects.prefetch_related(
+            Prefetch("groups", queryset=Group.objects.order_by("name"))
+        )
         .user_has_access(request.user)
         .order_by("-created_date")
     )
