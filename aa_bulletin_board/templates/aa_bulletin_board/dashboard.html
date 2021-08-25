@@ -58,12 +58,14 @@
     <script type="application/javascript">
         $(document).ready(function() {
             let resizeBulletinPanel = function () {
-                $('.panels-equal-height').each(function () {
-                    let highestBox = 0;
+                let highestBox = 0;
 
+                $('.panels-equal-height').each(function () {
                     $('.panel-bulletin-excerpt', this).each(function () {
-                        if ($(this).height() > highestBox) {
-                            highestBox = $(this).height();
+                        let currentBulletinHeight = $(this).height();
+
+                        if (currentBulletinHeight > highestBox) {
+                            highestBox = currentBulletinHeight;
                         }
                     });
 
