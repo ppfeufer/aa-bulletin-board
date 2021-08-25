@@ -30,13 +30,22 @@
                             {{ bulletin.content|safe }}
                         </div>
 
-                        <div class="panel-footer-read-more-button panel-footer-no-background">
-                            <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
+{#                        {% if bulletin.groups.all %}#}
+{#                            <div class="panel-footer">#}
+{#                                {% translate "This bulletin is restricted to one the following group(s):" %}<br>#}
+{#                                {{ bulletin.groups.all|join:", " }}#}
+{#                            </div>#}
+{#                        {% endif %}#}
 
-                            {% if perms.aa_bulletin_board.manage_bulletins %}
-                                <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
-                                <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
-                            {% endif %}
+                        <div class="panel-footer-read-more-button panel-footer-no-background">
+                            <p>
+                                <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
+
+                                {% if perms.aa_bulletin_board.manage_bulletins %}
+                                    <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
+                                    <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
+                                {% endif %}
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -19,7 +19,11 @@ def dashboard(request):
     Index view
     """
 
-    bulletins = Bulletin.objects.user_has_access(request.user).order_by("-created_date")
+    bulletins = (
+        Bulletin.objects.prefetch_related("groups", "groups__authgroup")
+        .user_has_access(request.user)
+        .order_by("-created_date")
+    )
     context = {"avoidCdn": avoid_cdn(), "bulletins": bulletins}
 
     return render(request, "aa_bulletin_board/dashboard.html", context)
