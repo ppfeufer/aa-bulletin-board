@@ -4,11 +4,12 @@ The models
 
 from ckeditor_uploader.fields import RichTextUploadingField
 
-from django.contrib.auth.models import User
+from django.contrib.auth.models import Group, User
 from django.db import models
-from django.utils import timezone
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
+
+from aa_bulletin_board.managers import BulletinManager
 
 
 def get_sentinel_user() -> User:
@@ -60,8 +61,8 @@ class Bulletin(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
     content = RichTextUploadingField(blank=True, null=True)
-    created_date = models.DateTimeField(default=timezone.now)
-    updated_date = models.DateTimeField(blank=True, null=True)
+    created_date = models.DateTimeField(auto_now_add=True, db_index=True)
+    updated_date = models.DateTimeField(auto_now=True, null=True)
     created_by = models.ForeignKey(
         User,
         related_name="+",
@@ -70,6 +71,13 @@ class Bulletin(models.Model):
         default=None,
         on_delete=models.SET(get_sentinel_user),
     )
+    groups = models.ManyToManyField(
+        Group,
+        blank=True,
+        related_name="aa_bulletin_board_group_restriction",
+    )
+
+    objects = BulletinManager()
 
     class Meta:
         """
@@ -79,6 +87,9 @@ class Bulletin(models.Model):
         default_permissions = ()
         verbose_name = _("Bulletin")
         verbose_name_plural = _("Bulletins")
+
+    def __str__(self) -> str:
+        return str(self.title)
 
     def save(self, *args, **kwargs) -> None:
         """
