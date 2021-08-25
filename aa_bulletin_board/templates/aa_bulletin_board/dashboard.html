@@ -24,7 +24,7 @@
                             <div class="panel-title">
                                 {{ bulletin.title }}
                                 {% if bulletin.groups.all %}
-                                    <i class="far fa-eye aa-bulletin-board-marker-group-restrictions" data-title="{% translate "This bulletin is restricted to the following group(s):" %}<br>{{ bulletin.groups.all|join:', ' }}"></i>
+                                    <i class="far fa-eye-slash aa-bulletin-board-marker-group-restrictions" data-title="{% translate "This bulletin is restricted to the following group(s):" %}<br>{{ bulletin.groups.all|join:', ' }}"></i>
                                 {% endif %}
                             </div>
                         </div>
