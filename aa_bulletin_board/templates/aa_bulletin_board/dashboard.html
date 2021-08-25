@@ -23,6 +23,9 @@
                         <div class="panel-heading">
                             <div class="panel-title">
                                 {{ bulletin.title }}
+                                {% if bulletin.groups.all %}
+                                    <i class="far fa-eye-slash aa-bulletin-board-marker-group-restrictions" data-title="{% translate "This bulletin is restricted to the following group(s):" %}<br>{{ bulletin.groups.all|join:', ' }}"></i>
+                                {% endif %}
                             </div>
                         </div>
 
@@ -31,12 +34,14 @@
                         </div>
 
                         <div class="panel-footer-read-more-button panel-footer-no-background">
-                            <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
+                            <p>
+                                <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
 
-                            {% if perms.aa_bulletin_board.manage_bulletins %}
-                                <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
-                                <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
-                            {% endif %}
+                                {% if perms.aa_bulletin_board.manage_bulletins %}
+                                    <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
+                                    <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
+                                {% endif %}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -49,12 +54,14 @@
     <script type="application/javascript">
         $(document).ready(function() {
             let resizeBulletinPanel = function () {
-                $('.panels-equal-height').each(function () {
-                    let highestBox = 0;
+                let highestBox = 0;
 
+                $('.panels-equal-height').each(function () {
                     $('.panel-bulletin-excerpt', this).each(function () {
-                        if ($(this).height() > highestBox) {
-                            highestBox = $(this).height();
+                        let currentBulletinHeight = $(this).height();
+
+                        if (currentBulletinHeight > highestBox) {
+                            highestBox = currentBulletinHeight;
                         }
                     });
 
@@ -68,6 +75,11 @@
                 $('.panel-bulletin-excerpt').css({"height": ""});
 
                 resizeBulletinPanel();
+            });
+
+            $(".aa-bulletin-board-marker-group-restrictions").tooltip({
+                placement: 'bottom',
+                html: true
             });
         });
     </script>

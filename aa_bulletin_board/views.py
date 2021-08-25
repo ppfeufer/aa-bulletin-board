@@ -4,6 +4,8 @@ The views
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.models import Group
+from django.db.models import Prefetch
 from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -19,7 +21,13 @@ def dashboard(request):
     Index view
     """
 
-    bulletins = Bulletin.objects.all().order_by("-created_date")
+    bulletins = (
+        Bulletin.objects.prefetch_related(
+            Prefetch("groups", queryset=Group.objects.order_by("name"))
+        )
+        .user_has_access(request.user)
+        .order_by("-created_date")
+    )
     context = {"avoidCdn": avoid_cdn(), "bulletins": bulletins}
 
     return render(request, "aa_bulletin_board/dashboard.html", context)
@@ -51,6 +59,8 @@ def create_bulletin(request):
             bulletin.created_by = request.user
             bulletin.save()
 
+            bulletin.groups.set(form.cleaned_data["groups"])
+
             messages.success(
                 request,
                 _('Bulletin "{bulletin_title}" created').format(
@@ -79,14 +89,17 @@ def view_bulletin(request, slug):
     """
 
     try:
-        bulletin = Bulletin.objects.get(slug=slug)
+        bulletin = Bulletin.objects.user_has_access(request.user).get(slug=slug)
         context = {"avoidCdn": avoid_cdn(), "bulletin": bulletin, "slug": slug}
 
         return render(request, "aa_bulletin_board/bulletin.html", context)
     except Bulletin.DoesNotExist:
         messages.warning(
             request,
-            _("The bulletin you are looking for does not exist."),
+            _(
+                "The bulletin you are looking for does not exist, "
+                "or you don't have access to it."
+            ),
         )
 
         return redirect("aa_bulletin_board:dashboard")
@@ -118,6 +131,7 @@ def edit_bulletin(request, slug):
                 bulletin.title = bulletin__title
                 bulletin.content = bulletin__content
                 bulletin.updated_date = bulletin__updated_date
+                bulletin.groups.set(form.cleaned_data["groups"])
                 bulletin.save()
 
                 messages.success(

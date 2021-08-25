@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.0.0] - 2021-08-25
+
+### Added
+
+- Group restrictions to bulletins. Bulletins can now be restricted to one or more
+  groups. Bulletins without group restrictions can be viewed by everyone who has
+  access to the bulletins.
+
+### Fixed
+
+- Small logic error in JavaScript
+
+
 ## [0.1.0-beta.12] - 2021-07-25
 
 ### Fixed

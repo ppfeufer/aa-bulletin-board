@@ -39,6 +39,24 @@
     }
 }
 
+/* MultiSelect
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board .SumoSelect p {
+        height: auto;
+    }
+
+    /* For for Dark Mode
+    --------------------------------------------------------------------------------- */
+    .template-dark-mode .aa-bulletin-board .SumoSelect {
+        color: rgb(54, 54, 54);
+    }
+
+    .template-dark-mode .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
+        color: rgb(62, 68, 76);
+    }
+}
+
 @media all and (min-width: 768px) {
     .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
         width: calc(100% / 2);
