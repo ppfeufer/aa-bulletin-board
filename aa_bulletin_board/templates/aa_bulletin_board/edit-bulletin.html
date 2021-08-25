@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <div class="panel-body">
+        <div class="panel-body aa-bulletin-boad-edit-bulletin">
             <form autocomplete="off" action="{% if bulletin %}{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:create_bulletin' %}{% endif %}" method="post">
                 {% csrf_token %}
 
@@ -45,9 +45,17 @@
 {% block extra_javascript %}
     <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
     <script type="application/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+
+    <script type="application/javascript" src="{% static 'aa_bulletin_board/libs/sumoselect/3.0.2-66/jquery.sumoselect.min.js' %}"></script>
+    <script type="application/javascript">
+        $('.aa-bulletin-boad-edit-bulletin select').SumoSelect(
+            {okCancelInMulti: true, selectAll: true}
+        );
+    </script>
 {% endblock %}
 
 {% block extra_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'aa_bulletin_board/libs/sumoselect/3.0.2-66/sumoselect.min.css' %}">
     <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
 {% endblock %}
