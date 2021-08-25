@@ -7,6 +7,7 @@ from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.contrib.auth.models import Group
 from django.forms import ModelForm
+from django.utils.translation import ugettext_lazy as _
 
 from aa_bulletin_board.models import Bulletin
 
@@ -60,7 +61,13 @@ class BulletinForm(ModelForm):
     )
 
     groups = SpecialModelMultipleChoiceField(
-        required=False, queryset=Group.objects.all()
+        required=False,
+        queryset=Group.objects.all(),
+        help_text=_(
+            "Restrict this bulletin to certain groups. "
+            "If no group restrictions are in place, everyone who has access to "
+            "this module can read this bulletin."
+        ),
     )
 
     def __init__(self, *args, **kwargs):
