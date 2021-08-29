@@ -1,7 +1,7 @@
 ---
 name: Feature Request
 about: Suggest an idea for AA Bulletin Board
-title: ''
+title: "[Feature Request] "
 labels: ''
 assignees: ''
 ---
