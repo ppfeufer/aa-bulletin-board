@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - An issue where JavaScript and CSS could have been posted in a bulletin
+- An issue with unicode characters in bulletin topics
 
 
 ## [1.0.0] - 2021-08-25
