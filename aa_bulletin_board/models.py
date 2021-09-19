@@ -5,10 +5,11 @@ The models
 from ckeditor_uploader.fields import RichTextUploadingField
 
 from django.contrib.auth.models import Group, User
-from django.db import models
+from django.db import models, transaction
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
 
+from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.managers import BulletinManager
 
 
@@ -91,10 +92,13 @@ class Bulletin(models.Model):
     def __str__(self) -> str:
         return str(self.title)
 
+    @transaction.atomic()
     def save(self, *args, **kwargs) -> None:
         """
         Add the slug on save
         """
+
+        self.content = string_cleanup(self.content)
 
         if self.slug == "":
             bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)
