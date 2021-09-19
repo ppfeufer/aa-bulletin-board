@@ -10,7 +10,6 @@ from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
-from aa_bulletin_board.app_settings import avoid_cdn
 from aa_bulletin_board.forms import Bulletin, BulletinForm
 
 
@@ -28,7 +27,7 @@ def dashboard(request):
         .user_has_access(request.user)
         .order_by("-created_date")
     )
-    context = {"avoidCdn": avoid_cdn(), "bulletins": bulletins}
+    context = {"bulletins": bulletins}
 
     return render(request, "aa_bulletin_board/dashboard.html", context)
 
@@ -73,7 +72,6 @@ def create_bulletin(request):
         form = BulletinForm()
 
     context = {
-        "avoidCdn": avoid_cdn(),
         "form": form,
         "bulletin": False,
     }
@@ -90,7 +88,7 @@ def view_bulletin(request, slug):
 
     try:
         bulletin = Bulletin.objects.user_has_access(request.user).get(slug=slug)
-        context = {"avoidCdn": avoid_cdn(), "bulletin": bulletin, "slug": slug}
+        context = {"bulletin": bulletin, "slug": slug}
 
         return render(request, "aa_bulletin_board/bulletin.html", context)
     except Bulletin.DoesNotExist:
@@ -146,7 +144,6 @@ def edit_bulletin(request, slug):
             form = BulletinForm(instance=bulletin)
 
         context = {
-            "avoidCdn": avoid_cdn(),
             "form": form,
             "existing_bulletin": True,
             "bulletin": bulletin,
