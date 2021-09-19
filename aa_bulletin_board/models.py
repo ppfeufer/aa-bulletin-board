@@ -1,14 +1,15 @@
 """
 The models
 """
-
+import unidecode
 from ckeditor_uploader.fields import RichTextUploadingField
 
 from django.contrib.auth.models import Group, User
-from django.db import models
+from django.db import models, transaction
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
 
+from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.managers import BulletinManager
 
 
@@ -29,11 +30,13 @@ def get_bulletin_slug_from_title(bulletin_title: str) -> str:
     """
 
     run = 0
-    bulletin_slug = slugify(bulletin_title, allow_unicode=True)
+    bulletin_slug = slugify(unidecode.unidecode(bulletin_title), allow_unicode=True)
 
     while Bulletin.objects.filter(slug=bulletin_slug).exists():
         run += 1
-        bulletin_slug = slugify(bulletin_title + "-" + str(run), allow_unicode=True)
+        bulletin_slug = slugify(
+            unidecode.unidecode(f"{bulletin_title}-{run}"), allow_unicode=True
+        )
 
     return bulletin_slug
 
@@ -91,10 +94,13 @@ class Bulletin(models.Model):
     def __str__(self) -> str:
         return str(self.title)
 
+    @transaction.atomic()
     def save(self, *args, **kwargs) -> None:
         """
         Add the slug on save
         """
+
+        self.content = string_cleanup(self.content)
 
         if self.slug == "":
             bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)

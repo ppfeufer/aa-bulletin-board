@@ -28,7 +28,11 @@ project_changelog_url = (
     "https://github.com/ppfeufer/aa-bulletin-board/blob/master/CHANGELOG.md"
 )
 project_homepage_url = project_git_url
-project_install_requirements = ["allianceauth>=2.8.2", "django-ckeditor"]
+project_install_requirements = [
+    "allianceauth>=2.8.2",
+    "django-ckeditor",
+    "unidecode",
+]
 project_python_requires = "~=3.6"
 project_classifiers = [
     "Environment :: Web Environment",

@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.0.1] - 2021-09-19
+
+### Fixed
+
+- An issue where JavaScript and CSS could have been posted in a bulletin
+- An issue with unicode characters in bulletin topics
+
+
 ## [1.0.0] - 2021-08-25
 
 ### Added
