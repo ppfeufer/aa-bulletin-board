@@ -2,7 +2,6 @@
 Test bulletins
 """
 
-from django_webtest import WebTest
 from faker import Faker
 
 from django.contrib.auth.models import Group
@@ -99,71 +98,3 @@ class TestBulletins(TestCase):
             str(messages[0]),
             "The bulletin you are trying to delete for does not exist.",
         )
-
-
-class TestBulletinUI(WebTest):
-    @classmethod
-    def setUpClass(cls):
-        """
-        Set up groups and users
-        """
-
-        super().setUpClass()
-        cls.group = Group.objects.create(name="Superhero")
-
-        # User cannot access bulletins
-        cls.user_1001 = create_fake_user(1001, "Peter Parker")
-
-        # User can access bulletins
-        cls.user_1002 = create_fake_user(
-            1002, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
-        )
-
-        # User can manage bulletins
-        cls.user_1003 = create_fake_user(
-            1003,
-            "Clark Kent",
-            permissions=[
-                "aa_bulletin_board.basic_access",
-                "aa_bulletin_board.manage_bulletins",
-            ],
-        )
-
-    def test_should_show_bulletin(self):
-        """
-        Test if a bulletin is shown
-        :return:
-        :rtype:
-        """
-
-        # given
-        bulletin = Bulletin.objects.create(
-            title="Test Bulletin",
-            content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1002,
-        )
-        self.app.set_user(self.user_1002)
-
-        # when
-        page = self.app.get(
-            reverse("aa_bulletin_board:view_bulletin", args=[bulletin.slug])
-        )
-
-        # then
-        self.assertTemplateUsed(page, "aa_bulletin_board/bulletin.html")
-
-    def test_should_redirect_to_bulletin_dashboard_when_bulletin_does_not_exist(self):
-        """
-        Test should redirect to bulletin dashboard when bulletin does not exist
-        :return:
-        :rtype:
-        """
-
-        # given
-        self.app.set_user(self.user_1002)
-
-        # when
-        page = self.app.get(reverse("aa_bulletin_board:view_bulletin", args=["foobar"]))
-
-        # then
-        self.assertRedirects(page, "/bulletin-board/")
