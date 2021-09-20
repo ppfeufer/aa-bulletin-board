@@ -26,7 +26,7 @@ graph_models:
 	python ../myauth/manage.py graph_models $(package) --arrow-shape normal -o $(appname)-models.png
 
 coverage:
-	coverage run ../myauth/manage.py test $(package) --keepdb --failfast && coverage html && coverage report
+	coverage run ../myauth/manage.py test $(package) --keepdb --failfast && coverage html && coverage report && coverage xml
 
 build_test:
 	rm -rfv dist && \
