@@ -11,4 +11,3 @@ htmlcov/
 *.old
 __pycache__
 .coverage
-coverage.xml
