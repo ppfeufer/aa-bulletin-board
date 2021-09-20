@@ -42,7 +42,7 @@ class TestBulletinUI(WebTest):
             ],
         )
 
-    def test_should_show_bulletin(self):
+    def test_should_show_bulletin_page(self):
         """
         Test if a bulletin is shown
         :return:
@@ -77,6 +77,63 @@ class TestBulletinUI(WebTest):
 
         # when
         page = self.app.get(reverse("aa_bulletin_board:view_bulletin", args=["foobar"]))
+
+        # then
+        self.assertRedirects(page, "/bulletin-board/")
+
+    def test_should_show_create_bulletin_page(self):
+        """
+        Test if create bulletin is shown
+        :return:
+        :rtype:
+        """
+
+        # given
+        self.app.set_user(self.user_1003)
+
+        # when
+        page = self.app.get(reverse("aa_bulletin_board:create_bulletin"))
+
+        # then
+        self.assertTemplateUsed(page, "aa_bulletin_board/edit-bulletin.html")
+
+    def test_should_show_edit_bulletin_page(self):
+        """
+        Test if edit bulletin is shown
+        :return:
+        :rtype:
+        """
+
+        # given
+        bulletin = Bulletin.objects.create(
+            title="Test Bulletin",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1002,
+        )
+        self.app.set_user(self.user_1003)
+
+        # when
+        page = self.app.get(
+            reverse("aa_bulletin_board:edit_bulletin", args=[bulletin.slug])
+        )
+
+        # then
+        self.assertTemplateUsed(page, "aa_bulletin_board/edit-bulletin.html")
+
+    def test_should_redirect_to_bulletin_dashboard_when_edit_bulletin_does_not_exist(
+        self,
+    ):
+        """
+        Test should redirect to bulletin dashboard when bulletin to edit does not exist
+        :return:
+        :rtype:
+        """
+
+        # given
+        self.app.set_user(self.user_1003)
+
+        # when
+        page = self.app.get(reverse("aa_bulletin_board:edit_bulletin", args=["foobar"]))
 
         # then
         self.assertRedirects(page, "/bulletin-board/")
