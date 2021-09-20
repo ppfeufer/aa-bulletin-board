@@ -154,7 +154,7 @@ class TestBulletinUI(WebTest):
 
     def test_should_redirect_to_bulletin_dashboard_when_bulletin_does_not_exist(self):
         """
-        Test should redirect to buzlletin dashboard when bulletin does not exist
+        Test should redirect to bulletin dashboard when bulletin does not exist
         :return:
         :rtype:
         """
