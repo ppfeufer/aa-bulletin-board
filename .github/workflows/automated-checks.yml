@@ -118,7 +118,10 @@ jobs:
           pip install coverage
 
       - name: Run Codacy Coverage Reporter
-        run: coverage xml
+        run: |
+          coverage run runtests.py aa_bulletin_board -v 2
+          coverage report
+          coverage xml
 
       - name: Upload to Codacy Coverage Reporter
         uses: codacy/codacy-coverage-reporter-action@v1
