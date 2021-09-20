@@ -117,14 +117,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install coverage
 
-      - name: Setup Codacy Coverage Reporter
+      - name: Run Codacy Coverage Reporter
+        run: coverage xml
+
+      - name: Upload to Codacy Coverage Reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: coverage.xml
-
-      - name: Run Codacy Coverage Reporter
-        run: coverage xml
 
   # pypi build test
 #  build-test:
