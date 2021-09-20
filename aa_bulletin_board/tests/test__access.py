@@ -25,11 +25,11 @@ class TestBulletin(TestCase):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(1002, "Peter Parker")
+        cls.user_1001 = create_fake_user(1001, "Peter Parker")
 
         # User can access bulletins
         cls.user_1002 = create_fake_user(
-            1001, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
+            1002, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
         )
 
         # User can manage bulletins

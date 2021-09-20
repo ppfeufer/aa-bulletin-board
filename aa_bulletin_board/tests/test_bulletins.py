@@ -27,11 +27,11 @@ class TestBulletins(TestCase):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(1002, "Peter Parker")
+        cls.user_1001 = create_fake_user(1001, "Peter Parker")
 
         # User can access bulletins
         cls.user_1002 = create_fake_user(
-            1001, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
+            1002, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
         )
 
         # User can manage bulletins
@@ -112,11 +112,11 @@ class TestBulletinUI(WebTest):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(1002, "Peter Parker")
+        cls.user_1001 = create_fake_user(1001, "Peter Parker")
 
         # User can access bulletins
         cls.user_1002 = create_fake_user(
-            1001, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
+            1002, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
         )
 
         # User can manage bulletins
@@ -129,27 +129,41 @@ class TestBulletinUI(WebTest):
             ],
         )
 
-    # def test_should_show_bulletin(self):
-    #     """
-    #     Test if a bulletin is shown
-    #     :return:
-    #     :rtype:
-    #     """
-    #
-    #     # given
-    #     Bulletin.objects.create(
-    #         title="Test Bulletin",
-    #         content=f"<p>{fake.sentence()}</p>",
-    #         created_by=self.user_1002,
-    #     )
-    #
-    #     # when
-    #     # bulletin = Bulletin.objects.user_has_access(self.user_1002).get(
-    #     #     slug="test-bulletin"
-    #     # )
-    #     page = self.app.get(
-    #         reverse("aa_bulletin_board:view_bulletin", args=["test-bulletin"])
-    #     )
-    #
-    #     # then
-    #     self.assertTemplateUsed(page, "aa_bulletin_board/bulletin.html")
+    def test_should_show_bulletin(self):
+        """
+        Test if a bulletin is shown
+        :return:
+        :rtype:
+        """
+
+        # given
+        bulletin = Bulletin.objects.create(
+            title="Test Bulletin",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1002,
+        )
+        self.app.set_user(self.user_1002)
+
+        # when
+        page = self.app.get(
+            reverse("aa_bulletin_board:view_bulletin", args=[bulletin.slug])
+        )
+
+        # then
+        self.assertTemplateUsed(page, "aa_bulletin_board/bulletin.html")
+
+    def test_should_redirect_to_bulletin_dashboard_when_bulletin_does_not_exist(self):
+        """
+        Test should redirect to buzlletin dashboard when bulletin does not exist
+        :return:
+        :rtype:
+        """
+
+        # given
+        self.app.set_user(self.user_1002)
+
+        # when
+        page = self.app.get(reverse("aa_bulletin_board:view_bulletin", args=["foobar"]))
+
+        # then
+        self.assertRedirects(page, "/bulletin-board/")
