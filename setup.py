@@ -2,10 +2,13 @@
 app setup
 """
 
+# Standard Library
 import os
 
+# Third Party
 from setuptools import find_packages, setup
 
+# AA Bulletin Board
 from aa_bulletin_board import __version__
 
 # read the contents of your README file

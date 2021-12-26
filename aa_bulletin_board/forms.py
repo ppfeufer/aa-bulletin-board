@@ -2,13 +2,16 @@
 Forms definition
 """
 
+# Third Party
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
+# Django
 from django import forms
 from django.contrib.auth.models import Group
 from django.forms import ModelForm
 from django.utils.translation import ugettext_lazy as _
 
+# AA Bulletin Board
 from aa_bulletin_board.models import Bulletin
 
 

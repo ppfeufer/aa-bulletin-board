@@ -2,8 +2,10 @@
 Test bulletins
 """
 
+# Third Party
 from faker import Faker
 
+# Django
 from django.contrib.auth.models import Group
 from django.contrib.messages import get_messages
 from django.test import TestCase

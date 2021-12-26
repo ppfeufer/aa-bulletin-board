@@ -2,8 +2,10 @@
 Testing access to bulletins
 """
 
+# Third Party
 from faker import Faker
 
+# Django
 from django.contrib.auth.models import Group
 from django.test import TestCase
 from django.urls import reverse

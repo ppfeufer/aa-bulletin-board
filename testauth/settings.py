@@ -1,9 +1,12 @@
 # flake8: noqa
 
+# Standard Library
 import os
 
+# Third Party
 from celery.schedules import crontab
 
+# Django
 from django.contrib import messages
 
 INSTALLED_APPS = [
@@ -297,6 +300,7 @@ NOTIFICATIONS_MAX_PER_USER = 50
 
 ## AA Bulletin Board
 if "ckeditor" in INSTALLED_APPS:
+    # Third Party
     import ckeditor.configs
 
     MEDIA_URL = "/media/"
