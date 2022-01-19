@@ -2,8 +2,10 @@
 App config
 """
 
+# Django
 from django.apps import AppConfig
 
+# AA Bulletin Board
 from aa_bulletin_board import __version__
 
 

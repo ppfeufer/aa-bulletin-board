@@ -2,6 +2,7 @@
 The views
 """
 
+# Django
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import Group
@@ -10,6 +11,7 @@ from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
+# AA Bulletin Board
 from aa_bulletin_board.forms import Bulletin, BulletinForm
 
 

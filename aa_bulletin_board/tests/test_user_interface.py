@@ -2,9 +2,11 @@
 Test for the UI
 """
 
+# Third Party
 from django_webtest import WebTest
 from faker import Faker
 
+# Django
 from django.contrib.auth.models import Group
 from django.urls import reverse
 

@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.0] - 2022-01-19
+
+### Added
+
+- Tests for Python 3.11
+
+### Changed
+
+- Minimum dependencies:
+  - Alliance Auth>=2.9.4
+
+
 ## [1.1.0] - 2021-11-30
 
 ### Changed
