@@ -29,9 +29,13 @@ coverage:
 	rm -rfv htmlcov && \
 	coverage run ../myauth/manage.py test $(package) --keepdb --failfast && \
 	coverage html && \
-	coverage report
+	coverage report -m
 
 build_test:
 	rm -rfv dist && \
 	rm -rfv build && \
 	python3 setup.py sdist bdist_wheel
+
+tox_tests:
+	tox && \
+	rm -rf .tox/
