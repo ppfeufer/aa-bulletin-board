@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [1.3.0] - 2022-02-02
+
+### Fixed
+
+- Compatibility Fixes (AA 3.x / Django 4):
+  - ImportError: cannot import name 'ugettext_lazy' from 'django.utils.translation'
+  - URL config in README updated to work with Django 4. **Please make sure to update
+    your configuration accordingly!**
+
+
 ## [1.2.1] - 2022-02-02
 
 ### Changed
