@@ -65,9 +65,9 @@ jobs:
           sarif_file: results.sarif
 
   # Run Test Coverage
-  test-coverage-aa-2x:
+  test-coverage-aa-stable:
     needs: [ codacy-security-scan ]
-    name: Test Coverage (AA 2.x, Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }})
+    name: Test Coverage (AA Stable, Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }})
     runs-on: ubuntu-latest
 
     strategy:
@@ -105,18 +105,18 @@ jobs:
         run: tox -v
         env:
           DJANGO: ${{ matrix.django-version }}
-          ALLIANCEAUTH: aa2
+          ALLIANCEAUTH: stable
 
       - name: Upload Coverage Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: coverage-aa-2x-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
+          name: coverage-aa-stable-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
           path: coverage.xml
           if-no-files-found: ignore
 
-  test-coverage-aa-3x:
+  test-coverage-aa-dev:
     needs: [ codacy-security-scan ]
-    name: Test Coverage (AA 3.x, Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }})
+    name: Test Coverage (AA Alpha/Beta, Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }})
     runs-on: ubuntu-latest
 
     strategy:
@@ -152,19 +152,19 @@ jobs:
         run: tox -v
         env:
           DJANGO: ${{ matrix.django-version }}
-          ALLIANCEAUTH: aa3
+          ALLIANCEAUTH: testing
 
       - name: Upload Coverage Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: coverage-aa-3x-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
+          name: coverage-aa-dev-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
           path: coverage.xml
           if-no-files-found: ignore
 
   # Coverage upload to Codecov and Codacy
   upload-coverage:
-#    needs: [ test-coverage-aa-stable ]
-    needs: [ test-coverage-aa-2x, test-coverage-aa-3x ]
+    #    needs: [ test-coverage-aa-stable ]
+    needs: [ test-coverage-aa-stable, test-coverage-aa-dev ]
     name: Upload Coverage
     runs-on: ubuntu-latest
 
@@ -185,7 +185,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: artifacts/coverage-aa-2x-python-3.10-django-3.2/coverage.xml # optional
+          files: artifacts/coverage-aa-stable-python-3.10-django-3.2/coverage.xml # optional
 #          flags: unittests # optional
 #          name: codecov-umbrella # optional
 #          fail_ci_if_error: true # optional (default = false)
@@ -195,12 +195,12 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: artifacts/coverage-aa-2x-python-3.10-django-3.2/coverage.xml
+          coverage-reports: artifacts/coverage-aa-stable-python-3.10-django-3.2/coverage.xml
 
   # Pypi Build Test
   pypi-build-test:
-#    needs: [ test-coverage-aa-stable ]
-    needs: [ test-coverage-aa-2x, test-coverage-aa-3x ]
+    #    needs: [ test-coverage-aa-stable ]
+    needs: [ test-coverage-aa-stable, test-coverage-aa-dev ]
     name: PyPi Build Test
     runs-on: ubuntu-latest
 
