@@ -110,10 +110,8 @@ jobs:
       - name: Upload Coverage Artifacts
         uses: actions/upload-artifact@v2
         with:
-#          name: coverage-aa-stable-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
           name: coverage-aa-stable-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
-#          path: coverage.xml
-          path: aa-stable-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}.xml
+          path: coverage.xml
           if-no-files-found: ignore
 
   test-coverage-aa-dev:
@@ -159,10 +157,8 @@ jobs:
       - name: Upload Coverage Artifacts
         uses: actions/upload-artifact@v2
         with:
-#          name: coverage-aa-dev-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
-          name: coverage
-#          path: coverage.xml
-          path: aa-dev-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}.xml
+          name: coverage-aa-dev-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
+          path: coverage.xml
           if-no-files-found: ignore
 
   # Coverage upload to Codecov and Codacy
@@ -189,8 +185,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-#          files: artifacts/coverage-aa-stable-python-3.10-django-3.2/coverage.xml # optional
-          files: artifacts/coverage/aa-stable-python-3.10-django-3.2.xml # optional
+          files: artifacts/coverage-aa-stable-python-3.10-django-3.2/coverage.xml # optional
 #          flags: unittests # optional
 #          name: codecov-umbrella # optional
 #          fail_ci_if_error: true # optional (default = false)
@@ -200,8 +195,7 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-#          coverage-reports: artifacts/coverage-aa-stable-python-3.10-django-3.2/coverage.xml
-          coverage-reports: artifacts/coverage/aa-stable-python-3.10-django-3.2.xml
+          coverage-reports: artifacts/coverage-aa-stable-python-3.10-django-3.2/coverage.xml
 
   # Pypi Build Test
   pypi-build-test:
