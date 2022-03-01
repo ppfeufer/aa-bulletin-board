@@ -105,7 +105,7 @@ jobs:
         run: tox -v
         env:
           DJANGO: ${{ matrix.django-version }}
-          ALLIANCEAUTH: aa_2x
+          ALLIANCEAUTH: aa2
 
       - name: Upload Coverage Artifacts
         uses: actions/upload-artifact@v2
@@ -152,7 +152,7 @@ jobs:
         run: tox -v
         env:
           DJANGO: ${{ matrix.django-version }}
-          ALLIANCEAUTH: aa_3x
+          ALLIANCEAUTH: aa3
 
       - name: Upload Coverage Artifacts
         uses: actions/upload-artifact@v2
