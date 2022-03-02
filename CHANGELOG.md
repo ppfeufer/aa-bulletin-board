@@ -8,6 +8,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Test suite for AA 3.x and Django 4
+
+### Removed
+
+- Deprecated settings
+
+### Changed
+
+- Switched to `setup.cfg` as config file, since `setup.py` is deprecated now
+- Minimum dependencies:
+  - Alliance Auth>=2.11.0 (as last stable of the 2.x branch for now)
+
 
 ## [1.3.0] - 2022-02-28
 
