@@ -4,13 +4,15 @@ The models
 
 # Third Party
 import unidecode
-from ckeditor_uploader.fields import RichTextUploadingField
 
 # Django
 from django.contrib.auth.models import Group, User
 from django.db import models, transaction
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
+
+# ckEditor
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # AA Bulletin Board
 from aa_bulletin_board.helpers import string_cleanup
