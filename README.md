@@ -81,6 +81,7 @@ INSTALLED_APPS += [
 ]
 
 if "ckeditor" in INSTALLED_APPS:
+    # ckEditor
     import ckeditor.configs
 
     MEDIA_URL = "/media/"
@@ -227,8 +228,11 @@ following block right before the `handler` definitions:
 from django.apps import apps
 
 if apps.is_installed("ckeditor"):
+    # Django
     from django.contrib.auth.decorators import login_required
     from django.views.decorators.cache import never_cache
+
+    # ckEditor
     from ckeditor_uploader import views as ckeditor_views
 
     urlpatterns = [
@@ -259,8 +263,11 @@ urlpatterns = [
 from django.apps import apps
 
 if apps.is_installed("ckeditor"):
+    # Django
     from django.contrib.auth.decorators import login_required
     from django.views.decorators.cache import never_cache
+
+    # ckEditor
     from ckeditor_uploader import views as ckeditor_views
 
     urlpatterns = [

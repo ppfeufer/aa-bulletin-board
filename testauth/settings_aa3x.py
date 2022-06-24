@@ -295,7 +295,7 @@ NOTIFICATIONS_MAX_PER_USER = 50
 
 ## AA Bulletin Board
 if "ckeditor" in INSTALLED_APPS:
-    # Third Party
+    # ckEditor
     import ckeditor.configs
 
     MEDIA_URL = "/media/"

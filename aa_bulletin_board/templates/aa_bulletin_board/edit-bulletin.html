@@ -3,6 +3,7 @@
 {% load bootstrap %}
 {% load i18n %}
 {% load static %}
+{% load aa_bulletin_board_versioned_static %}
 
 {% block page_title %}
     {% if bulletin %}
@@ -56,6 +57,6 @@
 
 {% block extra_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'aa_bulletin_board/libs/sumoselect/3.0.2-66/sumoselect.min.css' %}">
-    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
 {% endblock %}

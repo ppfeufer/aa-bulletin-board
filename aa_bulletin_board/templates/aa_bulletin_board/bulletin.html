@@ -2,6 +2,7 @@
 
 {% load i18n %}
 {% load static %}
+{% load aa_bulletin_board_versioned_static %}
 
 {% block page_title %}{{ bulletin.title }} » {% translate "Bulletin Board" %}{% endblock %}
 
@@ -37,6 +38,6 @@
 {% endblock %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
 {% endblock %}
