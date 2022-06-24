@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Versioned static template tag
+
 
 ## [1.4.0] - 2022-03-02
 
