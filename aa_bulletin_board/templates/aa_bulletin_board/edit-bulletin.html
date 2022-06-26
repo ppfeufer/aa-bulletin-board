@@ -15,9 +15,9 @@
 
 {% block aabulletinboard_header %}
     {% if bulletin %}
-        {% include 'aa_bulletin_board/partials/header/h1.html' with header_text=bulletin.title %}
+        {% include 'aa_bulletin_board/partials/header/page-header.html' with header_text=bulletin.title %}
     {% else %}
-        {% include 'aa_bulletin_board/partials/header/h1.html' with header_text='Create New Bulletin' %}
+        {% include 'aa_bulletin_board/partials/header/page-header.html' with header_text='Create New Bulletin' %}
     {% endif %}
 {% endblock %}
 
