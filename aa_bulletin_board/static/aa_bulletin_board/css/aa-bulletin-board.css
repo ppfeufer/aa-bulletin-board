@@ -1,4 +1,8 @@
 @media all {
+    .aa-bulletin-board-header-addition {
+        display: block;
+    }
+
     .aa-bulletin-board .panels-equal-height {
         display: flex;
         flex-wrap: wrap;

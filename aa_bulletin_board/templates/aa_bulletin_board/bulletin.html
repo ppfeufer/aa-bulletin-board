@@ -1,13 +1,12 @@
 {% extends 'aa_bulletin_board/base.html' %}
 
 {% load i18n %}
-{% load static %}
 {% load aa_bulletin_board_versioned_static %}
 
 {% block page_title %}{{ bulletin.title }} » {% translate "Bulletin Board" %}{% endblock %}
 
 {% block aabulletinboard_header %}
-    {% include 'aa_bulletin_board/partials/header/h1.html' with header_text=bulletin.title %}
+    {% include 'aa_bulletin_board/partials/header/page-header.html' with header_text=bulletin.title %}
 {% endblock %}
 
 {% block aabulletinboard_body %}
