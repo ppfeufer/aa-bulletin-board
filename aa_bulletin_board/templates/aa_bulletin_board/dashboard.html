@@ -1,7 +1,6 @@
 {% extends 'aa_bulletin_board/base.html' %}
 
 {% load i18n %}
-{% load aa_bulletin_board_versioned_static %}
 
 {% block aabulletinboard_header %}
     {% translate "Bulletin Board" as translated_header %}
@@ -51,27 +50,29 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    <script type="application/javascript">
-        $(document).ready(function() {
-            let resizeBulletinPanel = function () {
+    <script>
+        $(document).ready(() => {
+            let resizeBulletinPanel = () => {
+                const elementPanelEqualHeight = $('.panels-equal-height');
+                const elementPanelExcerpt = $('.panel-bulletin-excerpt');
                 let highestBox = 0;
 
-                $('.panels-equal-height').each(function () {
-                    $('.panel-bulletin-excerpt', this).each(function () {
-                        let currentBulletinHeight = $(this).height();
+                elementPanelEqualHeight.each(() => {
+                    elementPanelExcerpt.each((index, element) => {
+                        let currentBulletinHeight = $(element).height();
 
                         if (currentBulletinHeight > highestBox) {
                             highestBox = currentBulletinHeight;
                         }
                     });
 
-                    $('.panel-bulletin-excerpt', this).height(highestBox);
+                    elementPanelExcerpt.height(highestBox);
                 });
             }
 
             resizeBulletinPanel();
 
-            $(window).on('resize', function (e) {
+            $(window).on('resize', () => {
                 $('.panel-bulletin-excerpt').css({"height": ""});
 
                 resizeBulletinPanel();
@@ -86,6 +87,5 @@
 {% endblock %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
+    {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
 {% endblock %}
