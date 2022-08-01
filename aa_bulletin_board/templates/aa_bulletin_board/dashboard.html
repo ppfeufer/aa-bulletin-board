@@ -53,20 +53,18 @@
     <script>
         $(document).ready(() => {
             let resizeBulletinPanel = () => {
-                const elementPanelEqualHeight = $('.panels-equal-height');
-                const elementPanelExcerpt = $('.panel-bulletin-excerpt');
                 let highestBox = 0;
 
-                elementPanelEqualHeight.each(() => {
-                    elementPanelExcerpt.each((index, element) => {
-                        let currentBulletinHeight = $(element).height();
+                $('.panels-equal-height').each((indexEqualHeight, elementEqualHeight) => {
+                    $('.panel-bulletin-excerpt', elementEqualHeight).each((indexExcerpt, elementExcerpt) => {
+                        let currentBulletinHeight = $(elementExcerpt).height();
 
                         if (currentBulletinHeight > highestBox) {
                             highestBox = currentBulletinHeight;
                         }
                     });
 
-                    elementPanelExcerpt.height(highestBox);
+                    $('.panel-bulletin-excerpt', elementEqualHeight).height(highestBox);
                 });
             }
 
