@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - CSS now delivered via template bundles
 - Minimum dependencies:
   - Python>=3.8
+  - Alliance Auth>=2.15.1
 
 ### Removed
 
