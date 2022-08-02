@@ -3,7 +3,6 @@
 {% load bootstrap %}
 {% load i18n %}
 {% load static %}
-{% load aa_bulletin_board_versioned_static %}
 
 {% block page_title %}
     {% if bulletin %}
@@ -46,9 +45,9 @@
 {% block extra_javascript %}
     {% include "aa_bulletin_board/bundles/sumoselect-js.html" %}
 
-    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-    <script type="application/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
-    <script type="application/javascript">
+    <script src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+    <script>
         $('.aa-bulletin-boad-edit-bulletin select').SumoSelect(
             {okCancelInMulti: true, selectAll: true}
         );
@@ -57,7 +56,5 @@
 
 {% block extra_css %}
     {% include "aa_bulletin_board/bundles/sumoselect-css.html" %}
-
-    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bootstrap-fix.min.css' %}" type="text/css">
-    <link rel="stylesheet" href="{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}" type="text/css">
+    {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
 {% endblock %}

@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [1.6.0] - 2022-08-02
+
+### Changed
+
+- More JavaScript modernisation
+- CSS now delivered via template bundles
+- Minimum dependencies:
+  - Python>=3.8
+  - Alliance Auth>=2.15.1
+
+### Removed
+
+- tox tests for AA beta version
+
+
 ## [1.5.1] - 2022-07-11
 
 ### Changed
