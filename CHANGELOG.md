@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - More JavaScript modernisation
 - CSS now delivered via template bundles
+- Minimum dependencies:
+  - Python>=3.8
 
 ### Removed
 
