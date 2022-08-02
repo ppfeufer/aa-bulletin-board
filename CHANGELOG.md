@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - More JavaScript modernisation
 - CSS now delivered via template bundles
 
+### Removed
+
+- tox tests for AA beta version
+
 
 ## [1.5.1] - 2022-07-11
 
