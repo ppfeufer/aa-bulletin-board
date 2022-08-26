@@ -10,8 +10,9 @@ from django.contrib.auth.models import Group
 from django.test import TestCase
 from django.urls import reverse
 
-from ..models import Bulletin
-from .utils import create_fake_user
+# AA Bulletin Board
+from aa_bulletin_board.models import Bulletin
+from aa_bulletin_board.tests.utils import create_fake_user
 
 fake = Faker()
 

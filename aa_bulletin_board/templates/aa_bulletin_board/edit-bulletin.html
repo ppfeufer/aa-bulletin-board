@@ -29,7 +29,7 @@
         </div>
 
         <div class="panel-body aa-bulletin-boad-edit-bulletin">
-            <form autocomplete="off" action="{% if bulletin %}{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:create_bulletin' %}{% endif %}" method="post">
+            <form id="aa-bulletin-board-bulletin-form" autocomplete="off" action="{% if bulletin %}{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:create_bulletin' %}{% endif %}" method="post">
                 {% csrf_token %}
 
                 {{ form|bootstrap }}

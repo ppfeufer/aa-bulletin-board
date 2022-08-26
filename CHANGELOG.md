@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- String cleanup added to form validation as well
+
 
 ## [1.6.0] - 2022-08-02
 
