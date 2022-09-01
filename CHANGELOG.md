@@ -12,6 +12,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - String cleanup added to form validation as well
 - YouTube plugin updated
+- Automated tests set to use MySQL instead of SQLite to test against:
+  - mysql:5.7
+  - mysql:8.0
+  - mariadb:10.3
+  - mariadb:10.4
+  - mariadb:10.5
+  - mariadb:10.6
+  - mariadb:10.7
+  - mariadb:10.8
+  - mariadb:10.9
 
 
 ## [1.6.0] - 2022-08-02
