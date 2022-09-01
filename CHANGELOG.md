@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - String cleanup added to form validation as well
+- YouTube plugin updated
 
 
 ## [1.6.0] - 2022-08-02
