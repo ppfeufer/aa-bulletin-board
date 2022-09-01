@@ -12,6 +12,7 @@ from django.utils.translation import gettext_lazy as _
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 # AA Bulletin Board
+from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.models import Bulletin
 
 
@@ -82,5 +83,19 @@ class BulletinForm(ModelForm):
             self.fields["groups"].queryset = groups_queryset
 
     class Meta:
+        """
+        Form Meta
+        """
+
         model = Bulletin
         fields = ["title", "content", "groups"]
+
+    def clean_message(self):
+        """
+        Cleanup the message
+        :return:
+        """
+
+        message = string_cleanup(self.cleaned_data["message"])
+
+        return message
