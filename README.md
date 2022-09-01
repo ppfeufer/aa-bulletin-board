@@ -77,6 +77,7 @@ This is fairly simple, configure your AA settings (`local.py`) as follows:
 INSTALLED_APPS += [
     "ckeditor",
     "ckeditor_uploader",
+    "django_ckeditor_youtube_plugin",
     "aa_bulletin_board",  # https://github.com/ppfeufer/aa-bulletin-board
 ]
 
