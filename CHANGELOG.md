@@ -22,7 +22,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - mariadb:10.7
   - mariadb:10.8
   - mariadb:10.9
+- Minumum requirements
+  - `django-ckeditor`>=6.5.0
 
+### Removed
+
+- Bundled YouTube plugin for CKEditor in favor of `django-ckeditor-youtube-plugin`
+  - Apply the following changes in your `local.py`:
+    - Add `"django_ckeditor_youtube_plugin",` to `INSTALLED_APPS`
+    - Search for the line:
+      ```python
+      "/static/aa_bulletin_board/ckeditor/plugins/youtube/"
+      ```
+
+      And replace it with:
+      ```python
+      "/static/ckeditor/ckeditor/plugins/youtube/"
+      ```
 
 ## [1.6.0] - 2022-08-02
 

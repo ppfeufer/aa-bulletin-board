@@ -201,20 +201,24 @@ if "ckeditor" in INSTALLED_APPS:
         ],
     }
 
+    # Add the external YouTube plugin
+    aa_bulletin_board__external_plugin_resources = [
+        (
+            "youtube",
+            "/static/ckeditor/ckeditor/plugins/youtube/",
+            "plugin.min.js",
+        )
+    ]
+
     # Put it all together
     CKEDITOR_CONFIGS = {
         "default": ckeditor.configs.DEFAULT_CONFIG,
         "aa_bulletin_board": ckeditor_default_config,
     }
 
-    # Add the external YouTube plugin
-    CKEDITOR_CONFIGS["aa_bulletin_board"]["external_plugin_resources"] = [
-        (
-            "youtube",
-            "/static/aa_bulletin_board/ckeditor/plugins/youtube/",
-            "plugin.min.js",
-        )
-    ]
+    CKEDITOR_CONFIGS["aa_bulletin_board"][
+        "external_plugin_resources"
+    ] = aa_bulletin_board__external_plugin_resources
 ```
 
 #### Settings in `/home/allianceserver/myauth/myauth/urls.py`
