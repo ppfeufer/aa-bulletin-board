@@ -154,6 +154,7 @@ jobs:
 #    strategy:
 #      # Set Python and Django version to test for the alpha/beta release of AllianceAuth
 #      matrix:
+#        # Python versions
 #        python-version:
 #          - '3.8'
 #          - '3.9'
@@ -175,6 +176,22 @@ jobs:
 #          - mariadb:10.9
 #
 #    continue-on-error: ${{ matrix.python-version == '3.11-dev' }}
+#
+#    services:
+#      database:
+#        image: ${{ matrix.database }}
+#        env:
+#          MYSQL_ROOT_PASSWORD: foobar
+#          MYSQL_DATABASE: tox_allianceauth
+#        ports:
+#          - 3306:3306
+#        options: --tmpfs /var/lib/mysql
+#
+#    env:
+#      USE_MYSQL: True
+#      DB_HOST: 127.0.0.1
+#      DB_USER: root
+#      DB_PASSWORD: foobar
 #
 #    steps:
 #      - name: Checkout
