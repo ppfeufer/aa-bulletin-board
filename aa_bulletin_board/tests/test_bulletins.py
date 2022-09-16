@@ -103,20 +103,20 @@ class TestBulletins(TestCase):
             "The bulletin you are trying to delete for does not exist.",
         )
 
-    # def test_should_translate_russian_letters_in_slug(self):
-    #     """
-    #     Test that russian letters in a slug are translated
-    #     :return:
-    #     :rtype:
-    #     """
-    #
-    #     bulletin = Bulletin.objects.create(
-    #         title="дрифтерке, рорки в док",
-    #         content=f"<p>{fake.sentence()}</p>",
-    #         created_by=self.user_1001,
-    #     )
-    #
-    #     self.assertEqual(bulletin.slug, "drifterke-rorki-v-dok")
+    def test_should_translate_russian_letters_in_slug(self):
+        """
+        Test that russian letters in a slug are translated
+        :return:
+        :rtype:
+        """
+
+        bulletin = Bulletin.objects.create(
+            title="дрифтерке, рорки в док",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1001,
+        )
+
+        self.assertEqual(bulletin.slug, "drifterke-rorki-v-dok")
 
     def test_should_return_cleaned_message_string_on_bulletin_creation(self):
         """
