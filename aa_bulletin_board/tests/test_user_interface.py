@@ -19,6 +19,10 @@ fake = Faker()
 
 
 class TestBulletinUI(WebTest):
+    """
+    Test Bulletin UI
+    """
+
     @classmethod
     def setUpClass(cls):
         """

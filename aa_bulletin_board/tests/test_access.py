@@ -17,7 +17,11 @@ from aa_bulletin_board.tests.utils import create_fake_user
 fake = Faker()
 
 
-class TestBulletin(TestCase):
+class TestAccess(TestCase):
+    """
+    Test access to the module
+    """
+
     @classmethod
     def setUpClass(cls) -> None:
         """
@@ -171,7 +175,7 @@ class TestBulletin(TestCase):
 
     def test_should_return_bulletin_with_no_groups(self):
         """
-        Test that any user with access can se non restricted bulletins
+        Test that any user with access can se non-restricted bulletins
         :return:
         :rtype:
         """

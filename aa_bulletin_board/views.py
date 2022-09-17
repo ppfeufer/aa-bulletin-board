@@ -62,21 +62,13 @@ def create_bulletin(request):
 
             bulletin.groups.set(form.cleaned_data["groups"])
 
-            messages.success(
-                request,
-                _('Bulletin "{bulletin_title}" created').format(
-                    bulletin_title=bulletin__title
-                ),
-            )
+            messages.success(request, _(f'Bulletin "{bulletin__title}" created.'))
 
             return redirect("aa_bulletin_board:view_bulletin", bulletin.slug)
     else:
         form = BulletinForm()
 
-    context = {
-        "form": form,
-        "bulletin": False,
-    }
+    context = {"form": form, "bulletin": False}
 
     return render(request, "aa_bulletin_board/edit-bulletin.html", context)
 
@@ -134,28 +126,18 @@ def edit_bulletin(request, slug):
                 bulletin.groups.set(form.cleaned_data["groups"])
                 bulletin.save()
 
-                messages.success(
-                    request,
-                    _('Bulletin "{bulletin_title}" updated').format(
-                        bulletin_title=bulletin__title
-                    ),
-                )
+                messages.success(request, _(f'Bulletin "{bulletin__title}" updated.'))
 
                 return redirect("aa_bulletin_board:view_bulletin", bulletin.slug)
         else:
             form = BulletinForm(instance=bulletin)
 
-        context = {
-            "form": form,
-            "existing_bulletin": True,
-            "bulletin": bulletin,
-        }
+        context = {"form": form, "existing_bulletin": True, "bulletin": bulletin}
 
         return render(request, "aa_bulletin_board/edit-bulletin.html", context)
     except Bulletin.DoesNotExist:
         messages.warning(
-            request,
-            _("The bulletin you are trying to edit for does not exist."),
+            request, _("The bulletin you are trying to edit for does not exist.")
         )
 
         return redirect("aa_bulletin_board:dashboard")
@@ -174,18 +156,12 @@ def remove_bulletin(request, slug):
     try:
         bulletin = Bulletin.objects.get(slug=slug)
 
-        messages.success(
-            request,
-            _('Bulletin "{bulletin_title}" deleted.').format(
-                bulletin_title=bulletin.title
-            ),
-        )
+        messages.success(request, _(f'Bulletin "{bulletin.title}" deleted.'))
 
         bulletin.delete()
     except Bulletin.DoesNotExist:
         messages.warning(
-            request,
-            _("The bulletin you are trying to delete for does not exist."),
+            request, _("The bulletin you are trying to delete for does not exist.")
         )
 
     return redirect("aa_bulletin_board:dashboard")

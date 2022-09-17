@@ -20,6 +20,10 @@ fake = Faker()
 
 
 class TestBulletins(TestCase):
+    """
+    Test Bulletins
+    """
+
     @classmethod
     def setUpClass(cls) -> None:
         """

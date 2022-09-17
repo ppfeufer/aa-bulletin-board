@@ -1,3 +1,7 @@
+"""
+Test URL config
+"""
+
 # Django
 from django.apps import apps
 from django.urls import include, re_path

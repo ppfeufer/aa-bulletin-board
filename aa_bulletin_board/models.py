@@ -52,7 +52,11 @@ class General(models.Model):
     Meta model for app permissions
     """
 
-    class Meta:
+    class Meta:  # pylint: disable=too-few-public-methods
+        """
+        Meta definitions
+        """
+
         verbose_name = "Bulletins"
         managed = False
         default_permissions = ()
@@ -88,7 +92,7 @@ class Bulletin(models.Model):
 
     objects = BulletinManager()
 
-    class Meta:
+    class Meta:  # pylint: disable=too-few-public-methods
         """
         Meta definitions
         """

@@ -9,12 +9,16 @@ from django.db.models import Q
 
 
 class BulletinQuerySet(models.QuerySet):
+    """
+    Bulletin queryset
+    """
+
     def user_has_access(self, user: User) -> models.QuerySet:
         """
         Filter boards that given user has access to.
         """
 
-        # Forum manager have always access, so assign this permission wisely
+        # Forum manager always have access, so assign this permission wisely
         if user.has_perm("aa_bulletin_board.manage_bulletins"):
             return self
 
@@ -24,12 +28,12 @@ class BulletinQuerySet(models.QuerySet):
         ).distinct()
 
 
-class BulletinManagerBase(models.Manager):
+class BulletinManagerBase(models.Manager):  # pylint: disable=too-few-public-methods
     """
     BoardManagerBase
     """
 
-    pass
+    pass  # pylint: disable=unnecessary-pass
 
 
 BulletinManager = BulletinManagerBase.from_queryset(BulletinQuerySet)

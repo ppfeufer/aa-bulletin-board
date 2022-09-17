@@ -383,10 +383,10 @@ about the available permissions.
 
 ## Permissions
 
-| ID                    | Description                   | Notes|
-|-----------------------|-------------------------------|------|
-| `basic_access`        | Can access the Bulletin Board | Grants read access to the bulletin board |
-| `manage_bulletins`    | Can manage bulletins          | Grants the right to edit and delete existing bulletins and create new bulletins |
+| ID                 | Description                   | Notes                                                                           |
+|--------------------|-------------------------------|---------------------------------------------------------------------------------|
+| `basic_access`     | Can access the Bulletin Board | Grants read access to the bulletin board                                        |
+| `manage_bulletins` | Can manage bulletins          | Grants the right to edit and delete existing bulletins and create new bulletins |
 
 
 ## Changelog
