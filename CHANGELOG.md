@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- SumoSelect library updated to the latest version
+
 
 ## [1.7.1] - 2022-08-02
 
