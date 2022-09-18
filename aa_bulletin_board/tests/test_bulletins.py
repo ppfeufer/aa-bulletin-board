@@ -217,7 +217,7 @@ class TestBulletins(TestCase):
 
     def test_form_clean_content_method(self):
         """
-        Test the cleaam_ method of the form
+        Test the clean_ method of the form
         :return:
         :rtype:
         """
@@ -229,6 +229,8 @@ class TestBulletins(TestCase):
         )
         cleaned_message = string_cleanup(dirty_message)
         data = {"title": "This is a title", "content": dirty_message}
+
         form = BulletinForm(data)
+
         self.assertTrue(form.is_valid())
         self.assertEqual(form.cleaned_data["content"], cleaned_message)
