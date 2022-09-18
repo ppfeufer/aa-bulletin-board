@@ -52,7 +52,7 @@
 {% block extra_javascript %}
     <script>
         $(document).ready(() => {
-            let resizeBulletinPanel = () => {
+            const resizeBulletinPanel = () => {
                 let highestBox = 0;
 
                 $('.panels-equal-height').each((indexEqualHeight, elementEqualHeight) => {

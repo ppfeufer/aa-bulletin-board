@@ -11,7 +11,17 @@ from aa_bulletin_board import __version__
 
 
 class TestVersionedStatic(TestCase):
+    """
+    Test aa_bulletin_board_versioned_static template tag
+    """
+
     def test_versioned_static(self):
+        """
+        Test versioned static template tag
+        :return:
+        :rtype:
+        """
+
         context = Context({"version": __version__})
         template_to_render = Template(
             "{% load aa_bulletin_board_versioned_static %}"

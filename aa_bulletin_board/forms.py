@@ -24,7 +24,7 @@ class SpecialModelChoiceIterator(forms.models.ModelChoiceIterator):
 
     def __iter__(self):
         if self.field.empty_label is not None:
-            yield ("", self.field.empty_label)
+            yield "", self.field.empty_label
 
         queryset = self.queryset
 
@@ -82,7 +82,7 @@ class BulletinForm(ModelForm):
         if groups_queryset:
             self.fields["groups"].queryset = groups_queryset
 
-    class Meta:
+    class Meta:  # pylint: disable=too-few-public-methods
         """
         Form Meta
         """

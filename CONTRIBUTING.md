@@ -17,18 +17,19 @@ You can check if your code to commit adheres to the given style by simply runnin
 pre-commit
 ```
 
-or to check all files:
+Or to check all files:
 ```shell script
 pre-commit run --all-files
 ```
 
 The following will be checked by `pre-commit`:
 
-- no trailing whitespaces (excluded are: minified js and css, .po and .mo files)
-- one, and only one, empty line at the end of every file (excluded are: minified js and css, .po and .mo files)
-- line ending is LF
-- code formatted according to black code style
-- code conforms with flake8
+- No trailing whitespaces (excluded are: minified js and css, .po and .mo files)
+- One, and only one, empty line at the end of every file (excluded are: minified js
+  and css, .po and .mo files)
+- Line ending is LF
+- Code formatted according to black code style
+- Code conforms with flake8
 
 
 ## Contributing via pull requests
@@ -53,5 +54,5 @@ make coverage
 
 The full tox-test suite can be run via:
 ```shell
-tox
+make tox_tests
 ```

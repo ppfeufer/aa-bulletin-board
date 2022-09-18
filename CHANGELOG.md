@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [1.7.2] - 2022-09-18
+
+### Added
+
+- More tests
+
+### Changed
+
+- SumoSelect library updated to the latest version
+- Minor code updates
+- Minimum requirements
+  - `allianceauth`>=3.0.0
+
+
 ## [1.7.1] - 2022-08-02
 
 ### Changed
@@ -32,7 +46,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   - mariadb:10.7
   - mariadb:10.8
   - mariadb:10.9
-- Minumum requirements
+- Minimum requirements
   - `django-ckeditor`>=6.5.0
 
 ### Removed
