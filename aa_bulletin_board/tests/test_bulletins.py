@@ -216,6 +216,12 @@ class TestBulletins(TestCase):
         self.assertEqual(str(bulletin), "This is a bulletin")
 
     def test_form_clean_content_method(self):
+        """
+        Test the cleaam_ method of the form
+        :return:
+        :rtype:
+        """
+
         dirty_message = (
             'this is a script test. <script type="text/javascript">alert('
             "'test')</script>and this is style test. <style>.MathJax, "
