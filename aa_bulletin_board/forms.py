@@ -90,12 +90,12 @@ class BulletinForm(ModelForm):
         model = Bulletin
         fields = ["title", "content", "groups"]
 
-    def clean_message(self):
+    def clean_content(self):
         """
-        Cleanup the message
+        Cleanup the content
         :return:
         """
 
-        message = string_cleanup(self.cleaned_data["message"])
+        message = string_cleanup(self.cleaned_data["content"])
 
         return message
