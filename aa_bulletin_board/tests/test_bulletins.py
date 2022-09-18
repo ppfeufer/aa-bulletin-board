@@ -12,6 +12,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 # AA Bulletin Board
+from aa_bulletin_board.forms import BulletinForm
 from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.models import Bulletin, get_sentinel_user
 from aa_bulletin_board.tests.utils import create_fake_user
@@ -213,3 +214,15 @@ class TestBulletins(TestCase):
         )
 
         self.assertEqual(str(bulletin), "This is a bulletin")
+
+    def test_form_clean_content_method(self):
+        dirty_message = (
+            'this is a script test. <script type="text/javascript">alert('
+            "'test')</script>and this is style test. <style>.MathJax, "
+            ".MathJax_Message, .MathJax_Preview{display: none}</style>end tests."
+        )
+        cleaned_message = string_cleanup(dirty_message)
+        data = {"title": "This is a title", "content": dirty_message}
+        form = BulletinForm(data)
+        self.assertTrue(form.is_valid())
+        self.assertEqual(form.cleaned_data["content"], cleaned_message)
