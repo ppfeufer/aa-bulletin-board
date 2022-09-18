@@ -207,6 +207,12 @@ class TestBulletins(TestCase):
         self.assertEqual(bulletin_3.slug, "this-is-a-bulletin-2")
 
     def test_should_return_bulletin_title_as_model_object_string_name(self):
+        """
+        Test should return the objects string name
+        :return:
+        :rtype:
+        """
+
         bulletin = Bulletin.objects.create(
             title="This is a bulletin",
             content=f"<p>{fake.sentence()}</p>",
