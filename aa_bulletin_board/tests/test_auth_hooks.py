@@ -1,3 +1,7 @@
+"""
+Test auth_hooks
+"""
+
 # Standard Library
 from http import HTTPStatus
 
