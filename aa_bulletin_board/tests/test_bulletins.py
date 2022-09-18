@@ -6,17 +6,50 @@ Test bulletins
 from faker import Faker
 
 # Django
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 from django.contrib.messages import get_messages
 from django.test import TestCase
 from django.urls import reverse
 
 # AA Bulletin Board
 from aa_bulletin_board.helpers import string_cleanup
-from aa_bulletin_board.models import Bulletin
+from aa_bulletin_board.models import Bulletin, get_sentinel_user
 from aa_bulletin_board.tests.utils import create_fake_user
 
 fake = Faker()
+
+
+class TestGetSentinelUser(TestCase):
+    """
+    Tests for the sentinel user
+    """
+
+    def test_should_create_user_when_it_does_not_exist(self):
+        """
+        Test should create sentinel user when it doesn't exist
+        :return:
+        """
+
+        # when
+        user = get_sentinel_user()
+
+        # then
+        self.assertEqual(user.username, "deleted")
+
+    def test_should_return_user_when_it_does(self):
+        """
+        Test should return sentinel user when it exists
+        :return:
+        """
+
+        # given
+        User.objects.create_user(username="deleted")
+
+        # when
+        user = get_sentinel_user()
+
+        # then
+        self.assertEqual(user.username, "deleted")
 
 
 class TestBulletins(TestCase):
@@ -142,3 +175,41 @@ class TestBulletins(TestCase):
         )
 
         self.assertEqual(bulletin.content, cleaned_message)
+
+    def test_bulletin_slug_creation(self):
+        """
+        Test slug creation
+        :return:
+        :rtype:
+        """
+
+        bulletin = Bulletin.objects.create(
+            title="This is a bulletin",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1001,
+        )
+
+        bulletin_2 = Bulletin.objects.create(
+            title="This is a bulletin",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1001,
+        )
+
+        bulletin_3 = Bulletin.objects.create(
+            title="This is a bulletin",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1001,
+        )
+
+        self.assertEqual(bulletin.slug, "this-is-a-bulletin")
+        self.assertEqual(bulletin_2.slug, "this-is-a-bulletin-1")
+        self.assertEqual(bulletin_3.slug, "this-is-a-bulletin-2")
+
+    def test_should_return_bulletin_title_as_model_object_string_name(self):
+        bulletin = Bulletin.objects.create(
+            title="This is a bulletin",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1001,
+        )
+
+        self.assertEqual(str(bulletin), "This is a bulletin")

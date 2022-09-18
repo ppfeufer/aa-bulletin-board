@@ -205,3 +205,55 @@ class TestBulletinUI(WebTest):
         # then
         bulletin_edited = Bulletin.objects.get(pk=bulletin.pk)
         self.assertEqual(bulletin_edited.content, cleaned_message)
+
+    def test_should_return_to_edit_bulletin_form_for_invalid_form_submitted_on_create_bulletin(
+        self,
+    ):
+        """
+        Test should return to bulletin form, because submitted form is not valid
+        due to missing title
+        :return:
+        :rtype:
+        """
+
+        self.app.set_user(self.user_1003)
+        page = self.app.get(reverse("aa_bulletin_board:create_bulletin"))
+
+        # when
+        form = page.forms["aa-bulletin-board-bulletin-form"]
+        form["content"] = "Lorem Ipsum"
+        page = form.submit()
+
+        # then
+        self.assertTemplateUsed(page, "aa_bulletin_board/edit-bulletin.html")
+
+    def test_should_return_to_edit_bulletin_form_for_invalid_form_submitted_on_edit_bulletin(
+        self,
+    ):
+        """
+        Test should return to bulletin form, because submitted form is not valid
+        due to missing title
+        :return:
+        :rtype:
+        """
+
+        bulletin = Bulletin.objects.create(
+            title="Test Bulletin",
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1002,
+        )
+        self.app.set_user(self.user_1003)
+
+        # when
+        page = self.app.get(
+            reverse("aa_bulletin_board:edit_bulletin", args=[bulletin.slug])
+        )
+
+        # when
+        form = page.forms["aa-bulletin-board-bulletin-form"]
+        form["title"] = ""
+        form["content"] = "Lorem Ipsum"
+        page = form.submit()
+
+        # then
+        self.assertTemplateUsed(page, "aa_bulletin_board/edit-bulletin.html")
