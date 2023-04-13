@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- German translation
+
 
 ## [1.7.3] - 2022-09-18
 
@@ -206,7 +210,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - CKEditor config changed to prevent possible collisions in static files (see
-  [Readme](README.md) for details)
+  [Readme](https://github.com/ppfeufer/aa-bulletin-board/blob/master/README.md) for
+  details)
 
 
 ## [0.1.0-beta.9] - 2021-07-08
