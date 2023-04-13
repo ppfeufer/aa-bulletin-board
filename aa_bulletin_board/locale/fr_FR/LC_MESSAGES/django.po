@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-11 22:55+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: forms.py:71
+msgid ""
+"Restrict this bulletin to certain groups. If no group restrictions are in "
+"place, everyone who has access to this module can read this bulletin."
+msgstr ""
+
+#: models.py:101
+msgid "Bulletin"
+msgstr ""
+
+#: models.py:102
+msgid "Bulletins"
+msgstr ""
+
+#: templates/aa_bulletin_board/base.html:5
+#: templates/aa_bulletin_board/bulletin.html:5
+#: templates/aa_bulletin_board/dashboard.html:6
+#: templates/aa_bulletin_board/edit-bulletin.html:9
+#: templates/aa_bulletin_board/edit-bulletin.html:11
+msgid "Bulletin Board"
+msgstr ""
+
+#: templates/aa_bulletin_board/bulletin.html:14
+#: templates/aa_bulletin_board/dashboard.html:13
+msgid "Add Bulletin"
+msgstr ""
+
+#: templates/aa_bulletin_board/bulletin.html:22
+#: templates/aa_bulletin_board/edit-bulletin.html:27
+msgid "Back"
+msgstr ""
+
+#: templates/aa_bulletin_board/bulletin.html:25
+#: templates/aa_bulletin_board/dashboard.html:40
+msgid "Edit"
+msgstr ""
+
+#: templates/aa_bulletin_board/bulletin.html:26
+#: templates/aa_bulletin_board/dashboard.html:41
+msgid "Delete"
+msgstr ""
+
+#: templates/aa_bulletin_board/dashboard.html:26
+msgid "This bulletin is restricted to the following group(s):"
+msgstr ""
+
+#: templates/aa_bulletin_board/dashboard.html:37
+msgid "Read more"
+msgstr ""
+
+#: templates/aa_bulletin_board/edit-bulletin.html:9
+msgid "Edit Bulletin"
+msgstr ""
+
+#: templates/aa_bulletin_board/edit-bulletin.html:11
+msgid "Create New Bulletin"
+msgstr ""
+
+#: templates/aa_bulletin_board/edit-bulletin.html:38
+msgid "Update Bulletin"
+msgstr ""
+
+#: templates/aa_bulletin_board/edit-bulletin.html:38
+msgid "Create Bulletin"
+msgstr ""
+
+#: views.py:65
+#, python-brace-format
+msgid "Bulletin \"{bulletin__title}\" created."
+msgstr ""
+
+#: views.py:92
+msgid ""
+"The bulletin you are looking for does not exist, or you don't have access to "
+"it."
+msgstr ""
+
+#: views.py:129
+#, python-brace-format
+msgid "Bulletin \"{bulletin__title}\" updated."
+msgstr ""
+
+#: views.py:140
+msgid "The bulletin you are trying to edit for does not exist."
+msgstr ""
+
+#: views.py:159
+#, python-brace-format
+msgid "Bulletin \"{bulletin.title}\" deleted."
+msgstr ""
+
+#: views.py:164
+msgid "The bulletin you are trying to delete for does not exist."
+msgstr ""

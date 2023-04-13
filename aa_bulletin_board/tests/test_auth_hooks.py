@@ -9,9 +9,6 @@ from http import HTTPStatus
 from django.test import TestCase
 from django.urls import reverse
 
-# Alliance Auth
-from allianceauth.tests.auth_utils import AuthUtils
-
 # AA Bulletin Board
 from aa_bulletin_board.tests.utils import create_fake_user
 
@@ -52,11 +49,7 @@ class TestHooks(TestCase):
         :rtype:
         """
 
-        self.testuser = AuthUtils.add_permissions_to_user_by_name(
-            ["aa_bulletin_board.basic_access"], self.user_1002
-        )
-
-        self.client.force_login(self.testuser)
+        self.client.force_login(self.user_1002)
 
         response = self.client.get(reverse("authentication:dashboard"))
 
