@@ -1,11 +1,18 @@
+<!-- TOC -->
+* [Contributing](#contributing)
+  * [Code Formatting](#code-formatting)
+  * [Contributing via pull requests](#contributing-via-pull-requests)
+    * [Test Coverage](#test-coverage)
+  * [Translation](#translation)
+<!-- TOC -->
+
 # Contributing
 
 ## Code Formatting
 
-This app is utilizing the [Black](https://black.readthedocs.io/en/stable/the_black_code_style.html)
-code style. Every commit has to adhere to it.
+This app is utilizing the [Black] code style. Every commit has to adhere to it.
 
-This repository uses [pre-commit](https://github.com/pre-commit/pre-commit) to
+This repository uses [pre-commit] to
 verify compliance with formatting rules. To use:
 
 1. Install `pre-commit`.
@@ -38,8 +45,8 @@ To contribute code via pull request, make sure that you fork the repository and 
 your changes from the `development` branch. Only pull requests towards the development
 branch will be considered.
 
-Please make sure you have signed the [License Agreement](https://developers.eveonline.com/resource/license-agreement)
-by logging in at https://developers.eveonline.com before submitting any pull requests.
+Please make sure you've signed [CCP's Developer License Agreement] by logging in
+at [CCP's Developer Portal] before submitting any pull requests.
 
 ### Test Coverage
 
@@ -56,3 +63,17 @@ The full tox-test suite can be run via:
 ```shell
 make tox_tests
 ```
+
+## Translation
+
+This app is fully translation-ready and translations are handled via [Weblate]. If
+you like to contribute to the app's translation or simply improve it, feel free to
+register on my [Weblate] site and message me so I can add you to the right group.
+
+
+<!-- Links -->
+[Black]: https://black.readthedocs.io/en/stable/the_black_code_style.html "Black Code Formatter"
+[pre-commit]: https://github.com/pre-commit/pre-commit "pre-commit"
+[CCP's Developer License Agreement]: https://developers.eveonline.com/resource/license-agreement "CCP's Developer License Agreement"
+[CCP's Developer Portal]: https://developers.eveonline.com/ "CCP's Developer Portal"
+[Weblate]: https://weblate.ppfeufer.de/ "Weblate"
