@@ -15,28 +15,33 @@
 
 Simple bulletin board for [Alliance Auth](https://gitlab.com/allianceauth/allianceauth)
 
-## ⚠️ Before you install this module ⚠️
+
+<!-- TOC -->
+* [AA Bulletin Board](#aa-bulletin-board)
+  * [⚠️ Before You Install This Module ⚠️](#-before-you-install-this-module-)
+  * [Overview](#overview)
+  * [Installation](#installation)
+    * [Step 1: Install the Package](#step-1-install-the-package)
+    * [Step 2: Configure Alliance Auth](#step-2-configure-alliance-auth)
+      * [Settings in `/home/allianceserver/myauth/myauth/settings/local.py`](#settings-in-homeallianceservermyauthmyauthsettingslocalpy)
+      * [Settings in `/home/allianceserver/myauth/myauth/urls.py`](#settings-in-homeallianceservermyauthmyauthurlspy)
+    * [Step 3: Configure Your Webserver](#step-3-configure-your-webserver)
+      * [Apache](#apache)
+      * [Nginx](#nginx)
+    * [Step 4: Finalizing the Installation](#step-4-finalizing-the-installation)
+    * [Step 5: Set Up Permissions](#step-5-set-up-permissions)
+  * [Permissions](#permissions)
+  * [Changelog](#changelog)
+  * [Contributing](#contributing)
+<!-- TOC -->
+
+
+## ⚠️ Before You Install This Module ⚠️
 
 This module needs quite some configuration done before working properly. You need to
 modify your Apache/Nginx configuration as well as the global URL config of Alliance
 Auth. So please only install if you know what you're doing/feel comfortable to make
-these kind of changes. For you own sanity, and mine :-)
-
-## Contents
-- [Overview](#overview)
-    - Features
-    - Screenshots
-- [Installation](#installation)
-    - [Step 1 - Install the package](#step-1---install-the-package)
-    - [Step 2 - Configure Alliance Auth](#step-2---configure-alliance-auth)
-        - [local.py](#settings-in-homeallianceservermyauthmyauthsettingslocalpy)
-        - [urls.py](#settings-in-homeallianceservermyauthmyauthurlspy)
-    - [Step 3 - Configure your webserver](#step-3---configure-your-webserver)
-    - [Step 4 - Finalize the installation](#step-4---finalize-the-installation)
-    - [Step 5 - Set up permissions](#step-5---set-up-permissions)
-- [Permissions](#permissions)
-- [Changelog](#changelog)
-- [Contributing](#contributing)
+these kinds of changes. For your own sanity, and mine :-)
 
 
 ## Overview
@@ -57,16 +62,16 @@ Work in progress on this one
   described in this document, but you need to understand what will be changed.
 
 
-### Step 1 - Install the package
+### Step 1: Install the Package
 
-Make sure you are in the virtual environment (venv) of your Alliance Auth
+Make sure you're in the virtual environment (venv) of your Alliance Auth
 installation Then install the latest release directly from PyPi.
 
 ```shell
 pip install aa-bulletin-board
 ```
 
-### Step 2 - Configure Alliance Auth
+### Step 2: Configure Alliance Auth
 
 #### Settings in `/home/allianceserver/myauth/myauth/settings/local.py`
 
@@ -293,15 +298,15 @@ handler400 = "allianceauth.views.Generic400Redirect"
 ```
 
 
-### Step 3 - Configure your webserver
+### Step 3: Configure Your Webserver
 
-Your webserver needs to know from where to serve the uploaded mages of course, so we
+Your webserver needs to know from where to serve the uploaded images, of course, so we
 have to tell it.
 
 #### Apache
 
 In your vhost configuration you have a line `ProxyPassMatch ^/static !`, which tells
-the server where to find all the static files. We are adding a similar line for the
+the server where to find all the static files. We're adding a similar line for the
 media, right below that one.
 
 Add the following right below the static proxy match:
@@ -316,8 +321,8 @@ be done right below the already existing Alias for `/static`:
 Alias "/media" "/var/www/myauth/media/"
 ```
 
-At last a Directory rule is needed as well. Add the following below the already
-existing Directory rule for the static files:
+At last, a Directory rule is needed as well. Add the following code below to the
+already existing Directory rule for the static files:
 
 ```apache
 <Directory "/var/www/myauth/media/">
@@ -362,7 +367,7 @@ location /media {
 Restart your Nginx webserver.
 
 
-### Step 4 - Finalize the installation
+### Step 4: Finalizing the Installation
 
 Run static files collection and migrations
 
@@ -374,7 +379,7 @@ python manage.py migrate
 Restart your supervisor services for Auth
 
 
-### Step 5 - Set up permissions
+### Step 5: Set Up Permissions
 
 Now it's time to set up access permissions for your new module. You can do so in
 your admin backend. Read the [Permissions](#permissions) section for more information
@@ -384,7 +389,7 @@ about the available permissions.
 ## Permissions
 
 | ID                 | Description                   | Notes                                                                           |
-|--------------------|-------------------------------|---------------------------------------------------------------------------------|
+|:-------------------|:------------------------------|:--------------------------------------------------------------------------------|
 | `basic_access`     | Can access the Bulletin Board | Grants read access to the bulletin board                                        |
 | `manage_bulletins` | Can manage bulletins          | Grants the right to edit and delete existing bulletins and create new bulletins |
 
