@@ -6,7 +6,17 @@ help:
 
 translationfiles:
 	cd $(package) && \
-	django-admin makemessages -l de -l es -l fr_FR -l it_IT -l ja -l ko_KR -l ru -l zh_Hans --keep-pot --ignore 'build/*'
+	django-admin makemessages \
+		-l de \
+		-l es \
+		-l fr_FR \
+		-l it_IT \
+		-l ja \
+		-l ko_KR \
+		-l ru \
+		-l zh_Hans \
+		--keep-pot \
+		--ignore 'build/*'
 
 compiletranslationfiles:
 	cd $(package) && \
