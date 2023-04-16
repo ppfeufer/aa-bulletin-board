@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # "H. Peter Pfeufer" <info@ppfeufer.de>, 2023.
+# Nikolay <nick.postnikov@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-11 22:55+0200\n"
-"PO-Revision-Date: 2023-04-11 21:13+0000\n"
-"Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
+"PO-Revision-Date: 2023-04-16 15:21+0000\n"
+"Last-Translator: Nikolay <nick.postnikov@gmail.com>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/ru/>\n"
 "Language: ru\n"
@@ -25,14 +26,16 @@ msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
+"Ограничить доступ к бюллетеню для конкретных групп. Если ограничение не "
+"задано, у всех пользователей модуля есть доступ к бюллетеню."
 
 #: models.py:101
 msgid "Bulletin"
-msgstr ""
+msgstr "Бюллетень"
 
 #: models.py:102
 msgid "Bulletins"
-msgstr ""
+msgstr "Бюллетени"
 
 #: templates/aa_bulletin_board/base.html:5
 #: templates/aa_bulletin_board/bulletin.html:5
@@ -40,22 +43,22 @@ msgstr ""
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Bulletin Board"
-msgstr ""
+msgstr "Доска бюллетеней"
 
 #: templates/aa_bulletin_board/bulletin.html:14
 #: templates/aa_bulletin_board/dashboard.html:13
 msgid "Add Bulletin"
-msgstr ""
+msgstr "Добавить бюллетень"
 
 #: templates/aa_bulletin_board/bulletin.html:22
 #: templates/aa_bulletin_board/edit-bulletin.html:27
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: templates/aa_bulletin_board/bulletin.html:25
 #: templates/aa_bulletin_board/dashboard.html:40
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 #: templates/aa_bulletin_board/bulletin.html:26
 #: templates/aa_bulletin_board/dashboard.html:41
@@ -64,53 +67,53 @@ msgstr "Удалить"
 
 #: templates/aa_bulletin_board/dashboard.html:26
 msgid "This bulletin is restricted to the following group(s):"
-msgstr ""
+msgstr "Этот бюллетень доступен следующим группам:"
 
 #: templates/aa_bulletin_board/dashboard.html:37
 msgid "Read more"
-msgstr ""
+msgstr "Читать"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 msgid "Edit Bulletin"
-msgstr ""
+msgstr "Редактировать"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Create New Bulletin"
-msgstr ""
+msgstr "Создание нового бюллетеня"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Update Bulletin"
-msgstr ""
+msgstr "Обновить бюллетень"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Create Bulletin"
-msgstr ""
+msgstr "Создать бюллетень"
 
 #: views.py:65
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
-msgstr ""
+msgstr "Бюллетень \"{bulletin__title}\" создан."
 
 #: views.py:92
 msgid ""
 "The bulletin you are looking for does not exist, or you don't have access to "
 "it."
-msgstr ""
+msgstr "Запрошенный бюллетень не существует или у Вас нет доступа."
 
 #: views.py:129
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr ""
+msgstr "Бюллетень \"{bulletin__title}\" обновлен."
 
 #: views.py:140
 msgid "The bulletin you are trying to edit for does not exist."
-msgstr ""
+msgstr "Запрошенный бюллетень не существует."
 
 #: views.py:159
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr ""
+msgstr "Бюллетень \"{bulletin.title}\" удален."
 
 #: views.py:164
 msgid "The bulletin you are trying to delete for does not exist."
-msgstr ""
+msgstr "Запрошенный бюллетень не существует."
