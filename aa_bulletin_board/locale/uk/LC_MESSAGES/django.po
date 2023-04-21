@@ -16,22 +16,25 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural= n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural= n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: forms.py:71
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
+"Обмежте доступ до цього бюлетеня для певних груп. Якщо не встановлено жодних "
+"групових обмежень, кожен, хто має доступ до цього модуля, зможе прочитати "
+"цей бюлетень."
 
 #: models.py:101
 msgid "Bulletin"
-msgstr ""
+msgstr "Інформаційний бюлетень"
 
 #: models.py:102
 msgid "Bulletins"
-msgstr ""
+msgstr "Інформаційні бюлетені"
 
 #: templates/aa_bulletin_board/base.html:5
 #: templates/aa_bulletin_board/bulletin.html:5
@@ -39,77 +42,77 @@ msgstr ""
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Bulletin Board"
-msgstr ""
+msgstr "Дошка оголошень"
 
 #: templates/aa_bulletin_board/bulletin.html:14
 #: templates/aa_bulletin_board/dashboard.html:13
 msgid "Add Bulletin"
-msgstr ""
+msgstr "Додати інформаційний бюлетень"
 
 #: templates/aa_bulletin_board/bulletin.html:22
 #: templates/aa_bulletin_board/edit-bulletin.html:27
 msgid "Back"
-msgstr ""
+msgstr "Повернутися"
 
 #: templates/aa_bulletin_board/bulletin.html:25
 #: templates/aa_bulletin_board/dashboard.html:40
 msgid "Edit"
-msgstr ""
+msgstr "Редагувати"
 
 #: templates/aa_bulletin_board/bulletin.html:26
 #: templates/aa_bulletin_board/dashboard.html:41
 msgid "Delete"
-msgstr ""
+msgstr "Видалити"
 
 #: templates/aa_bulletin_board/dashboard.html:26
 msgid "This bulletin is restricted to the following group(s):"
-msgstr ""
+msgstr "Доступ до цього бюлетеня обмежений для наступних груп:"
 
 #: templates/aa_bulletin_board/dashboard.html:37
 msgid "Read more"
-msgstr ""
+msgstr "Читати далі"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 msgid "Edit Bulletin"
-msgstr ""
+msgstr "Редагувати бюлетень"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Create New Bulletin"
-msgstr ""
+msgstr "Створити новий бюлетень"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Update Bulletin"
-msgstr ""
+msgstr "Бюлетень оновлень"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Create Bulletin"
-msgstr ""
+msgstr "Створити бюлетень"
 
 #: views.py:65
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
-msgstr ""
+msgstr "Створено бюлетень \"{bulletin__title}\"."
 
 #: views.py:92
 msgid ""
 "The bulletin you are looking for does not exist, or you don't have access to "
 "it."
-msgstr ""
+msgstr "Бюлетень, який ви шукаєте, не існує, або у вас немає до нього доступу."
 
 #: views.py:129
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr ""
+msgstr "Оновлено бюлетень \"{bulletin__title}\"."
 
 #: views.py:140
 msgid "The bulletin you are trying to edit for does not exist."
-msgstr ""
+msgstr "Бюлетень, який ви намагаєтеся відредагувати, не існує."
 
 #: views.py:159
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr ""
+msgstr "Бюлетень \"{bulletin.title}\" вилучено."
 
 #: views.py:164
 msgid "The bulletin you are trying to delete for does not exist."
-msgstr ""
+msgstr "Зведення, яке ви намагаєтеся видалити, не існує."
