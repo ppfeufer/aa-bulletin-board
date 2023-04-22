@@ -2,5 +2,10 @@
 App init
 """
 
-__version__ = "1.9.0"
+# Standard Library
+from importlib import metadata
+
+__version__ = metadata.version("aa-bulletin-board")
 __title__ = "Bulletin Board"
+
+del metadata
