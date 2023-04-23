@@ -8,6 +8,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [1.10.0] - 2023-04-23
+
+### Added
+
+- Ukrainian translation (for upcoming AA update which adds the Ukrainian language)
+
+### Changed
+
+- Moved the build process to PEP 621 / pyproject.toml
+
+
 ## [1.9.0] - 2023-04-16
 
 ### Added
