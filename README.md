@@ -16,6 +16,8 @@
 Simple bulletin board for [Alliance Auth](https://gitlab.com/allianceauth/allianceauth)
 
 
+---
+
 <!-- TOC -->
 * [AA Bulletin Board](#aa-bulletin-board)
   * [⚠️ Before You Install This Module ⚠️](#-before-you-install-this-module-)
@@ -34,6 +36,8 @@ Simple bulletin board for [Alliance Auth](https://gitlab.com/allianceauth/allian
   * [Changelog](#changelog)
   * [Contributing](#contributing)
 <!-- TOC -->
+
+---
 
 
 ## ⚠️ Before You Install This Module ⚠️
