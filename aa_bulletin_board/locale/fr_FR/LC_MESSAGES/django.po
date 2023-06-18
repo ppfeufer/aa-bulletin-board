@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-11 22:55+0200\n"
+"POT-Creation-Date: 2023-06-18 21:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,7 +100,7 @@ msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr ""
 
 #: views.py:140
-msgid "The bulletin you are trying to edit for does not exist."
+msgid "The bulletin you are trying to edit does not exist."
 msgstr ""
 
 #: views.py:159
@@ -109,5 +109,5 @@ msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr ""
 
 #: views.py:164
-msgid "The bulletin you are trying to delete for does not exist."
+msgid "The bulletin you are trying to delete does not exist."
 msgstr ""

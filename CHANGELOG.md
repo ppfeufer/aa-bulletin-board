@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Typos in the German translation
+- Grammar in English sentences
 
 
 ## [1.10.0] - 2023-04-23
