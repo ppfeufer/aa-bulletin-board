@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-18 21:09+0200\n"
-"PO-Revision-Date: 2023-06-18 19:01+0000\n"
+"PO-Revision-Date: 2023-06-19 20:18+0000\n"
 "Last-Translator: Nikolay <nick.postnikov@gmail.com>\n"
-"Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-bulletin-board/ru/>\n"
+"Language-Team: Russian <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-bulletin-board/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -105,10 +105,8 @@ msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr "Бюллетень \"{bulletin__title}\" обновлен."
 
 #: views.py:140
-#, fuzzy
-#| msgid "The bulletin you are trying to edit for does not exist."
 msgid "The bulletin you are trying to edit does not exist."
-msgstr "Бюллетень, который вы хотите редактировать, не существует."
+msgstr "Бюллетень, который вы пытаетесь отредактировать, не существует."
 
 #: views.py:159
 #, python-brace-format
@@ -116,7 +114,5 @@ msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Бюллетень \"{bulletin.title}\" удален."
 
 #: views.py:164
-#, fuzzy
-#| msgid "The bulletin you are trying to delete for does not exist."
 msgid "The bulletin you are trying to delete does not exist."
-msgstr "Бюллетень, который вы хотите удалить, не существует."
+msgstr "Бюллетень, который вы пытаетесь удалить, не существует."
