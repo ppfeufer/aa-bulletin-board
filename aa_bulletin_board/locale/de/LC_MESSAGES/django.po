@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-06-18 21:09+0200\n"
-"PO-Revision-Date: 2023-05-19 23:24+0000\n"
-"Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-bulletin-board/de/>\n"
+"PO-Revision-Date: 2023-06-19 20:18+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-bulletin-board/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 4.18\n"
 
 #: forms.py:71
 msgid ""
@@ -104,8 +104,6 @@ msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr "Bulletin \"{bulletin__title}\" aktualisiert."
 
 #: views.py:140
-#, fuzzy
-#| msgid "The bulletin you are trying to edit for does not exist."
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Das Bulletin das Du bearbeiten möchtest scheint nicht zu existieren."
 
@@ -115,7 +113,5 @@ msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Bulletin \"{bulletin.title}\" gelöscht."
 
 #: views.py:164
-#, fuzzy
-#| msgid "The bulletin you are trying to delete for does not exist."
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Das Bulletin das Du versuchst zu löschen scheint nicht zu existieren."
