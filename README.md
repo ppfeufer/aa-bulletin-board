@@ -22,7 +22,6 @@ Simple bulletin board for [Alliance Auth](https://gitlab.com/allianceauth/allian
 <!-- TOC -->
 * [AA Bulletin Board](#aa-bulletin-board)
   * [⚠️ Before You Install This Module ⚠️](#-before-you-install-this-module-)
-  * [Overview](#overview)
   * [Installation](#installation)
     * [Step 1: Install the Package](#step-1-install-the-package)
     * [Step 2: Configure Alliance Auth](#step-2-configure-alliance-auth)
@@ -47,11 +46,6 @@ This module needs quite some configuration done before working properly. You nee
 modify your Apache/Nginx configuration as well as the global URL config of Alliance
 Auth. So please only install if you know what you're doing/feel comfortable to make
 these kinds of changes. For your own sanity, and mine :-)
-
-
-## Overview
-
-Work in progress on this one
 
 
 ## Installation
