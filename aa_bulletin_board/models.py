@@ -21,7 +21,7 @@ from aa_bulletin_board.managers import BulletinManager
 
 def get_sentinel_user() -> User:
     """
-    Get user or create one
+    Get the sentinel user or create one
     :return:
     """
 

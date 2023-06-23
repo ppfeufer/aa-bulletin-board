@@ -19,7 +19,7 @@ from aa_bulletin_board.models import Bulletin
 class SpecialModelChoiceIterator(forms.models.ModelChoiceIterator):
     """
     Variant of Django's ModelChoiceIterator to prevent it from always re-fetching the
-    given queryset from database.
+    given queryset from the database.
     """
 
     def __iter__(self):
@@ -35,7 +35,7 @@ class SpecialModelChoiceIterator(forms.models.ModelChoiceIterator):
 class SpecialModelMultipleChoiceField(forms.ModelMultipleChoiceField):
     """
     Variant of Django's ModelMultipleChoiceField to prevent it from always
-    re-fetching the given queryset from database.
+    re-fetching the given queryset from the database.
     """
 
     iterator = SpecialModelChoiceIterator

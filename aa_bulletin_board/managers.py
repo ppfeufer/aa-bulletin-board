@@ -18,7 +18,7 @@ class BulletinQuerySet(models.QuerySet):
         Filter boards that given user has access to.
         """
 
-        # Forum manager always have access, so assign this permission wisely
+        # Forum managers always have access, so assign this permission wisely
         if user.has_perm("aa_bulletin_board.manage_bulletins"):
             return self
 

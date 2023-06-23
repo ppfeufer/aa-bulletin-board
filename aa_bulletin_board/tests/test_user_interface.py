@@ -148,7 +148,7 @@ class TestBulletinUI(WebTest):
 
     def test_should_return_cleaned_message_string_on_bulletin_creation(self):
         """
-        Test should return a clean/sanitized message string when new bulletin is created
+        Test should return a clean/sanitized message string when a new bulletin is created
         :return:
         """
 
@@ -210,7 +210,7 @@ class TestBulletinUI(WebTest):
         self,
     ):
         """
-        Test should return to bulletin form, because submitted form is not valid
+        Test should return to the bulletin form, because the submitted form is not valid
         due to missing title
         :return:
         :rtype:
@@ -231,7 +231,7 @@ class TestBulletinUI(WebTest):
         self,
     ):
         """
-        Test should return to bulletin form, because submitted form is not valid
+        Test should return to the bulletin form, because the submitted form is not valid
         due to missing title
         :return:
         :rtype:
