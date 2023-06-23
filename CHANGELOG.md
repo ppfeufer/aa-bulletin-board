@@ -12,6 +12,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Typos in the German translation
 - Grammar in English sentences
+- Quotes in templates
+
+### Removed
+
+- Deprecated type attributes
 
 
 ## [1.10.0] - 2023-04-23
