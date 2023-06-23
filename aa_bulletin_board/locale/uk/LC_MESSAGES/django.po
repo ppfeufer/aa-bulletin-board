@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-18 21:09+0200\n"
+"POT-Creation-Date: 2023-06-23 16:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural= n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
+#: __init__.py:12 templates/aa_bulletin_board/base.html:5
+#: templates/aa_bulletin_board/bulletin.html:5
+#: templates/aa_bulletin_board/dashboard.html:6
+#: templates/aa_bulletin_board/edit-bulletin.html:9
+#: templates/aa_bulletin_board/edit-bulletin.html:11
+msgid "Bulletin Board"
+msgstr "Дошка оголошень"
+
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: apps.py:21
+#, fuzzy, python-brace-format
+#| msgid "Bulletin Board"
+msgid "Bulletin Board v{__version__}"
+msgstr "Дошка оголошень"
+
 #: forms.py:71
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
@@ -28,21 +43,39 @@ msgstr ""
 "групових обмежень, кожен, хто має доступ до цього модуля, зможе прочитати "
 "цей бюлетень."
 
-#: models.py:101
+#: models.py:74
+msgid "Title"
+msgstr ""
+
+#: models.py:76
+msgid "Content"
+msgstr ""
+
+#. Translators: This is the date and time the bulletin has been created
+#: models.py:81
+msgid "Created"
+msgstr ""
+
+#. Translators: This is the date and time the bulletin has been updated
+#: models.py:87
+msgid "Updated"
+msgstr ""
+
+#: models.py:96
+msgid "User"
+msgstr ""
+
+#: models.py:102
+msgid "Group restrictions"
+msgstr ""
+
+#: models.py:113
 msgid "Bulletin"
 msgstr "Інформаційний бюлетень"
 
-#: models.py:102
+#: models.py:114
 msgid "Bulletins"
 msgstr "Інформаційні бюлетені"
-
-#: templates/aa_bulletin_board/base.html:5
-#: templates/aa_bulletin_board/bulletin.html:5
-#: templates/aa_bulletin_board/dashboard.html:6
-#: templates/aa_bulletin_board/edit-bulletin.html:9
-#: templates/aa_bulletin_board/edit-bulletin.html:11
-msgid "Bulletin Board"
-msgstr "Дошка оголошень"
 
 #: templates/aa_bulletin_board/bulletin.html:14
 #: templates/aa_bulletin_board/dashboard.html:13

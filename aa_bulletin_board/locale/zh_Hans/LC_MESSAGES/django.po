@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-18 21:09+0200\n"
+"POT-Creation-Date: 2023-06-23 16:40+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,26 +18,58 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: __init__.py:12 templates/aa_bulletin_board/base.html:5
+#: templates/aa_bulletin_board/bulletin.html:5
+#: templates/aa_bulletin_board/dashboard.html:6
+#: templates/aa_bulletin_board/edit-bulletin.html:9
+#: templates/aa_bulletin_board/edit-bulletin.html:11
+msgid "Bulletin Board"
+msgstr ""
+
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: apps.py:21
+#, python-brace-format
+msgid "Bulletin Board v{__version__}"
+msgstr ""
+
 #: forms.py:71
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
 
-#: models.py:101
-msgid "Bulletin"
+#: models.py:74
+msgid "Title"
+msgstr ""
+
+#: models.py:76
+msgid "Content"
+msgstr ""
+
+#. Translators: This is the date and time the bulletin has been created
+#: models.py:81
+msgid "Created"
+msgstr ""
+
+#. Translators: This is the date and time the bulletin has been updated
+#: models.py:87
+msgid "Updated"
+msgstr ""
+
+#: models.py:96
+msgid "User"
 msgstr ""
 
 #: models.py:102
-msgid "Bulletins"
+msgid "Group restrictions"
 msgstr ""
 
-#: templates/aa_bulletin_board/base.html:5
-#: templates/aa_bulletin_board/bulletin.html:5
-#: templates/aa_bulletin_board/dashboard.html:6
-#: templates/aa_bulletin_board/edit-bulletin.html:9
-#: templates/aa_bulletin_board/edit-bulletin.html:11
-msgid "Bulletin Board"
+#: models.py:113
+msgid "Bulletin"
+msgstr ""
+
+#: models.py:114
+msgid "Bulletins"
 msgstr ""
 
 #: templates/aa_bulletin_board/bulletin.html:14
