@@ -10,9 +10,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
-- Typos in the German translation
 - Grammar in English sentences
 - Quotes in templates
+- German translation improved
+- Russian translation improved
+- Ukrainian translation improved
 
 ### Removed
 
