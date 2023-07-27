@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-23 16:40+0200\n"
+"POT-Creation-Date: 2023-07-27 22:06+0200\n"
 "PO-Revision-Date: 2023-07-26 13:02+0000\n"
 "Last-Translator: \"Andrii M.\" <elfleg0las88@gmail.com>\n"
-"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-bulletin-board/uk/>\n"
+"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-bulletin-board/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -120,6 +120,19 @@ msgstr "Бюлетень оновлень"
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Create Bulletin"
 msgstr "Створити бюлетень"
+
+#: templates/aa_bulletin_board/partials/app-translation-footer.html:4
+msgid "Join our team of translators!"
+msgstr ""
+
+#: templates/aa_bulletin_board/partials/app-translation-footer.html:7
+#, python-format
+msgid ""
+"\n"
+"            Do you want to help translate this app into your language or "
+"improve the existing translation? - %(weblate_link)s\n"
+"        "
+msgstr ""
 
 #: views.py:65
 #, python-brace-format

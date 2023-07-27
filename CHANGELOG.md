@@ -16,6 +16,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Russian translation improved
 - Ukrainian translation improved
 
+### Added
+
+- Footer to promote help with the app translation
+
 ### Removed
 
 - Deprecated type attributes
