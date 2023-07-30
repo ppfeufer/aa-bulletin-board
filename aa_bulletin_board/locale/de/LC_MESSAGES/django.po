@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-11 22:55+0200\n"
-"PO-Revision-Date: 2023-04-11 21:08+0000\n"
-"Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
+"POT-Creation-Date: 2023-07-27 22:06+0200\n"
+"PO-Revision-Date: 2023-07-28 22:39+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/de/>\n"
 "Language: de\n"
@@ -16,7 +16,21 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.18.2\n"
+
+#: __init__.py:12 templates/aa_bulletin_board/base.html:5
+#: templates/aa_bulletin_board/bulletin.html:5
+#: templates/aa_bulletin_board/dashboard.html:6
+#: templates/aa_bulletin_board/edit-bulletin.html:9
+#: templates/aa_bulletin_board/edit-bulletin.html:11
+msgid "Bulletin Board"
+msgstr "Bulletin Board"
+
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: apps.py:21
+#, python-brace-format
+msgid "Bulletin Board v{__version__}"
+msgstr "Bulletin Board v{__version__}"
 
 #: forms.py:71
 msgid ""
@@ -24,24 +38,42 @@ msgid ""
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
 "Beschränkt dieses Bulletin auf bestimmte Gruppen. Wenn keine "
-"Gruppenbeschränkungen bestehen, kann jeder, der Zugriff auf dieses Modul "
-"hat, dieses Bulletin lesen."
+"Gruppenbeschränkungen bestehen, kann jeder der Zugriff auf dieses Modul hat, "
+"dieses Bulletin lesen."
 
-#: models.py:101
+#: models.py:74
+msgid "Title"
+msgstr "Titel"
+
+#: models.py:76
+msgid "Content"
+msgstr "Inhalt"
+
+#. Translators: This is the date and time the bulletin has been created
+#: models.py:81
+msgid "Created"
+msgstr "Erstellt"
+
+#. Translators: This is the date and time the bulletin has been updated
+#: models.py:87
+msgid "Updated"
+msgstr "Aktualisiert"
+
+#: models.py:96
+msgid "User"
+msgstr "Nutzer"
+
+#: models.py:102
+msgid "Group restrictions"
+msgstr "Gruppenbeschränkungen"
+
+#: models.py:113
 msgid "Bulletin"
 msgstr "Bulletin"
 
-#: models.py:102
+#: models.py:114
 msgid "Bulletins"
 msgstr "Bulletins"
-
-#: templates/aa_bulletin_board/base.html:5
-#: templates/aa_bulletin_board/bulletin.html:5
-#: templates/aa_bulletin_board/dashboard.html:6
-#: templates/aa_bulletin_board/edit-bulletin.html:9
-#: templates/aa_bulletin_board/edit-bulletin.html:11
-msgid "Bulletin Board"
-msgstr "Bulletin Board"
 
 #: templates/aa_bulletin_board/bulletin.html:14
 #: templates/aa_bulletin_board/dashboard.html:13
@@ -87,6 +119,23 @@ msgstr "Bulletin aktualisieren"
 msgid "Create Bulletin"
 msgstr "Bulletin erstellen"
 
+#: templates/aa_bulletin_board/partials/app-translation-footer.html:4
+msgid "Join our team of translators!"
+msgstr "Tritt unserm Team von Übersetzern bei!"
+
+#: templates/aa_bulletin_board/partials/app-translation-footer.html:7
+#, python-format
+msgid ""
+"\n"
+"            Do you want to help translate this app into your language or "
+"improve the existing translation? - %(weblate_link)s\n"
+"        "
+msgstr ""
+"\n"
+"            Du möchtest helfen diese App in Deine Sprache zu übersetzen oder "
+"die bestehende Übersetzung verbessern? - %(weblate_link)s\n"
+"        "
+
 #: views.py:65
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
@@ -104,7 +153,7 @@ msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr "Bulletin \"{bulletin__title}\" aktualisiert."
 
 #: views.py:140
-msgid "The bulletin you are trying to edit for does not exist."
+msgid "The bulletin you are trying to edit does not exist."
 msgstr "Das Bulletin das Du bearbeiten möchtest scheint nicht zu existieren."
 
 #: views.py:159
@@ -113,5 +162,5 @@ msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Bulletin \"{bulletin.title}\" gelöscht."
 
 #: views.py:164
-msgid "The bulletin you are trying to delete for does not exist."
-msgstr "Das Bulletin das Du versuchst zu löschen scheint nicht zu existrieren."
+msgid "The bulletin you are trying to delete does not exist."
+msgstr "Das Bulletin das Du versuchst zu löschen scheint nicht zu existieren."

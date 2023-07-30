@@ -2,8 +2,6 @@
 Hook into AA
 """
 
-# Django
-from django.utils.translation import gettext_lazy as _
 
 # Alliance Auth
 from allianceauth import hooks
@@ -25,7 +23,7 @@ class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-m
 
         MenuItemHook.__init__(
             self,
-            _(__title__),
+            __title__,
             "fas fa-clipboard-list fa-fw",
             "aa_bulletin_board:dashboard",
             navactive=["aa_bulletin_board:"],

@@ -1,16 +1,16 @@
-{% extends 'aa_bulletin_board/base.html' %}
+{% extends "aa_bulletin_board/base.html" %}
 
 {% load i18n %}
 
 {% block aabulletinboard_header %}
     {% translate "Bulletin Board" as translated_header %}
-    {% include 'aa_bulletin_board/partials/header/page-header.html' with header_text=translated_header %}
+    {% include "aa_bulletin_board/partials/header/page-header.html" with header_text=translated_header %}
 {% endblock %}
 
 {% block aabulletinboard_body %}
     {% if perms.aa_bulletin_board.manage_bulletins %}
         <div class="aa-bulletin-board-management text-right">
-            <a class="btn btn-success btn-read-more" href="{% url 'aa_bulletin_board:create_bulletin' %}">{% translate 'Add Bulletin' %}</a>
+            <a class="btn btn-success btn-read-more" href="{% url 'aa_bulletin_board:create_bulletin' %}">{% translate "Add Bulletin" %}</a>
         </div>
     {% endif %}
 
@@ -23,7 +23,7 @@
                             <div class="panel-title">
                                 {{ bulletin.title }}
                                 {% if bulletin.groups.all %}
-                                    <i class="far fa-eye-slash aa-bulletin-board-marker-group-restrictions" data-title="{% translate "This bulletin is restricted to the following group(s):" %}<br>{{ bulletin.groups.all|join:', ' }}"></i>
+                                    <i class="far fa-eye-slash aa-bulletin-board-marker-group-restrictions" data-title="{% translate 'This bulletin is restricted to the following group(s):' %}<br>{{ bulletin.groups.all|join:', ' }}"></i>
                                 {% endif %}
                             </div>
                         </div>
@@ -34,11 +34,11 @@
 
                         <div class="panel-footer-read-more-button panel-footer-no-background">
                             <p>
-                                <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate 'Read more' %}</a>
+                                <a class="btn btn-primary btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate "Read more" %}</a>
 
                                 {% if perms.aa_bulletin_board.manage_bulletins %}
-                                    <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate 'Edit' %}</a>
-                                    <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate 'Delete' %}</a>
+                                    <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate "Edit" %}</a>
+                                    <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate "Delete" %}</a>
                                 {% endif %}
                             </p>
                         </div>
@@ -52,6 +52,8 @@
 {% block extra_javascript %}
     <script>
         $(document).ready(() => {
+            'use strict';
+
             const resizeBulletinPanel = () => {
                 let highestBox = 0;
 

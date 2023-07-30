@@ -13,7 +13,6 @@ import aa_bulletin_board.models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [

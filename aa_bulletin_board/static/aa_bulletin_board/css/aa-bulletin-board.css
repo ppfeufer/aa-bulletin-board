@@ -40,6 +40,17 @@
         height: auto !important; /* to override inline style added by CKeditor */
         max-width: 100%;
     }
+
+    .aa-bulletin-board-footer {
+        border-top: 1px solid rgb(236 240 241);
+        font-size: 85%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .template-dark-mode .aa-bulletin-board-footer {
+        border-color: rgb(70 69 69);
+    }
 }
 
 /* MultiSelect

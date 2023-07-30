@@ -21,7 +21,7 @@ from aa_bulletin_board.managers import BulletinManager
 
 def get_sentinel_user() -> User:
     """
-    Get user or create one
+    Get the sentinel user or create one
     :return:
     """
 
@@ -71,11 +71,21 @@ class Bulletin(models.Model):
     Bulletin model
     """
 
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, verbose_name=_("Title"))
     slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
-    content = RichTextUploadingField(blank=True, null=True)
-    created_date = models.DateTimeField(auto_now_add=True, db_index=True)
-    updated_date = models.DateTimeField(auto_now=True, null=True)
+    content = RichTextUploadingField(blank=True, null=True, verbose_name=_("Content"))
+    created_date = models.DateTimeField(
+        auto_now_add=True,
+        db_index=True,
+        # Translators: This is the date and time the bulletin has been created
+        verbose_name=_("Created"),
+    )
+    updated_date = models.DateTimeField(
+        auto_now=True,
+        null=True,
+        # Translators: This is the date and time the bulletin has been updated
+        verbose_name=_("Updated"),
+    )
     created_by = models.ForeignKey(
         User,
         related_name="+",
@@ -83,11 +93,13 @@ class Bulletin(models.Model):
         blank=True,
         default=None,
         on_delete=models.SET(get_sentinel_user),
+        verbose_name=_("User"),
     )
     groups = models.ManyToManyField(
         Group,
         blank=True,
         related_name="aa_bulletin_board_group_restriction",
+        verbose_name=_("Group restrictions"),
     )
 
     objects = BulletinManager()

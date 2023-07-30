@@ -27,7 +27,7 @@ class TestGetSentinelUser(TestCase):
 
     def test_should_create_user_when_it_does_not_exist(self):
         """
-        Test should create sentinel user when it doesn't exist
+        Test should create a sentinel user when it doesn't exist
         :return:
         """
 
@@ -138,7 +138,35 @@ class TestBulletins(TestCase):
         self.assertEqual(len(messages), 1)
         self.assertEqual(
             str(messages[0]),
-            "The bulletin you are trying to delete for does not exist.",
+            "The bulletin you are trying to delete does not exist.",
+        )
+
+    def test_should_raise_does_not_exist_exception_when_edit_bulletin_not_found(self):
+        """
+        Test if a bulletin that doesn't exist should be edited
+        :return:
+        :rtype:
+        """
+
+        # given
+        bulletin = Bulletin.objects.create(
+            title=fake.sentence(),
+            content=f"<p>{fake.sentence()}</p>",
+            created_by=self.user_1001,
+        )
+        self.client.force_login(self.user_1003)
+
+        # when
+        response = self.client.get(
+            reverse("aa_bulletin_board:edit_bulletin", args=["foobarsson"])
+        )
+        messages = list(get_messages(response.wsgi_request))
+
+        self.assertRaises(bulletin.DoesNotExist)
+        self.assertEqual(len(messages), 1)
+        self.assertEqual(
+            str(messages[0]),
+            "The bulletin you are trying to edit does not exist.",
         )
 
     def test_should_translate_russian_letters_in_slug(self):
@@ -158,7 +186,7 @@ class TestBulletins(TestCase):
 
     def test_should_return_cleaned_message_string_on_bulletin_creation(self):
         """
-        Test should return a clean/sanitized message string when new bulletin is created
+        Test should return a clean/sanitized message string when a new bulletin is created
         :return:
         """
 
@@ -208,7 +236,7 @@ class TestBulletins(TestCase):
 
     def test_should_return_bulletin_title_as_model_object_string_name(self):
         """
-        Test should return the objects string name
+        Test should return the object's string name
         :return:
         :rtype:
         """

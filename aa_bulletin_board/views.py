@@ -137,7 +137,7 @@ def edit_bulletin(request, slug):
         return render(request, "aa_bulletin_board/edit-bulletin.html", context)
     except Bulletin.DoesNotExist:
         messages.warning(
-            request, _("The bulletin you are trying to edit for does not exist.")
+            request, _("The bulletin you are trying to edit does not exist.")
         )
 
         return redirect("aa_bulletin_board:dashboard")
@@ -161,7 +161,7 @@ def remove_bulletin(request, slug):
         bulletin.delete()
     except Bulletin.DoesNotExist:
         messages.warning(
-            request, _("The bulletin you are trying to delete for does not exist.")
+            request, _("The bulletin you are trying to delete does not exist.")
         )
 
     return redirect("aa_bulletin_board:dashboard")

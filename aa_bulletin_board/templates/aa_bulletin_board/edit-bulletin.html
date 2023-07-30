@@ -1,4 +1,4 @@
-{% extends 'aa_bulletin_board/base.html' %}
+{% extends "aa_bulletin_board/base.html" %}
 
 {% load bootstrap %}
 {% load i18n %}
@@ -14,9 +14,9 @@
 
 {% block aabulletinboard_header %}
     {% if bulletin %}
-        {% include 'aa_bulletin_board/partials/header/page-header.html' with header_text=bulletin.title %}
+        {% include "aa_bulletin_board/partials/header/page-header.html" with header_text=bulletin.title %}
     {% else %}
-        {% include 'aa_bulletin_board/partials/header/page-header.html' with header_text='Create New Bulletin' %}
+        {% include "aa_bulletin_board/partials/header/page-header.html" with header_text="Create New Bulletin" %}
     {% endif %}
 {% endblock %}
 
@@ -24,7 +24,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="panel-title">
-                <a class="btn btn-default btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate 'Back' %}</a>
+                <a class="btn btn-default btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate "Back" %}</a>
             </div>
         </div>
 
@@ -35,7 +35,7 @@
                 {{ form|bootstrap }}
 
                 <div class="form-group text-right clearfix">
-                    <button class="btn btn-success" type="submit">{% if bulletin %}{% translate 'Update Bulletin' %}{% else %}{% translate 'Create Bulletin' %}{% endif %}</button>
+                    <button class="btn btn-success" type="submit">{% if bulletin %}{% translate "Update Bulletin" %}{% else %}{% translate "Create Bulletin" %}{% endif %}</button>
                 </div>
             </form>
         </div>
@@ -48,6 +48,8 @@
     <script src="{% static "ckeditor/ckeditor-init.js" %}"></script>
     <script src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
     <script>
+        'use strict';
+
         $('.aa-bulletin-boad-edit-bulletin select').SumoSelect(
             {okCancelInMulti: true, selectAll: true}
         );
