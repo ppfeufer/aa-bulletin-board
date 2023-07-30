@@ -8,17 +8,23 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [1.10.1] - 2023-07-30
+
 ### Fixed
 
 - Grammar in English sentences
-- Quotes in templates
-- German translation improved
-- Russian translation improved
-- Ukrainian translation improved
+- Quotation marks in templates
 
 ### Added
 
 - Footer to promote help with the app translation
+
+### Changed
+
+- German translation improved
+- Russian translation improved
+- Ukrainian translation improved
 
 ### Removed
 
