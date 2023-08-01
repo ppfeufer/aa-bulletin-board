@@ -149,3 +149,15 @@ repos:
           - black==23.7.0
         args:
           - --target-version=py38
+
+  - repo: https://github.com/pylint-dev/pylint
+    rev: v3.0.0a6
+    hooks:
+      - id: pylint
+        exclude: |
+          (?x)(
+            tests/ |
+            migrations/
+          )
+        args:
+          - --py-version=3.8.0
