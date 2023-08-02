@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-30 18:32+0200\n"
+"POT-Creation-Date: 2023-08-02 15:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,37 +38,37 @@ msgid ""
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
 
-#: models.py:74
+#: models.py:81
 msgid "Title"
 msgstr ""
 
-#: models.py:76
+#: models.py:83
 msgid "Content"
 msgstr ""
 
 #. Translators: This is the date and time the bulletin has been created
-#: models.py:81
+#: models.py:88
 msgid "Created"
 msgstr ""
 
 #. Translators: This is the date and time the bulletin has been updated
-#: models.py:87
+#: models.py:94
 msgid "Updated"
 msgstr ""
 
-#: models.py:96
+#: models.py:103
 msgid "User"
 msgstr ""
 
-#: models.py:102
+#: models.py:109
 msgid "Group restrictions"
 msgstr ""
 
-#: models.py:113
+#: models.py:120
 msgid "Bulletin"
 msgstr ""
 
-#: models.py:114
+#: models.py:121
 msgid "Bulletins"
 msgstr ""
 
@@ -126,31 +126,31 @@ msgstr ""
 msgid "Join our team of translators!"
 msgstr ""
 
-#: views.py:65
+#: views.py:80
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
 msgstr ""
 
-#: views.py:92
+#: views.py:123
 msgid ""
 "The bulletin you are looking for does not exist, or you don't have access to "
 "it."
 msgstr ""
 
-#: views.py:129
+#: views.py:165
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr ""
 
-#: views.py:140
+#: views.py:184
 msgid "The bulletin you are trying to edit does not exist."
 msgstr ""
 
-#: views.py:159
+#: views.py:208
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr ""
 
-#: views.py:164
+#: views.py:215
 msgid "The bulletin you are trying to delete does not exist."
 msgstr ""

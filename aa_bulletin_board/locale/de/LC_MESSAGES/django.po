@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-30 18:32+0200\n"
+"POT-Creation-Date: 2023-08-02 15:50+0200\n"
 "PO-Revision-Date: 2023-07-31 17:39+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-bulletin-board/de/>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-bulletin-board/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -41,37 +41,37 @@ msgstr ""
 "Gruppenbeschränkungen bestehen, kann jeder der Zugriff auf dieses Modul hat, "
 "dieses Bulletin lesen."
 
-#: models.py:74
+#: models.py:81
 msgid "Title"
 msgstr "Titel"
 
-#: models.py:76
+#: models.py:83
 msgid "Content"
 msgstr "Inhalt"
 
 #. Translators: This is the date and time the bulletin has been created
-#: models.py:81
+#: models.py:88
 msgid "Created"
 msgstr "Erstellt"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: models.py:87
+#: models.py:94
 msgid "Updated"
 msgstr "Aktualisiert"
 
-#: models.py:96
+#: models.py:103
 msgid "User"
 msgstr "Nutzer"
 
-#: models.py:102
+#: models.py:109
 msgid "Group restrictions"
 msgstr "Gruppenbeschränkungen"
 
-#: models.py:113
+#: models.py:120
 msgid "Bulletin"
 msgstr "Bulletin"
 
-#: models.py:114
+#: models.py:121
 msgid "Bulletins"
 msgstr "Bulletins"
 
@@ -131,31 +131,31 @@ msgstr ""
 msgid "Join our team of translators!"
 msgstr "Tritt unserm Team von Übersetzern bei!"
 
-#: views.py:65
+#: views.py:80
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
 msgstr "Bulletin \"{bulletin__title}\" erstellt."
 
-#: views.py:92
+#: views.py:123
 msgid ""
 "The bulletin you are looking for does not exist, or you don't have access to "
 "it."
 msgstr "Dieses Bulletin existiert nicht, oder Du hast keinen Zugriff darauf."
 
-#: views.py:129
+#: views.py:165
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr "Bulletin \"{bulletin__title}\" aktualisiert."
 
-#: views.py:140
+#: views.py:184
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Das Bulletin das Du bearbeiten möchtest scheint nicht zu existieren."
 
-#: views.py:159
+#: views.py:208
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Bulletin \"{bulletin.title}\" gelöscht."
 
-#: views.py:164
+#: views.py:215
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Das Bulletin das Du versuchst zu löschen scheint nicht zu existieren."
