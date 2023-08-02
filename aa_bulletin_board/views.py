@@ -74,7 +74,9 @@ def create_bulletin(request: WSGIRequest) -> HttpResponse:
             bulletin.created_by = request.user
             bulletin.save()
 
-            bulletin.groups.set(form.cleaned_data["groups"])
+            bulletin.groups.set(  # pylint: disable=no-member
+                form.cleaned_data["groups"]
+            )
 
             messages.success(
                 request=request, message=_(f'Bulletin "{bulletin__title}" created.')
@@ -116,7 +118,7 @@ def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
             template_name="aa_bulletin_board/bulletin.html",
             context=context,
         )
-    except Bulletin.DoesNotExist:
+    except Bulletin.DoesNotExist:  # pylint: disable=no-member
         messages.warning(
             request=request,
             message=_(
@@ -178,7 +180,7 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
             template_name="aa_bulletin_board/edit-bulletin.html",
             context=context,
         )
-    except Bulletin.DoesNotExist:
+    except Bulletin.DoesNotExist:  # pylint: disable=no-member
         messages.warning(
             request=request,
             message=_("The bulletin you are trying to edit does not exist."),
@@ -209,7 +211,7 @@ def remove_bulletin(request: WSGIRequest, slug: str) -> HttpResponseRedirect:
         )
 
         bulletin.delete()
-    except Bulletin.DoesNotExist:
+    except Bulletin.DoesNotExist:  # pylint: disable=no-member
         messages.warning(
             request=request,
             message=_("The bulletin you are trying to delete does not exist."),

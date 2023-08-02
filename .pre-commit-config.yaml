@@ -154,10 +154,5 @@ repos:
     rev: v3.0.0a6
     hooks:
       - id: pylint
-        exclude: |
-          (?x)(
-            tests/ |
-            migrations/
-          )
         args:
           - --py-version=3.8.0

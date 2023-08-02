@@ -1,3 +1,10 @@
+[MASTER]
+# Add files or directories matching the regex patterns to the ignore-list.
+# The regex matches against paths.
+ignore-paths=
+    (.*)/tests/,
+    (.*)/migrations/
+
 [MESSAGES CONTROL]
 disable=
     attribute-defined-outside-init,
