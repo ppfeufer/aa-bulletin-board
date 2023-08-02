@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Code improvements
+  - Type hints
+  - Docstrings
+  - Keyword arguments
+- Tweaks to pylint checks
+
 
 ## [1.10.1] - 2023-07-30
 
