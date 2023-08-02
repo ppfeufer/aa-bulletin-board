@@ -22,7 +22,9 @@ from aa_bulletin_board.managers import BulletinManager
 def get_sentinel_user() -> User:
     """
     Get the sentinel user or create one
+
     :return:
+    :rtype:
     """
 
     return User.objects.get_or_create(username="deleted")[0]
@@ -31,17 +33,22 @@ def get_sentinel_user() -> User:
 def get_bulletin_slug_from_title(bulletin_title: str) -> str:
     """
     Get the slug from the title
+
     :param bulletin_title:
+    :type bulletin_title:
     :return:
+    :rtype:
     """
 
     run = 0
-    bulletin_slug = slugify(unidecode.unidecode(bulletin_title), allow_unicode=True)
+    bulletin_slug = slugify(
+        value=unidecode.unidecode(bulletin_title), allow_unicode=True
+    )
 
     while Bulletin.objects.filter(slug=bulletin_slug).exists():
         run += 1
         bulletin_slug = slugify(
-            unidecode.unidecode(f"{bulletin_title}-{run}"), allow_unicode=True
+            value=unidecode.unidecode(f"{bulletin_title}-{run}"), allow_unicode=True
         )
 
     return bulletin_slug
@@ -120,9 +127,16 @@ class Bulletin(models.Model):
     def save(self, *args, **kwargs) -> None:
         """
         Add the slug on save
+
+        :param args:
+        :type args:
+        :param kwargs:
+        :type kwargs:
+        :return:
+        :rtype:
         """
 
-        self.content = string_cleanup(self.content)
+        self.content = string_cleanup(string=self.content)
 
         if self.slug == "":
             bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)

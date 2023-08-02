@@ -25,22 +25,26 @@ class TestGetSentinelUser(TestCase):
     Tests for the sentinel user
     """
 
-    def test_should_create_user_when_it_does_not_exist(self):
+    def test_should_create_user_when_it_does_not_exist(self) -> None:
         """
         Test should create a sentinel user when it doesn't exist
+
         :return:
+        :rtype:
         """
 
         # when
         user = get_sentinel_user()
 
         # then
-        self.assertEqual(user.username, "deleted")
+        self.assertEqual(first=user.username, second="deleted")
 
-    def test_should_return_user_when_it_does(self):
+    def test_should_return_user_when_it_does(self) -> None:
         """
         Test should return sentinel user when it exists
+
         :return:
+        :rtype:
         """
 
         # given
@@ -50,7 +54,7 @@ class TestGetSentinelUser(TestCase):
         user = get_sentinel_user()
 
         # then
-        self.assertEqual(user.username, "deleted")
+        self.assertEqual(first=user.username, second="deleted")
 
 
 class TestBulletins(TestCase):
@@ -62,32 +66,40 @@ class TestBulletins(TestCase):
     def setUpClass(cls) -> None:
         """
         Set up groups and users
+
+        :return:
+        :rtype:
         """
 
         super().setUpClass()
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(1001, "Peter Parker")
+        cls.user_1001 = create_fake_user(
+            character_id=1001, character_name="Peter Parker"
+        )
 
         # User can access bulletins
         cls.user_1002 = create_fake_user(
-            1002, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
+            character_id=1002,
+            character_name="Bruce Wayne",
+            permissions=["aa_bulletin_board.basic_access"],
         )
 
         # User can manage bulletins
         cls.user_1003 = create_fake_user(
-            1003,
-            "Clark Kent",
+            character_id=1003,
+            character_name="Clark Kent",
             permissions=[
                 "aa_bulletin_board.basic_access",
                 "aa_bulletin_board.manage_bulletins",
             ],
         )
 
-    def test_should_remove_bulletin(self):
+    def test_should_remove_bulletin(self) -> None:
         """
         Test if a bulletin should be removed
+
         :return:
         :rtype:
         """
@@ -100,22 +112,29 @@ class TestBulletins(TestCase):
             created_by=self.user_1001,
         )
 
-        self.client.force_login(self.user_1003)
+        self.client.force_login(user=self.user_1003)
 
         # when
         response = self.client.get(
-            reverse("aa_bulletin_board:remove_bulletin", args=[bulletin.slug])
+            path=reverse(
+                viewname="aa_bulletin_board:remove_bulletin", args=[bulletin.slug]
+            )
         )
-        messages = list(get_messages(response.wsgi_request))
+        messages = list(get_messages(request=response.wsgi_request))
 
         # then
-        self.assertRedirects(response, "/bulletin-board/")
-        self.assertEqual(len(messages), 1)
-        self.assertEqual(str(messages[0]), f'Bulletin "{bulletin_title}" deleted.')
+        self.assertRedirects(response=response, expected_url="/bulletin-board/")
+        self.assertEqual(first=len(messages), second=1)
+        self.assertEqual(
+            first=str(messages[0]), second=f'Bulletin "{bulletin_title}" deleted.'
+        )
 
-    def test_should_raise_does_not_exist_exception_when_delete_bulletin_not_found(self):
+    def test_should_raise_does_not_exist_exception_when_delete_bulletin_not_found(
+        self,
+    ) -> None:
         """
         Test if a bulletin that doesn't exist should be removed
+
         :return:
         :rtype:
         """
@@ -126,24 +145,29 @@ class TestBulletins(TestCase):
             content=f"<p>{fake.sentence()}</p>",
             created_by=self.user_1001,
         )
-        self.client.force_login(self.user_1003)
+        self.client.force_login(user=self.user_1003)
 
         # when
         response = self.client.get(
-            reverse("aa_bulletin_board:remove_bulletin", args=["foobarsson"])
+            path=reverse(
+                viewname="aa_bulletin_board:remove_bulletin", args=["foobarsson"]
+            )
         )
         messages = list(get_messages(response.wsgi_request))
 
-        self.assertRaises(bulletin.DoesNotExist)
-        self.assertEqual(len(messages), 1)
+        self.assertRaises(expected_exception=bulletin.DoesNotExist)
+        self.assertEqual(first=len(messages), second=1)
         self.assertEqual(
-            str(messages[0]),
-            "The bulletin you are trying to delete does not exist.",
+            first=str(messages[0]),
+            second="The bulletin you are trying to delete does not exist.",
         )
 
-    def test_should_raise_does_not_exist_exception_when_edit_bulletin_not_found(self):
+    def test_should_raise_does_not_exist_exception_when_edit_bulletin_not_found(
+        self,
+    ) -> None:
         """
         Test if a bulletin that doesn't exist should be edited
+
         :return:
         :rtype:
         """
@@ -154,24 +178,27 @@ class TestBulletins(TestCase):
             content=f"<p>{fake.sentence()}</p>",
             created_by=self.user_1001,
         )
-        self.client.force_login(self.user_1003)
+        self.client.force_login(user=self.user_1003)
 
         # when
         response = self.client.get(
-            reverse("aa_bulletin_board:edit_bulletin", args=["foobarsson"])
+            path=reverse(
+                viewname="aa_bulletin_board:edit_bulletin", args=["foobarsson"]
+            )
         )
-        messages = list(get_messages(response.wsgi_request))
+        messages = list(get_messages(request=response.wsgi_request))
 
-        self.assertRaises(bulletin.DoesNotExist)
-        self.assertEqual(len(messages), 1)
+        self.assertRaises(expected_exception=bulletin.DoesNotExist)
+        self.assertEqual(first=len(messages), second=1)
         self.assertEqual(
-            str(messages[0]),
-            "The bulletin you are trying to edit does not exist.",
+            first=str(messages[0]),
+            second="The bulletin you are trying to edit does not exist.",
         )
 
-    def test_should_translate_russian_letters_in_slug(self):
+    def test_should_translate_russian_letters_in_slug(self) -> None:
         """
         Test that russian letters in a slug are translated
+
         :return:
         :rtype:
         """
@@ -182,12 +209,15 @@ class TestBulletins(TestCase):
             created_by=self.user_1001,
         )
 
-        self.assertEqual(bulletin.slug, "drifterke-rorki-v-dok")
+        self.assertEqual(first=bulletin.slug, second="drifterke-rorki-v-dok")
 
-    def test_should_return_cleaned_message_string_on_bulletin_creation(self):
+    def test_should_return_cleaned_message_string_on_bulletin_creation(self) -> None:
         """
-        Test should return a clean/sanitized message string when a new bulletin is created
+        Test should return a clean/sanitized message string
+        when a new bulletin is created
+
         :return:
+        :rtype:
         """
 
         # given
@@ -196,18 +226,19 @@ class TestBulletins(TestCase):
             "'test')</script>and this is style test. <style>.MathJax, "
             ".MathJax_Message, .MathJax_Preview{display: none}</style>end tests."
         )
-        cleaned_message = string_cleanup(dirty_message)
+        cleaned_message = string_cleanup(string=dirty_message)
         bulletin = Bulletin.objects.create(
             title="Foobar",
             content=dirty_message,
             created_by=self.user_1001,
         )
 
-        self.assertEqual(bulletin.content, cleaned_message)
+        self.assertEqual(first=bulletin.content, second=cleaned_message)
 
-    def test_bulletin_slug_creation(self):
+    def test_bulletin_slug_creation(self) -> None:
         """
         Test slug creation
+
         :return:
         :rtype:
         """
@@ -230,13 +261,14 @@ class TestBulletins(TestCase):
             created_by=self.user_1001,
         )
 
-        self.assertEqual(bulletin.slug, "this-is-a-bulletin")
-        self.assertEqual(bulletin_2.slug, "this-is-a-bulletin-1")
-        self.assertEqual(bulletin_3.slug, "this-is-a-bulletin-2")
+        self.assertEqual(first=bulletin.slug, second="this-is-a-bulletin")
+        self.assertEqual(first=bulletin_2.slug, second="this-is-a-bulletin-1")
+        self.assertEqual(first=bulletin_3.slug, second="this-is-a-bulletin-2")
 
-    def test_should_return_bulletin_title_as_model_object_string_name(self):
+    def test_should_return_bulletin_title_as_model_object_string_name(self) -> None:
         """
         Test should return the object's string name
+
         :return:
         :rtype:
         """
@@ -247,11 +279,12 @@ class TestBulletins(TestCase):
             created_by=self.user_1001,
         )
 
-        self.assertEqual(str(bulletin), "This is a bulletin")
+        self.assertEqual(first=str(bulletin), second="This is a bulletin")
 
-    def test_form_clean_content_method(self):
+    def test_form_clean_content_method(self) -> None:
         """
         Test the clean_ method of the form
+
         :return:
         :rtype:
         """
@@ -261,10 +294,10 @@ class TestBulletins(TestCase):
             "'test')</script>and this is style test. <style>.MathJax, "
             ".MathJax_Message, .MathJax_Preview{display: none}</style>end tests."
         )
-        cleaned_message = string_cleanup(dirty_message)
+        cleaned_message = string_cleanup(string=dirty_message)
         data = {"title": "This is a title", "content": dirty_message}
 
-        form = BulletinForm(data)
+        form = BulletinForm(data=data)
 
-        self.assertTrue(form.is_valid())
-        self.assertEqual(form.cleaned_data["content"], cleaned_message)
+        self.assertTrue(expr=form.is_valid())
+        self.assertEqual(first=form.cleaned_data["content"], second=cleaned_message)

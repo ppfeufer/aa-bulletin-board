@@ -29,7 +29,7 @@ class SpecialModelChoiceIterator(forms.models.ModelChoiceIterator):
         queryset = self.queryset
 
         for obj in queryset:
-            yield self.choice(obj)
+            yield self.choice(obj=obj)
 
 
 class SpecialModelMultipleChoiceField(forms.ModelMultipleChoiceField):
@@ -47,7 +47,7 @@ class SpecialModelMultipleChoiceField(forms.ModelMultipleChoiceField):
         self._queryset = queryset
         self.widget.choices = self.choices
 
-    queryset = property(_get_queryset, _set_queryset)
+    queryset = property(fget=_get_queryset, fset=_set_queryset)
 
 
 class BulletinForm(ModelForm):
@@ -90,12 +90,14 @@ class BulletinForm(ModelForm):
         model = Bulletin
         fields = ["title", "content", "groups"]
 
-    def clean_content(self):
+    def clean_content(self) -> str:
         """
         Cleanup the content
+
         :return:
+        :rtype:
         """
 
-        message = string_cleanup(self.cleaned_data["content"])
+        message = string_cleanup(string=self.cleaned_data["content"])
 
         return message

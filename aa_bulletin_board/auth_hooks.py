@@ -23,21 +23,24 @@ class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-m
 
         MenuItemHook.__init__(
             self,
-            __title__,
-            "fas fa-clipboard-list fa-fw",
-            "aa_bulletin_board:dashboard",
+            text=__title__,
+            classes="fas fa-clipboard-list fa-fw",
+            url_name="aa_bulletin_board:dashboard",
             navactive=["aa_bulletin_board:"],
         )
 
     def render(self, request):
         """
         Check if the user has the permission to view this app
+
         :param request:
+        :type request:
         :return:
+        :rtype:
         """
 
-        if request.user.has_perm("aa_bulletin_board.basic_access"):
-            return MenuItemHook.render(self, request)
+        if request.user.has_perm(perm="aa_bulletin_board.basic_access"):
+            return MenuItemHook.render(self, request=request)
 
         return ""
 
@@ -46,7 +49,9 @@ class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-m
 def register_menu():
     """
     Register our menu item
+
     :return:
+    :rtype:
     """
 
     return AaBulletinBoardMenuItem()
@@ -56,7 +61,11 @@ def register_menu():
 def register_urls():
     """
     Register our base url
+
     :return:
+    :rtype:
     """
 
-    return UrlHook(urls, "aa_bulletin_board", r"^bulletin-board/")
+    return UrlHook(
+        urls=urls, namespace="aa_bulletin_board", base_url=r"^bulletin-board/"
+    )

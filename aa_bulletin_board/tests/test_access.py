@@ -1,6 +1,8 @@
 """
 Testing access to bulletins
 """
+# Standard Library
+from http import HTTPStatus
 
 # Third Party
 from faker import Faker
@@ -26,48 +28,57 @@ class TestAccess(TestCase):
     def setUpClass(cls) -> None:
         """
         Set up groups and users
+
+        :return:
+        :rtype:
         """
 
         super().setUpClass()
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(1001, "Peter Parker")
+        cls.user_1001 = create_fake_user(
+            character_id=1001, character_name="Peter Parker"
+        )
 
         # User can access bulletins
         cls.user_1002 = create_fake_user(
-            1002, "Bruce Wayne", permissions=["aa_bulletin_board.basic_access"]
+            character_id=1002,
+            character_name="Bruce Wayne",
+            permissions=["aa_bulletin_board.basic_access"],
         )
 
         # User can manage bulletins
         cls.user_1003 = create_fake_user(
-            1003,
-            "Clark Kent",
+            character_id=1003,
+            character_name="Clark Kent",
             permissions=[
                 "aa_bulletin_board.basic_access",
                 "aa_bulletin_board.manage_bulletins",
             ],
         )
 
-    def test_should_show_dashboard(self):
+    def test_should_show_dashboard(self) -> None:
         """
         Test that a user with basic_access can see the bulletin board
+
         :return:
         :rtype:
         """
 
         # given
-        self.client.force_login(self.user_1002)
+        self.client.force_login(user=self.user_1002)
 
         # when
-        res = self.client.get(reverse("aa_bulletin_board:dashboard"))
+        res = self.client.get(path=reverse(viewname="aa_bulletin_board:dashboard"))
 
         # then
-        self.assertEqual(res.status_code, 200)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.OK)
 
-    def test_should_show_bulletin(self):
+    def test_should_show_bulletin(self) -> None:
         """
         Test that a user with basic_access can see the bulletin
+
         :return:
         :rtype:
         """
@@ -78,37 +89,42 @@ class TestAccess(TestCase):
             content=f"<p>{fake.sentence()}</p>",
             created_by=self.user_1001,
         )
-        self.client.force_login(self.user_1002)
+        self.client.force_login(user=self.user_1002)
 
         # when
         res = self.client.get(
-            reverse("aa_bulletin_board:view_bulletin", kwargs={"slug": bulletin.slug})
+            path=reverse(
+                viewname="aa_bulletin_board:view_bulletin",
+                kwargs={"slug": bulletin.slug},
+            )
         )
-        result = Bulletin.objects.user_has_access(self.user_1002)
+        result = Bulletin.objects.user_has_access(user=self.user_1002)
 
         # then
-        self.assertEqual(res.status_code, 200)
-        self.assertIn(bulletin, result)
+        self.assertEqual(first=res.status_code, second=HTTPStatus.OK)
+        self.assertIn(member=bulletin, container=result)
 
-    def test_should_not_show_dashboard(self):
+    def test_should_not_show_dashboard(self) -> None:
         """
         Test that a user without basic_access can't see the bulletin board
+
         :return:
         :rtype:
         """
 
         # given
-        self.client.force_login(self.user_1001)
+        self.client.force_login(user=self.user_1001)
 
         # when
-        res = self.client.get(reverse("aa_bulletin_board:dashboard"))
+        res = self.client.get(path=reverse(viewname="aa_bulletin_board:dashboard"))
 
         # then
-        self.assertIsNot(res.status_code, 200)
+        self.assertIsNot(expr1=res.status_code, expr2=HTTPStatus.OK)
 
-    def test_should_not_show_bulletin(self):
+    def test_should_not_show_bulletin(self) -> None:
         """
         Test that a user without basic_access can't see the bulletin
+
         :return:
         :rtype:
         """
@@ -119,19 +135,23 @@ class TestAccess(TestCase):
             content=f"<p>{fake.sentence()}</p>",
             created_by=self.user_1001,
         )
-        self.client.force_login(self.user_1001)
+        self.client.force_login(user=self.user_1001)
 
         # when
         res = self.client.get(
-            reverse("aa_bulletin_board:view_bulletin", kwargs={"slug": bulletin.slug})
+            path=reverse(
+                viewname="aa_bulletin_board:view_bulletin",
+                kwargs={"slug": bulletin.slug},
+            )
         )
 
         # then
-        self.assertIsNot(res.status_code, 200)
+        self.assertIsNot(expr1=res.status_code, expr2=HTTPStatus.OK)
 
-    def test_should_return_bulletin_for_user_with_perm_manage_bulletins(self):
+    def test_should_return_bulletin_for_user_with_perm_manage_bulletins(self) -> None:
         """
         Test that a user with "aa_bulletin_board.manage_bulletins" can see all bulletins
+
         :return:
         :rtype:
         """
@@ -144,17 +164,18 @@ class TestAccess(TestCase):
         )
 
         # when
-        result = Bulletin.objects.user_has_access(self.user_1003)
+        result = Bulletin.objects.user_has_access(user=self.user_1003)
 
         # then
-        self.assertIn(bulletin, result)
+        self.assertIn(member=bulletin, container=result)
 
     def test_should_return_restricted_bulletin_for_user_with_perm_manage_bulletins(
         self,
-    ):
+    ) -> None:
         """
         Test that a user with "aa_bulletin_board.manage_bulletins"
         can see all bulletins, even restricted
+
         :return:
         :rtype:
         """
@@ -168,14 +189,15 @@ class TestAccess(TestCase):
         bulletin.groups.add(self.group)
 
         # when
-        result = Bulletin.objects.user_has_access(self.user_1003)
+        result = Bulletin.objects.user_has_access(user=self.user_1003)
 
         # then
-        self.assertIn(bulletin, result)
+        self.assertIn(member=bulletin, container=result)
 
-    def test_should_return_bulletin_with_no_groups(self):
+    def test_should_return_bulletin_with_no_groups(self) -> None:
         """
         Test that any user with access can se non-restricted bulletins
+
         :return:
         :rtype:
         """
@@ -188,14 +210,15 @@ class TestAccess(TestCase):
         )
 
         # when
-        result = Bulletin.objects.user_has_access(self.user_1002)
+        result = Bulletin.objects.user_has_access(user=self.user_1002)
 
         # then
-        self.assertIn(bulletin, result)
+        self.assertIn(member=bulletin, container=result)
 
-    def test_should_return_bulletin_for_group_member(self):
+    def test_should_return_bulletin_for_group_member(self) -> None:
         """
         Test that group restricted bulletins are visible for users who have this group
+
         :return:
         :rtype:
         """
@@ -210,15 +233,16 @@ class TestAccess(TestCase):
         self.user_1001.groups.add(self.group)
 
         # when
-        result = Bulletin.objects.user_has_access(self.user_1001)
+        result = Bulletin.objects.user_has_access(user=self.user_1001)
 
         # then
-        self.assertIn(bulletin, result)
+        self.assertIn(member=bulletin, container=result)
 
-    def test_should_not_return_bulletin_for_non_group_member(self):
+    def test_should_not_return_bulletin_for_non_group_member(self) -> None:
         """
         Test that group restricted bulletins are not visible for
         users who don't have this group
+
         :return:
         :rtype:
         """
@@ -232,7 +256,7 @@ class TestAccess(TestCase):
         bulletin.groups.add(self.group)
 
         # when
-        result = Bulletin.objects.user_has_access(self.user_1002)
+        result = Bulletin.objects.user_has_access(user=self.user_1002)
 
         # then
-        self.assertNotIn(bulletin, result)
+        self.assertNotIn(member=bulletin, container=result)
