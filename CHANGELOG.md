@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [1.11.0] - 2023-08-13
+
+### Fixed
+
+- Some CSS issues
+
+### Changed
+
+- Code improvements
+  - Type hints
+  - Docstrings
+  - Keyword arguments
+- Tweaks to pylint checks
+
+
 ## [1.10.1] - 2023-07-30
 
 ### Fixed

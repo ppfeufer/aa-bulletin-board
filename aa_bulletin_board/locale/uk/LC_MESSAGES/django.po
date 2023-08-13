@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-27 22:06+0200\n"
+"POT-Creation-Date: 2023-08-02 15:50+0200\n"
 "PO-Revision-Date: 2023-07-26 13:02+0000\n"
 "Last-Translator: \"Andrii M.\" <elfleg0las88@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -43,37 +43,37 @@ msgstr ""
 "групових обмежень, кожен, хто має доступ до цього модуля, зможе прочитати "
 "цей бюлетень."
 
-#: models.py:74
+#: models.py:81
 msgid "Title"
 msgstr "Заголовок"
 
-#: models.py:76
+#: models.py:83
 msgid "Content"
 msgstr "Вміст"
 
 #. Translators: This is the date and time the bulletin has been created
-#: models.py:81
+#: models.py:88
 msgid "Created"
 msgstr "Створено"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: models.py:87
+#: models.py:94
 msgid "Updated"
 msgstr ""
 
-#: models.py:96
+#: models.py:103
 msgid "User"
 msgstr ""
 
-#: models.py:102
+#: models.py:109
 msgid "Group restrictions"
 msgstr "Групові обмеження"
 
-#: models.py:113
+#: models.py:120
 msgid "Bulletin"
 msgstr "Інформаційний бюлетень"
 
-#: models.py:114
+#: models.py:121
 msgid "Bulletins"
 msgstr "Інформаційні бюлетені"
 
@@ -121,47 +121,44 @@ msgstr "Бюлетень оновлень"
 msgid "Create Bulletin"
 msgstr "Створити бюлетень"
 
-#: templates/aa_bulletin_board/partials/app-translation-footer.html:4
+#: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
+msgid ""
+"Do you want to help translate this app into your language or improve the "
+"existing translation?"
+msgstr ""
+
+#: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
 msgstr ""
 
-#: templates/aa_bulletin_board/partials/app-translation-footer.html:7
-#, python-format
-msgid ""
-"\n"
-"            Do you want to help translate this app into your language or "
-"improve the existing translation? - %(weblate_link)s\n"
-"        "
-msgstr ""
-
-#: views.py:65
+#: views.py:80
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
 msgstr "Створено бюлетень \"{bulletin__title}\"."
 
-#: views.py:92
+#: views.py:123
 msgid ""
 "The bulletin you are looking for does not exist, or you don't have access to "
 "it."
 msgstr "Бюлетень, який ви шукаєте, не існує, або у вас немає до нього доступу."
 
-#: views.py:129
+#: views.py:165
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr "Оновлено бюлетень \"{bulletin__title}\"."
 
-#: views.py:140
+#: views.py:184
 #, fuzzy
 #| msgid "The bulletin you are trying to edit for does not exist."
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Бюлетень, який ви намагаєтеся відредагувати, не існує."
 
-#: views.py:159
+#: views.py:208
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Бюлетень \"{bulletin.title}\" вилучено."
 
-#: views.py:164
+#: views.py:215
 #, fuzzy
 #| msgid "The bulletin you are trying to delete for does not exist."
 msgid "The bulletin you are trying to delete does not exist."
