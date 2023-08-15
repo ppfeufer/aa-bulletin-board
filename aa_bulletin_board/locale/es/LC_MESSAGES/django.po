@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Zigor Fernandez Moreno <sietehierros@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-02 15:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-08-15 17:40+0000\n"
+"Last-Translator: Zigor Fernandez Moreno <sietehierros@gmail.com>\n"
+"Language-Team: Spanish <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-bulletin-board/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 #: __init__.py:12 templates/aa_bulletin_board/base.html:5
 #: templates/aa_bulletin_board/bulletin.html:5
@@ -24,133 +24,137 @@ msgstr ""
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Bulletin Board"
-msgstr ""
+msgstr "Tablón de Anuncios"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: apps.py:21
 #, python-brace-format
 msgid "Bulletin Board v{__version__}"
-msgstr ""
+msgstr "Tablón de Anuncios v{__version__}"
 
 #: forms.py:71
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
+"Restringir este anuncio a ciertos grupos. Si no existen restricciones de "
+"grupo, todos los que tengan acceso a este módulo pueden leer este anuncio."
 
 #: models.py:81
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: models.py:83
 msgid "Content"
-msgstr ""
+msgstr "Contenido"
 
 #. Translators: This is the date and time the bulletin has been created
 #: models.py:88
 msgid "Created"
-msgstr ""
+msgstr "Creado"
 
 #. Translators: This is the date and time the bulletin has been updated
 #: models.py:94
 msgid "Updated"
-msgstr ""
+msgstr "Actualizado"
 
 #: models.py:103
 msgid "User"
-msgstr ""
+msgstr "Usuario"
 
 #: models.py:109
 msgid "Group restrictions"
-msgstr ""
+msgstr "Restricciones de grupo"
 
 #: models.py:120
 msgid "Bulletin"
-msgstr ""
+msgstr "Anuncio"
 
 #: models.py:121
 msgid "Bulletins"
-msgstr ""
+msgstr "Anuncios"
 
 #: templates/aa_bulletin_board/bulletin.html:14
 #: templates/aa_bulletin_board/dashboard.html:13
 msgid "Add Bulletin"
-msgstr ""
+msgstr "Agregar Anuncio"
 
 #: templates/aa_bulletin_board/bulletin.html:22
 #: templates/aa_bulletin_board/edit-bulletin.html:27
 msgid "Back"
-msgstr ""
+msgstr "Atrás"
 
 #: templates/aa_bulletin_board/bulletin.html:25
 #: templates/aa_bulletin_board/dashboard.html:40
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: templates/aa_bulletin_board/bulletin.html:26
 #: templates/aa_bulletin_board/dashboard.html:41
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: templates/aa_bulletin_board/dashboard.html:26
 msgid "This bulletin is restricted to the following group(s):"
-msgstr ""
+msgstr "Este anuncio está restringido a los siguientes grupos:"
 
 #: templates/aa_bulletin_board/dashboard.html:37
 msgid "Read more"
-msgstr ""
+msgstr "Leer más"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 msgid "Edit Bulletin"
-msgstr ""
+msgstr "Editar Anuncio"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Create New Bulletin"
-msgstr ""
+msgstr "Crear nuevo Anuncio"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Update Bulletin"
-msgstr ""
+msgstr "Actualizar Anuncio"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Create Bulletin"
-msgstr ""
+msgstr "Crear Anuncio"
 
 #: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid ""
 "Do you want to help translate this app into your language or improve the "
 "existing translation?"
 msgstr ""
+"¿Quieres ayudar a traducir esta aplicación a tu idioma o mejorar la "
+"traducción existente?"
 
 #: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
-msgstr ""
+msgstr "¡Únete a nuestro equipo de traductores!"
 
 #: views.py:80
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
-msgstr ""
+msgstr "Se ha creado el Anuncio \"{bulletin__title}\"."
 
 #: views.py:123
 msgid ""
 "The bulletin you are looking for does not exist, or you don't have access to "
 "it."
-msgstr ""
+msgstr "El anuncio que busca no existe, o no tiene acceso a él."
 
 #: views.py:165
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr ""
+msgstr "Se ha actualizado el Anuncio \"{bulletin__title}\"."
 
 #: views.py:184
 msgid "The bulletin you are trying to edit does not exist."
-msgstr ""
+msgstr "El anuncio que intenta editar no existe."
 
 #: views.py:208
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr ""
+msgstr "Se ha eliminado el Anuncio \"{bulletin.title}\"."
 
 #: views.py:215
 msgid "The bulletin you are trying to delete does not exist."
-msgstr ""
+msgstr "El anuncio que intenta eliminar no existe."
