@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aa-bulletin-board"
-version = "1.11.0"
+version = "1.12.0"
 description = "A simple bulletin board for Alliance Auth"
 readme = "README.md"
 license = "GPL-3.0"
