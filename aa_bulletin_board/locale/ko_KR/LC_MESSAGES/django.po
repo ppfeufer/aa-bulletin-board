@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# Author50CO <tkddlschry@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-02 15:50+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2023-08-29 15:40+0000\n"
+"Last-Translator: Author50CO <tkddlschry@gmail.com>\n"
+"Language-Team: Korean <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-bulletin-board/ko/>\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 #: __init__.py:12 templates/aa_bulletin_board/base.html:5
 #: templates/aa_bulletin_board/bulletin.html:5
@@ -23,133 +24,135 @@ msgstr ""
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Bulletin Board"
-msgstr ""
+msgstr "불레틴 보드"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: apps.py:21
 #, python-brace-format
 msgid "Bulletin Board v{__version__}"
-msgstr ""
+msgstr "불레틴 보드 버전{__version__}"
 
 #: forms.py:71
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
+"불레틴 보드의 항목을 그룹별로 열람을 제한할 수 있습니다. 그룹 제한이 없다면, "
+"모듈의 접근 권한이 있는 모든 사용자가 이 항목을 열람할 수 있습니다."
 
 #: models.py:81
 msgid "Title"
-msgstr ""
+msgstr "제목"
 
 #: models.py:83
 msgid "Content"
-msgstr ""
+msgstr "내용"
 
 #. Translators: This is the date and time the bulletin has been created
 #: models.py:88
 msgid "Created"
-msgstr ""
+msgstr "생성 날짜"
 
 #. Translators: This is the date and time the bulletin has been updated
 #: models.py:94
 msgid "Updated"
-msgstr ""
+msgstr "업데이트 날짜"
 
 #: models.py:103
 msgid "User"
-msgstr ""
+msgstr "사용자"
 
 #: models.py:109
 msgid "Group restrictions"
-msgstr ""
+msgstr "그룹 제한"
 
 #: models.py:120
 msgid "Bulletin"
-msgstr ""
+msgstr "불레틴"
 
 #: models.py:121
 msgid "Bulletins"
-msgstr ""
+msgstr "불레틴"
 
 #: templates/aa_bulletin_board/bulletin.html:14
 #: templates/aa_bulletin_board/dashboard.html:13
 msgid "Add Bulletin"
-msgstr ""
+msgstr "불레틴 추가"
 
 #: templates/aa_bulletin_board/bulletin.html:22
 #: templates/aa_bulletin_board/edit-bulletin.html:27
 msgid "Back"
-msgstr ""
+msgstr "뒤로"
 
 #: templates/aa_bulletin_board/bulletin.html:25
 #: templates/aa_bulletin_board/dashboard.html:40
 msgid "Edit"
-msgstr ""
+msgstr "수정"
 
 #: templates/aa_bulletin_board/bulletin.html:26
 #: templates/aa_bulletin_board/dashboard.html:41
 msgid "Delete"
-msgstr ""
+msgstr "삭제"
 
 #: templates/aa_bulletin_board/dashboard.html:26
 msgid "This bulletin is restricted to the following group(s):"
-msgstr ""
+msgstr "이 불레틴은 다음 그룹(들)만 열람할 수 있습니다:"
 
 #: templates/aa_bulletin_board/dashboard.html:37
 msgid "Read more"
-msgstr ""
+msgstr "더보기"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:9
 msgid "Edit Bulletin"
-msgstr ""
+msgstr "불레틴 수정"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Create New Bulletin"
-msgstr ""
+msgstr "새 불레틴 생성"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Update Bulletin"
-msgstr ""
+msgstr "불레틴 업데이트"
 
 #: templates/aa_bulletin_board/edit-bulletin.html:38
 msgid "Create Bulletin"
-msgstr ""
+msgstr "불레틴 생성"
 
 #: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid ""
 "Do you want to help translate this app into your language or improve the "
 "existing translation?"
-msgstr ""
+msgstr "이 앱을 번역하거나 기존 번역을 개선하고 싶으신가요?"
 
 #: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
-msgstr ""
+msgstr "번역 팀에 참여하세요!"
 
 #: views.py:80
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
-msgstr ""
+msgstr "불레틴 \"{bulletin__title}\" 생성됨."
 
 #: views.py:123
 msgid ""
 "The bulletin you are looking for does not exist, or you don't have access to "
 "it."
-msgstr ""
+msgstr "찾는 불레틴이 없거나, 열람 권한이 없습니다."
 
 #: views.py:165
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr ""
+msgstr "불레틴 \"{bulletin__title}\" 업데이트됨."
 
 #: views.py:184
 msgid "The bulletin you are trying to edit does not exist."
-msgstr ""
+msgstr "수정하려는 불레틴이 없습니다."
 
 #: views.py:208
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr ""
+msgstr "불레틴 \"{bulletin.title}\" 삭제됨."
 
 #: views.py:215
 msgid "The bulletin you are trying to delete does not exist."
-msgstr ""
+msgstr "삭제하려는 불레틴이 없습니다."
