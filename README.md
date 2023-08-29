@@ -1,4 +1,4 @@
-# AA Bulletin Board
+# AA Bulletin Board<a name="aa-bulletin-board"></a>
 
 [![Version](https://img.shields.io/pypi/v/aa-bulletin-board?label=release)](https://pypi.org/project/aa-bulletin-board/)
 [![License](https://img.shields.io/github/license/ppfeufer/aa-bulletin-board)](https://github.com/ppfeufer/aa-bulletin-board/blob/master/LICENSE)
@@ -16,39 +16,38 @@
 
 Simple bulletin board for [Alliance Auth](https://gitlab.com/allianceauth/allianceauth)
 
+______________________________________________________________________
 
----
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
 
-<!-- TOC -->
-* [AA Bulletin Board](#aa-bulletin-board)
-  * [⚠️ Before You Install This Module ⚠️](#-before-you-install-this-module-)
-  * [Installation](#installation)
-    * [Step 1: Install the Package](#step-1-install-the-package)
-    * [Step 2: Configure Alliance Auth](#step-2-configure-alliance-auth)
-      * [Settings in `/home/allianceserver/myauth/myauth/settings/local.py`](#settings-in-homeallianceservermyauthmyauthsettingslocalpy)
-      * [Settings in `/home/allianceserver/myauth/myauth/urls.py`](#settings-in-homeallianceservermyauthmyauthurlspy)
-    * [Step 3: Configure Your Webserver](#step-3-configure-your-webserver)
-      * [Apache](#apache)
-      * [Nginx](#nginx)
-    * [Step 4: Finalizing the Installation](#step-4-finalizing-the-installation)
-    * [Step 5: Set Up Permissions](#step-5-set-up-permissions)
-  * [Permissions](#permissions)
-  * [Changelog](#changelog)
-  * [Contributing](#contributing)
-<!-- TOC -->
+- [AA Bulletin Board](#aa-bulletin-board)
+  - [⚠️ Before You Install This Module ⚠️](#%E2%9A%A0%EF%B8%8F-before-you-install-this-module-%E2%9A%A0%EF%B8%8F)
+  - [Installation](#installation)
+    - [Step 1: Install the Package](#step-1-install-the-package)
+    - [Step 2: Configure Alliance Auth](#step-2-configure-alliance-auth)
+      - [Settings in `/home/allianceserver/myauth/myauth/settings/local.py`](#settings-in-homeallianceservermyauthmyauthsettingslocalpy)
+      - [Settings in `/home/allianceserver/myauth/myauth/urls.py`](#settings-in-homeallianceservermyauthmyauthurlspy)
+    - [Step 3: Configure Your Webserver](#step-3-configure-your-webserver)
+      - [Apache](#apache)
+      - [Nginx](#nginx)
+    - [Step 4: Finalizing the Installation](#step-4-finalizing-the-installation)
+    - [Step 5: Set Up Permissions](#step-5-set-up-permissions)
+  - [Permissions](#permissions)
+  - [Changelog](#changelog)
+  - [Contributing](#contributing)
 
----
+<!-- mdformat-toc end -->
 
+______________________________________________________________________
 
-## ⚠️ Before You Install This Module ⚠️
+## ⚠️ Before You Install This Module ⚠️<a name="%E2%9A%A0%EF%B8%8F-before-you-install-this-module-%E2%9A%A0%EF%B8%8F"></a>
 
 This module needs quite some configuration done before working properly. You need to
 modify your Apache/Nginx configuration as well as the global URL config of Alliance
 Auth. So please only install if you know what you're doing/feel comfortable to make
 these kinds of changes. For your own sanity, and mine :-)
 
-
-## Installation
+## Installation<a name="installation"></a>
 
 **Important**: Please make sure you meet all preconditions before you proceed:
 
@@ -60,8 +59,7 @@ these kinds of changes. For your own sanity, and mine :-)
   Auth configuration. So make sure you know how to do so. The steps needed will be
   described in this document, but you need to understand what will be changed.
 
-
-### Step 1: Install the Package
+### Step 1: Install the Package<a name="step-1-install-the-package"></a>
 
 Make sure you're in the virtual environment (venv) of your Alliance Auth
 installation Then install the latest release directly from PyPi.
@@ -70,9 +68,9 @@ installation Then install the latest release directly from PyPi.
 pip install aa-bulletin-board
 ```
 
-### Step 2: Configure Alliance Auth
+### Step 2: Configure Alliance Auth<a name="step-2-configure-alliance-auth"></a>
 
-#### Settings in `/home/allianceserver/myauth/myauth/settings/local.py`
+#### Settings in `/home/allianceserver/myauth/myauth/settings/local.py`<a name="settings-in-homeallianceservermyauthmyauthsettingslocalpy"></a>
 
 This is fairly simple, configure your AA settings (`local.py`) as follows:
 
@@ -226,7 +224,7 @@ if "ckeditor" in INSTALLED_APPS:
     ] = aa_bulletin_board__external_plugin_resources
 ```
 
-#### Settings in `/home/allianceserver/myauth/myauth/urls.py`
+#### Settings in `/home/allianceserver/myauth/myauth/urls.py`<a name="settings-in-homeallianceservermyauthmyauthurlspy"></a>
 
 Now let's move on to editing the global URL configuration of Alliance Auth. To do so,
 you need to open `/home/allianceserver/myauth/myauth/urls.py` and change the
@@ -296,19 +294,19 @@ handler403 = "allianceauth.views.Generic403Redirect"
 handler400 = "allianceauth.views.Generic400Redirect"
 ```
 
-
-### Step 3: Configure Your Webserver
+### Step 3: Configure Your Webserver<a name="step-3-configure-your-webserver"></a>
 
 Your webserver needs to know from where to serve the uploaded images, of course, so we
 have to tell it.
 
-#### Apache
+#### Apache<a name="apache"></a>
 
 In your vhost configuration you have a line `ProxyPassMatch ^/static !`, which tells
 the server where to find all the static files. We're adding a similar line for the
 media, right below that one.
 
 Add the following right below the static proxy match:
+
 ```apache
 ProxyPassMatch ^/media !
 ```
@@ -316,6 +314,7 @@ ProxyPassMatch ^/media !
 Now we also need to let the server know where to find the media directory we just
 configured the proxy for. To do so, add a new Alias to your configuration. This can
 be done right below the already existing Alias for `/static`:
+
 ```apache
 Alias "/media" "/var/www/myauth/media/"
 ```
@@ -330,6 +329,7 @@ already existing Directory rule for the static files:
 ```
 
 So the whole block should now look like this:
+
 ```apache
 ProxyPassMatch ^/static !
 ProxyPassMatch ^/media !  # *** NEW proxy rule
@@ -351,11 +351,11 @@ Alias "/media" "/var/www/myauth/media/"
 
 Restart your Apache webserver.
 
-
-#### Nginx
+#### Nginx<a name="nginx"></a>
 
 In order to let Nginx know where to find the uploaded files, you need to add a new
 location rule to the configuration.
+
 ```nginx
 location /media {
     alias /var/www/myauth/media;
@@ -365,8 +365,7 @@ location /media {
 
 Restart your Nginx webserver.
 
-
-### Step 4: Finalizing the Installation
+### Step 4: Finalizing the Installation<a name="step-4-finalizing-the-installation"></a>
 
 Run static files collection and migrations
 
@@ -377,28 +376,24 @@ python manage.py migrate
 
 Restart your supervisor services for Auth
 
-
-### Step 5: Set Up Permissions
+### Step 5: Set Up Permissions<a name="step-5-set-up-permissions"></a>
 
 Now it's time to set up access permissions for your new module. You can do so in
 your admin backend. Read the [Permissions](#permissions) section for more information
 about the available permissions.
 
-
-## Permissions
+## Permissions<a name="permissions"></a>
 
 | ID                 | Description                   | Notes                                                                           |
-|:-------------------|:------------------------------|:--------------------------------------------------------------------------------|
+| :----------------- | :---------------------------- | :------------------------------------------------------------------------------ |
 | `basic_access`     | Can access the Bulletin Board | Grants read access to the bulletin board                                        |
 | `manage_bulletins` | Can manage bulletins          | Grants the right to edit and delete existing bulletins and create new bulletins |
 
-
-## Changelog
+## Changelog<a name="changelog"></a>
 
 See [CHANGELOG.md](https://github.com/ppfeufer/aa-bulletin-board/blob/master/CHANGELOG.md)
 
-
-## Contributing
+## Contributing<a name="contributing"></a>
 
 You want to contribute to this project? That's cool!
 
