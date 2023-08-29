@@ -1,22 +1,24 @@
 [build-system]
-requires = ["hatchling"]
 build-backend = "hatchling.build"
+requires = [
+    "hatchling",
+]
 
 [project]
 name = "aa-bulletin-board"
-version = "1.12.0"
+version = "1.13.0"
 description = "A simple bulletin board for Alliance Auth"
 readme = "README.md"
-license = "GPL-3.0"
-requires-python = "~=3.8"
-authors = [
-    { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
-]
 keywords = [
     "allianceauth",
     "bulletinboard",
     "eveonline",
 ]
+license = {file = "LICENSE"}
+authors = [
+    { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
+]
+requires-python = "~=3.8"
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
@@ -34,17 +36,17 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dependencies = [
-    "allianceauth>=3.0.0",
+    "allianceauth>=3",
+    "django-ckeditor>=6.5",
     "django-ckeditor-youtube-plugin>=0.0.1",
-    "django-ckeditor>=6.5.0",
     "unidecode",
 ]
-
 [project.urls]
-Homepage = "https://github.com/ppfeufer/aa-bulletin-board"
-Documentation = "https://github.com/ppfeufer/aa-bulletin-board/blob/master/README.md"
-Source = "https://github.com/ppfeufer/aa-bulletin-board.git"
 Changelog = "https://github.com/ppfeufer/aa-bulletin-board/blob/master/CHANGELOG.md"
+Documentation = "https://github.com/ppfeufer/aa-bulletin-board/blob/master/README.md"
+Donations = "https://ko-fi.com/ppfeufer"
+Homepage = "https://github.com/ppfeufer/aa-bulletin-board"
+Source = "https://github.com/ppfeufer/aa-bulletin-board.git"
 Tracker = "https://github.com/ppfeufer/aa-bulletin-board/issues"
 
 [tool.hatch.build]
