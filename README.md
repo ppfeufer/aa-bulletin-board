@@ -9,7 +9,7 @@
 [![Discord](https://img.shields.io/discord/790364535294132234?label=discord)](https://discord.gg/zmh52wnfvM)
 [![Automated Checks](https://github.com/ppfeufer/aa-bulletin-board/actions/workflows/automated-checks.yml/badge.svg)](https://github.com/ppfeufer/aa-bulletin-board/actions/workflows/automated-checks.yml)
 [![codecov](https://codecov.io/gh/ppfeufer/aa-bulletin-board/branch/master/graph/badge.svg?token=UCXABR42QC)](https://codecov.io/gh/ppfeufer/aa-bulletin-board)
-[![Translation Status](https://weblate.ppfeufer.de/widgets/alliance-auth-apps/-/aa-bulletin-board/svg-badge.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
+[![Translation status](https://weblate.ppfeufer.de/widget/alliance-auth-apps/aa-bulletin-board/svg-badge.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/ppfeufer/aa-forum/blob/master/CODE_OF_CONDUCT.md)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N8CL1BY)
@@ -34,6 +34,7 @@ ______________________________________________________________________
     - [Step 5: Set Up Permissions](#step-5-set-up-permissions)
   - [Permissions](#permissions)
   - [Changelog](#changelog)
+  - [Translation Status](#translation-status)
   - [Contributing](#contributing)
 
 <!-- mdformat-toc end -->
@@ -393,9 +394,21 @@ about the available permissions.
 
 See [CHANGELOG.md](https://github.com/ppfeufer/aa-bulletin-board/blob/master/CHANGELOG.md)
 
+## Translation Status<a name="translation-status"></a>
+
+[![Translation status](https://weblate.ppfeufer.de/widget/alliance-auth-apps/aa-bulletin-board/multi-auto.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
+
+Do you want to help translate this app into your language or improve the existing
+translation? - [Join our team of translators][weblate engage]!
+
 ## Contributing<a name="contributing"></a>
 
-You want to contribute to this project? That's cool!
+Do you want to contribute to this project? That's cool!
 
-Please make sure to read the [contribution guidelines](https://github.com/ppfeufer/aa-bulletin-board/blob/master/CONTRIBUTING.md) (I promise,
-it's not much, just some basics)
+Please make sure to read the [Contribution Guidelines].\
+(I promise, it's not much, just some basics)
+
+<!-- Links -->
+
+[contribution guidelines]: https://github.com/ppfeufer/aa-bulletin-board/blob/master/CONTRIBUTING.md "Contribution Guidelines"
+[weblate engage]: https://weblate.ppfeufer.de/engage/alliance-auth-apps/ "Weblate Translations"
