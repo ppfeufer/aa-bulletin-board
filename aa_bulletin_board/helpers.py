@@ -26,7 +26,7 @@ def string_cleanup(string: str) -> str:
         pattern=r"<\s*style[^>]*>.*?<\s*/\s*style\s*>", flags=re.S | re.I
     )
 
-    # Strip JS
+    # Strip unwanted content (JS, CSS, HTML-Head)
     string = re_head.sub(repl="", string=string)
     string = re_script.sub(repl="", string=string)
     string = re_css.sub(repl="", string=string)
