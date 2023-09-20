@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/aa-bulletin-board)](https://pypi.org/project/aa-bulletin-board/)
 [![Django](https://img.shields.io/pypi/djversions/aa-bulletin-board?label=django)](https://pypi.org/project/aa-bulletin-board/)
 ![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/ppfeufer/aa-bulletin-board/master.svg)](https://results.pre-commit.ci/latest/github/ppfeufer/aa-bulletin-board/master)
 [![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](http://black.readthedocs.io/en/latest/)
 [![Discord](https://img.shields.io/discord/790364535294132234?label=discord)](https://discord.gg/zmh52wnfvM)
 [![Automated Checks](https://github.com/ppfeufer/aa-bulletin-board/actions/workflows/automated-checks.yml/badge.svg)](https://github.com/ppfeufer/aa-bulletin-board/actions/workflows/automated-checks.yml)
