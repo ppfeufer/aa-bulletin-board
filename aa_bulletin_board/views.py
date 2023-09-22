@@ -122,8 +122,8 @@ def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
         messages.warning(
             request=request,
             message=_(
-                "The bulletin you are looking for does not exist, "
-                "or you don't have access to it."
+                "The bulletin you are looking for does either not exist, or you don't "
+                "have access to it."
             ),
         )
 

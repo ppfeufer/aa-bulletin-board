@@ -9,11 +9,7 @@
 {% endblock %}
 
 {% block aabulletinboard_body %}
-    {% if perms.aa_bulletin_board.manage_bulletins %}
-        <div class="aa-bulletin-board-management text-right">
-            <a class="btn btn-success btn-read-more" href="{% url 'aa_bulletin_board:create_bulletin' %}">{% translate "Add Bulletin" %}</a>
-        </div>
-    {% endif %}
+    {% include "aa_bulletin_board/partials/common/bulletin-board-management.html" %}
 
     {% if bulletin %}
         <div class="panel panel-default">

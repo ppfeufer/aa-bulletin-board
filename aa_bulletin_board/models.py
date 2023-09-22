@@ -64,12 +64,12 @@ class General(models.Model):
         Meta definitions
         """
 
-        verbose_name = "Bulletins"
+        verbose_name = _("Bulletin Board")
         managed = False
         default_permissions = ()
         permissions = (
-            ("basic_access", "Can access this app"),
-            ("manage_bulletins", "Can manage (add/change/remove) bulletins"),
+            ("basic_access", _("Can access this app")),
+            ("manage_bulletins", _("Can manage (add/change/remove) bulletins")),
         )
 
 
