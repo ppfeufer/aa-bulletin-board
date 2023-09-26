@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "aa-bulletin-board"
-version = "1.13.1"
+version = "1.13.2"
 description = "A simple bulletin board for Alliance Auth"
 readme = "README.md"
 keywords = [
@@ -18,7 +18,7 @@ license = {file = "LICENSE"}
 authors = [
     { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
 ]
-requires-python = "~=3.8"
+requires-python = ">=3.8"
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",

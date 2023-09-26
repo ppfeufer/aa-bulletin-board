@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-02 15:50+0200\n"
-"PO-Revision-Date: 2023-07-31 17:39+0000\n"
+"POT-Creation-Date: 2023-09-24 16:29+0200\n"
+"PO-Revision-Date: 2023-09-24 13:13+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
 "apps/aa-bulletin-board/ru/>\n"
@@ -18,13 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 4.18.2\n"
+"X-Generator: Weblate 5.0.2\n"
 
-#: __init__.py:12 templates/aa_bulletin_board/base.html:5
+#: __init__.py:12 models.py:67 templates/aa_bulletin_board/base.html:5
 #: templates/aa_bulletin_board/bulletin.html:5
 #: templates/aa_bulletin_board/dashboard.html:6
-#: templates/aa_bulletin_board/edit-bulletin.html:9
-#: templates/aa_bulletin_board/edit-bulletin.html:11
+#: templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
 msgstr "Доска бюллетеней"
 
@@ -41,6 +40,14 @@ msgid ""
 msgstr ""
 "Ограничить доступ к бюллетеню для конкретных групп. Если ограничение не "
 "задано, у всех пользователей модуля есть доступ к бюллетеню."
+
+#: models.py:71
+msgid "Can access this app"
+msgstr "Имеет доступ к приложению"
+
+#: models.py:72
+msgid "Can manage (add/change/remove) bulletins"
+msgstr "Может управлять (добавлять/изменять/удалять) бюллетенями"
 
 #: models.py:81
 msgid "Title"
@@ -76,49 +83,49 @@ msgstr "Бюллетень"
 msgid "Bulletins"
 msgstr "Бюллетени"
 
-#: templates/aa_bulletin_board/bulletin.html:14
-#: templates/aa_bulletin_board/dashboard.html:13
-msgid "Add Bulletin"
-msgstr "Добавить бюллетень"
-
-#: templates/aa_bulletin_board/bulletin.html:22
-#: templates/aa_bulletin_board/edit-bulletin.html:27
+#: templates/aa_bulletin_board/bulletin.html:18
+#: templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
 msgstr "Назад"
 
-#: templates/aa_bulletin_board/bulletin.html:25
-#: templates/aa_bulletin_board/dashboard.html:40
+#: templates/aa_bulletin_board/bulletin.html:21
+#: templates/aa_bulletin_board/dashboard.html:36
 msgid "Edit"
 msgstr "Редактировать"
 
-#: templates/aa_bulletin_board/bulletin.html:26
-#: templates/aa_bulletin_board/dashboard.html:41
+#: templates/aa_bulletin_board/bulletin.html:22
+#: templates/aa_bulletin_board/dashboard.html:37
 msgid "Delete"
 msgstr "Удалить"
 
-#: templates/aa_bulletin_board/dashboard.html:26
+#: templates/aa_bulletin_board/dashboard.html:22
 msgid "This bulletin is restricted to the following group(s):"
 msgstr "Этот бюллетень доступен следующим группам:"
 
-#: templates/aa_bulletin_board/dashboard.html:37
+#: templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
 msgstr "Читать"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:9
-msgid "Edit Bulletin"
+#: templates/aa_bulletin_board/edit-bulletin.html:11
+msgid "Edit bulletin"
 msgstr "Редактировать бюллетень"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:11
-msgid "Create New Bulletin"
+#: templates/aa_bulletin_board/edit-bulletin.html:14
+#: templates/aa_bulletin_board/edit-bulletin.html:25
+msgid "Create new bulletin"
 msgstr "Создание нового бюллетеня"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:38
-msgid "Update Bulletin"
+#: templates/aa_bulletin_board/edit-bulletin.html:47
+msgid "Update bulletin"
 msgstr "Обновить бюллетень"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:38
-msgid "Create Bulletin"
+#: templates/aa_bulletin_board/edit-bulletin.html:49
+msgid "Create bulletin"
 msgstr "Создать бюллетень"
+
+#: templates/aa_bulletin_board/partials/common/bulletin-board-management.html:6
+msgid "Add bulletin"
+msgstr "Добавить бюллетень"
 
 #: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid ""
@@ -132,31 +139,31 @@ msgstr ""
 msgid "Join our team of translators!"
 msgstr "Присоединяйтесь к нашей команде переводчиков!"
 
-#: views.py:80
+#: views.py:82
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
 msgstr "Бюллетень \"{bulletin__title}\" создан."
 
-#: views.py:123
+#: views.py:125
 msgid ""
-"The bulletin you are looking for does not exist, or you don't have access to "
-"it."
+"The bulletin you are looking for does either not exist, or you don't have "
+"access to it."
 msgstr "Запрошенный бюллетень не существует или у Вас нет доступа."
 
-#: views.py:165
+#: views.py:167
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr "Бюллетень \"{bulletin__title}\" обновлен."
 
-#: views.py:184
+#: views.py:186
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Бюллетень, который вы пытаетесь отредактировать, не существует."
 
-#: views.py:208
+#: views.py:210
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Бюллетень \"{bulletin.title}\" удален."
 
-#: views.py:215
+#: views.py:217
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Бюллетень, который вы пытаетесь удалить, не существует."
