@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "aa-bulletin-board"
-version = "1.13.1"
+version = "1.13.2"
 description = "A simple bulletin board for Alliance Auth"
 readme = "README.md"
 keywords = [
