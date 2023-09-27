@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:29+0200\n"
+"POT-Creation-Date: 2023-09-27 13:28+0200\n"
 "PO-Revision-Date: 2023-09-24 13:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -86,20 +86,22 @@ msgid "Back"
 msgstr ""
 
 #: templates/aa_bulletin_board/bulletin.html:21
-#: templates/aa_bulletin_board/dashboard.html:36
+#: templates/aa_bulletin_board/dashboard.html:39
 msgid "Edit"
 msgstr ""
 
 #: templates/aa_bulletin_board/bulletin.html:22
-#: templates/aa_bulletin_board/dashboard.html:37
+#: templates/aa_bulletin_board/dashboard.html:40
 msgid "Delete"
 msgstr ""
 
-#: templates/aa_bulletin_board/dashboard.html:22
-msgid "This bulletin is restricted to the following group(s):"
-msgstr ""
+#: templates/aa_bulletin_board/dashboard.html:24
+msgid "This bulletin is restricted to the following group:"
+msgid_plural "This bulletin is restricted to the following groups:"
+msgstr[0] ""
+msgstr[1] ""
 
-#: templates/aa_bulletin_board/dashboard.html:33
+#: templates/aa_bulletin_board/dashboard.html:36
 msgid "Read more"
 msgstr ""
 

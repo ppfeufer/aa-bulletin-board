@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:29+0200\n"
+"POT-Creation-Date: 2023-09-27 13:28+0200\n"
 "PO-Revision-Date: 2023-09-24 13:13+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -89,20 +89,26 @@ msgid "Back"
 msgstr "Назад"
 
 #: templates/aa_bulletin_board/bulletin.html:21
-#: templates/aa_bulletin_board/dashboard.html:36
+#: templates/aa_bulletin_board/dashboard.html:39
 msgid "Edit"
 msgstr "Редактировать"
 
 #: templates/aa_bulletin_board/bulletin.html:22
-#: templates/aa_bulletin_board/dashboard.html:37
+#: templates/aa_bulletin_board/dashboard.html:40
 msgid "Delete"
 msgstr "Удалить"
 
-#: templates/aa_bulletin_board/dashboard.html:22
-msgid "This bulletin is restricted to the following group(s):"
-msgstr "Этот бюллетень доступен следующим группам:"
+#: templates/aa_bulletin_board/dashboard.html:24
+#, fuzzy
+#| msgid "This bulletin is restricted to the following group(s):"
+msgid "This bulletin is restricted to the following group:"
+msgid_plural "This bulletin is restricted to the following groups:"
+msgstr[0] "Этот бюллетень доступен следующим группам:"
+msgstr[1] "Этот бюллетень доступен следующим группам:"
+msgstr[2] "Этот бюллетень доступен следующим группам:"
+msgstr[3] "Этот бюллетень доступен следующим группам:"
 
-#: templates/aa_bulletin_board/dashboard.html:33
+#: templates/aa_bulletin_board/dashboard.html:36
 msgid "Read more"
 msgstr "Читать"
 

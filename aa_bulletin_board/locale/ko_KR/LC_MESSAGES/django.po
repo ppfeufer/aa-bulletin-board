@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-24 16:29+0200\n"
+"POT-Creation-Date: 2023-09-27 13:28+0200\n"
 "PO-Revision-Date: 2023-09-24 13:13+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -88,20 +88,23 @@ msgid "Back"
 msgstr "뒤로"
 
 #: templates/aa_bulletin_board/bulletin.html:21
-#: templates/aa_bulletin_board/dashboard.html:36
+#: templates/aa_bulletin_board/dashboard.html:39
 msgid "Edit"
 msgstr "수정"
 
 #: templates/aa_bulletin_board/bulletin.html:22
-#: templates/aa_bulletin_board/dashboard.html:37
+#: templates/aa_bulletin_board/dashboard.html:40
 msgid "Delete"
 msgstr "삭제"
 
-#: templates/aa_bulletin_board/dashboard.html:22
-msgid "This bulletin is restricted to the following group(s):"
-msgstr "이 불레틴은 다음 그룹(들)만 열람할 수 있습니다:"
+#: templates/aa_bulletin_board/dashboard.html:24
+#, fuzzy
+#| msgid "This bulletin is restricted to the following group(s):"
+msgid "This bulletin is restricted to the following group:"
+msgid_plural "This bulletin is restricted to the following groups:"
+msgstr[0] "이 불레틴은 다음 그룹(들)만 열람할 수 있습니다:"
 
-#: templates/aa_bulletin_board/dashboard.html:33
+#: templates/aa_bulletin_board/dashboard.html:36
 msgid "Read more"
 msgstr "더보기"
 
