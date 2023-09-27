@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Fixed
+
+- Pluralisation in a template string
+
 ## \[1.13.2\] - 2023-09-26
 
 ### Fixed
