@@ -47,7 +47,4 @@ build_test:
 
 tox_tests:
 	export USE_MYSQL=False && \
-	tox
-
-pylint_checks:
-	pylint --rcfile .pylintrc $(package)/
+	tox -v -e allianceauth-stable
