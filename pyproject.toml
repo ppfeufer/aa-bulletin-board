@@ -41,6 +41,12 @@ dependencies = [
     "django-ckeditor-youtube-plugin>=0.0.1",
     "unidecode",
 ]
+[project.optional-dependencies]
+tests-allianceauth-stable = [
+    "coverage",
+    "django-webtest",
+    "Faker",
+]
 [project.urls]
 Changelog = "https://github.com/ppfeufer/aa-bulletin-board/blob/master/CHANGELOG.md"
 Documentation = "https://github.com/ppfeufer/aa-bulletin-board/blob/master/README.md"
