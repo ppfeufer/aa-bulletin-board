@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-27 13:28+0200\n"
+"POT-Creation-Date: 2023-10-01 13:56+0200\n"
 "PO-Revision-Date: 2023-10-01 11:43+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: German <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-bulletin-board/de/>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-bulletin-board/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,20 +18,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.0.2\n"
 
-#: __init__.py:12 models.py:67 templates/aa_bulletin_board/base.html:5
-#: templates/aa_bulletin_board/bulletin.html:5
-#: templates/aa_bulletin_board/dashboard.html:6
-#: templates/aa_bulletin_board/edit-bulletin.html:8
+#: aa_bulletin_board/__init__.py:12 aa_bulletin_board/models.py:67
+#: aa_bulletin_board/templates/aa_bulletin_board/base.html:5
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:6
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
 msgstr "Bulletin Board"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
-#: apps.py:21
+#: aa_bulletin_board/apps.py:21
 #, python-brace-format
 msgid "Bulletin Board v{__version__}"
 msgstr "Bulletin Board v{__version__}"
 
-#: forms.py:71
+#: aa_bulletin_board/forms.py:71
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
@@ -40,95 +41,95 @@ msgstr ""
 "Gruppenbeschränkungen bestehen, kann jeder der Zugriff auf dieses Modul hat, "
 "dieses Bulletin lesen."
 
-#: models.py:71
+#: aa_bulletin_board/models.py:71
 msgid "Can access this app"
 msgstr "Kann auf diese App zugreifen"
 
-#: models.py:72
+#: aa_bulletin_board/models.py:72
 msgid "Can manage (add/change/remove) bulletins"
 msgstr "Kann Bulletins verwalten (hinzufügen/ändern/entfernen)"
 
-#: models.py:81
+#: aa_bulletin_board/models.py:81
 msgid "Title"
 msgstr "Titel"
 
-#: models.py:83
+#: aa_bulletin_board/models.py:83
 msgid "Content"
 msgstr "Inhalt"
 
 #. Translators: This is the date and time the bulletin has been created
-#: models.py:88
+#: aa_bulletin_board/models.py:88
 msgid "Created"
 msgstr "Erstellt"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: models.py:94
+#: aa_bulletin_board/models.py:94
 msgid "Updated"
 msgstr "Aktualisiert"
 
-#: models.py:103
+#: aa_bulletin_board/models.py:103
 msgid "User"
 msgstr "Nutzer"
 
-#: models.py:109
+#: aa_bulletin_board/models.py:109
 msgid "Group restrictions"
 msgstr "Gruppenbeschränkungen"
 
-#: models.py:120
+#: aa_bulletin_board/models.py:120
 msgid "Bulletin"
 msgstr "Bulletin"
 
-#: models.py:121
+#: aa_bulletin_board/models.py:121
 msgid "Bulletins"
 msgstr "Bulletins"
 
-#: templates/aa_bulletin_board/bulletin.html:18
-#: templates/aa_bulletin_board/edit-bulletin.html:34
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:18
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
 msgstr "Zurück"
 
-#: templates/aa_bulletin_board/bulletin.html:21
-#: templates/aa_bulletin_board/dashboard.html:39
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:21
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:39
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: templates/aa_bulletin_board/bulletin.html:22
-#: templates/aa_bulletin_board/dashboard.html:40
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:22
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:40
 msgid "Delete"
 msgstr "Löschen"
 
-#: templates/aa_bulletin_board/dashboard.html:24
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:24
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
 msgstr[0] "Dieses Bulletin ist auf die folgende Gruppe beschränkt:"
 msgstr[1] "Dieses Bulletin ist auf die folgenden Gruppen beschränkt:"
 
-#: templates/aa_bulletin_board/dashboard.html:36
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
 msgid "Read more"
 msgstr "Weiter lesen"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:11
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Edit bulletin"
 msgstr "Bulletin bearbeiten"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:14
-#: templates/aa_bulletin_board/edit-bulletin.html:25
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
 msgid "Create new bulletin"
 msgstr "Neuen Bulletin erstellen"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:47
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
 msgid "Update bulletin"
 msgstr "Bulletin aktualisieren"
 
-#: templates/aa_bulletin_board/edit-bulletin.html:49
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:49
 msgid "Create bulletin"
 msgstr "Bulletin erstellen"
 
-#: templates/aa_bulletin_board/partials/common/bulletin-board-management.html:6
+#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:6
 msgid "Add bulletin"
 msgstr "Bulletin hinzufügen"
 
-#: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
+#: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid ""
 "Do you want to help translate this app into your language or improve the "
 "existing translation?"
@@ -136,36 +137,36 @@ msgstr ""
 "Du möchtest helfen diese App in Deine Sprache zu übersetzen oder die "
 "bestehende Übersetzung verbessern?"
 
-#: templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
+#: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
 msgstr "Tritt unserm Team von Übersetzern bei!"
 
-#: views.py:82
+#: aa_bulletin_board/views.py:82
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
 msgstr "Bulletin „{bulletin__title}“ erstellt."
 
-#: views.py:125
+#: aa_bulletin_board/views.py:125
 msgid ""
 "The bulletin you are looking for does either not exist, or you don't have "
 "access to it."
 msgstr ""
 "Dieses Bulletin existiert entweder nicht oder Du hast keinen Zugriff darauf."
 
-#: views.py:167
+#: aa_bulletin_board/views.py:167
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr "Bulletin „{bulletin__title}“ aktualisiert."
 
-#: views.py:186
+#: aa_bulletin_board/views.py:186
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Das Bulletin das Du bearbeiten möchtest scheint nicht zu existieren."
 
-#: views.py:210
+#: aa_bulletin_board/views.py:210
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Bulletin „{bulletin.title}“ gelöscht."
 
-#: views.py:217
+#: aa_bulletin_board/views.py:217
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Das Bulletin das Du versuchst zu löschen scheint nicht zu existieren."
