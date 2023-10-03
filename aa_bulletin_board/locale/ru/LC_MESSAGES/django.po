@@ -3,15 +3,16 @@
 # This file is distributed under the same license as the PACKAGE package.
 # "H. Peter Pfeufer" <info@ppfeufer.de>, 2023.
 # Nikolay <nick.postnikov@gmail.com>, 2023.
+# Max <mark25@inbox.ru>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 13:56+0200\n"
-"PO-Revision-Date: 2023-09-24 13:13+0000\n"
-"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-bulletin-board/ru/>\n"
+"PO-Revision-Date: 2023-10-03 11:01+0000\n"
+"Last-Translator: Max <mark25@inbox.ru>\n"
+"Language-Team: Russian <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-bulletin-board/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -100,11 +101,9 @@ msgid "Delete"
 msgstr "Удалить"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:24
-#, fuzzy
-#| msgid "This bulletin is restricted to the following group(s):"
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
-msgstr[0] "Этот бюллетень доступен следующим группам:"
+msgstr[0] "Этот бюллетень доступен следующей группе:"
 msgstr[1] "Этот бюллетень доступен следующим группам:"
 msgstr[2] "Этот бюллетень доступен следующим группам:"
 msgstr[3] "Этот бюллетень доступен следующим группам:"
@@ -149,7 +148,7 @@ msgstr "Присоединяйтесь к нашей команде перево
 #: aa_bulletin_board/views.py:82
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
-msgstr "Бюллетень \"{bulletin__title}\" создан."
+msgstr "Бюллетень «{bulletin__title}» создан."
 
 #: aa_bulletin_board/views.py:125
 msgid ""
@@ -160,7 +159,7 @@ msgstr "Запрошенный бюллетень не существует ил
 #: aa_bulletin_board/views.py:167
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr "Бюллетень \"{bulletin__title}\" обновлен."
+msgstr "Бюллетень «{bulletin__title}» обновлен."
 
 #: aa_bulletin_board/views.py:186
 msgid "The bulletin you are trying to edit does not exist."
@@ -169,7 +168,7 @@ msgstr "Бюллетень, который вы пытаетесь отреда�
 #: aa_bulletin_board/views.py:210
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr "Бюллетень \"{bulletin.title}\" удален."
+msgstr "Бюллетень «{bulletin.title}» удален."
 
 #: aa_bulletin_board/views.py:217
 msgid "The bulletin you are trying to delete does not exist."
