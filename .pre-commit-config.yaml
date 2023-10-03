@@ -194,6 +194,8 @@ repos:
       - id: pyproject-fmt
         args:
           - --indent=4
+        additional_dependencies:
+          - tox==4.11.3  # https://github.com/tox-dev/tox/releases/latest
 
   - repo: https://github.com/abravalheri/validate-pyproject
     rev: v0.14
