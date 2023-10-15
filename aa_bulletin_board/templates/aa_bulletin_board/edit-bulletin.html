@@ -28,21 +28,21 @@
 {% endblock %}
 
 {% block aabulletinboard_body %}
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <a class="btn btn-default btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate "Back" %}</a>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title mb-0">
+                <a class="btn bg-secondary btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate "Back" %}</a>
             </div>
         </div>
 
-        <div class="panel-body aa-bulletin-boad-edit-bulletin">
+        <div class="card-body aa-bulletin-boad-edit-bulletin">
             <form id="aa-bulletin-board-bulletin-form" autocomplete="off" action="{% if bulletin %}{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:create_bulletin' %}{% endif %}" method="post">
                 {% csrf_token %}
 
                 {{ form|bootstrap }}
 
                 <div class="form-group text-right clearfix">
-                    <button class="btn btn-success" type="submit">
+                    <button class="btn bg-success" type="submit">
                         {% if bulletin %}
                             {% translate "Update bulletin" as button_text %}
                         {% else %}
