@@ -19,8 +19,8 @@
 
     .aa-bulletin-board .card-bulletin-excerpt .card-body {
         height: 200px;
-        -webkit-mask-image: linear-gradient( rgb(0  0  0), transparent);
-        mask-image: linear-gradient(rgb(0  0  0), transparent);
+        -webkit-mask-image: linear-gradient(rgb(0 0 0), transparent);
+        mask-image: linear-gradient(rgb(0 0 0), transparent);
         overflow: hidden;
         padding: 1rem;
     }
@@ -43,7 +43,15 @@
     }
 }
 
-/* MultiSelect
+/* Form
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board #aa-bulletin-board-bulletin-form label {
+        display: block;
+    }
+}
+
+/* SumoSelect
 ------------------------------------------------------------------------------------- */
 @media all {
     .aa-bulletin-board .SumoSelect p {
@@ -52,6 +60,10 @@
 
     .aa-bulletin-board .SumoSelect {
         color: rgb(54 54 54);
+    }
+
+    .aa-bulletin-board .SumoSelect > .CaptionCont > label > i {
+        background-image: none;
     }
 
     .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {

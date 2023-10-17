@@ -1,6 +1,6 @@
 {% extends "aa_bulletin_board/base.html" %}
 
-{% load bootstrap %}
+{% load django_bootstrap5 %}
 {% load i18n %}
 {% load static %}
 
@@ -39,19 +39,15 @@
             <form id="aa-bulletin-board-bulletin-form" autocomplete="off" action="{% if bulletin %}{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:create_bulletin' %}{% endif %}" method="post">
                 {% csrf_token %}
 
-                {{ form|bootstrap }}
+                {% bootstrap_form form %}
 
-                <div class="form-group text-right clearfix">
-                    <button class="btn bg-success" type="submit">
-                        {% if bulletin %}
-                            {% translate "Update bulletin" as button_text %}
-                        {% else %}
-                            {% translate "Create bulletin" as button_text %}
-                        {% endif %}
+                {% if bulletin %}
+                    {% translate "Update bulletin" as button_text %}
+                {% else %}
+                    {% translate "Create bulletin" as button_text %}
+                {% endif %}
 
-                        {{ button_text|title }}
-                    </button>
-                </div>
+                {% bootstrap_button button_type="submit" button_class="btn bg-success" content=button_text|title %}
             </form>
         </div>
     </div>
