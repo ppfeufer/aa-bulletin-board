@@ -36,7 +36,7 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
 dependencies = [
-    "allianceauth>=3",
+    "allianceauth>=4.0.0a1",
     "django-ckeditor>=6.5",
     "django-ckeditor-youtube-plugin>=0.0.1",
     "unidecode",
