@@ -42,6 +42,8 @@ ______________________________________________________________________
 
 ______________________________________________________________________
 
+![AA Bulletin Board](https://raw.githubusercontent.com/ppfeufer/aa-bulletin-board/master/docs/images/presentation/aa-bulletin-board.jpg "AA Bulletin Board")
+
 ## ⚠️ Before You Install This Module ⚠️<a name="%E2%9A%A0%EF%B8%8F-before-you-install-this-module-%E2%9A%A0%EF%B8%8F"></a>
 
 This module needs quite some configuration done before working properly. You need to
