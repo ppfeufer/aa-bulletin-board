@@ -40,14 +40,14 @@ def get_bulletin_slug_from_title(bulletin_title: str) -> str:
     :rtype:
     """
 
-    run = 0
-    bulletin_slug = slugify(
+    run: int = 0
+    bulletin_slug: str = slugify(
         value=unidecode.unidecode(bulletin_title), allow_unicode=True
     )
 
     while Bulletin.objects.filter(slug=bulletin_slug).exists():
         run += 1
-        bulletin_slug = slugify(
+        bulletin_slug: str = slugify(
             value=unidecode.unidecode(f"{bulletin_title}-{run}"), allow_unicode=True
         )
 
