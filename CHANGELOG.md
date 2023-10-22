@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+<!--
+Section Order:
+
+### Added
+### Fixed
+### Changed
+### Deprecated
+### Removed
+### Security
+-->
+
+> **Note**
+>
+> This will be the last version which will be compatible with Alliance Auth older
+> than version 4.0.0. So make sure to update your Alliance Auth instance in a timely
+> manner to make sure future updates will work.
+
+### Added
+
+- Compatibility with Alliance Auth v4
+- Backwards compatibility with Alliance Auth v3 or older
+
 ### Fixed
 
 - Pluralisation in a template string
@@ -56,14 +78,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[1.10.1\] - 2023-07-30
 
+### Added
+
+- Footer to promote help with the app translation
+
 ### Fixed
 
 - Grammar in English sentences
 - Quotation marks in templates
-
-### Added
-
-- Footer to promote help with the app translation
 
 ### Changed
 
@@ -193,15 +215,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Test suite for AA 3.x and Django 4
 
-### Removed
-
-- Deprecated settings
-
 ### Changed
 
 - Switched to `setup.cfg` as config file, since `setup.py` is deprecated now
 - Minimum dependencies:
   - Alliance Auth>=2.11.0 (as the latest stable of the 2.x branch for now)
+
+### Removed
+
+- Deprecated settings
 
 ## \[1.3.0\] - 2022-02-28
 
@@ -270,7 +292,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[0.1.0-beta.11\] - 2021-07-25
 
-### Updated
+### Changed
 
 - Configuration instructions in README.md to make it easier to understand if you
   have multiple apps that use CKEditor, like `aa-forum`, and how to combine these
