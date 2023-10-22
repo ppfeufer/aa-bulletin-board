@@ -2,6 +2,9 @@
 The views
 """
 
+# Third Party
+from packaging import version
+
 # Django
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
@@ -13,8 +16,39 @@ from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
+# Alliance Auth
+from allianceauth import __version__ as allianceauth__version
+from allianceauth.services.hooks import get_extension_logger
+
+# Alliance Auth (External Libs)
+from app_utils.logging import LoggerAddTag
+
 # AA Bulletin Board
+from aa_bulletin_board import __title__
 from aa_bulletin_board.forms import Bulletin, BulletinForm
+
+logger = LoggerAddTag(my_logger=get_extension_logger(name=__name__), prefix=__title__)
+
+
+def get_template_path() -> str:
+    """
+    Get template path
+
+    This is used to determine if we have Alliance Auth v4 or still v3, in which case we
+    have to fall back to the legacy templates to ensure backwards compatibility
+
+    :return:
+    :rtype:
+    """
+
+    if version.parse(allianceauth__version).major < 4:
+        logger.debug(
+            msg="Alliance Auth v3 detected, falling back to legacy templates …"
+        )
+
+        return "aa_bulletin_board/legacy_templates"
+
+    return "aa_bulletin_board"
 
 
 @login_required
@@ -36,11 +70,13 @@ def dashboard(request: WSGIRequest) -> HttpResponse:
         .user_has_access(user=request.user)
         .order_by("-created_date")
     )
+
+    template_path = get_template_path()
     context = {"bulletins": bulletins}
 
     return render(
         request=request,
-        template_name="aa_bulletin_board/dashboard.html",
+        template_name=f"{template_path}/dashboard.html",
         context=context,
     )
 
@@ -90,11 +126,12 @@ def create_bulletin(request: WSGIRequest) -> HttpResponse:
 
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
 
+    template_path = get_template_path()
     context = {"form": form, "bulletin": False}
 
     return render(
         request=request,
-        template_name="aa_bulletin_board/edit-bulletin.html",
+        template_name=f"{template_path}/edit-bulletin.html",
         context=context,
     )
 
@@ -117,11 +154,12 @@ def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
         bulletin: Bulletin = Bulletin.objects.user_has_access(request.user).get(
             slug=slug
         )
+        template_path = get_template_path()
         context = {"bulletin": bulletin, "slug": slug}
 
         return render(
             request=request,
-            template_name="aa_bulletin_board/bulletin.html",
+            template_name=f"{template_path}/bulletin.html",
             context=context,
         )
     except Bulletin.DoesNotExist:
@@ -187,11 +225,12 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
 
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
 
+    template_path = get_template_path()
     context = {"form": form, "existing_bulletin": True, "bulletin": bulletin}
 
     return render(
         request=request,
-        template_name="aa_bulletin_board/edit-bulletin.html",
+        template_name=f"{template_path}/edit-bulletin.html",
         context=context,
     )
 

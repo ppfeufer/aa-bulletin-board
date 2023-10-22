@@ -14,6 +14,7 @@ from django.urls import reverse
 from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.models import Bulletin
 from aa_bulletin_board.tests.utils import create_fake_user
+from aa_bulletin_board.views import get_template_path
 
 fake = Faker()
 
@@ -57,6 +58,8 @@ class TestBulletinUI(WebTest):
             ],
         )
 
+        cls.template_path = get_template_path()
+
     def test_should_show_bulletin_page(self) -> None:
         """
         Test if a bulletin is shown
@@ -82,7 +85,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/bulletin.html"
+            response=page,
+            template_name=f"{self.template_path}/bulletin.html",
         )
 
     def test_should_redirect_to_bulletin_dashboard_when_bulletin_does_not_exist(
@@ -122,7 +126,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name=f"{self.template_path}/edit-bulletin.html",
         )
 
     def test_should_show_edit_bulletin_page(self) -> None:
@@ -150,7 +155,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name=f"{self.template_path}/edit-bulletin.html",
         )
 
     def test_should_redirect_to_bulletin_dashboard_when_edit_bulletin_does_not_exist(
@@ -261,7 +267,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name=f"{self.template_path}/edit-bulletin.html",
         )
 
     def test_should_return_to_edit_bulletin_form_for_invalid_form_submitted_on_edit_bulletin(
@@ -297,5 +304,6 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name=f"{self.template_path}/edit-bulletin.html",
         )

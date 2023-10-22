@@ -1,0 +1,77 @@
+{% extends "aa_bulletin_board/legacy_templates/base.html" %}
+
+{% load bootstrap %}
+{% load i18n %}
+{% load static %}
+
+{% block page_title %}
+    {% translate "Bulletin Board" as app_name %}
+
+    {% if bulletin %}
+        {% translate "Edit bulletin" as page_title %}
+        {{ page_title|title }} » {{ bulletin.title }}
+    {% else %}
+        {% translate "Create new bulletin" as page_title %}
+        {{ page_title|title }}
+    {% endif %}
+
+    » {{ app_name }}
+{% endblock %}
+
+{% block aabulletinboard_header %}
+    {% if bulletin %}
+        {% include "aa_bulletin_board/legacy_templates/partials/header/page-header.html" with header_text=bulletin.title %}
+    {% else %}
+        {% translate "Create new bulletin" as header_text %}
+        {% include "aa_bulletin_board/legacy_templates/partials/header/page-header.html" with header_text=header_text %}
+    {% endif %}
+{% endblock %}
+
+{% block aabulletinboard_body %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">
+                <a class="btn btn-default btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate "Back" %}</a>
+            </div>
+        </div>
+
+        <div class="panel-body aa-bulletin-boad-edit-bulletin">
+            <form id="aa-bulletin-board-bulletin-form" autocomplete="off" action="{% if bulletin %}{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:create_bulletin' %}{% endif %}" method="post">
+                {% csrf_token %}
+
+                {{ form|bootstrap }}
+
+                <div class="form-group text-right clearfix">
+                    <button class="btn btn-success" type="submit">
+                        {% if bulletin %}
+                            {% translate "Update bulletin" as button_text %}
+                        {% else %}
+                            {% translate "Create bulletin" as button_text %}
+                        {% endif %}
+
+                        {{ button_text|title }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_javascript %}
+    {% include "aa_bulletin_board/legacy_templates/bundles/sumoselect-js.html" %}
+
+    <script src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+    <script>
+        'use strict';
+
+        $('.aa-bulletin-boad-edit-bulletin select').SumoSelect(
+            {okCancelInMulti: true, selectAll: true}
+        );
+    </script>
+{% endblock %}
+
+{% block extra_css %}
+    {% include "aa_bulletin_board/legacy_templates/bundles/sumoselect-css.html" %}
+    {% include "aa_bulletin_board/legacy_templates/bundles/aa-bulletin-board-css.html" %}
+{% endblock %}

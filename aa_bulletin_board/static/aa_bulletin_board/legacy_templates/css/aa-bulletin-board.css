@@ -1,0 +1,84 @@
+@media all {
+    .aa-bulletin-board-header-addition {
+        display: block;
+    }
+
+    .aa-bulletin-board .panels-equal-height {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .aa-bulletin-board .panels-equal-height .panel {
+        width: 100%;
+    }
+
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    .aa-bulletin-board .panel-bulletin-excerpt .panel-body {
+        height: 200px;
+        mask-image: linear-gradient(180deg, rgb(0 0 0) 60%, transparent);
+        overflow: hidden;
+        padding: 1rem;
+    }
+
+    .aa-bulletin-board .panel-bulletin-excerpt .panel-footer-read-more-button {
+        padding: 0.625rem 1rem;
+    }
+
+    .aa-bulletin-board .django-ckeditor-widget {
+        display: initial !important;
+    }
+
+    .aa-bulletin-board-management {
+        margin-bottom: 2rem;
+    }
+
+    .aa-bulletin-board img {
+        height: auto !important; /* to override inline style added by CKeditor */
+        max-width: 100%;
+    }
+
+    .aa-bulletin-board-footer {
+        border-top: 1px solid rgb(236 240 241);
+        font-size: 85%;
+        margin-top: 1rem;
+        padding-top: 1rem;
+    }
+
+    .template-dark-mode .aa-bulletin-board-footer {
+        border-color: rgb(70 69 69);
+    }
+}
+
+/* MultiSelect
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board .SumoSelect p {
+        height: auto;
+    }
+
+    /* For for Dark Mode
+    --------------------------------------------------------------------------------- */
+    .template-dark-mode .aa-bulletin-board .SumoSelect {
+        color: rgb(54 54 54);
+    }
+
+    .template-dark-mode .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
+        color: rgb(62 68 76);
+    }
+}
+
+@media all and (min-width: 768px) {
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+        width: calc(100% / 2);
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+        width: calc(100% / 3);
+    }
+}

@@ -38,13 +38,26 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth>=4.0.0a1",
+    "allianceauth>=3",
+    "allianceauth-app-utils>=1.19.1",
     "django-ckeditor>=6.5",
     "django-ckeditor-youtube-plugin>=0.0.1",
     "unidecode",
 ]
 [project.optional-dependencies]
+tests-allianceauth-legacy = [
+    "allianceauth<=4,>=3",
+    "coverage",
+    "django-webtest",
+    "Faker",
+]
 tests-allianceauth-stable = [
+    "coverage",
+    "django-webtest",
+    "Faker",
+]
+tests-allianceauth-testing = [
+    "allianceauth>=4.0.0a1",
     "coverage",
     "django-webtest",
     "Faker",
