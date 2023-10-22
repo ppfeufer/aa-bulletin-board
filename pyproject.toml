@@ -6,7 +6,6 @@ requires = [
 
 [project]
 name = "aa-bulletin-board"
-version = "1.13.2"
 description = "A simple bulletin board for Alliance Auth"
 readme = "README.md"
 keywords = [
@@ -35,6 +34,9 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
+dynamic = [
+    "version",
+]
 dependencies = [
     "allianceauth>=4.0.0a1",
     "django-ckeditor>=6.5",
@@ -59,3 +61,6 @@ Tracker = "https://github.com/ppfeufer/aa-bulletin-board/issues"
 include = [
     "/aa_bulletin_board",
 ]
+
+[tool.hatch.version]
+path = "aa_bulletin_board/__init__.py"
