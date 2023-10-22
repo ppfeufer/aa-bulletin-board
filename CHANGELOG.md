@@ -20,7 +20,7 @@ Section Order:
 
 > **Note**
 >
-> This will be the last version which will be compatible with Alliance Auth older
+> This will be the last version to be compatible with Alliance Auth older
 > than version 4.0.0. So make sure to update your Alliance Auth instance in a timely
 > manner to make sure future updates will work.
 
