@@ -2,6 +2,9 @@
 Test for the UI
 """
 
+# Standard Library
+from unittest.mock import patch
+
 # Third Party
 from django_webtest import WebTest
 from faker import Faker
@@ -17,6 +20,8 @@ from aa_bulletin_board.tests.utils import create_fake_user
 from aa_bulletin_board.views import get_template_path
 
 fake = Faker()
+
+VIEWS_PATH = "aa_bulletin_board.views"
 
 
 class TestBulletinUI(WebTest):
@@ -59,6 +64,34 @@ class TestBulletinUI(WebTest):
         )
 
         cls.template_path = get_template_path()
+
+    def test_should_return_template_path(self):
+        """
+        Test should return the template path
+
+        :return:
+        :rtype:
+        """
+
+        with patch(target=VIEWS_PATH + ".allianceauth__version", new="4.0.0"):
+            template_path = get_template_path()
+            expected_template_path = "aa_bulletin_board"
+
+            self.assertEqual(first=template_path, second=expected_template_path)
+
+    def test_should_return_legacy_template_path(self):
+        """
+        Test should return the template path to the legacy templates
+
+        :return:
+        :rtype:
+        """
+
+        with patch(target=VIEWS_PATH + ".allianceauth__version", new="3.7.1"):
+            template_path = get_template_path()
+            expected_template_path = "aa_bulletin_board/legacy_templates"
+
+            self.assertEqual(first=template_path, second=expected_template_path)
 
     def test_should_show_bulletin_page(self) -> None:
         """

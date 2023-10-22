@@ -41,9 +41,13 @@ def get_template_path() -> str:
     :rtype:
     """
 
-    if version.parse(allianceauth__version).major < 4:
+    current_aa_version = allianceauth__version
+
+    logger.debug(msg=current_aa_version)
+
+    if version.parse(current_aa_version).major < 4:
         logger.debug(
-            msg="Alliance Auth v3 detected, falling back to legacy templates …"
+            msg="Alliance Auth v3 or lower detected, falling back to legacy templates …"
         )
 
         return "aa_bulletin_board/legacy_templates"
