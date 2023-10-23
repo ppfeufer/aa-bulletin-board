@@ -14,14 +14,13 @@ from django.contrib.auth.models import Group
 from django.urls import reverse
 
 # AA Bulletin Board
+from aa_bulletin_board.app_settings import template_path
+from aa_bulletin_board.constants import TEMPLATE_PATH
 from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.models import Bulletin
 from aa_bulletin_board.tests.utils import create_fake_user
-from aa_bulletin_board.views import _get_template_path
 
 fake = Faker()
-
-VIEWS_PATH = "aa_bulletin_board.views"
 
 
 class TestBulletinUI(WebTest):
@@ -63,7 +62,7 @@ class TestBulletinUI(WebTest):
             ],
         )
 
-        cls.template_path = _get_template_path()
+        cls.template_path = TEMPLATE_PATH
 
     def test_should_return_template_path(self):
         """
@@ -73,11 +72,13 @@ class TestBulletinUI(WebTest):
         :rtype:
         """
 
-        with patch(target=VIEWS_PATH + ".allianceauth__version", new="4.0.0"):
-            template_path = _get_template_path()
+        with patch(
+            target="aa_bulletin_board.app_settings.allianceauth__version", new="4.0.0"
+        ):
+            curren_template_path = template_path()
             expected_template_path = "aa_bulletin_board"
 
-            self.assertEqual(first=template_path, second=expected_template_path)
+            self.assertEqual(first=curren_template_path, second=expected_template_path)
 
     def test_should_return_legacy_template_path(self):
         """
@@ -87,11 +88,13 @@ class TestBulletinUI(WebTest):
         :rtype:
         """
 
-        with patch(target=VIEWS_PATH + ".allianceauth__version", new="3.7.1"):
-            template_path = _get_template_path()
+        with patch(
+            target="aa_bulletin_board.app_settings.allianceauth__version", new="3.7.1"
+        ):
+            curren_template_path = template_path()
             expected_template_path = "aa_bulletin_board/legacy_templates"
 
-            self.assertEqual(first=template_path, second=expected_template_path)
+            self.assertEqual(first=curren_template_path, second=expected_template_path)
 
     def test_should_show_bulletin_page(self) -> None:
         """
