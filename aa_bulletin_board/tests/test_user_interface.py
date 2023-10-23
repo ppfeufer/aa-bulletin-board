@@ -17,7 +17,7 @@ from django.urls import reverse
 from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.models import Bulletin
 from aa_bulletin_board.tests.utils import create_fake_user
-from aa_bulletin_board.views import get_template_path
+from aa_bulletin_board.views import _get_template_path
 
 fake = Faker()
 
@@ -63,7 +63,7 @@ class TestBulletinUI(WebTest):
             ],
         )
 
-        cls.template_path = get_template_path()
+        cls.template_path = _get_template_path()
 
     def test_should_return_template_path(self):
         """
@@ -74,7 +74,7 @@ class TestBulletinUI(WebTest):
         """
 
         with patch(target=VIEWS_PATH + ".allianceauth__version", new="4.0.0"):
-            template_path = get_template_path()
+            template_path = _get_template_path()
             expected_template_path = "aa_bulletin_board"
 
             self.assertEqual(first=template_path, second=expected_template_path)
@@ -88,7 +88,7 @@ class TestBulletinUI(WebTest):
         """
 
         with patch(target=VIEWS_PATH + ".allianceauth__version", new="3.7.1"):
-            template_path = get_template_path()
+            template_path = _get_template_path()
             expected_template_path = "aa_bulletin_board/legacy_templates"
 
             self.assertEqual(first=template_path, second=expected_template_path)

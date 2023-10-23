@@ -25,12 +25,13 @@ from app_utils.logging import LoggerAddTag
 
 # AA Bulletin Board
 from aa_bulletin_board import __title__
+from aa_bulletin_board.apps import AaBulletinBoardConfig
 from aa_bulletin_board.forms import Bulletin, BulletinForm
 
 logger = LoggerAddTag(my_logger=get_extension_logger(name=__name__), prefix=__title__)
 
 
-def get_template_path() -> str:
+def _get_template_path() -> str:
     """
     Get template path
 
@@ -41,18 +42,16 @@ def get_template_path() -> str:
     :rtype:
     """
 
-    current_aa_version = allianceauth__version
+    app_name = AaBulletinBoardConfig.name
 
-    logger.debug(msg=current_aa_version)
-
-    if version.parse(current_aa_version).major < 4:
+    if version.parse(allianceauth__version).major < 4:
         logger.debug(
-            msg="Alliance Auth v3 or lower detected, falling back to legacy templates …"
+            msg="Alliance Auth v3 detected, falling back to legacy templates …"
         )
 
-        return "aa_bulletin_board/legacy_templates"
+        return f"{app_name}/legacy_templates"
 
-    return "aa_bulletin_board"
+    return app_name
 
 
 @login_required
@@ -75,7 +74,7 @@ def dashboard(request: WSGIRequest) -> HttpResponse:
         .order_by("-created_date")
     )
 
-    template_path = get_template_path()
+    template_path = _get_template_path()
     context = {"bulletins": bulletins}
 
     return render(
@@ -130,7 +129,7 @@ def create_bulletin(request: WSGIRequest) -> HttpResponse:
 
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
 
-    template_path = get_template_path()
+    template_path = _get_template_path()
     context = {"form": form, "bulletin": False}
 
     return render(
@@ -158,7 +157,7 @@ def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
         bulletin: Bulletin = Bulletin.objects.user_has_access(request.user).get(
             slug=slug
         )
-        template_path = get_template_path()
+        template_path = _get_template_path()
         context = {"bulletin": bulletin, "slug": slug}
 
         return render(
@@ -229,7 +228,7 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
 
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
 
-    template_path = get_template_path()
+    template_path = _get_template_path()
     context = {"form": form, "existing_bulletin": True, "bulletin": bulletin}
 
     return render(
