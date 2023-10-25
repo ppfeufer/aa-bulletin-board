@@ -14,7 +14,7 @@ from django.contrib.auth.models import Group
 from django.urls import reverse
 
 # AA Bulletin Board
-from aa_bulletin_board.app_settings import template_path
+from aa_bulletin_board.app_settings import allianceauth_major_version, template_path
 from aa_bulletin_board.constants import TEMPLATE_PATH
 from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.models import Bulletin
@@ -63,6 +63,24 @@ class TestBulletinUI(WebTest):
         )
 
         cls.template_path = TEMPLATE_PATH
+
+    def test_should_return_aa_major_version(self):
+        """
+        Test should return the major version of the installed AA instance
+
+        :return:
+        :rtype:
+        """
+
+        with patch(
+            target="aa_bulletin_board.app_settings.allianceauth__version", new="4.0.0"
+        ):
+            curren_aa_major_version = allianceauth_major_version()
+            expected_aa_major_version = 4
+
+            self.assertEqual(
+                first=curren_aa_major_version, second=expected_aa_major_version
+            )
 
     def test_should_return_template_path(self):
         """
