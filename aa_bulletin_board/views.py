@@ -21,7 +21,6 @@ from app_utils.logging import LoggerAddTag
 
 # AA Bulletin Board
 from aa_bulletin_board import __title__
-from aa_bulletin_board.constants import TEMPLATE_PATH
 from aa_bulletin_board.forms import Bulletin, BulletinForm
 
 logger = LoggerAddTag(my_logger=get_extension_logger(name=__name__), prefix=__title__)
@@ -51,7 +50,7 @@ def dashboard(request: WSGIRequest) -> HttpResponse:
 
     return render(
         request=request,
-        template_name=f"{TEMPLATE_PATH}/dashboard.html",
+        template_name="aa_bulletin_board/dashboard.html",
         context=context,
     )
 
@@ -105,7 +104,7 @@ def create_bulletin(request: WSGIRequest) -> HttpResponse:
 
     return render(
         request=request,
-        template_name=f"{TEMPLATE_PATH}/edit-bulletin.html",
+        template_name="aa_bulletin_board/edit-bulletin.html",
         context=context,
     )
 
@@ -132,7 +131,7 @@ def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
 
         return render(
             request=request,
-            template_name=f"{TEMPLATE_PATH}/bulletin.html",
+            template_name="aa_bulletin_board/bulletin.html",
             context=context,
         )
     except Bulletin.DoesNotExist:
@@ -202,7 +201,7 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
 
     return render(
         request=request,
-        template_name=f"{TEMPLATE_PATH}/edit-bulletin.html",
+        template_name="aa_bulletin_board/edit-bulletin.html",
         context=context,
     )
 

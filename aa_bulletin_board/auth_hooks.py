@@ -23,7 +23,7 @@ class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-m
         MenuItemHook.__init__(
             self,
             text=__title__,
-            classes="fas fa-clipboard-list fa-fw",
+            classes="fas fa-clipboard-list",
             url_name="aa_bulletin_board:dashboard",
             navactive=["aa_bulletin_board:"],
         )

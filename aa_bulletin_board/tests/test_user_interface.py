@@ -2,9 +2,6 @@
 Test for the UI
 """
 
-# Standard Library
-from unittest.mock import patch
-
 # Third Party
 from django_webtest import WebTest
 from faker import Faker
@@ -14,8 +11,6 @@ from django.contrib.auth.models import Group
 from django.urls import reverse
 
 # AA Bulletin Board
-from aa_bulletin_board.app_settings import allianceauth_major_version, template_path
-from aa_bulletin_board.constants import TEMPLATE_PATH
 from aa_bulletin_board.helpers import string_cleanup
 from aa_bulletin_board.models import Bulletin
 from aa_bulletin_board.tests.utils import create_fake_user
@@ -62,58 +57,6 @@ class TestBulletinUI(WebTest):
             ],
         )
 
-        cls.template_path = TEMPLATE_PATH
-
-    def test_should_return_aa_major_version(self):
-        """
-        Test should return the major version of the installed AA instance
-
-        :return:
-        :rtype:
-        """
-
-        with patch(
-            target="aa_bulletin_board.app_settings.allianceauth__version", new="4.0.0"
-        ):
-            curren_aa_major_version = allianceauth_major_version()
-            expected_aa_major_version = 4
-
-            self.assertEqual(
-                first=curren_aa_major_version, second=expected_aa_major_version
-            )
-
-    def test_should_return_template_path(self):
-        """
-        Test should return the template path
-
-        :return:
-        :rtype:
-        """
-
-        with patch(
-            target="aa_bulletin_board.app_settings.allianceauth__version", new="4.0.0"
-        ):
-            curren_template_path = template_path()
-            expected_template_path = "aa_bulletin_board"
-
-            self.assertEqual(first=curren_template_path, second=expected_template_path)
-
-    def test_should_return_legacy_template_path(self):
-        """
-        Test should return the template path to the legacy templates
-
-        :return:
-        :rtype:
-        """
-
-        with patch(
-            target="aa_bulletin_board.app_settings.allianceauth__version", new="3.7.1"
-        ):
-            curren_template_path = template_path()
-            expected_template_path = "aa_bulletin_board/legacy_templates"
-
-            self.assertEqual(first=curren_template_path, second=expected_template_path)
-
     def test_should_show_bulletin_page(self) -> None:
         """
         Test if a bulletin is shown
@@ -140,7 +83,7 @@ class TestBulletinUI(WebTest):
         # then
         self.assertTemplateUsed(
             response=page,
-            template_name=f"{self.template_path}/bulletin.html",
+            template_name="aa_bulletin_board/bulletin.html",
         )
 
     def test_should_redirect_to_bulletin_dashboard_when_bulletin_does_not_exist(
@@ -181,7 +124,7 @@ class TestBulletinUI(WebTest):
         # then
         self.assertTemplateUsed(
             response=page,
-            template_name=f"{self.template_path}/edit-bulletin.html",
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )
 
     def test_should_show_edit_bulletin_page(self) -> None:
@@ -210,7 +153,7 @@ class TestBulletinUI(WebTest):
         # then
         self.assertTemplateUsed(
             response=page,
-            template_name=f"{self.template_path}/edit-bulletin.html",
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )
 
     def test_should_redirect_to_bulletin_dashboard_when_edit_bulletin_does_not_exist(
@@ -322,7 +265,7 @@ class TestBulletinUI(WebTest):
         # then
         self.assertTemplateUsed(
             response=page,
-            template_name=f"{self.template_path}/edit-bulletin.html",
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )
 
     def test_should_return_to_edit_bulletin_form_for_invalid_form_submitted_on_edit_bulletin(
@@ -359,5 +302,5 @@ class TestBulletinUI(WebTest):
         # then
         self.assertTemplateUsed(
             response=page,
-            template_name=f"{self.template_path}/edit-bulletin.html",
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )

@@ -8,7 +8,8 @@ Test settings
 # local.py settings
 # Every setting in base.py can be overloaded by redefining it here.
 
-from .base import *
+# AA Bulletin Board
+from testauth.settings.legacy.base import *
 
 PACKAGE = "aa_bulletin_board"
 
