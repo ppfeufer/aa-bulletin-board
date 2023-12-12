@@ -55,7 +55,7 @@
 
                 $('.cards-equal-height').each((indexEqualHeight, elementEqualHeight) => {
                     $('.card-bulletin-excerpt', elementEqualHeight).each((indexExcerpt, elementExcerpt) => {
-                        let currentBulletinHeight = $(elementExcerpt).height();
+                        const currentBulletinHeight = $(elementExcerpt).height();
 
                         if (currentBulletinHeight > highestBox) {
                             highestBox = currentBulletinHeight;
@@ -68,7 +68,7 @@
 
             resizeBulletinCard();
 
-            $(window).on('resize', () => {
+            $(window).resize(() => {
                 $('.card-bulletin-excerpt').css({"height": ""});
 
                 resizeBulletinCard();
