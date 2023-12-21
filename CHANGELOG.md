@@ -37,14 +37,15 @@ Section Order:
 
 > \[!NOTE\]
 >
-> This will be the last version to be compatible with Alliance Auth older
-> than version 4.0.0. So make sure to update your Alliance Auth instance in a timely
-> manner to make sure future updates will work.
+> **This version needs at least Alliance Auth v4.0.0!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
 
 ### Added
 
 - Compatibility with Alliance Auth v4
-- Backwards compatibility with Alliance Auth v3 or older
 
 ### Fixed
 

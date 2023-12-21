@@ -46,12 +46,20 @@ ______________________________________________________________________
 
 ## ⚠️ Before You Install This Module ⚠️<a name="%E2%9A%A0%EF%B8%8F-before-you-install-this-module-%E2%9A%A0%EF%B8%8F"></a>
 
-This module needs quite some configuration done before working properly. You need to
+This app needs quite some configuration done before working properly. You need to
 modify your Apache/Nginx configuration as well as the global URL config of Alliance
 Auth. So please only install if you know what you're doing/feel comfortable to make
 these kinds of changes. For your own sanity, and mine :-)
 
 ## Installation<a name="installation"></a>
+
+> \[!NOTE\]
+>
+> **AA Bulletin Board needs at least Alliance Auth v4.0.0!**
+>
+> Please make sure to update your Alliance Auth instance _before_ you install this
+> module or update to the latest version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
 
 **Important**: Please make sure you meet all preconditions before you proceed:
 
