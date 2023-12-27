@@ -2,6 +2,14 @@
     "extends": "stylelint-config-standard",
     "rules": {
         "color-no-hex": true,
+        "property-no-vendor-prefix": [
+            true,
+            {
+                "ignoreProperties": [
+                    "mask-image"
+                ]
+            }
+        ],
         "at-rule-empty-line-before": [
             "always",
             {
