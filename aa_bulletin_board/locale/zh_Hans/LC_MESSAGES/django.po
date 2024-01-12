@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-10-01 13:56+0200\n"
-"PO-Revision-Date: 2024-01-09 07:54+0000\n"
+"PO-Revision-Date: 2024-01-11 21:04+0000\n"
 "Last-Translator: Dehao Wu <wudehao2000@163.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/zh_Hans/>\n"
@@ -67,7 +67,7 @@ msgstr ""
 
 #: aa_bulletin_board/models.py:103
 msgid "User"
-msgstr ""
+msgstr "用户"
 
 #: aa_bulletin_board/models.py:109
 msgid "Group restrictions"
@@ -94,7 +94,7 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:22
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:40
 msgid "Delete"
-msgstr ""
+msgstr "删除"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:24
 msgid "This bulletin is restricted to the following group:"
@@ -130,11 +130,11 @@ msgstr ""
 msgid ""
 "Do you want to help translate this app into your language or improve the "
 "existing translation?"
-msgstr "您想帮助将此应用程序翻译成您的语言或改进现有的翻译吗？"
+msgstr "您想帮助将此应用程序翻译成您的母语或改进现有的翻译吗?"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
-msgstr "加入我们的翻译团队！"
+msgstr "加入我们的翻译团队吧！"
 
 #: aa_bulletin_board/views.py:82
 #, python-brace-format
