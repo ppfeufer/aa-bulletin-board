@@ -31,7 +31,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-title mb-0">
-                <a class="btn bg-secondary btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate "Back" %}</a>
+                <a class="btn btn-secondary btn-sm" href="{% if bulletin %}{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}{% else %}{% url 'aa_bulletin_board:dashboard' %}{% endif %}">{% translate "Back" %}</a>
             </div>
         </div>
 
@@ -47,7 +47,7 @@
                     {% translate "Create bulletin" as button_text %}
                 {% endif %}
 
-                {% bootstrap_button button_type="submit" button_class="btn bg-success" content=button_text|title %}
+                {% bootstrap_button button_type="submit" button_class="btn btn-success" content=button_text|title %}
             </form>
         </div>
     </div>

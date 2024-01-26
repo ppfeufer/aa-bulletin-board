@@ -2,7 +2,7 @@
 
 {% if perms.aa_bulletin_board.manage_bulletins %}
     <div class="aa-bulletin-board-management text-end">
-        <a class="btn bg-success btn-add-bulletin" href="{% url 'aa_bulletin_board:create_bulletin' %}">
+        <a class="btn btn-success btn-add-bulletin" href="{% url 'aa_bulletin_board:create_bulletin' %}">
             {% translate "Add bulletin" as button_text%}
             {{ button_text|title }}
         </a>

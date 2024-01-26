@@ -15,11 +15,11 @@
         <div class="card">
             <div class="card-header">
                 <div class="card-title mb-0">
-                    <a class="btn bg-secondary btn-sm" href="{% url 'aa_bulletin_board:dashboard' %}">{% translate "Back" %}</a>
+                    <a class="btn btn-secondary btn-sm" href="{% url 'aa_bulletin_board:dashboard' %}">{% translate "Back" %}</a>
 
                     {% if perms.aa_bulletin_board.manage_bulletins %}
-                        <a class="btn bg-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate "Edit" %}</a>
-                        <a class="btn bg-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate "Delete" %}</a>
+                        <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate "Edit" %}</a>
+                        <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate "Delete" %}</a>
                     {% endif %}
                 </div>
             </div>

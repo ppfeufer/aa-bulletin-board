@@ -30,11 +30,11 @@
 
                         <div class="card-footer-read-more-button card-footer-no-background">
                             <p class="my-2">
-                                <a class="btn bg-success btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate "Read more" %}</a>
+                                <a class="btn btn-success btn-sm btn-read-more" href="{% url 'aa_bulletin_board:view_bulletin' bulletin.slug %}">{% translate "Read more" %}</a>
 
                                 {% if perms.aa_bulletin_board.manage_bulletins %}
-                                    <a class="btn bg-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate "Edit" %}</a>
-                                    <a class="btn bg-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate "Delete" %}</a>
+                                    <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate "Edit" %}</a>
+                                    <a class="btn btn-danger btn-sm btn-read-more" href="{% url 'aa_bulletin_board:remove_bulletin' bulletin.slug %}">{% translate "Delete" %}</a>
                                 {% endif %}
                             </p>
                         </div>
