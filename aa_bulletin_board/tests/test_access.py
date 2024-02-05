@@ -1,6 +1,7 @@
 """
 Testing access to bulletins
 """
+
 # Standard Library
 from http import HTTPStatus
 
