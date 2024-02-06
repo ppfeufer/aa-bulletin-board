@@ -131,6 +131,7 @@ repos:
       - id: eslint
         name: ESLint
         description: "Check for problems in JavaScript files."
+        language: node
         exclude: |
           (?x)(
             .min(.js|.js.map)|
