@@ -125,9 +125,9 @@ repos:
             static/(.*)/libs/
           )
 
-#  - repo: https://github.com/eslint/eslint
-  - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v9.0.0-alpha.2
+  - repo: https://github.com/eslint/eslint
+#  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.56.0
     hooks:
       - id: eslint
         name: ESLint
@@ -139,7 +139,7 @@ repos:
           )
         additional_dependencies:
           # eslint itself needs to be here when using additional_dependencies.
-          - eslint@9.0.0-alpha.2
+          - eslint@8.56.0  # https://github.com/eslint/eslint/releases/latest
           - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
