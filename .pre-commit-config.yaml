@@ -125,6 +125,7 @@ repos:
             static/(.*)/libs/
           )
 
+#  - repo: https://github.com/pre-commit/mirrors-eslint
   - repo: https://github.com/eslint/eslint
     rev: v8.56.0
     hooks:
@@ -136,10 +137,10 @@ repos:
             .min(.js|.js.map)|
             static/(.*)/libs/
           )
-#        additional_dependencies:
-#          # eslint itself needs to be here when using additional_dependencies.
-#          - eslint@8.56.0  # https://github.com/eslint/eslint/releases/latest
-#          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
+        additional_dependencies:
+          # eslint itself needs to be here when using additional_dependencies.
+          - eslint@8.56.0  # https://github.com/eslint/eslint/releases/latest
+          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: v16.2.1
@@ -232,7 +233,7 @@ repos:
         description: "Check for extraneous `# noqa` comments."
 
   - repo: https://github.com/PyCQA/isort
-    rev: 5.13.2
+    rev: 5.12.0
     hooks:
       - id: isort
         name: Isort
@@ -307,7 +308,7 @@ repos:
         description: "Validate the pyproject.toml file."
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: v3.0.3
+    rev: v3.0.1
     hooks:
       - id: pylint
         name: Pylint

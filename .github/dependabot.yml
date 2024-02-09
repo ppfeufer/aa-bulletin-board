@@ -7,3 +7,10 @@ updates:
     target-branch: "master"
     schedule:
       interval: "daily"
+
+  # Maintain dependencies for npm
+  - package-ecosystem: npm
+    directory: "/"
+    target-branch: "master"
+    schedule:
+      interval: "daily"

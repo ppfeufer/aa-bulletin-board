@@ -32,7 +32,13 @@ jobs:
         with:
           python-version-file: 'pyproject.toml' # Read the Python version from the pyproject.toml file
 
-      # Install pre-commit
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+
       - name: Run Pre Commit Checks
         uses: pre-commit/action@v3.0.1
 
