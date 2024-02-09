@@ -125,8 +125,8 @@ repos:
             static/(.*)/libs/
           )
 
-  - repo: https://github.com/eslint/eslint
 #  - repo: https://github.com/pre-commit/mirrors-eslint
+  - repo: https://github.com/eslint/eslint
     rev: v8.56.0
     hooks:
       - id: eslint
