@@ -42,7 +42,6 @@ dependencies = [
     "allianceauth>=4.0.0a5",
     "allianceauth-app-utils>=1.19.1",
     "django-ckeditor-5>=0.2.11",
-    "django-ckeditor-youtube-plugin>=0.0.1",
     "unidecode",
 ]
 [project.optional-dependencies]
