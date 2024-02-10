@@ -57,18 +57,6 @@ class BulletinForm(ModelForm):
 
     title = forms.CharField()
 
-    content = forms.CharField(
-        widget=CKEditor5Widget(
-            config_name="extends",
-            attrs={
-                "class": "aa-bulletin-board-ckeditor django_ckeditor_5",
-                "rows": 10,
-                "cols": 20,
-                "style": "width: 100%;",
-            },
-        )
-    )
-
     groups = SpecialModelMultipleChoiceField(
         required=False,
         queryset=Group.objects.all(),
@@ -94,6 +82,17 @@ class BulletinForm(ModelForm):
 
         model = Bulletin
         fields = ["title", "content", "groups"]
+        widgets = {
+            "content": CKEditor5Widget(
+                config_name="extends",
+                attrs={
+                    "class": "aa-bulletin-board-ckeditor django_ckeditor_5",
+                    "rows": 10,
+                    "cols": 20,
+                    "style": "width: 100%;",
+                },
+            )
+        }
 
     def clean_content(self) -> str:
         """
