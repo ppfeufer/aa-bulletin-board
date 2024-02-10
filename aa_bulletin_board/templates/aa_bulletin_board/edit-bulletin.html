@@ -55,9 +55,8 @@
 
 {% block extra_javascript %}
     {% include "aa_bulletin_board/bundles/sumoselect-js.html" %}
+    {% include "aa_bulletin_board/bundles/ckeditor5-js.html" %}
 
-    <script src="{% static "ckeditor/ckeditor-init.js" %}"></script>
-    <script src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
     <script>
         'use strict';
 
@@ -68,6 +67,7 @@
 {% endblock %}
 
 {% block extra_css %}
+    {% include "aa_bulletin_board/bundles/ckeditor5-css.html" %}
     {% include "aa_bulletin_board/bundles/sumoselect-css.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
 {% endblock %}

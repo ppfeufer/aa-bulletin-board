@@ -11,8 +11,8 @@ from django.db import models, transaction
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
 
-# ckEditor
-from ckeditor_uploader.fields import RichTextUploadingField
+# CKEditor
+from django_ckeditor_5.fields import CKEditor5Field
 
 # AA Bulletin Board
 from aa_bulletin_board.helpers import string_cleanup
@@ -80,7 +80,9 @@ class Bulletin(models.Model):
 
     title = models.CharField(max_length=255, verbose_name=_("Title"))
     slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
-    content = RichTextUploadingField(blank=True, null=True, verbose_name=_("Content"))
+    content = CKEditor5Field(
+        blank=True, null=True, verbose_name=_("Content"), config_name="extends"
+    )
     created_date = models.DateTimeField(
         auto_now_add=True,
         db_index=True,

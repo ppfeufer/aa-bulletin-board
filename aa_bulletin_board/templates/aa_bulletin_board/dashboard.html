@@ -25,7 +25,9 @@
                         </div>
 
                         <div class="card-body">
-                            {{ bulletin.content|safe }}
+                            <div class="ck ck-content">
+                                {{ bulletin.content|safe }}
+                            </div>
                         </div>
 
                         <div class="card-footer-read-more-button card-footer-no-background">
@@ -41,6 +43,10 @@
                     </div>
                 </div>
             {% endfor %}
+        </div>
+    {% else %}
+        <div class="aa-callout aa-callout-info" role="alert">
+            {% translate "No bulletins found." %}
         </div>
     {% endif %}
 {% endblock %}
@@ -64,7 +70,7 @@
 
                     $('.card-bulletin-excerpt', elementEqualHeight).height(highestBox);
                 });
-            }
+            };
 
             resizeBulletinCard();
 
@@ -83,5 +89,6 @@
 {% endblock %}
 
 {% block extra_css %}
+    {% include "aa_bulletin_board/bundles/ckeditor5-css.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
 {% endblock %}

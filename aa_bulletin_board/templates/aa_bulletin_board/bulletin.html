@@ -25,12 +25,15 @@
             </div>
 
             <div class="card-body">
-                {{ bulletin.content|safe }}
+                <div class="ck ck-content">
+                    {{ bulletin.content|safe }}
+                </div>
             </div>
         </div>
     {% endif %}
 {% endblock %}
 
 {% block extra_css %}
+    {% include "aa_bulletin_board/bundles/ckeditor5-css.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
 {% endblock %}

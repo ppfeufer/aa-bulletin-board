@@ -8,8 +8,8 @@ from django.contrib.auth.models import Group
 from django.forms import ModelForm
 from django.utils.translation import gettext_lazy as _
 
-# ckEditor
-from ckeditor_uploader.widgets import CKEditorUploadingWidget
+# CKEditor
+from django_ckeditor_5.widgets import CKEditor5Widget
 
 # AA Bulletin Board
 from aa_bulletin_board.helpers import string_cleanup
@@ -58,9 +58,14 @@ class BulletinForm(ModelForm):
     title = forms.CharField()
 
     content = forms.CharField(
-        widget=CKEditorUploadingWidget(
-            config_name="aa_bulletin_board",
-            attrs={"rows": 10, "cols": 20, "style": "width: 100%;"},
+        widget=CKEditor5Widget(
+            config_name="extends",
+            attrs={
+                "class": "aa-bulletin-board-ckeditor django_ckeditor_5",
+                "rows": 10,
+                "cols": 20,
+                "style": "width: 100%;",
+            },
         )
     )
 

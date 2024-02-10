@@ -43,14 +43,6 @@
     }
 }
 
-/* Form
-------------------------------------------------------------------------------------- */
-@media all {
-    .aa-bulletin-board #aa-bulletin-board-bulletin-form label {
-        display: block;
-    }
-}
-
 /* SumoSelect
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -60,6 +52,7 @@
 
     .aa-bulletin-board .SumoSelect {
         color: rgb(54 54 54);
+        display: inherit;
     }
 
     .aa-bulletin-board .SumoSelect > .CaptionCont > label > i {
