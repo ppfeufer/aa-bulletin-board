@@ -5,6 +5,7 @@ Forms definition
 # Django
 from django import forms
 from django.contrib.auth.models import Group
+from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 from django.utils.translation import gettext_lazy as _
 
@@ -75,6 +76,9 @@ class BulletinForm(ModelForm):
         if groups_queryset:
             self.fields["groups"].queryset = groups_queryset
 
+        # We have to set this to False, otherwise CKEditor5 will not work
+        self.fields["content"].required = False
+
     class Meta:  # pylint: disable=too-few-public-methods
         """
         Form Meta
@@ -94,6 +98,21 @@ class BulletinForm(ModelForm):
             )
         }
 
+    def clean(self):
+        """
+        Clean the form
+
+        :return:
+        :rtype:
+        """
+
+        cleaned_data = super().clean()
+
+        if not string_cleanup(cleaned_data.get("content")).strip():
+            raise ValidationError(_("You have forgotten the content!"))
+
+        return cleaned_data
+
     def clean_content(self) -> str:
         """
         Cleanup the content
@@ -102,6 +121,6 @@ class BulletinForm(ModelForm):
         :rtype:
         """
 
-        message = string_cleanup(string=self.cleaned_data["content"])
+        content = string_cleanup(string=self.cleaned_data["content"])
 
-        return message
+        return content

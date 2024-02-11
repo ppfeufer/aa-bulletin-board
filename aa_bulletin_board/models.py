@@ -81,7 +81,7 @@ class Bulletin(models.Model):
     title = models.CharField(max_length=255, verbose_name=_("Title"))
     slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
     content = CKEditor5Field(
-        blank=True, null=True, verbose_name=_("Content"), config_name="extends"
+        blank=False, default=None, verbose_name=_("Content"), config_name="extends"
     )
     created_date = models.DateTimeField(
         auto_now_add=True,
@@ -96,7 +96,7 @@ class Bulletin(models.Model):
         verbose_name=_("Updated"),
     )
     created_by = models.ForeignKey(
-        User,
+        to=User,
         related_name="+",
         null=True,
         blank=True,
@@ -105,7 +105,7 @@ class Bulletin(models.Model):
         verbose_name=_("User"),
     )
     groups = models.ManyToManyField(
-        Group,
+        to=Group,
         blank=True,
         related_name="aa_bulletin_board_group_restriction",
         verbose_name=_("Group restrictions"),
