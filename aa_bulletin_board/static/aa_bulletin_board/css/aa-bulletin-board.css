@@ -33,10 +33,6 @@
         display: initial !important;
     }
 
-    .aa-bulletin-board-management {
-        margin-bottom: 2rem;
-    }
-
     .aa-bulletin-board img {
         height: auto !important; /* to override inline style added by CKeditor */
         max-width: 100%;
