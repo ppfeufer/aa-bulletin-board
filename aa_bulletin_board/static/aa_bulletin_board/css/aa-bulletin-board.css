@@ -47,6 +47,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .aa-bulletin-board .SumoSelect p {
+        border-radius: var(--bs-border-radius);
         height: auto;
     }
 
@@ -91,10 +92,28 @@
 
     .aa-bulletin-board figure.media .oembed-video > iframe {
         height: 100%;
-        max-height: 100vh;
         left: 0;
+        max-height: 100vh;
         position: absolute;
         top: 0;
         width: 100%;
+    }
+}
+
+/* CKEditor 5 (WYSIWYG editor)
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board .ck-rounded-corners {
+        --ck-border-radius: var(--bs-border-radius);
+    }
+
+    .aa-bulletin-board .ck-editor__editable {
+        color: initial;
+    }
+
+    .aa-bulletin-board .ck-word-count {
+        color: var(--bs-secondary-color) !important;
+
+        --bs-text-opacity: 1;
     }
 }
