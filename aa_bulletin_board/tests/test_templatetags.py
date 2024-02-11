@@ -12,7 +12,7 @@ from aa_bulletin_board import __version__
 
 class TestVersionedStatic(TestCase):
     """
-    Test aa_bulletin_board_versioned_static template tag
+    Test aa_bulletin_board_static template tag
     """
 
     def test_versioned_static(self) -> None:
@@ -26,7 +26,7 @@ class TestVersionedStatic(TestCase):
         context = Context({"version": __version__})
         template_to_render = Template(
             template_string=(
-                "{% load aa_bulletin_board_versioned_static %}"
+                "{% load aa_bulletin_board %}"
                 "{% aa_bulletin_board_static 'aa_bulletin_board/css/aa-bulletin-board.min.css' %}"  # pylint: disable=line-too-long
             )
         )
