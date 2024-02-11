@@ -3,8 +3,6 @@
 {% load i18n %}
 
 {% block aabulletinboard_body %}
-    {% include "aa_bulletin_board/partials/common/bulletin-board-management.html" %}
-
     {% if bulletins %}
         <div class="row cards-equal-height">
             {% for bulletin in bulletins %}

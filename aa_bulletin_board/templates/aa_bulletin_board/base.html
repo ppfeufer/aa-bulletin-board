@@ -10,6 +10,10 @@
     {% translate "Bulletin Board" %}
 {% endblock header_nav_brand %}
 
+{% block header_nav_collapse_right %}
+    {% include "aa_bulletin_board/partials/common/bulletin-board-management.html" %}
+{% endblock %}
+
 {% block content %}
     <div class="aa-bulletin-board">
         <div class="aa-bulletin-board-header">
