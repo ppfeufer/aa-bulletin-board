@@ -77,3 +77,24 @@
         width: calc(100% / 3);
     }
 }
+
+/* Fix for oEmbed videos
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board figure.media .oembed-video {
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+
+    .aa-bulletin-board figure.media .oembed-video > iframe {
+        height: 100%;
+        max-height: 100vh;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
