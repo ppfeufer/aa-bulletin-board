@@ -86,6 +86,7 @@ Add `"django_ckeditor_5",` to `INSTALLED_APPS` and remove the following apps if 
 Remove the old CKEditor configuration and replace it with the following:
 
 ```python
+# Django CKEditor 5 Configuration
 if "django_ckeditor_5" in INSTALLED_APPS:
     MEDIA_URL = "/media/"
     MEDIA_ROOT = os.path.join(BASE_DIR, "media/uploads")

@@ -93,6 +93,7 @@ INSTALLED_APPS += [
     "aa_bulletin_board",  # https://github.com/ppfeufer/aa-bulletin-board
 ]
 
+# Django CKEditor 5 Configuration
 if "django_ckeditor_5" in INSTALLED_APPS:
     MEDIA_URL = "/media/"
     MEDIA_ROOT = os.path.join(BASE_DIR, "media/uploads")
