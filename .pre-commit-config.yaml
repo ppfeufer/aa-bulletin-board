@@ -138,10 +138,10 @@ repos:
             .min(.js|.js.map)|
             static/(.*)/libs/
           )
-        additional_dependencies:
-          # eslint itself needs to be here when using additional_dependencies.
-          - eslint@8.56.0  # https://github.com/eslint/eslint/releases/latest
-          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
+#        additional_dependencies:
+#          # eslint itself needs to be here when using additional_dependencies.
+#          - eslint@8.56.0  # https://github.com/eslint/eslint/releases/latest
+#          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: v16.2.1
