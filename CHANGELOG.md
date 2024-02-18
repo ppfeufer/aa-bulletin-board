@@ -24,6 +24,8 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 
 ## \[In Development\] - Unreleased
 
+## \[2.0.0-beta.1\] - 2024-02-18
+
 <!--
 Section Order:
 
@@ -37,9 +39,9 @@ Section Order:
 
 > \[!NOTE\]
 >
-> **This version needs at least Alliance Auth v4.0.0!**
+> **This version needs at least Alliance Auth v4.0.0b1!**
 >
-> Please make sure to update your Alliance Auth instance before
+> Please make sure to update your Alliance Auth instance **before**
 > you install this version, otherwise an update to Alliance Auth will
 > be pulled in unsupervised.
 
@@ -51,22 +53,28 @@ Section Order:
 
 ### Added
 
-- Compatibility with Alliance Auth v4
+- Compatibility to Alliance Auth v4
+  - Bootstrap 5
+  - Django 4.2
 
 ### Fixed
 
 - Pluralisation in a template string
 
-## \[1.13.2\] - 2023-09-26
-
-### Fixed
-
-- Capitalization for translatable strings
-
 ### Changed
 
-- Translations improved and updated
+- JS modernized
+- CSS modernizes
+- Templates changed to Bootstrap 5
 - Switched from CKEditor 4 to CKEditor 5 (Configuration update necessary, see below)
+- Translations improved
+  - French
+  - Chinese
+  - Spanish
+
+### Removed
+
+- Compatibility to Alliance Auth v3
 
 ### Update Information
 
@@ -75,7 +83,8 @@ This version introduces a new WYSIWYG editor. Some configuration changes are nec
 #### Settings in `/home/allianceserver/myauth/myauth/settings/local.py`
 
 Please make sure to update your `local.py` with the following configuration.\
-Add `"django_ckeditor_5",` to `INSTALLED_APPS` and remove the following apps if they are present:
+Add `"django_ckeditor_5",` to `INSTALLED_APPS` and remove the following apps
+if they are present:
 
 ```python
 "ckeditor",
@@ -257,6 +266,16 @@ if apps.is_installed("django_ckeditor_5"):
         + urlpatterns
     )
 ```
+
+## \[1.13.2\] - 2023-09-26
+
+### Fixed
+
+- Capitalization for translatable strings
+
+### Changed
+
+- Translations improved and updated
 
 ## \[1.13.1\] - 2023-09-02
 
