@@ -13,7 +13,7 @@
                                 <span>{{ bulletin.title }}</span>
                                 {% if bulletin.groups.all %}
                                     <i
-                                        class="far fa-eye-slash aa-bulletin-board-marker-group-restrictions float-end"
+                                        class="fa-regular fa-eye-slash aa-bulletin-board-marker-group-restrictions float-end"
                                         title="{% blocktranslate count group_count=bulletin.groups.all|length %}This bulletin is restricted to the following group:{% plural %}This bulletin is restricted to the following groups:{% endblocktranslate %}<br>{{ bulletin.groups.all|join:', ' }}"
                                         data-bs-toggle="tooltip"
                                         data-bs-html="true"
