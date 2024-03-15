@@ -22,7 +22,7 @@ ______________________________________________________________________
 <!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
 
 - [AA Bulletin Board](#aa-bulletin-board)
-  - [⚠️ Before You Install This Module ⚠️](#%E2%9A%A0%EF%B8%8F-before-you-install-this-module-%E2%9A%A0%EF%B8%8F)
+  - [Before You Install This Module](#before-you-install-this-module)
   - [Installation](#installation)
     - [Step 1: Install the Package](#step-1-install-the-package)
     - [Step 2: Configure Alliance Auth](#step-2-configure-alliance-auth)
@@ -44,7 +44,7 @@ ______________________________________________________________________
 
 ![AA Bulletin Board](https://raw.githubusercontent.com/ppfeufer/aa-bulletin-board/master/docs/images/presentation/aa-bulletin-board.jpg "AA Bulletin Board")
 
-## ⚠️ Before You Install This Module ⚠️<a name="%E2%9A%A0%EF%B8%8F-before-you-install-this-module-%E2%9A%A0%EF%B8%8F"></a>
+## Before You Install This Module<a name="before-you-install-this-module"></a>
 
 This app needs quite some configuration done before working properly. You need to
 modify your Apache/Nginx configuration as well as the global URL config of Alliance
@@ -55,11 +55,13 @@ these kinds of changes. For your own sanity, and mine :-)
 
 > \[!NOTE\]
 >
-> **AA Bulletin Board needs at least Alliance Auth v4.0.0!**
+> **AA Bulletin Board >=2.0.0 needs at least Alliance Auth v4.0.0!**
 >
 > Please make sure to update your Alliance Auth instance _before_ you install this
 > module or update to the latest version, otherwise an update to Alliance Auth will
 > be pulled in unsupervised.
+>
+> The last version compatible with Alliance Auth v3 is `1.13.2`.
 
 **Important**: Please make sure you meet all preconditions before you proceed:
 
