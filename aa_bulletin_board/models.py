@@ -11,8 +11,8 @@ from django.db import models, transaction
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
 
-# ckEditor
-from ckeditor_uploader.fields import RichTextUploadingField
+# CKEditor
+from django_ckeditor_5.fields import CKEditor5Field
 
 # AA Bulletin Board
 from aa_bulletin_board.helpers import string_cleanup
@@ -40,14 +40,14 @@ def get_bulletin_slug_from_title(bulletin_title: str) -> str:
     :rtype:
     """
 
-    run = 0
-    bulletin_slug = slugify(
+    run: int = 0
+    bulletin_slug: str = slugify(
         value=unidecode.unidecode(bulletin_title), allow_unicode=True
     )
 
     while Bulletin.objects.filter(slug=bulletin_slug).exists():
         run += 1
-        bulletin_slug = slugify(
+        bulletin_slug: str = slugify(
             value=unidecode.unidecode(f"{bulletin_title}-{run}"), allow_unicode=True
         )
 
@@ -80,7 +80,9 @@ class Bulletin(models.Model):
 
     title = models.CharField(max_length=255, verbose_name=_("Title"))
     slug = models.SlugField(max_length=255, unique=True, allow_unicode=True)
-    content = RichTextUploadingField(blank=True, null=True, verbose_name=_("Content"))
+    content = CKEditor5Field(
+        blank=False, default=None, verbose_name=_("Content"), config_name="extends"
+    )
     created_date = models.DateTimeField(
         auto_now_add=True,
         db_index=True,
@@ -94,7 +96,7 @@ class Bulletin(models.Model):
         verbose_name=_("Updated"),
     )
     created_by = models.ForeignKey(
-        User,
+        to=User,
         related_name="+",
         null=True,
         blank=True,
@@ -103,7 +105,7 @@ class Bulletin(models.Model):
         verbose_name=_("User"),
     )
     groups = models.ManyToManyField(
-        Group,
+        to=Group,
         blank=True,
         related_name="aa_bulletin_board_group_restriction",
         verbose_name=_("Group restrictions"),

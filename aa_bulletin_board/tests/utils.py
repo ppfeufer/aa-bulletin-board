@@ -8,6 +8,7 @@ from typing import List
 
 # Django
 from django.contrib.auth.models import User
+from django.core.handlers.wsgi import WSGIRequest
 
 # Alliance Auth
 from allianceauth.tests.auth_utils import AuthUtils
@@ -76,3 +77,16 @@ def create_fake_user(
         user = AuthUtils.add_permissions_to_user(perms=perm_objs, user=user)
 
     return user
+
+
+def response_content_to_str(response: WSGIRequest) -> str:
+    """
+    Return the content of a WSGIRequest response as string
+
+    :param response:
+    :type response:
+    :return:
+    :rtype:
+    """
+
+    return response.content.decode(response.charset)

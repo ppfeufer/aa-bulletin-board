@@ -5,9 +5,6 @@ import django.utils.timezone
 from django.conf import settings
 from django.db import migrations, models
 
-# ckEditor
-import ckeditor_uploader.fields
-
 # AA Bulletin Board
 import aa_bulletin_board.models
 
@@ -57,12 +54,7 @@ class Migration(migrations.Migration):
                 ),
                 ("title", models.CharField(max_length=255)),
                 ("slug", models.CharField(max_length=255)),
-                (
-                    "content",
-                    ckeditor_uploader.fields.RichTextUploadingField(
-                        blank=True, null=True
-                    ),
-                ),
+                ("content", models.TextField(blank=True)),
                 (
                     "created_date",
                     models.DateTimeField(default=django.utils.timezone.now),

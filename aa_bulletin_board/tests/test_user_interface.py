@@ -82,7 +82,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/bulletin.html"
+            response=page,
+            template_name="aa_bulletin_board/bulletin.html",
         )
 
     def test_should_redirect_to_bulletin_dashboard_when_bulletin_does_not_exist(
@@ -122,7 +123,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )
 
     def test_should_show_edit_bulletin_page(self) -> None:
@@ -150,7 +152,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )
 
     def test_should_redirect_to_bulletin_dashboard_when_edit_bulletin_does_not_exist(
@@ -261,7 +264,8 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )
 
     def test_should_return_to_edit_bulletin_form_for_invalid_form_submitted_on_edit_bulletin(
@@ -297,5 +301,6 @@ class TestBulletinUI(WebTest):
 
         # then
         self.assertTemplateUsed(
-            response=page, template_name="aa_bulletin_board/edit-bulletin.html"
+            response=page,
+            template_name="aa_bulletin_board/edit-bulletin.html",
         )

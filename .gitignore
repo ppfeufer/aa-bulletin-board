@@ -4,6 +4,7 @@
 .idea/
 .tox/
 htmlcov/
+node_modules/
 
 *.log
 *.tmp
@@ -12,3 +13,4 @@ htmlcov/
 __pycache__
 .coverage
 /coverage.xml
+alliance_auth.sqlite3

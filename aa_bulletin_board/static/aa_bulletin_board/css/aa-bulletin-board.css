@@ -3,28 +3,29 @@
         display: block;
     }
 
-    .aa-bulletin-board .panels-equal-height {
+    .aa-bulletin-board .cards-equal-height {
         display: flex;
         flex-wrap: wrap;
     }
 
-    .aa-bulletin-board .panels-equal-height .panel {
+    .aa-bulletin-board .cards-equal-height .card {
         width: 100%;
     }
 
-    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+    .aa-bulletin-board .cards-equal-height .card-bulletin-excerpt {
         margin-bottom: 0.5rem;
         width: 100%;
     }
 
-    .aa-bulletin-board .panel-bulletin-excerpt .panel-body {
+    .aa-bulletin-board .card-bulletin-excerpt .card-body {
         height: 200px;
-        mask-image: linear-gradient(180deg, rgb(0 0 0) 60%, transparent);
+        -webkit-mask-image: linear-gradient(rgb(0 0 0), transparent);
+        mask-image: linear-gradient(rgb(0 0 0), transparent);
         overflow: hidden;
         padding: 1rem;
     }
 
-    .aa-bulletin-board .panel-bulletin-excerpt .panel-footer-read-more-button {
+    .aa-bulletin-board .card-bulletin-excerpt .card-footer-read-more-button {
         padding: 0.625rem 1rem;
     }
 
@@ -32,53 +33,83 @@
         display: initial !important;
     }
 
-    .aa-bulletin-board-management {
-        margin-bottom: 2rem;
-    }
-
     .aa-bulletin-board img {
         height: auto !important; /* to override inline style added by CKeditor */
         max-width: 100%;
     }
-
-    .aa-bulletin-board-footer {
-        border-top: 1px solid rgb(236 240 241);
-        font-size: 85%;
-        margin-top: 1rem;
-        padding-top: 1rem;
-    }
-
-    .template-dark-mode .aa-bulletin-board-footer {
-        border-color: rgb(70 69 69);
-    }
 }
 
-/* MultiSelect
+/* SumoSelect
 ------------------------------------------------------------------------------------- */
 @media all {
     .aa-bulletin-board .SumoSelect p {
+        border-radius: var(--bs-border-radius);
         height: auto;
     }
 
-    /* For for Dark Mode
-    --------------------------------------------------------------------------------- */
-    .template-dark-mode .aa-bulletin-board .SumoSelect {
+    .aa-bulletin-board .SumoSelect {
         color: rgb(54 54 54);
+        display: inherit;
     }
 
-    .template-dark-mode .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
+    .aa-bulletin-board .SumoSelect > .CaptionCont > label > i {
+        background-image: none;
+    }
+
+    .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
+        background-color: transparent;
         color: rgb(62 68 76);
+        opacity: 1;
     }
 }
 
 @media all and (min-width: 768px) {
-    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+    .aa-bulletin-board .cards-equal-height .card-bulletin-excerpt {
         width: calc(100% / 2);
     }
 }
 
 @media all and (min-width: 1200px) {
-    .aa-bulletin-board .panels-equal-height .panel-bulletin-excerpt {
+    .aa-bulletin-board .cards-equal-height .card-bulletin-excerpt {
         width: calc(100% / 3);
+    }
+}
+
+/* Fix for oEmbed videos
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board figure.media .oembed-video {
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+
+    .aa-bulletin-board figure.media .oembed-video > iframe {
+        height: 100%;
+        left: 0;
+        max-height: 100vh;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+/* CKEditor 5 (WYSIWYG editor)
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board .ck-rounded-corners {
+        --ck-border-radius: var(--bs-border-radius);
+    }
+
+    .aa-bulletin-board .ck-editor__editable {
+        color: initial;
+    }
+
+    .aa-bulletin-board .ck-word-count {
+        color: var(--bs-secondary-color) !important;
+
+        --bs-text-opacity: 1;
     }
 }

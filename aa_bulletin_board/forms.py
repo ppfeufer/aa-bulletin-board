@@ -5,11 +5,12 @@ Forms definition
 # Django
 from django import forms
 from django.contrib.auth.models import Group
+from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 from django.utils.translation import gettext_lazy as _
 
-# ckEditor
-from ckeditor_uploader.widgets import CKEditorUploadingWidget
+# CKEditor
+from django_ckeditor_5.widgets import CKEditor5Widget
 
 # AA Bulletin Board
 from aa_bulletin_board.helpers import string_cleanup
@@ -57,13 +58,6 @@ class BulletinForm(ModelForm):
 
     title = forms.CharField()
 
-    content = forms.CharField(
-        widget=CKEditorUploadingWidget(
-            config_name="aa_bulletin_board",
-            attrs={"rows": 10, "cols": 20, "style": "width: 100%;"},
-        )
-    )
-
     groups = SpecialModelMultipleChoiceField(
         required=False,
         queryset=Group.objects.all(),
@@ -82,6 +76,9 @@ class BulletinForm(ModelForm):
         if groups_queryset:
             self.fields["groups"].queryset = groups_queryset
 
+        # We have to set this to False, otherwise CKEditor5 will not work
+        self.fields["content"].required = False
+
     class Meta:  # pylint: disable=too-few-public-methods
         """
         Form Meta
@@ -89,6 +86,32 @@ class BulletinForm(ModelForm):
 
         model = Bulletin
         fields = ["title", "content", "groups"]
+        widgets = {
+            "content": CKEditor5Widget(
+                config_name="extends",
+                attrs={
+                    "class": "aa-bulletin-board-ckeditor django_ckeditor_5",
+                    "rows": 10,
+                    "cols": 20,
+                    "style": "width: 100%;",
+                },
+            )
+        }
+
+    def clean(self):
+        """
+        Clean the form
+
+        :return:
+        :rtype:
+        """
+
+        cleaned_data = super().clean()
+
+        if not string_cleanup(cleaned_data.get("content")).strip():
+            raise ValidationError(_("You have forgotten the content!"))
+
+        return cleaned_data
 
     def clean_content(self) -> str:
         """
@@ -98,6 +121,6 @@ class BulletinForm(ModelForm):
         :rtype:
         """
 
-        message = string_cleanup(string=self.cleaned_data["content"])
+        content = string_cleanup(string=self.cleaned_data["content"])
 
-        return message
+        return content

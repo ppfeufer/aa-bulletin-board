@@ -42,12 +42,25 @@ class TestHooks(TestCase):
         )
 
         cls.html_menu = f"""
-            <li>
-                <a class href="{reverse(viewname='aa_bulletin_board:dashboard')}">
-                    <i class="fas fa-clipboard-list fa-fw"></i> Bulletin Board
+            <li class="d-flex flex-wrap m-2 p-2 pt-0 pb-0 mt-0 mb-0 me-0 pe-0">
+                <i class="nav-link fa-solid fa-clipboard-list fa-fw align-self-center me-3 "></i>
+                <a class="nav-link flex-fill align-self-center me-auto" href="{reverse(viewname='aa_bulletin_board:dashboard')}">
+                    Bulletin Board
                 </a>
             </li>
         """
+
+    def login(self, user):
+        """
+        Login a test user
+
+        :param user:
+        :type user:
+        :return:
+        :rtype:
+        """
+
+        self.client.force_login(user=user)
 
     def test_render_hook_success(self) -> None:
         """
@@ -57,7 +70,7 @@ class TestHooks(TestCase):
         :rtype:
         """
 
-        self.client.force_login(user=self.user_1002)
+        self.login(user=self.user_1002)
 
         response = self.client.get(path=reverse(viewname="authentication:dashboard"))
 
@@ -73,7 +86,7 @@ class TestHooks(TestCase):
         :rtype:
         """
 
-        self.client.force_login(user=self.user_1001)
+        self.login(user=self.user_1001)
 
         response = self.client.get(path=reverse(viewname="authentication:dashboard"))
 

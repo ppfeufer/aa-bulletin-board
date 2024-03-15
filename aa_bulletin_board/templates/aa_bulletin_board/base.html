@@ -1,8 +1,18 @@
-{% extends "allianceauth/base.html" %}
+{% extends "allianceauth/base-bs5.html" %}
 
 {% load i18n %}
 
-{% block page_title %}{% translate "Bulletin Board" %}{% endblock %}
+{% block page_title %}
+    {% translate "Bulletin Board" %}
+{% endblock %}
+
+{% block header_nav_brand %}
+    {% translate "Bulletin Board" %}
+{% endblock header_nav_brand %}
+
+{% block header_nav_collapse_right %}
+    {% include "aa_bulletin_board/partials/common/bulletin-board-management.html" %}
+{% endblock %}
 
 {% block content %}
     <div class="aa-bulletin-board">
@@ -14,7 +24,7 @@
             {% block aabulletinboard_body %}{% endblock %}
         </div>
 
-        <div class="aa-bulletin-board-footer">
+        <div class="aa-bulletin-board-footer mt-3 pt-3 border-top border-light">
             {% include "aa_bulletin_board/partials/footer/app-translation-footer.html" %}
         </div>
     </div>

@@ -1,10 +1,12 @@
 {% load i18n %}
 
 {% if perms.aa_bulletin_board.manage_bulletins %}
-    <div class="aa-bulletin-board-management text-right">
-        <a class="btn btn-success btn-read-more" href="{% url 'aa_bulletin_board:create_bulletin' %}">
-            {% translate "Add bulletin" as button_text%}
-            {{ button_text|title }}
+    <li class="nav-item">
+        <a class="nav-link py-0" href="{% url 'aa_bulletin_board:create_bulletin' %}">
+            <span class="btn btn-success btn-add-bulletin">
+                {% translate "Add bulletin" as button_text%}
+                {{ button_text|title }}
+            </span>
         </a>
-    </div>
+    </li>
 {% endif %}

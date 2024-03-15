@@ -9,13 +9,11 @@
 {% endblock %}
 
 {% block aabulletinboard_body %}
-    {% include "aa_bulletin_board/partials/common/bulletin-board-management.html" %}
-
     {% if bulletin %}
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">
-                    <a class="btn btn-default btn-sm" href="{% url 'aa_bulletin_board:dashboard' %}">{% translate "Back" %}</a>
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title mb-0">
+                    <a class="btn btn-secondary btn-sm" href="{% url 'aa_bulletin_board:dashboard' %}">{% translate "Back" %}</a>
 
                     {% if perms.aa_bulletin_board.manage_bulletins %}
                         <a class="btn btn-warning btn-sm btn-read-more" href="{% url 'aa_bulletin_board:edit_bulletin' bulletin.slug %}">{% translate "Edit" %}</a>
@@ -24,13 +22,20 @@
                 </div>
             </div>
 
-            <div class="panel-body">
-                {{ bulletin.content|safe }}
+            <div class="card-body">
+                <div class="ck ck-content">
+                    {{ bulletin.content|safe }}
+                </div>
             </div>
         </div>
     {% endif %}
 {% endblock %}
 
 {% block extra_css %}
+    {% include "aa_bulletin_board/bundles/ckeditor5-css.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
+{% endblock %}
+
+{% block extra_javascript %}
+    {% include "aa_bulletin_board/bundles/aa-bulletin-board-oembed-js.html" %}
 {% endblock %}
