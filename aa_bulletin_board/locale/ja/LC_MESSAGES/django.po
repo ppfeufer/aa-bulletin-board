@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 13:56+0200\n"
+"POT-Creation-Date: 2024-03-15 18:14+0100\n"
 "PO-Revision-Date: 2023-09-24 13:13+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-"
@@ -19,10 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.0.2\n"
 
-#: aa_bulletin_board/__init__.py:12 aa_bulletin_board/models.py:67
-#: aa_bulletin_board/templates/aa_bulletin_board/base.html:5
+#: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
+#: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
+#: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
 msgstr ""
@@ -33,10 +33,14 @@ msgstr ""
 msgid "Bulletin Board v{__version__}"
 msgstr ""
 
-#: aa_bulletin_board/forms.py:71
+#: aa_bulletin_board/forms.py:65
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
+msgstr ""
+
+#: aa_bulletin_board/forms.py:112
+msgid "You have forgotten the content!"
 msgstr ""
 
 #: aa_bulletin_board/models.py:71
@@ -51,58 +55,62 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: aa_bulletin_board/models.py:83
+#: aa_bulletin_board/models.py:84
 msgid "Content"
 msgstr ""
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:88
+#: aa_bulletin_board/models.py:90
 msgid "Created"
 msgstr ""
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:94
+#: aa_bulletin_board/models.py:96
 msgid "Updated"
 msgstr ""
 
-#: aa_bulletin_board/models.py:103
+#: aa_bulletin_board/models.py:105
 msgid "User"
 msgstr ""
 
-#: aa_bulletin_board/models.py:109
+#: aa_bulletin_board/models.py:111
 msgid "Group restrictions"
 msgstr ""
 
-#: aa_bulletin_board/models.py:120
+#: aa_bulletin_board/models.py:122
 msgid "Bulletin"
 msgstr ""
 
-#: aa_bulletin_board/models.py:121
+#: aa_bulletin_board/models.py:123
 msgid "Bulletins"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:18
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:21
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:39
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:19
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
 msgid "Edit"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:22
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:40
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:20
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:37
 msgid "Delete"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:24
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
 msgstr[0] ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
+msgstr ""
+
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:47
+msgid "No bulletins found."
 msgstr ""
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
@@ -114,15 +122,15 @@ msgstr ""
 msgid "Create new bulletin"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Update bulletin"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:49
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
 msgid "Create bulletin"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:6
+#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:7
 msgid "Add bulletin"
 msgstr ""
 
@@ -136,31 +144,31 @@ msgstr ""
 msgid "Join our team of translators!"
 msgstr ""
 
-#: aa_bulletin_board/views.py:82
+#: aa_bulletin_board/views.py:98
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
 msgstr ""
 
-#: aa_bulletin_board/views.py:125
+#: aa_bulletin_board/views.py:141
 msgid ""
 "The bulletin you are looking for does either not exist, or you don't have "
 "access to it."
 msgstr ""
 
-#: aa_bulletin_board/views.py:167
+#: aa_bulletin_board/views.py:168
+msgid "The bulletin you are trying to edit does not exist."
+msgstr ""
+
+#: aa_bulletin_board/views.py:195
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
 msgstr ""
 
-#: aa_bulletin_board/views.py:186
-msgid "The bulletin you are trying to edit does not exist."
-msgstr ""
-
-#: aa_bulletin_board/views.py:210
+#: aa_bulletin_board/views.py:227
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr ""
 
-#: aa_bulletin_board/views.py:217
+#: aa_bulletin_board/views.py:234
 msgid "The bulletin you are trying to delete does not exist."
 msgstr ""

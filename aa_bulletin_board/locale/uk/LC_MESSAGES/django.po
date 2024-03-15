@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-01 13:56+0200\n"
+"POT-Creation-Date: 2024-03-15 18:14+0100\n"
 "PO-Revision-Date: 2023-10-02 15:43+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-bulletin-board/uk/>\n"
+"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-bulletin-board/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,10 +21,10 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.0.2\n"
 
-#: aa_bulletin_board/__init__.py:12 aa_bulletin_board/models.py:67
-#: aa_bulletin_board/templates/aa_bulletin_board/base.html:5
+#: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
+#: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
+#: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
 msgstr "Дошка оголошень"
@@ -35,7 +35,7 @@ msgstr "Дошка оголошень"
 msgid "Bulletin Board v{__version__}"
 msgstr "Дошка оголошень v{__version__}"
 
-#: aa_bulletin_board/forms.py:71
+#: aa_bulletin_board/forms.py:65
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
@@ -43,6 +43,10 @@ msgstr ""
 "Обмежте доступ до цього бюлетеня для певних груп. Якщо не встановлено жодних "
 "групових обмежень, кожен, хто має доступ до цього модуля, зможе прочитати "
 "цей бюлетень."
+
+#: aa_bulletin_board/forms.py:112
+msgid "You have forgotten the content!"
+msgstr ""
 
 #: aa_bulletin_board/models.py:71
 msgid "Can access this app"
@@ -56,52 +60,52 @@ msgstr ""
 msgid "Title"
 msgstr "Заголовок"
 
-#: aa_bulletin_board/models.py:83
+#: aa_bulletin_board/models.py:84
 msgid "Content"
 msgstr "Вміст"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:88
+#: aa_bulletin_board/models.py:90
 msgid "Created"
 msgstr "Створено"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:94
+#: aa_bulletin_board/models.py:96
 msgid "Updated"
 msgstr ""
 
-#: aa_bulletin_board/models.py:103
+#: aa_bulletin_board/models.py:105
 msgid "User"
 msgstr ""
 
-#: aa_bulletin_board/models.py:109
+#: aa_bulletin_board/models.py:111
 msgid "Group restrictions"
 msgstr "Групові обмеження"
 
-#: aa_bulletin_board/models.py:120
+#: aa_bulletin_board/models.py:122
 msgid "Bulletin"
 msgstr "Інформаційний бюлетень"
 
-#: aa_bulletin_board/models.py:121
+#: aa_bulletin_board/models.py:123
 msgid "Bulletins"
 msgstr "Інформаційні бюлетені"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:18
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
 msgstr "Повернутися"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:21
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:39
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:19
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
 msgid "Edit"
 msgstr "Редагувати"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:22
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:40
+#: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:20
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:37
 msgid "Delete"
 msgstr "Видалити"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:24
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 #, fuzzy
 #| msgid "This bulletin is restricted to the following group(s):"
 msgid "This bulletin is restricted to the following group:"
@@ -111,9 +115,15 @@ msgstr[1] "Доступ до цього бюлетеня обмежений дл
 msgstr[2] "Доступ до цього бюлетеня обмежений для наступних груп:"
 msgstr[3] "Доступ до цього бюлетеня обмежений для наступних груп:"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
 msgstr "Читати далі"
+
+#: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:47
+#, fuzzy
+#| msgid "Bulletin Board"
+msgid "No bulletins found."
+msgstr "Дошка оголошень"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
 #, fuzzy
@@ -128,19 +138,19 @@ msgstr "Редагувати бюлетень"
 msgid "Create new bulletin"
 msgstr "Створити новий бюлетень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 #, fuzzy
 #| msgid "Update Bulletin"
 msgid "Update bulletin"
 msgstr "Бюлетень оновлень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:49
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
 #, fuzzy
 #| msgid "Create Bulletin"
 msgid "Create bulletin"
 msgstr "Створити бюлетень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:6
+#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:7
 #, fuzzy
 #| msgid "Add Bulletin"
 msgid "Add bulletin"
@@ -156,12 +166,12 @@ msgstr ""
 msgid "Join our team of translators!"
 msgstr ""
 
-#: aa_bulletin_board/views.py:82
+#: aa_bulletin_board/views.py:98
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
 msgstr "Створено бюлетень «{bulletin__title}»."
 
-#: aa_bulletin_board/views.py:125
+#: aa_bulletin_board/views.py:141
 #, fuzzy
 #| msgid ""
 #| "The bulletin you are looking for does not exist, or you don't have access "
@@ -171,23 +181,23 @@ msgid ""
 "access to it."
 msgstr "Бюлетень, який ви шукаєте, не існує, або у вас немає до нього доступу."
 
-#: aa_bulletin_board/views.py:167
-#, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr "Оновлено бюлетень «{bulletin__title}»."
-
-#: aa_bulletin_board/views.py:186
+#: aa_bulletin_board/views.py:168
 #, fuzzy
 #| msgid "The bulletin you are trying to edit for does not exist."
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Бюлетень, який ви намагаєтеся відредагувати, не існує."
 
-#: aa_bulletin_board/views.py:210
+#: aa_bulletin_board/views.py:195
+#, python-brace-format
+msgid "Bulletin \"{bulletin__title}\" updated."
+msgstr "Оновлено бюлетень «{bulletin__title}»."
+
+#: aa_bulletin_board/views.py:227
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
 msgstr "Бюлетень «{bulletin.title}» вилучено."
 
-#: aa_bulletin_board/views.py:217
+#: aa_bulletin_board/views.py:234
 #, fuzzy
 #| msgid "The bulletin you are trying to delete for does not exist."
 msgid "The bulletin you are trying to delete does not exist."
