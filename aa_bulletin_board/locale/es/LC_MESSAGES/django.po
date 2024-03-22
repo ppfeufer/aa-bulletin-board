@@ -2,24 +2,23 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Zigor Fernandez Moreno <sietehierros@gmail.com>, 2023.
-# Peter Pfeufer <info@ppfeufer.de>, 2023.
+# Peter Pfeufer <info@ppfeufer.de>, 2023, 2024.
 # Geovanny David Morales De la cruz <moralesgeovanny1996@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 18:14+0100\n"
-"PO-Revision-Date: 2023-10-25 07:04+0000\n"
-"Last-Translator: Geovanny David Morales De la cruz "
-"<moralesgeovanny1996@gmail.com>\n"
-"Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-bulletin-board/es/>\n"
+"PO-Revision-Date: 2024-03-22 12:56+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
+"Language-Team: Spanish <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-bulletin-board/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.1\n"
+"X-Generator: Weblate 5.4.2\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -105,11 +104,9 @@ msgid "Delete"
 msgstr "Borrar"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
-#, fuzzy
-#| msgid "This bulletin is restricted to the following group(s):"
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
-msgstr[0] "Este anuncio está restringido a los siguientes grupos:"
+msgstr[0] "Este anuncio está restringido a los siguiente grupo:"
 msgstr[1] "Este anuncio está restringido a los siguientes grupos:"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
