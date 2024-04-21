@@ -2,7 +2,7 @@ codecov:
   require_ci_to_pass: true
 
 comment:
-  layout: header, diff, files, footer
+  layout: header, reach, changes, diff, files, footer
   require_changes: false
 
 coverage:
