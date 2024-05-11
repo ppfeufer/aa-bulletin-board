@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- Deprecated CSS definition
+
 ## \[2.0.0\] - 2024-03-16
 
 > \[!NOTE\]
