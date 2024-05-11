@@ -19,7 +19,6 @@
 
     .aa-bulletin-board .card-bulletin-excerpt .card-body {
         height: 200px;
-        -webkit-mask-image: linear-gradient(rgb(0 0 0), transparent);
         mask-image: linear-gradient(rgb(0 0 0), transparent);
         overflow: hidden;
         padding: 1rem;
@@ -34,7 +33,7 @@
     }
 
     .aa-bulletin-board img {
-        height: auto !important; /* to override inline style added by CKeditor */
+        height: auto !important; /* to override inline style added by CKEditor */
         max-width: 100%;
     }
 }
