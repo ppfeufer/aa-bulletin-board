@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-20 17:29+0100\n"
-"PO-Revision-Date: 2024-03-28 05:39+0000\n"
+"PO-Revision-Date: 2024-05-10 13:57+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Polish <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/pl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.4.2\n"
+"X-Generator: Weblate 5.5.3\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -105,6 +105,7 @@ msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
