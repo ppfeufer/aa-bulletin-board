@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Faer Yili <yilifaer@gmail.com>, 2024.
 # Dehao Wu <wudehao2000@163.com>, 2024.
+# SAM_FPS <sam_fps@163.com>, 2024.
+# MxdHana <236833425@qq.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 18:14+0100\n"
-"PO-Revision-Date: 2024-05-10 13:57+0000\n"
-"Last-Translator: Dehao Wu <wudehao2000@163.com>\n"
+"PO-Revision-Date: 2024-05-15 09:20+0000\n"
+"Last-Translator: MxdHana <236833425@qq.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -25,31 +27,32 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
-msgstr ""
+msgstr "公告栏"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_bulletin_board/apps.py:21
 #, python-brace-format
 msgid "Bulletin Board v{__version__}"
-msgstr ""
+msgstr "公告栏v{__version__}"
 
 #: aa_bulletin_board/forms.py:65
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
-msgstr ""
+msgstr "限制此公告为特定组可阅读。如果没有设置组限制，每个访问此模块的人都可以阅读此"
+"公告。"
 
 #: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
-msgstr ""
+msgstr "你忘记了内容！"
 
 #: aa_bulletin_board/models.py:71
 msgid "Can access this app"
-msgstr "允许访问此软件"
+msgstr "能够访问此应用程序"
 
 #: aa_bulletin_board/models.py:72
 msgid "Can manage (add/change/remove) bulletins"
-msgstr ""
+msgstr "可以管理（添加/更改/移除）公告"
 
 #: aa_bulletin_board/models.py:81
 msgid "Title"
@@ -57,17 +60,17 @@ msgstr "头衔"
 
 #: aa_bulletin_board/models.py:84
 msgid "Content"
-msgstr ""
+msgstr "目录"
 
 #. Translators: This is the date and time the bulletin has been created
 #: aa_bulletin_board/models.py:90
 msgid "Created"
-msgstr ""
+msgstr "创建"
 
 #. Translators: This is the date and time the bulletin has been updated
 #: aa_bulletin_board/models.py:96
 msgid "Updated"
-msgstr ""
+msgstr "更新"
 
 #: aa_bulletin_board/models.py:105
 msgid "User"
@@ -75,25 +78,25 @@ msgstr "用户"
 
 #: aa_bulletin_board/models.py:111
 msgid "Group restrictions"
-msgstr ""
+msgstr "组别限制"
 
 #: aa_bulletin_board/models.py:122
 msgid "Bulletin"
-msgstr ""
+msgstr "公告"
 
 #: aa_bulletin_board/models.py:123
 msgid "Bulletins"
-msgstr ""
+msgstr "公告"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
-msgstr ""
+msgstr "后"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:19
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:20
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:37
@@ -103,36 +106,36 @@ msgstr "删除"
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
-msgstr[0] ""
+msgstr[0] "此公告限制以下组访问："
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
-msgstr ""
+msgstr "阅读更多"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:47
 msgid "No bulletins found."
-msgstr ""
+msgstr "没有找到公告。"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Edit bulletin"
-msgstr ""
+msgstr "编辑公告"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
 msgid "Create new bulletin"
-msgstr ""
+msgstr "创建新的公告"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Update bulletin"
-msgstr ""
+msgstr "更新公告"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
 msgid "Create bulletin"
-msgstr ""
+msgstr "创建公告"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:7
 msgid "Add bulletin"
-msgstr ""
+msgstr "添加公告"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid ""
@@ -147,28 +150,28 @@ msgstr "加入我们的翻译团队吧！"
 #: aa_bulletin_board/views.py:98
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
-msgstr ""
+msgstr "公告“{bulletin__title}”已创建。"
 
 #: aa_bulletin_board/views.py:141
 msgid ""
 "The bulletin you are looking for does either not exist, or you don't have "
 "access to it."
-msgstr ""
+msgstr "您正在查看的公告不存在，或您没有权限访问。"
 
 #: aa_bulletin_board/views.py:168
 msgid "The bulletin you are trying to edit does not exist."
-msgstr ""
+msgstr "您尝试编辑的公告不存在。"
 
 #: aa_bulletin_board/views.py:195
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr ""
+msgstr "公告“{bulletin__title}”已更新。"
 
 #: aa_bulletin_board/views.py:227
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr ""
+msgstr "公告“{bulletin.title}”已删除。"
 
 #: aa_bulletin_board/views.py:234
 msgid "The bulletin you are trying to delete does not exist."
-msgstr ""
+msgstr "您要删除的公告不存在。"
