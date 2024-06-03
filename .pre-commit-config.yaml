@@ -6,6 +6,7 @@
 default_language_version:
   # force all unspecified python hooks to run python3
   python: python3
+  node: system
 
 # https://pre-commit.ci/
 ci:
@@ -17,8 +18,8 @@ ci:
   autoupdate_branch: ''
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
   autoupdate_schedule: monthly
-  skip:
-    - eslint  # Fails due to missing node environment in CI
+#  skip:
+#    - eslint  # Fails due to missing node environment in CI
   submodules: false
 
 # pre-commit setup
@@ -132,15 +133,16 @@ repos:
       - id: eslint
         name: ESLint
         description: Check for problems in JavaScript files.
+        language: node
         exclude: |
           (?x)(
             .min(.js|.js.map)|
             static/(.*)/libs/
           )
-#        additional_dependencies:
-#          # eslint itself needs to be here when using additional_dependencies.
-#          - eslint@8.56.0  # https://github.com/eslint/eslint/releases/latest
-#          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
+        additional_dependencies:
+          # eslint itself needs to be here when using additional_dependencies.
+          - eslint@9.4.0  # https://github.com/eslint/eslint/releases/latest
+          - globals@15.3.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
     rev: v16.6.1
@@ -157,7 +159,7 @@ repos:
           - --formatter=compact
         additional_dependencies:
           # stylelint itself needs to be here when using additional_dependencies.
-          - stylelint@16.5.0  # https://github.com/stylelint/stylelint/releases/latest
+          - stylelint@16.6.1  # https://github.com/stylelint/stylelint/releases/latest
           - stylelint-config-standard@36.0.0  # https://github.com/stylelint/stylelint-config-standard/releases/latest
 
   - repo: https://github.com/pre-commit/pygrep-hooks
