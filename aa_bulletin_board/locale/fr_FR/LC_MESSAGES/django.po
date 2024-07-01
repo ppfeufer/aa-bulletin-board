@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 18:14+0100\n"
-"PO-Revision-Date: 2024-05-10 13:57+0000\n"
+"PO-Revision-Date: 2024-06-25 18:27+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.6\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -25,13 +25,13 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
-msgstr ""
+msgstr "Tableau d'affichage"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_bulletin_board/apps.py:21
 #, python-brace-format
 msgid "Bulletin Board v{__version__}"
-msgstr ""
+msgstr "Tableau d'affichage v{__version__}"
 
 #: aa_bulletin_board/forms.py:65
 msgid ""
