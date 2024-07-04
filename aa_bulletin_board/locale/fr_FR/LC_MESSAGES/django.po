@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 # erka Ekanon <M6musicT@hotmail.fr>, 2024.
 # Peter Pfeufer <info@ppfeufer.de>, 2024.
+# Hexo <ghostcig@free.fr>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 18:14+0100\n"
-"PO-Revision-Date: 2024-06-25 18:27+0000\n"
-"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
+"PO-Revision-Date: 2024-07-04 07:27+0000\n"
+"Last-Translator: Hexo <ghostcig@free.fr>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/fr/>\n"
 "Language: fr_FR\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6\n"
+"X-Generator: Weblate 5.6.1\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -34,44 +35,54 @@ msgid "Bulletin Board v{__version__}"
 msgstr "Tableau d'affichage v{__version__}"
 
 #: aa_bulletin_board/forms.py:65
+#, fuzzy
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
+"Restreindre ce bulletin à certains groupes. Si aucune restriction de groupe "
+"n'est en place, tous ceux qui ont accès à ce module peuvent lire ce bulletin."
 
 #: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
-msgstr ""
+msgstr "Vous avez oublié le contenu !"
 
 #: aa_bulletin_board/models.py:71
+#, fuzzy
 msgid "Can access this app"
 msgstr "Peut accéder à cette application"
 
 #: aa_bulletin_board/models.py:72
+#, fuzzy
 msgid "Can manage (add/change/remove) bulletins"
-msgstr ""
+msgstr "Peut gérer (ajouter/modifier/supprimer) des bulletins"
 
 #: aa_bulletin_board/models.py:81
+#, fuzzy
 msgid "Title"
-msgstr ""
+msgstr "Titre"
 
 #: aa_bulletin_board/models.py:84
+#, fuzzy
 msgid "Content"
-msgstr ""
+msgstr "Contenu"
 
 #. Translators: This is the date and time the bulletin has been created
 #: aa_bulletin_board/models.py:90
+#, fuzzy
 msgid "Created"
-msgstr ""
+msgstr "Créé"
 
 #. Translators: This is the date and time the bulletin has been updated
 #: aa_bulletin_board/models.py:96
+#, fuzzy
 msgid "Updated"
-msgstr ""
+msgstr "Mis à jour"
 
 #: aa_bulletin_board/models.py:105
+#, fuzzy
 msgid "User"
-msgstr ""
+msgstr "Utilisateur"
 
 #: aa_bulletin_board/models.py:111
 msgid "Group restrictions"
@@ -79,21 +90,21 @@ msgstr "Restrictions de groupe"
 
 #: aa_bulletin_board/models.py:122
 msgid "Bulletin"
-msgstr ""
+msgstr "Bulletin"
 
 #: aa_bulletin_board/models.py:123
 msgid "Bulletins"
-msgstr ""
+msgstr "Bulletins"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
-msgstr ""
+msgstr "Retour"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:19
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
 msgid "Edit"
-msgstr ""
+msgstr "Editer"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:20
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:37
