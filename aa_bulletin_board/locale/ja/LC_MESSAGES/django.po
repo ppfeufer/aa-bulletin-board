@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Xrandier <xrandier@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 18:14+0100\n"
-"PO-Revision-Date: 2024-05-10 13:57+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-07-08 06:27+0000\n"
+"Last-Translator: Xrandier <xrandier@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/ja/>\n"
 "Language: ja\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -71,7 +70,7 @@ msgstr ""
 
 #: aa_bulletin_board/models.py:105
 msgid "User"
-msgstr ""
+msgstr "ユーザー"
 
 #: aa_bulletin_board/models.py:111
 msgid "Group restrictions"
