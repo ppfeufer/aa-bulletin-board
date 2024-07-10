@@ -1,15 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Dadas Aideron <dadas.aideron@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-20 17:29+0100\n"
-"PO-Revision-Date: 2024-05-10 13:57+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-07-10 14:26+0000\n"
+"Last-Translator: Dadas Aideron <dadas.aideron@gmail.com>\n"
 "Language-Team: Czech <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/cs/>\n"
 "Language: cs\n"
@@ -18,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
 "<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
-"X-Generator: Weblate 5.5.3\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -26,153 +25,157 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
-msgstr ""
+msgstr "Nástěnka"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_bulletin_board/apps.py:21
 #, python-brace-format
 msgid "Bulletin Board v{__version__}"
-msgstr ""
+msgstr "Nástěnka v{__version__}"
 
 #: aa_bulletin_board/forms.py:65
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
+"Omez nástěnku pro určité skupiny. Pokud nejsou nastavena žádná omezení, "
+"všichni s přístupem k tomuto modulu můžou číst tuto nástěnku."
 
 #: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
-msgstr ""
+msgstr "Zapomněl jsi obsah!"
 
 #: aa_bulletin_board/models.py:71
 msgid "Can access this app"
-msgstr ""
+msgstr "Má přístup k této aplikaci"
 
 #: aa_bulletin_board/models.py:72
 msgid "Can manage (add/change/remove) bulletins"
-msgstr ""
+msgstr "Může spravovat (přidat, měnit, odstranit) nástěnky"
 
 #: aa_bulletin_board/models.py:81
 msgid "Title"
-msgstr ""
+msgstr "Nadpis"
 
 #: aa_bulletin_board/models.py:84
 msgid "Content"
-msgstr ""
+msgstr "Obsah"
 
 #. Translators: This is the date and time the bulletin has been created
 #: aa_bulletin_board/models.py:90
 msgid "Created"
-msgstr ""
+msgstr "Vytvořeno"
 
 #. Translators: This is the date and time the bulletin has been updated
 #: aa_bulletin_board/models.py:96
 msgid "Updated"
-msgstr ""
+msgstr "Upraveno"
 
 #: aa_bulletin_board/models.py:105
 msgid "User"
-msgstr ""
+msgstr "Uživatel"
 
 #: aa_bulletin_board/models.py:111
 msgid "Group restrictions"
-msgstr ""
+msgstr "Omezení skupiny"
 
 #: aa_bulletin_board/models.py:122
 msgid "Bulletin"
-msgstr ""
+msgstr "Nástěnka"
 
 #: aa_bulletin_board/models.py:123
 msgid "Bulletins"
-msgstr ""
+msgstr "Nástěnky"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
-msgstr ""
+msgstr "Zpět"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:19
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:20
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:37
 msgid "Delete"
-msgstr ""
+msgstr "Smazat"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Tato nástěnka je omezena pro tuto skupinu:"
+msgstr[1] "Tato nástěnka je omezena pro tyto skupiny:"
+msgstr[2] "Tato nástěnka je omezena pro tyto skupiny:"
+msgstr[3] "Tato nástěnka je omezena pro tyto skupiny:"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
-msgstr ""
+msgstr "Zobrazit více"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:47
 msgid "No bulletins found."
-msgstr ""
+msgstr "Žádné nástěnky nebyly nalezeny."
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Edit bulletin"
-msgstr ""
+msgstr "Upravit nástěnku"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
 msgid "Create new bulletin"
-msgstr ""
+msgstr "Vytvořit nástěnku"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Update bulletin"
-msgstr ""
+msgstr "Aktualizovat nástěnku"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
 msgid "Create bulletin"
-msgstr ""
+msgstr "Vytvořit nástěnku"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:7
 msgid "Add bulletin"
-msgstr ""
+msgstr "Přidat nástěnku"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid ""
 "Do you want to help translate this app into your language or improve the "
 "existing translation?"
 msgstr ""
+"Chceš pomoc s překladem této aplikace do tvého jazyka, nebo vylepšit "
+"současný překlad?"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
-msgstr ""
+msgstr "Připoj se k našemu týmu překladatelů!"
 
 #: aa_bulletin_board/views.py:98
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" created."
-msgstr ""
+msgstr "Nástěnka \"{bulletin__title}\" vytvořena."
 
 #: aa_bulletin_board/views.py:141
 msgid ""
 "The bulletin you are looking for does either not exist, or you don't have "
 "access to it."
-msgstr ""
+msgstr "Nástěnka kterou hledáte buďto neexistuje, nebo k ní nemáte přístup."
 
 #: aa_bulletin_board/views.py:168
 msgid "The bulletin you are trying to edit does not exist."
-msgstr ""
+msgstr "Nástěnka kterou chcete upravit neexistuje."
 
 #: aa_bulletin_board/views.py:195
 #, python-brace-format
 msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr ""
+msgstr "Nástěnka \"{bulletin__title}\" aktualizována."
 
 #: aa_bulletin_board/views.py:227
 #, python-brace-format
 msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr ""
+msgstr "Nástěnka \"{bulletin.title}\" smazána."
 
 #: aa_bulletin_board/views.py:234
 msgid "The bulletin you are trying to delete does not exist."
-msgstr ""
+msgstr "Nástěnku kterou se snažíte smazat neexistuje."
