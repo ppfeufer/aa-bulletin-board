@@ -4,13 +4,14 @@
 # erka Ekanon <M6musicT@hotmail.fr>, 2024.
 # Peter Pfeufer <info@ppfeufer.de>, 2024.
 # Hexo <ghostcig@free.fr>, 2024.
+# Houbi_Houba <paul.lacape@live.fr>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 18:14+0100\n"
-"PO-Revision-Date: 2024-07-04 07:27+0000\n"
-"Last-Translator: Hexo <ghostcig@free.fr>\n"
+"PO-Revision-Date: 2024-07-10 09:27+0000\n"
+"Last-Translator: Houbi_Houba <paul.lacape@live.fr>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/fr/>\n"
 "Language: fr_FR\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.6.1\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -40,7 +41,7 @@ msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
-"Restreindre ce bulletin à certains groupes. Si aucune restriction de groupe "
+"Restreignez ce bulletin à certains groupes. Si aucune restriction de groupe "
 "n'est en place, tous ceux qui ont accès à ce module peuvent lire ce bulletin."
 
 #: aa_bulletin_board/forms.py:112
