@@ -35,6 +35,19 @@ Section Order:
 ### Security
 -->
 
+## \[2.1.0\] - 2024-07-27
+
+### Added
+
+- Prepared Czech translation for when Alliance Auth supports it
+
+### Changed
+
+- Chinese translation improved
+- French translation improved
+- Japanese translation improved
+- Russian translation improved
+
 ### Removed
 
 - Support for Python 3.8 and Python 3.9
