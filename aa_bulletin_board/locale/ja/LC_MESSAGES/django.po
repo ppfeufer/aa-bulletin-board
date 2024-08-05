@@ -2,13 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Xrandier <xrandier@gmail.com>, 2024.
+# Anata_no_Usiro <yt23542354m@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-15 18:14+0100\n"
-"PO-Revision-Date: 2024-07-08 06:27+0000\n"
-"Last-Translator: Xrandier <xrandier@gmail.com>\n"
+"PO-Revision-Date: 2024-08-05 10:10+0000\n"
+"Last-Translator: Anata_no_Usiro <yt23542354m@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/"
 "alliance-auth-apps/aa-bulletin-board/ja/>\n"
 "Language: ja\n"
@@ -24,49 +25,50 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
-msgstr ""
+msgstr "掲示板"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_bulletin_board/apps.py:21
 #, python-brace-format
 msgid "Bulletin Board v{__version__}"
-msgstr ""
+msgstr "掲示板 v{__version__}"
 
 #: aa_bulletin_board/forms.py:65
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
-msgstr ""
+msgstr "この情報を特定のグループに制限する。グループ制限がない場合、このモジュールに"
+"アクセスできる全員がこの情報を読むことができます。"
 
 #: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
-msgstr ""
+msgstr "内容を忘れています！"
 
 #: aa_bulletin_board/models.py:71
 msgid "Can access this app"
-msgstr ""
+msgstr "このアプリにアクセス可能です"
 
 #: aa_bulletin_board/models.py:72
 msgid "Can manage (add/change/remove) bulletins"
-msgstr ""
+msgstr "情報の管理（追加／変更／削除）が可能"
 
 #: aa_bulletin_board/models.py:81
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: aa_bulletin_board/models.py:84
 msgid "Content"
-msgstr ""
+msgstr "内容"
 
 #. Translators: This is the date and time the bulletin has been created
 #: aa_bulletin_board/models.py:90
 msgid "Created"
-msgstr ""
+msgstr "作成"
 
 #. Translators: This is the date and time the bulletin has been updated
 #: aa_bulletin_board/models.py:96
 msgid "Updated"
-msgstr ""
+msgstr "アップデート"
 
 #: aa_bulletin_board/models.py:105
 msgid "User"
@@ -74,7 +76,7 @@ msgstr "ユーザー"
 
 #: aa_bulletin_board/models.py:111
 msgid "Group restrictions"
-msgstr ""
+msgstr "グループの制限"
 
 #: aa_bulletin_board/models.py:122
 msgid "Bulletin"
