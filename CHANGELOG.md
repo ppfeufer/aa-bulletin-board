@@ -35,6 +35,11 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- French translation improved
+- Ukrainian translation improved
+
 ## \[2.2.0\] - 2024-09-16
 
 ### Changed
