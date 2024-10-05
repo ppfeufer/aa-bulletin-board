@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-16 12:07+0200\n"
+"POT-Creation-Date: 2024-10-05 15:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,13 +32,13 @@ msgstr ""
 msgid "Bulletin Board v{__version__}"
 msgstr ""
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:63
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
 
-#: aa_bulletin_board/forms.py:112
+#: aa_bulletin_board/forms.py:110
 msgid "You have forgotten the content!"
 msgstr ""
 

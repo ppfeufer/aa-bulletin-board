@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-15 18:14+0100\n"
+"POT-Creation-Date: 2024-10-05 15:47+0200\n"
 "PO-Revision-Date: 2024-10-04 18:10+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-bulletin-board/uk/>\n"
+"Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-bulletin-board/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "Дошка оголошень"
 msgid "Bulletin Board v{__version__}"
 msgstr "Дошка оголошень v{__version__}"
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:63
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
@@ -44,7 +44,7 @@ msgstr ""
 "групових обмежень, кожен, хто має доступ до цього модуля, зможе прочитати "
 "цей бюлетень."
 
-#: aa_bulletin_board/forms.py:112
+#: aa_bulletin_board/forms.py:110
 msgid "You have forgotten the content!"
 msgstr ""
 

@@ -42,7 +42,7 @@ Section Order:
 
 ### Removed
 
-- Unnecessary form fiel definition
+- Unnecessary form field definition
 
 ## \[2.2.0\] - 2024-09-16
 

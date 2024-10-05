@@ -9,11 +9,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-15 18:14+0100\n"
+"POT-Creation-Date: 2024-10-05 15:47+0200\n"
 "PO-Revision-Date: 2024-05-10 13:57+0000\n"
 "Last-Translator: Rodpold Shard <rodpold@gmail.com>\n"
-"Language-Team: Korean <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-bulletin-board/ko/>\n"
+"Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-bulletin-board/ko/>\n"
 "Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,7 +35,7 @@ msgstr "불레틴 보드"
 msgid "Bulletin Board v{__version__}"
 msgstr "불레틴 보드 v{__version__}"
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:63
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
@@ -43,7 +43,7 @@ msgstr ""
 "불레틴 보드의 항목을 그룹별로 열람을 제한할 수 있습니다. 그룹 제한이 없다면, "
 "모듈의 접근 권한이 있는 모든 사용자가 이 항목을 열람할 수 있습니다."
 
-#: aa_bulletin_board/forms.py:112
+#: aa_bulletin_board/forms.py:110
 msgid "You have forgotten the content!"
 msgstr "내용을 잊어버리셨군요!"
 

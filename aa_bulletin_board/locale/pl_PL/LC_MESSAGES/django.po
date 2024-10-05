@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-20 17:29+0100\n"
+"POT-Creation-Date: 2024-10-05 15:47+0200\n"
 "PO-Revision-Date: 2024-05-10 13:57+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Polish <https://weblate.ppfeufer.de/projects/"
-"alliance-auth-apps/aa-bulletin-board/pl/>\n"
+"Language-Team: Polish <https://weblate.ppfeufer.de/projects/alliance-auth-"
+"apps/aa-bulletin-board/pl/>\n"
 "Language: pl_PL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,13 +33,13 @@ msgstr ""
 msgid "Bulletin Board v{__version__}"
 msgstr ""
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:63
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
 msgstr ""
 
-#: aa_bulletin_board/forms.py:112
+#: aa_bulletin_board/forms.py:110
 msgid "You have forgotten the content!"
 msgstr ""
 

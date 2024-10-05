@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-15 18:14+0100\n"
+"POT-Creation-Date: 2024-10-05 15:47+0200\n"
 "PO-Revision-Date: 2024-05-28 16:27+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.ppfeufer.de/projects/"
@@ -36,14 +36,15 @@ msgstr "公告栏"
 msgid "Bulletin Board v{__version__}"
 msgstr "公告栏v{__version__}"
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:63
 msgid ""
 "Restrict this bulletin to certain groups. If no group restrictions are in "
 "place, everyone who has access to this module can read this bulletin."
-msgstr "限制此公告为特定组可阅读。如果没有设置组限制，每个访问此模块的人都可以阅读此"
+msgstr ""
+"限制此公告为特定组可阅读。如果没有设置组限制，每个访问此模块的人都可以阅读此"
 "公告。"
 
-#: aa_bulletin_board/forms.py:112
+#: aa_bulletin_board/forms.py:110
 msgid "You have forgotten the content!"
 msgstr "你忘记了内容！"
 
