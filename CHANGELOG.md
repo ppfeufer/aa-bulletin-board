@@ -40,6 +40,10 @@ Section Order:
 - French translation improved
 - Ukrainian translation improved
 
+### Removed
+
+- Unnecessary form fiel definition
+
 ## \[2.2.0\] - 2024-09-16
 
 ### Changed

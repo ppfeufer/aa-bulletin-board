@@ -56,8 +56,6 @@ class BulletinForm(ModelForm):
     Form for bulletins
     """
 
-    title = forms.CharField()
-
     groups = SpecialModelMultipleChoiceField(
         required=False,
         queryset=Group.objects.all(),
