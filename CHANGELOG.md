@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## \[2.2.1\] - 2024-10-05
+
 ### Changed
 
 - French translation improved
