@@ -35,6 +35,11 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Dependency updates
+  - `django-ckeditor-5`>=0.2.14
+
 ## \[2.2.1\] - 2024-10-05
 
 ### Changed
