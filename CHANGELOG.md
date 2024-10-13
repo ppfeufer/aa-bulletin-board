@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## \[2.2.2\] - 2024-10-13
+
 ### Changed
 
 - Dependency updates
