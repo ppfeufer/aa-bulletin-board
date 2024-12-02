@@ -22,7 +22,7 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > Critical content demanding immediate user attention due to potential risks.
 -->
 
-## \[In Development\] - Unreleased
+## [In Development] - Unreleased
 
 <!--
 Section Order:
@@ -35,20 +35,20 @@ Section Order:
 ### Security
 -->
 
-## \[2.2.3\] - 2024-11-01
+## [2.2.3] - 2024-11-01
 
 ### Changed
 
 - Italian translation improved
 
-## \[2.2.2\] - 2024-10-13
+## [2.2.2] - 2024-10-13
 
 ### Changed
 
 - Dependency updates
   - `django-ckeditor-5`>=0.2.14
 
-## \[2.2.1\] - 2024-10-05
+## [2.2.1] - 2024-10-05
 
 ### Changed
 
@@ -59,7 +59,7 @@ Section Order:
 
 - Unnecessary form field definition
 
-## \[2.2.0\] - 2024-09-16
+## [2.2.0] - 2024-09-16
 
 ### Changed
 
@@ -68,7 +68,7 @@ Section Order:
 - Japanese translation improved
 - Lingua codes updated to match Alliance Auth
 
-## \[2.1.0\] - 2024-07-27
+## [2.1.0] - 2024-07-27
 
 ### Added
 
@@ -85,7 +85,7 @@ Section Order:
 
 - Support for Python 3.8 and Python 3.9
 
-## \[2.0.1\] - 2024-05-16
+## [2.0.1] - 2024-05-16
 
 ### Changed
 
@@ -95,9 +95,9 @@ Section Order:
 
 - Deprecated CSS definition
 
-## \[2.0.0\] - 2024-03-16
+## [2.0.0] - 2024-03-16
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0!**
 >
@@ -105,7 +105,7 @@ Section Order:
 > you install this version, otherwise an update to Alliance Auth will
 > be pulled in unsupervised.
 
-> \[!IMPORTANT\]
+> [!IMPORTANT]
 >
 > With this version, we switched to a new WYSIWYG editor.
 > Please make sure to read the update information
@@ -328,9 +328,9 @@ if apps.is_installed("django_ckeditor_5"):
     )
 ```
 
-## \[2.0.0-beta.1\] - 2024-02-18
+## [2.0.0-beta.1] - 2024-02-18
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0b1!**
 >
@@ -338,7 +338,7 @@ if apps.is_installed("django_ckeditor_5"):
 > you install this version, otherwise an update to Alliance Auth will
 > be pulled in unsupervised.
 
-> \[!IMPORTANT\]
+> [!IMPORTANT]
 >
 > With this version, we switched to a new WYSIWYG editor.
 > Please make sure to read the update information
@@ -561,9 +561,9 @@ if apps.is_installed("django_ckeditor_5"):
     )
 ```
 
-## \[1.13.2\] - 2023-09-26
+## [1.13.2] - 2023-09-26
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This is the last version compatible with Alliance Auth v3.**
 
@@ -575,26 +575,26 @@ if apps.is_installed("django_ckeditor_5"):
 
 - Translations improved and updated
 
-## \[1.13.1\] - 2023-09-02
+## [1.13.1] - 2023-09-02
 
 ### Changed
 
 - Korean translation improved
 - Spanish translation improved
 
-## \[1.13.0\] - 2023-08-29
+## [1.13.0] - 2023-08-29
 
 ### Added
 
 - Korean translation
 
-## \[1.12.0\] - 2023-08-15
+## [1.12.0] - 2023-08-15
 
 ### Added
 
 - Spanish translation
 
-## \[1.11.0\] - 2023-08-13
+## [1.11.0] - 2023-08-13
 
 ### Fixed
 
@@ -608,7 +608,7 @@ if apps.is_installed("django_ckeditor_5"):
   - Keyword arguments
 - Tweaks to pylint checks
 
-## \[1.10.1\] - 2023-07-30
+## [1.10.1] - 2023-07-30
 
 ### Added
 
@@ -629,7 +629,7 @@ if apps.is_installed("django_ckeditor_5"):
 
 - Deprecated type attributes
 
-## \[1.10.0\] - 2023-04-23
+## [1.10.0] - 2023-04-23
 
 ### Added
 
@@ -639,25 +639,25 @@ if apps.is_installed("django_ckeditor_5"):
 
 - Moved the build process to PEP 621 / pyproject.toml
 
-## \[1.9.0\] - 2023-04-16
+## [1.9.0] - 2023-04-16
 
 ### Added
 
 - Russian translation
 
-## \[1.8.0\] - 2023-04-13
+## [1.8.0] - 2023-04-13
 
 ### Added
 
 - German translation
 
-## \[1.7.3\] - 2022-09-18
+## [1.7.3] - 2022-09-18
 
 ### Fixed
 
 - Clean method in form
 
-## \[1.7.2\] - 2022-09-18
+## [1.7.2] - 2022-09-18
 
 ### Added
 
@@ -670,13 +670,13 @@ if apps.is_installed("django_ckeditor_5"):
 - Minimum requirements
   - `allianceauth`>=3.0.0
 
-## \[1.7.1\] - 2022-08-02
+## [1.7.1] - 2022-08-02
 
 ### Changed
 
 - README updated with missing information
 
-## \[1.7.0\] - 2022-08-02
+## [1.7.0] - 2022-08-02
 
 ### Changed
 
@@ -713,7 +713,7 @@ if apps.is_installed("django_ckeditor_5"):
       "/static/ckeditor/ckeditor/plugins/youtube/"
       ```
 
-## \[1.6.0\] - 2022-08-02
+## [1.6.0] - 2022-08-02
 
 ### Changed
 
@@ -727,7 +727,7 @@ if apps.is_installed("django_ckeditor_5"):
 
 - tox tests for AA beta version
 
-## \[1.5.1\] - 2022-07-11
+## [1.5.1] - 2022-07-11
 
 ### Changed
 
@@ -735,13 +735,13 @@ if apps.is_installed("django_ckeditor_5"):
 - Minimum dependencies:
   - Alliance Auth>=2.11.0 (as the latest stable of the 2.x branch for now)
 
-## \[1.5.0\] - 2022-06-24
+## [1.5.0] - 2022-06-24
 
 ### Added
 
 - Versioned static template tag
 
-## \[1.4.0\] - 2022-03-02
+## [1.4.0] - 2022-03-02
 
 ### Added
 
@@ -757,7 +757,7 @@ if apps.is_installed("django_ckeditor_5"):
 
 - Deprecated settings
 
-## \[1.3.0\] - 2022-02-28
+## [1.3.0] - 2022-02-28
 
 ### Fixed
 
@@ -766,13 +766,13 @@ if apps.is_installed("django_ckeditor_5"):
   - URL config in README updated to work with Django 4. **Please make sure to update
     your configuration accordingly!**
 
-## \[1.2.1\] - 2022-02-02
+## [1.2.1] - 2022-02-02
 
 ### Changed
 
 - Using `path` in URL config instead of soon-to-be removed `url`
 
-## \[1.2.0\] - 2022-01-19
+## [1.2.0] - 2022-01-19
 
 ### Added
 
@@ -783,7 +783,7 @@ if apps.is_installed("django_ckeditor_5"):
 - Minimum dependencies:
   - Alliance Auth>=2.9.4
 
-## \[1.1.0\] - 2021-11-30
+## [1.1.0] - 2021-11-30
 
 ### Changed
 
@@ -791,20 +791,20 @@ if apps.is_installed("django_ckeditor_5"):
   - Python 3.7
   - Alliance Auth v2.9.3
 
-## \[1.0.2\] - 2021-09-20
+## [1.0.2] - 2021-09-20
 
 ### Added
 
 - More tests (test coverage raised to 80%)
 
-## \[1.0.1\] - 2021-09-19
+## [1.0.1] - 2021-09-19
 
 ### Fixed
 
 - An issue where JavaScript and CSS could have been posted in a bulletin
 - An issue with unicode characters in bulletin topics
 
-## \[1.0.0\] - 2021-08-25
+## [1.0.0] - 2021-08-25
 
 ### Added
 
@@ -816,13 +816,13 @@ if apps.is_installed("django_ckeditor_5"):
 
 - Small logic error in JavaScript
 
-## \[0.1.0-beta.12\] - 2021-07-25
+## [0.1.0-beta.12] - 2021-07-25
 
 ### Fixed
 
 - Key in setup.py
 
-## \[0.1.0-beta.11\] - 2021-07-25
+## [0.1.0-beta.11] - 2021-07-25
 
 ### Changed
 
@@ -830,7 +830,7 @@ if apps.is_installed("django_ckeditor_5"):
   have multiple apps that use CKEditor, like `aa-forum`, and how to combine these
   configurations
 
-## \[0.1.0-beta.10\] - 2021-07-15
+## [0.1.0-beta.10] - 2021-07-15
 
 ### Changed
 
@@ -838,7 +838,7 @@ if apps.is_installed("django_ckeditor_5"):
   [Readme](https://github.com/ppfeufer/aa-bulletin-board/blob/master/README.md) for
   details)
 
-## \[0.1.0-beta.9\] - 2021-07-08
+## [0.1.0-beta.9] - 2021-07-08
 
 ### Added
 
@@ -848,7 +848,7 @@ if apps.is_installed("django_ckeditor_5"):
 
 - Compatibility with Python 3.9 and Django 3.2 confirmed
 
-## \[0.1.0-beta.8\] - 2021-06-21
+## [0.1.0-beta.8] - 2021-06-21
 
 ### Fixed
 
@@ -860,7 +860,7 @@ if apps.is_installed("django_ckeditor_5"):
 - Code formatting and cleanup
 - Slug field in DB to make sure it's unique and uses the right validator
 
-## \[0.1.0-beta.7\] - 2021-06-13
+## [0.1.0-beta.7] - 2021-06-13
 
 ### Changed
 
@@ -870,39 +870,39 @@ if apps.is_installed("django_ckeditor_5"):
   CKEDITOR_CONFIGS = {"default": {"width": "100%", "height": "45vh"}}
   ```
 
-## \[0.1.0-beta.6\] - 2021-06-13
+## [0.1.0-beta.6] - 2021-06-13
 
 ### Fixed
 
 - The editor now uses the space it has and doesn't sit in its corner any longer
 
-## \[0.1.0-beta.5\] - 2021-06-10
+## [0.1.0-beta.5] - 2021-06-10
 
 ### Fixed
 
 - App Name
 
-## \[0.1.0-beta.4\] - 2021-04-22
+## [0.1.0-beta.4] - 2021-04-22
 
 ### Changed
 
 - Dashboard layout, so it looks nice and doesn't break things when there are HTML
   tags in the excerpts
 
-## \[0.1.0-beta.3\] - 2021-04-21
+## [0.1.0-beta.3] - 2021-04-21
 
 ### Fixed
 
 - Broken layout in dashboard caused by html tags not being closed in excerpts. With
   this, html tags are removed completely from excerpts on the dashboard
 
-## \[0.1.0-beta.2\] - 2021-04-20
+## [0.1.0-beta.2] - 2021-04-20
 
 ### Fixed
 
 - Wrong import
 
-## \[0.1.0-beta.1\] - 2021-04-04
+## [0.1.0-beta.1] - 2021-04-04
 
 ## First release
 
