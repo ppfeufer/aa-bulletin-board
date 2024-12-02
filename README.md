@@ -53,7 +53,7 @@ these kinds of changes. For your own sanity, and mine :-)
 
 ## Installation<a name="installation"></a>
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **AA Bulletin Board >=2.0.0 needs at least Alliance Auth v4.0.0!**
 >
