@@ -22,6 +22,17 @@ ci:
     - eslint  # Fails due to missing node environment in CI
   submodules: false
 
+# Globally exclude files
+# https://pre-commit.com/#top_level-exclude
+exclude: |
+  (?x)(
+    .github/|
+    LICENSE|
+    .min(.css|.css.map|.js|.js.map)|
+    locale/|
+    static/(.*)/libs/
+  )
+
 # pre-commit setup
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -106,12 +117,6 @@ repos:
         description: Check for trailing whitespace.
         args:
           - --markdown-linebreak-ext=md
-        exclude: |
-          (?x)(
-            .min(.css|.css.map|.js|.js.map)|
-            locale/|
-            static/(.*)/libs/
-          )
 
       - id: check-executables-have-shebangs
         name: Check for shebangs in executables
@@ -120,12 +125,6 @@ repos:
       - id: end-of-file-fixer
         name: End of file fixer
         description: Ensure that files end with a newline.
-        exclude: |
-          (?x)(
-            .min(.css|.css.map|.js|.js.map)|
-            locale/|
-            static/(.*)/libs/
-          )
 
   - repo: https://github.com/eslint/eslint
     rev: de2b7986929c5a92de076e4381b8bb05440e78c2  # frozen: v9.16.0
@@ -134,11 +133,6 @@ repos:
         name: ESLint
         description: Check for problems in JavaScript files.
         language: node
-        exclude: |
-          (?x)(
-            .min(.js|.js.map)|
-            static/(.*)/libs/
-          )
 #        additional_dependencies:
 #          # eslint itself needs to be here when using additional_dependencies.
 #          - eslint@9.16.0  # https://github.com/eslint/eslint/releases/latest
@@ -151,11 +145,6 @@ repos:
         name: Stylelint
         description: Check for problems in CSS files.
         language: node
-        exclude: |
-          (?x)(
-            .min(.css|.css.map)|
-            static/(.*)/libs/
-          )
         args:
           - --formatter=compact
         additional_dependencies:
@@ -196,12 +185,6 @@ repos:
       - id: editorconfig-checker
         name: EditorConfig Checker
         description: Check for compliance with the definitions in the EditorConfig file.
-        exclude: |
-          (?x)(
-            LICENSE|
-            .min(.css|.css.map|.js|.js.map)|
-            static/(.*)/libs/
-          )
 
   - repo: https://github.com/adamchainz/django-upgrade
     rev: 04b0de71b1b4acc1803e74ab24e722bcbd5ab989  # frozen: 1.22.2
@@ -275,11 +258,6 @@ repos:
       - id: mdformat
         name: Mdformat
         description: Format Markdown files.
-        exclude: |
-          (?x)(
-            .github/|
-            static/(.*)/libs/
-          )
         additional_dependencies:
           - mdformat-gfm==0.3.7  # Mdformat plugin for GitHub Flavored Markdown compatibility » https://github.com/hukkin/mdformat-gfm/tags
           - mdformat-toc==0.3.0  # Mdformat plugin to generate a table of contents » https://github.com/hukkin/mdformat-toc/tags
