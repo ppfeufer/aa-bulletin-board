@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Python 3.13 to test matrix
+
 ### Changed
 
 - Sumoselect JS updated to the latest version
