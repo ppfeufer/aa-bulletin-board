@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Sumoselect JS updated to the latest version
+
 ## [2.2.3] - 2024-11-01
 
 ### Changed
