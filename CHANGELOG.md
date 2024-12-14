@@ -35,6 +35,12 @@ Section Order:
 ### Security
 -->
 
+## [2.2.5] - 2024-12-14
+
+### Changed
+
+- Translations updated
+
 ## [2.2.4] - 2024-12-09
 
 ### Added
