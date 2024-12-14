@@ -5,21 +5,22 @@
 # Peter Pfeufer <info@ppfeufer.de>, 2024.
 # Hexo <ghostcig@free.fr>, 2024.
 # Houbi_Houba <paul.lacape@live.fr>, 2024.
+# balbozorre <loic.petiot2002@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-05 15:47+0200\n"
-"PO-Revision-Date: 2024-10-04 18:10+0000\n"
-"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-bulletin-board/fr/>\n"
+"Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
+"POT-Creation-Date: 2024-12-09 13:09+0100\n"
+"PO-Revision-Date: 2024-12-13 17:15+0000\n"
+"Last-Translator: balbozorre <loic.petiot2002@gmail.com>\n"
+"Language-Team: French <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/aa-bulletin-board/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.7.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -114,8 +115,8 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ce bulletin est restreint au groupe suivant :"
+msgstr[1] "Ce bulletin est restreint aux groupes suivants :"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
