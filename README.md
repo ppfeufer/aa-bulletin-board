@@ -19,24 +19,23 @@ Simple bulletin board for [Alliance Auth](https://gitlab.com/allianceauth/allian
 
 ______________________________________________________________________
 
-<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=1 -->
+<!-- mdformat-toc start --slug=github --maxlevel=6 --minlevel=2 -->
 
-- [AA Bulletin Board](#aa-bulletin-board)
-  - [Before You Install This Module](#before-you-install-this-module)
-  - [Installation](#installation)
-    - [Step 1: Install the Package](#step-1-install-the-package)
-    - [Step 2: Configure Alliance Auth](#step-2-configure-alliance-auth)
-      - [Settings in `/home/allianceserver/myauth/myauth/settings/local.py`](#settings-in-homeallianceservermyauthmyauthsettingslocalpy)
-      - [Settings in `/home/allianceserver/myauth/myauth/urls.py`](#settings-in-homeallianceservermyauthmyauthurlspy)
-    - [Step 3: Configure Your Webserver](#step-3-configure-your-webserver)
-      - [Apache](#apache)
-      - [Nginx](#nginx)
-    - [Step 4: Finalizing the Installation](#step-4-finalizing-the-installation)
-    - [Step 5: Set Up Permissions](#step-5-set-up-permissions)
-  - [Permissions](#permissions)
-  - [Changelog](#changelog)
-  - [Translation Status](#translation-status)
-  - [Contributing](#contributing)
+- [Before You Install This Module](#before-you-install-this-module)
+- [Installation](#installation)
+  - [Step 1: Install the Package](#step-1-install-the-package)
+  - [Step 2: Configure Alliance Auth](#step-2-configure-alliance-auth)
+    - [Settings in `/home/allianceserver/myauth/myauth/settings/local.py`](#settings-in-homeallianceservermyauthmyauthsettingslocalpy)
+    - [Settings in `/home/allianceserver/myauth/myauth/urls.py`](#settings-in-homeallianceservermyauthmyauthurlspy)
+  - [Step 3: Configure Your Webserver](#step-3-configure-your-webserver)
+    - [Apache](#apache)
+    - [Nginx](#nginx)
+  - [Step 4: Finalizing the Installation](#step-4-finalizing-the-installation)
+  - [Step 5: Set Up Permissions](#step-5-set-up-permissions)
+- [Permissions](#permissions)
+- [Changelog](#changelog)
+- [Translation Status](#translation-status)
+- [Contributing](#contributing)
 
 <!-- mdformat-toc end -->
 
