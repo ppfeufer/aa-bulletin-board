@@ -14,7 +14,7 @@ updates:
   - package-ecosystem: "pip"
     directory: "/"
     target-branch: "master"
-    versioning-strategy: increase-if-necessary
+    versioning-strategy: increase
     groups:
       "Python Dependencies":
         update-types:
