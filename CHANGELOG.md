@@ -35,6 +35,15 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- SRI hashes to static files
+
+### Changed
+
+- Minimum requirements
+  - Alliance Auth >= 4.6.0
+
 ## [2.2.5] - 2024-12-14
 
 ### Changed
