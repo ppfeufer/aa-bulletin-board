@@ -9,11 +9,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2024-12-14 13:27+0100\n"
+"POT-Creation-Date: 2025-01-21 05:07+0100\n"
 "PO-Revision-Date: 2024-05-10 13:57+0000\n"
 "Last-Translator: Rodpold Shard <rodpold@gmail.com>\n"
-"Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-"
-"apps/aa-bulletin-board/ko/>\n"
+"Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ko/>\n"
 "Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,12 +35,8 @@ msgid "Bulletin Board v{__version__}"
 msgstr "불레틴 보드 v{__version__}"
 
 #: aa_bulletin_board/forms.py:63
-msgid ""
-"Restrict this bulletin to certain groups. If no group restrictions are in "
-"place, everyone who has access to this module can read this bulletin."
-msgstr ""
-"불레틴 보드의 항목을 그룹별로 열람을 제한할 수 있습니다. 그룹 제한이 없다면, "
-"모듈의 접근 권한이 있는 모든 사용자가 이 항목을 열람할 수 있습니다."
+msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
+msgstr "불레틴 보드의 항목을 그룹별로 열람을 제한할 수 있습니다. 그룹 제한이 없다면, 모듈의 접근 권한이 있는 모든 사용자가 이 항목을 열람할 수 있습니다."
 
 #: aa_bulletin_board/forms.py:110
 msgid "You have forgotten the content!"
@@ -153,9 +148,7 @@ msgid "Add bulletin"
 msgstr "불레틴 추가"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
-msgid ""
-"Do you want to help translate this app into your language or improve the "
-"existing translation?"
+msgid "Do you want to help translate this app into your language or improve the existing translation?"
 msgstr "이 앱을 번역하거나 기존 번역을 개선하고 싶으신가요?"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
@@ -169,12 +162,8 @@ msgstr "불레틴 “{bulletin__title}” 생성됨."
 
 #: aa_bulletin_board/views.py:141
 #, fuzzy
-#| msgid ""
-#| "The bulletin you are looking for does not exist, or you don't have access "
-#| "to it."
-msgid ""
-"The bulletin you are looking for does either not exist, or you don't have "
-"access to it."
+#| msgid "The bulletin you are looking for does not exist, or you don't have access to it."
+msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "찾는 불레틴이 없거나, 열람 권한이 없습니다."
 
 #: aa_bulletin_board/views.py:168
