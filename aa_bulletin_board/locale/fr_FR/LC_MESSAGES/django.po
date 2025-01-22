@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # erka Ekanon <M6musicT@hotmail.fr>, 2024.
-# Peter Pfeufer <info@ppfeufer.de>, 2024.
+# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025.
 # Hexo <ghostcig@free.fr>, 2024.
 # Houbi_Houba <paul.lacape@live.fr>, 2024.
 # balbozorre <loic.petiot2002@gmail.com>, 2024, 2025.
@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
 "POT-Creation-Date: 2025-01-21 05:07+0100\n"
-"PO-Revision-Date: 2025-01-19 19:17+0000\n"
-"Last-Translator: balbozorre <loic.petiot2002@gmail.com>\n"
+"PO-Revision-Date: 2025-01-22 06:17+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -76,7 +76,6 @@ msgid "Updated"
 msgstr "Mis à jour"
 
 #: aa_bulletin_board/models.py:105
-#, fuzzy
 msgid "User"
 msgstr "Utilisateur"
 
@@ -105,7 +104,7 @@ msgstr "Editer"
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:20
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:37
 msgid "Delete"
-msgstr ""
+msgstr "Supprimer"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 msgid "This bulletin is restricted to the following group:"
