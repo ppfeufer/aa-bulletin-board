@@ -32,7 +32,7 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     target-branch: "master"
-    versioning-strategy: increase-if-necessary
+    versioning-strategy: increase
     groups:
       "NPM Dependencies":
         update-types:
