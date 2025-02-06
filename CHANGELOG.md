@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Simplify constant names
+
 ## [2.3.0] - 2025-01-21
 
 ### Added
