@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [2.3.2] - 2025-03-06
+
 ### Changed
 
 - Move DEBUG check into function
