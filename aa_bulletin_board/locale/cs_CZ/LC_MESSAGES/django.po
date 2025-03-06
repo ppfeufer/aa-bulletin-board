@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-01-21 05:07+0100\n"
+"POT-Creation-Date: 2025-03-06 13:29+0100\n"
 "PO-Revision-Date: 2024-07-10 14:26+0000\n"
 "Last-Translator: Dadas Aideron <dadas.aideron@gmail.com>\n"
 "Language-Team: Czech <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/cs/>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 "X-Generator: Weblate 5.6.2\n"
 
-#: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: aa_bulletin_board/apps.py:22
+#, python-brace-format
+msgid "Bulletin Board v{__version__}"
+msgstr "Nástěnka v{__version__}"
+
+#: aa_bulletin_board/constants.py:13
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
 msgstr "Nástěnka"
-
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:21
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr "Nástěnka v{__version__}"
 
 #: aa_bulletin_board/forms.py:63
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
@@ -39,45 +39,45 @@ msgstr "Omez nástěnku pro určité skupiny. Pokud nejsou nastavena žádná om
 msgid "You have forgotten the content!"
 msgstr "Zapomněl jsi obsah!"
 
-#: aa_bulletin_board/models.py:71
+#: aa_bulletin_board/models.py:72
 msgid "Can access this app"
 msgstr "Má přístup k této aplikaci"
 
-#: aa_bulletin_board/models.py:72
+#: aa_bulletin_board/models.py:73
 msgid "Can manage (add/change/remove) bulletins"
 msgstr "Může spravovat (přidat, měnit, odstranit) nástěnky"
 
-#: aa_bulletin_board/models.py:81
+#: aa_bulletin_board/models.py:82
 msgid "Title"
 msgstr "Nadpis"
 
-#: aa_bulletin_board/models.py:84
+#: aa_bulletin_board/models.py:85
 msgid "Content"
 msgstr "Obsah"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:90
+#: aa_bulletin_board/models.py:91
 msgid "Created"
 msgstr "Vytvořeno"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:96
+#: aa_bulletin_board/models.py:97
 msgid "Updated"
 msgstr "Upraveno"
 
-#: aa_bulletin_board/models.py:105
+#: aa_bulletin_board/models.py:106
 msgid "User"
 msgstr "Uživatel"
 
-#: aa_bulletin_board/models.py:111
+#: aa_bulletin_board/models.py:112
 msgid "Group restrictions"
 msgstr "Omezení skupiny"
 
-#: aa_bulletin_board/models.py:122
+#: aa_bulletin_board/models.py:123
 msgid "Bulletin"
 msgstr "Nástěnka"
 
-#: aa_bulletin_board/models.py:123
+#: aa_bulletin_board/models.py:124
 msgid "Bulletins"
 msgstr "Nástěnky"
 
