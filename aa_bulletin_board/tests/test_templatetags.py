@@ -77,3 +77,22 @@ class TestVersionedStatic(TestCase):
 
         self.assertIn(member=expected_static_css_src, container=rendered_template)
         self.assertNotIn(member="integrity=", container=rendered_template)
+
+    def test_invalid_file_type(self) -> None:
+        """
+        Test should raise a ValueError for an invalid file type
+
+        :return:
+        :rtype:
+        """
+
+        context = Context({"version": __version__})
+        template_to_render = Template(
+            template_string=(
+                "{% load aa_bulletin_board %}"
+                "{% aa_bulletin_board_static 'invalid/invalid.txt' %}"
+            )
+        )
+
+        with self.assertRaises(ValueError):
+            template_to_render.render(context=context)

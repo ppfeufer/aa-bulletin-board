@@ -4,7 +4,7 @@
 .PHONY: coverage
 coverage:
 	@echo "Running tests and creating a coverage report …"
-	@rm -rf htmlcov
+	@#rm -rf htmlcov
 	@coverage run ../myauth/manage.py \
 		test \
 		$(package) \
