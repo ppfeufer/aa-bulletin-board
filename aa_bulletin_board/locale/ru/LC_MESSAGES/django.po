@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-01-21 05:07+0100\n"
+"POT-Creation-Date: 2025-03-06 13:29+0100\n"
 "PO-Revision-Date: 2024-06-07 13:27+0000\n"
 "Last-Translator: Roycce_ <malyasov.roma@mail.ru>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ru/>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5.5\n"
 
-#: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: aa_bulletin_board/apps.py:22
+#, python-brace-format
+msgid "Bulletin Board v{__version__}"
+msgstr "Доска бюллетеней v{__version__}"
+
+#: aa_bulletin_board/constants.py:13
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
 msgstr "Доска бюллетеней"
-
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:21
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr "Доска бюллетеней v{__version__}"
 
 #: aa_bulletin_board/forms.py:63
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
@@ -42,45 +42,45 @@ msgstr "Ограничить доступ к бюллетеню для конк�
 msgid "You have forgotten the content!"
 msgstr "Вы забыли содержание!"
 
-#: aa_bulletin_board/models.py:71
+#: aa_bulletin_board/models.py:72
 msgid "Can access this app"
 msgstr "Имеет доступ к приложению"
 
-#: aa_bulletin_board/models.py:72
+#: aa_bulletin_board/models.py:73
 msgid "Can manage (add/change/remove) bulletins"
 msgstr "Может управлять (добавлять/изменять/удалять) бюллетенями"
 
-#: aa_bulletin_board/models.py:81
+#: aa_bulletin_board/models.py:82
 msgid "Title"
 msgstr "Заглавие"
 
-#: aa_bulletin_board/models.py:84
+#: aa_bulletin_board/models.py:85
 msgid "Content"
 msgstr "Содержимое"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:90
+#: aa_bulletin_board/models.py:91
 msgid "Created"
 msgstr "Создан"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:96
+#: aa_bulletin_board/models.py:97
 msgid "Updated"
 msgstr "Обновлен"
 
-#: aa_bulletin_board/models.py:105
+#: aa_bulletin_board/models.py:106
 msgid "User"
 msgstr "Пользователь"
 
-#: aa_bulletin_board/models.py:111
+#: aa_bulletin_board/models.py:112
 msgid "Group restrictions"
 msgstr "Ограничения групп"
 
-#: aa_bulletin_board/models.py:122
+#: aa_bulletin_board/models.py:123
 msgid "Bulletin"
 msgstr "Бюллетень"
 
-#: aa_bulletin_board/models.py:123
+#: aa_bulletin_board/models.py:124
 msgid "Bulletins"
 msgstr "Бюллетени"
 

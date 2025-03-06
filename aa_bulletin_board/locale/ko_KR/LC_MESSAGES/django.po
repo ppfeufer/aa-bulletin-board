@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-01-21 05:07+0100\n"
+"POT-Creation-Date: 2025-03-06 13:29+0100\n"
 "PO-Revision-Date: 2024-05-10 13:57+0000\n"
 "Last-Translator: Rodpold Shard <rodpold@gmail.com>\n"
 "Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ko/>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.5.3\n"
 
-#: aa_bulletin_board/__init__.py:9 aa_bulletin_board/models.py:67
+#. Translators: This is the app name and version, which will appear in the Django Backend
+#: aa_bulletin_board/apps.py:22
+#, python-brace-format
+msgid "Bulletin Board v{__version__}"
+msgstr "불레틴 보드 v{__version__}"
+
+#: aa_bulletin_board/constants.py:13
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
 msgid "Bulletin Board"
 msgstr "불레틴 보드"
-
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:21
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr "불레틴 보드 v{__version__}"
 
 #: aa_bulletin_board/forms.py:63
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
@@ -42,45 +42,45 @@ msgstr "불레틴 보드의 항목을 그룹별로 열람을 제한할 수 있�
 msgid "You have forgotten the content!"
 msgstr "내용을 잊어버리셨군요!"
 
-#: aa_bulletin_board/models.py:71
+#: aa_bulletin_board/models.py:72
 msgid "Can access this app"
 msgstr "서비스에 접근할 수 있습니다"
 
-#: aa_bulletin_board/models.py:72
+#: aa_bulletin_board/models.py:73
 msgid "Can manage (add/change/remove) bulletins"
 msgstr "게시판 (추가/변경/삭제) 관리 권한"
 
-#: aa_bulletin_board/models.py:81
+#: aa_bulletin_board/models.py:82
 msgid "Title"
 msgstr "제목"
 
-#: aa_bulletin_board/models.py:84
+#: aa_bulletin_board/models.py:85
 msgid "Content"
 msgstr "내용"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:90
+#: aa_bulletin_board/models.py:91
 msgid "Created"
 msgstr "생성 날짜"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:96
+#: aa_bulletin_board/models.py:97
 msgid "Updated"
 msgstr "업데이트 날짜"
 
-#: aa_bulletin_board/models.py:105
+#: aa_bulletin_board/models.py:106
 msgid "User"
 msgstr "사용자"
 
-#: aa_bulletin_board/models.py:111
+#: aa_bulletin_board/models.py:112
 msgid "Group restrictions"
 msgstr "그룹 제한"
 
-#: aa_bulletin_board/models.py:122
+#: aa_bulletin_board/models.py:123
 msgid "Bulletin"
 msgstr "불레틴"
 
-#: aa_bulletin_board/models.py:123
+#: aa_bulletin_board/models.py:124
 msgid "Bulletins"
 msgstr "불레틴"
 
