@@ -6,7 +6,6 @@ Versioned static URLs to break browser caches when changing the app version
 import os
 
 # Django
-from django.conf import settings
 from django.template.defaulttags import register
 from django.templatetags.static import static
 from django.utils.safestring import mark_safe
@@ -19,6 +18,7 @@ from app_utils.logging import LoggerAddTag
 
 # AA Bulletin Board
 from aa_bulletin_board import __title__, __version__
+from aa_bulletin_board.app_settings import debug_enabled
 from aa_bulletin_board.constants import PACKAGE_NAME
 from aa_bulletin_board.helper.static_files import calculate_integrity_hash
 
@@ -56,7 +56,7 @@ def aa_bulletin_board_static(
     # Integrity hash calculation only for non-debug mode
     sri_string = (
         f' integrity="{calculate_integrity_hash(relative_file_path)}" crossorigin="anonymous"'
-        if not settings.DEBUG
+        if not debug_enabled()
         else ""
     )
 

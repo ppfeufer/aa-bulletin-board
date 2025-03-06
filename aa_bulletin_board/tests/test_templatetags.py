@@ -8,6 +8,7 @@ from django.test import TestCase, override_settings
 
 # AA Bulletin Board
 from aa_bulletin_board import __version__
+from aa_bulletin_board.constants import PACKAGE_NAME
 from aa_bulletin_board.helper.static_files import calculate_integrity_hash
 
 
@@ -36,11 +37,11 @@ class TestVersionedStatic(TestCase):
 
         rendered_template = template_to_render.render(context=context)
 
-        expected_static_css_src = f'/static/aa_bulletin_board/css/aa-bulletin-board.min.css?v={context["version"]}'
+        expected_static_css_src = f'/static/{PACKAGE_NAME}/css/aa-bulletin-board.min.css?v={context["version"]}'
         expected_static_css_src_integrity = calculate_integrity_hash(
             "css/aa-bulletin-board.min.css"
         )
-        expected_static_js_src = f'/static/aa_bulletin_board/javascript/aa-bulletin-board-oembed.min.js?v={context["version"]}'
+        expected_static_js_src = f'/static/{PACKAGE_NAME}/javascript/aa-bulletin-board-oembed.min.js?v={context["version"]}'
         expected_static_js_src_integrity = calculate_integrity_hash(
             "javascript/aa-bulletin-board-oembed.min.js"
         )
@@ -73,7 +74,7 @@ class TestVersionedStatic(TestCase):
 
         rendered_template = template_to_render.render(context=context)
 
-        expected_static_css_src = f'/static/aa_bulletin_board/css/aa-bulletin-board.min.css?v={context["version"]}'
+        expected_static_css_src = f'/static/{PACKAGE_NAME}/css/aa-bulletin-board.min.css?v={context["version"]}'
 
         self.assertIn(member=expected_static_css_src, container=rendered_template)
         self.assertNotIn(member="integrity=", container=rendered_template)
