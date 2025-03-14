@@ -35,6 +35,11 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Python code refactored/optimized
+- Test coverage improved
+
 ## [2.3.2] - 2025-03-06
 
 ### Changed

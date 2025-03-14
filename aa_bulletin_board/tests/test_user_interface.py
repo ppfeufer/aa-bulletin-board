@@ -11,7 +11,7 @@ from django.contrib.auth.models import Group
 from django.urls import reverse
 
 # AA Bulletin Board
-from aa_bulletin_board.helpers import string_cleanup
+from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.models import Bulletin
 from aa_bulletin_board.tests.utils import create_fake_user
 
