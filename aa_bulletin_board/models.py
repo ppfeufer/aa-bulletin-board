@@ -16,7 +16,7 @@ from django_ckeditor_5.fields import CKEditor5Field
 
 # AA Bulletin Board
 from aa_bulletin_board.constants import APP_TITLE
-from aa_bulletin_board.helpers import string_cleanup
+from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.managers import BulletinManager
 
 
@@ -41,16 +41,13 @@ def get_bulletin_slug_from_title(bulletin_title: str) -> str:
     :rtype:
     """
 
-    run: int = 0
-    bulletin_slug: str = slugify(
-        value=unidecode.unidecode(bulletin_title), allow_unicode=True
-    )
+    base_slug = slugify(value=unidecode.unidecode(bulletin_title), allow_unicode=True)
+    bulletin_slug = base_slug
+    run = 0
 
     while Bulletin.objects.filter(slug=bulletin_slug).exists():
         run += 1
-        bulletin_slug: str = slugify(
-            value=unidecode.unidecode(f"{bulletin_title}-{run}"), allow_unicode=True
-        )
+        bulletin_slug = f"{base_slug}-{run}"
 
     return bulletin_slug
 
@@ -141,8 +138,7 @@ class Bulletin(models.Model):
 
         self.content = string_cleanup(string=self.content)
 
-        if self.slug == "":
-            bulletin_slug = get_bulletin_slug_from_title(bulletin_title=self.title)
-            self.slug = bulletin_slug
+        if not self.slug:
+            self.slug = get_bulletin_slug_from_title(bulletin_title=self.title)
 
         super().save(*args, **kwargs)

@@ -13,7 +13,7 @@ from django.utils.translation import gettext_lazy as _
 from django_ckeditor_5.widgets import CKEditor5Widget
 
 # AA Bulletin Board
-from aa_bulletin_board.helpers import string_cleanup
+from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.models import Bulletin
 
 
@@ -105,9 +105,14 @@ class BulletinForm(ModelForm):
         """
 
         cleaned_data = super().clean()
+        content = cleaned_data.get("content")
 
-        if not string_cleanup(cleaned_data.get("content")).strip():
-            raise ValidationError(_("You have forgotten the content!"))
+        if not content or content.strip() == "":
+            self.add_error(
+                "content", ValidationError(_("You have forgotten the content!"))
+            )
+
+        cleaned_data["content"] = content.strip()
 
         return cleaned_data
 
