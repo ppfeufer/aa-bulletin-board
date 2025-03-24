@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- Use AA framework page header template
 - Python code refactored/optimized
 - Test coverage improved
 

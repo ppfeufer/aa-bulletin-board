@@ -5,7 +5,7 @@
 {% block page_title %}{{ bulletin.title }} » {% translate "Bulletin Board" %}{% endblock %}
 
 {% block aabulletinboard_header %}
-    {% include "aa_bulletin_board/partials/header/page-header.html" with header_text=bulletin.title %}
+    {% include "framework/header/page-header.html" with title=bulletin.title %}
 {% endblock %}
 
 {% block aabulletinboard_body %}
