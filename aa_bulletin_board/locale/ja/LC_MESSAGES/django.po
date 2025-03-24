@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-03-06 15:55+0100\n"
+"POT-Creation-Date: 2025-03-24 13:07+0100\n"
 "PO-Revision-Date: 2024-08-05 10:10+0000\n"
 "Last-Translator: Anata_no_Usiro <yt23542354m@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ja/>\n"
@@ -36,49 +36,49 @@ msgstr "掲示板"
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr "この情報を特定のグループに制限する。グループ制限がない場合、このモジュールにアクセスできる全員がこの情報を読むことができます。"
 
-#: aa_bulletin_board/forms.py:110
+#: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
 msgstr "内容を忘れています！"
 
-#: aa_bulletin_board/models.py:72
+#: aa_bulletin_board/models.py:69
 msgid "Can access this app"
 msgstr "このアプリにアクセス可能です"
 
-#: aa_bulletin_board/models.py:73
+#: aa_bulletin_board/models.py:70
 msgid "Can manage (add/change/remove) bulletins"
 msgstr "情報の管理（追加／変更／削除）が可能"
 
-#: aa_bulletin_board/models.py:82
+#: aa_bulletin_board/models.py:79
 msgid "Title"
 msgstr "タイトル"
 
-#: aa_bulletin_board/models.py:85
+#: aa_bulletin_board/models.py:82
 msgid "Content"
 msgstr "内容"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:91
+#: aa_bulletin_board/models.py:88
 msgid "Created"
 msgstr "作成"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:97
+#: aa_bulletin_board/models.py:94
 msgid "Updated"
 msgstr "アップデート"
 
-#: aa_bulletin_board/models.py:106
+#: aa_bulletin_board/models.py:103
 msgid "User"
 msgstr "ユーザー"
 
-#: aa_bulletin_board/models.py:112
+#: aa_bulletin_board/models.py:109
 msgid "Group restrictions"
 msgstr "グループの制限"
 
-#: aa_bulletin_board/models.py:123
+#: aa_bulletin_board/models.py:120
 msgid "Bulletin"
 msgstr ""
 
-#: aa_bulletin_board/models.py:124
+#: aa_bulletin_board/models.py:121
 msgid "Bulletins"
 msgstr ""
 
