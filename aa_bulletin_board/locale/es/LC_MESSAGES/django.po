@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-03-06 15:55+0100\n"
+"POT-Creation-Date: 2025-03-24 13:07+0100\n"
 "PO-Revision-Date: 2024-12-02 17:40+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/es/>\n"
@@ -37,49 +37,49 @@ msgstr "Tablón de Anuncios"
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr "Restringir este anuncio a ciertos grupos. Si no existen restricciones de grupo, todos los que tengan acceso a este módulo pueden leer este anuncio."
 
-#: aa_bulletin_board/forms.py:110
+#: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
 msgstr "Ha olvidado el contenido"
 
-#: aa_bulletin_board/models.py:72
+#: aa_bulletin_board/models.py:69
 msgid "Can access this app"
 msgstr "Puede acceder esta aplicacion"
 
-#: aa_bulletin_board/models.py:73
+#: aa_bulletin_board/models.py:70
 msgid "Can manage (add/change/remove) bulletins"
 msgstr ""
 
-#: aa_bulletin_board/models.py:82
+#: aa_bulletin_board/models.py:79
 msgid "Title"
 msgstr "Título"
 
-#: aa_bulletin_board/models.py:85
+#: aa_bulletin_board/models.py:82
 msgid "Content"
 msgstr "Contenido"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:91
+#: aa_bulletin_board/models.py:88
 msgid "Created"
 msgstr "Creado"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:97
+#: aa_bulletin_board/models.py:94
 msgid "Updated"
 msgstr "Actualizado"
 
-#: aa_bulletin_board/models.py:106
+#: aa_bulletin_board/models.py:103
 msgid "User"
 msgstr "Usuario"
 
-#: aa_bulletin_board/models.py:112
+#: aa_bulletin_board/models.py:109
 msgid "Group restrictions"
 msgstr "Restricciones de grupo"
 
-#: aa_bulletin_board/models.py:123
+#: aa_bulletin_board/models.py:120
 msgid "Bulletin"
 msgstr "Anuncio"
 
-#: aa_bulletin_board/models.py:124
+#: aa_bulletin_board/models.py:121
 msgid "Bulletins"
 msgstr "Anuncios"
 
