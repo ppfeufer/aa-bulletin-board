@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-03-06 15:55+0100\n"
+"POT-Creation-Date: 2025-03-24 13:07+0100\n"
 "PO-Revision-Date: 2024-05-10 13:57+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Dutch <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/nl/>\n"
@@ -36,49 +36,49 @@ msgstr ""
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr ""
 
-#: aa_bulletin_board/forms.py:110
+#: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
 msgstr ""
 
-#: aa_bulletin_board/models.py:72
+#: aa_bulletin_board/models.py:69
 msgid "Can access this app"
 msgstr ""
 
-#: aa_bulletin_board/models.py:73
+#: aa_bulletin_board/models.py:70
 msgid "Can manage (add/change/remove) bulletins"
 msgstr ""
 
-#: aa_bulletin_board/models.py:82
+#: aa_bulletin_board/models.py:79
 msgid "Title"
 msgstr ""
 
-#: aa_bulletin_board/models.py:85
+#: aa_bulletin_board/models.py:82
 msgid "Content"
 msgstr ""
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:91
+#: aa_bulletin_board/models.py:88
 msgid "Created"
 msgstr ""
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:97
+#: aa_bulletin_board/models.py:94
 msgid "Updated"
 msgstr ""
 
-#: aa_bulletin_board/models.py:106
+#: aa_bulletin_board/models.py:103
 msgid "User"
 msgstr ""
 
-#: aa_bulletin_board/models.py:112
+#: aa_bulletin_board/models.py:109
 msgid "Group restrictions"
 msgstr ""
 
-#: aa_bulletin_board/models.py:123
+#: aa_bulletin_board/models.py:120
 msgid "Bulletin"
 msgstr ""
 
-#: aa_bulletin_board/models.py:124
+#: aa_bulletin_board/models.py:121
 msgid "Bulletins"
 msgstr ""
 
