@@ -35,11 +35,14 @@ Section Order:
 ### Security
 -->
 
+## [2.3.3] - 2025-03-24
+
 ### Changed
 
 - Use AA framework page header template
 - Python code refactored/optimized
 - Test coverage improved
+- Translations updated
 
 ## [2.3.2] - 2025-03-06
 
