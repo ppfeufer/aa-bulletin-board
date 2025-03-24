@@ -20,10 +20,10 @@
 
 {% block aabulletinboard_header %}
     {% if bulletin %}
-        {% include "aa_bulletin_board/partials/header/page-header.html" with header_text=bulletin.title %}
+        {% include "framework/header/page-header.html" with title=bulletin.title %}
     {% else %}
         {% translate "Create new bulletin" as header_text %}
-        {% include "aa_bulletin_board/partials/header/page-header.html" with header_text=header_text %}
+        {% include "framework/header/page-header.html" with title=header_text %}
     {% endif %}
 {% endblock %}
 
