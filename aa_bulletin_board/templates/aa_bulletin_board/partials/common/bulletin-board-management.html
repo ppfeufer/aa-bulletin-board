@@ -1,10 +1,17 @@
 {% load i18n %}
 
 {% if perms.aa_bulletin_board.manage_bulletins %}
+    {% translate "Add bulletin" as button_text %}
+
     <li class="nav-item">
-        <a class="nav-link py-0" href="{% url 'aa_bulletin_board:create_bulletin' %}">
-            <span class="btn btn-success btn-add-bulletin">
-                {% translate "Add bulletin" as button_text%}
+        <a class="nav-link" href="{% url 'aa_bulletin_board:create_bulletin' %}">
+            <span class="btn btn-success btn-add-bulletin d-none d-lg-inline-block">
+                <i class="fa-solid fa-plus"></i>
+                {{ button_text|title }}
+            </span>
+
+            <span class="d-inline-block d-lg-none">
+                <i class="fa-solid fa-plus me-2"></i>
                 {{ button_text|title }}
             </span>
         </a>

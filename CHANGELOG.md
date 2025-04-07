@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Mobile navigation improved
+
 ## [2.3.3] - 2025-03-24
 
 ### Changed
