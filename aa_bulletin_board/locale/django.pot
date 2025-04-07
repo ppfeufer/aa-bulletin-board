@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Bulletin Board 2.3.3\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-03-24 13:07+0100\n"
+"POT-Creation-Date: 2025-04-07 06:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,7 +130,7 @@ msgstr ""
 msgid "Create bulletin"
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:7
+#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:4
 msgid "Add bulletin"
 msgstr ""
 
