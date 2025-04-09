@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-03-24 13:07+0100\n"
+"POT-Creation-Date: 2025-04-09 10:02+0200\n"
 "PO-Revision-Date: 2024-07-10 14:26+0000\n"
 "Last-Translator: Dadas Aideron <dadas.aideron@gmail.com>\n"
 "Language-Team: Czech <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/cs/>\n"
@@ -39,45 +39,45 @@ msgstr "Omez nástěnku pro určité skupiny. Pokud nejsou nastavena žádná om
 msgid "You have forgotten the content!"
 msgstr "Zapomněl jsi obsah!"
 
-#: aa_bulletin_board/models.py:69
+#: aa_bulletin_board/models.py:72
 msgid "Can access this app"
 msgstr "Má přístup k této aplikaci"
 
-#: aa_bulletin_board/models.py:70
+#: aa_bulletin_board/models.py:73
 msgid "Can manage (add/change/remove) bulletins"
 msgstr "Může spravovat (přidat, měnit, odstranit) nástěnky"
 
-#: aa_bulletin_board/models.py:79
+#: aa_bulletin_board/models.py:82
 msgid "Title"
 msgstr "Nadpis"
 
-#: aa_bulletin_board/models.py:82
+#: aa_bulletin_board/models.py:85
 msgid "Content"
 msgstr "Obsah"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:88
+#: aa_bulletin_board/models.py:91
 msgid "Created"
 msgstr "Vytvořeno"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:94
+#: aa_bulletin_board/models.py:97
 msgid "Updated"
 msgstr "Upraveno"
 
-#: aa_bulletin_board/models.py:103
+#: aa_bulletin_board/models.py:106
 msgid "User"
 msgstr "Uživatel"
 
-#: aa_bulletin_board/models.py:109
+#: aa_bulletin_board/models.py:112
 msgid "Group restrictions"
 msgstr "Omezení skupiny"
 
-#: aa_bulletin_board/models.py:120
+#: aa_bulletin_board/models.py:123
 msgid "Bulletin"
 msgstr "Nástěnka"
 
-#: aa_bulletin_board/models.py:121
+#: aa_bulletin_board/models.py:124
 msgid "Bulletins"
 msgstr "Nástěnky"
 
@@ -129,7 +129,7 @@ msgstr "Aktualizovat nástěnku"
 msgid "Create bulletin"
 msgstr "Vytvořit nástěnku"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:7
+#: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:4
 msgid "Add bulletin"
 msgstr "Přidat nástěnku"
 
