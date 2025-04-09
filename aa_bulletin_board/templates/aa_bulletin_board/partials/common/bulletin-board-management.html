@@ -4,9 +4,8 @@
     {% translate "Add bulletin" as button_text %}
 
     <li class="nav-item">
-        <a class="nav-link" href="{% url 'aa_bulletin_board:create_bulletin' %}">
+        <a class="nav-link py-lg-0" href="{% url 'aa_bulletin_board:create_bulletin' %}">
             <span class="btn btn-success btn-add-bulletin d-none d-lg-inline-block">
-                <i class="fa-solid fa-plus"></i>
                 {{ button_text|title }}
             </span>
 
