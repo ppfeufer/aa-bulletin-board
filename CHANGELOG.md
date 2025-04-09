@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Type hinting for managers
+
 ### Changed
 
 - Mobile navigation improved

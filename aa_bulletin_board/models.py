@@ -2,6 +2,9 @@
 The models
 """
 
+# Standard Library
+from typing import ClassVar
+
 # Third Party
 import unidecode
 
@@ -109,7 +112,7 @@ class Bulletin(models.Model):
         verbose_name=_("Group restrictions"),
     )
 
-    objects = BulletinManager()
+    objects: ClassVar[BulletinManager] = BulletinManager()
 
     class Meta:  # pylint: disable=too-few-public-methods
         """
