@@ -11,31 +11,24 @@ $(document).ready(() => {
      * @returns {`<div class="oembed-video youtube-oembed-video"><iframe src="${string}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`}
      */
     const youtubeOembedToIframe = (url) => {
-        let videoId = url.split('v=')[1];
-        const ampersandPosition = videoId.indexOf('&');
-        const embedUrl = 'https://www.youtube-nocookie.com/embed/';
+        const videoId = new URLSearchParams(new URL(url).search).get('v'); // jshint ignore:line
+        const videoUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
+        const divClasses = 'oembed-video youtube-oembed-video';
+        const iframeAllow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
 
-        if (ampersandPosition !== -1) {
-            videoId = videoId.substring(0, ampersandPosition);
-        }
-
-        const videoUrl = embedUrl + videoId;
-
-        return `<div class="oembed-video youtube-oembed-video"><iframe src="${videoUrl}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`;
+        return `<div class="${divClasses}"><iframe src="${videoUrl}" allow="${iframeAllow}" allowfullscreen></iframe></div>`;
     };
-
 
     /**
      * Look for oembed elements and replace them with iframes
      */
     const checkForOembed = () => {
         // Find all oembed elements and loop through them
-        $('.ck-content figure.media oembed').each((index, element) => {
+        $('.ck-content figure.media oembed').filter((_, element) => {
+            // Check if the source is a YouTube video
             const source = $(element).attr('url');
 
-            // Check if the source is a YouTube video
             if (source.includes('youtube.com/watch')) {
-                // Replace the oembed element with an iframe
                 $(element).replaceWith(youtubeOembedToIframe(source));
             }
         });

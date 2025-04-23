@@ -2,25 +2,22 @@ $(document).ready(() => {
     'use strict';
 
     const resizeBulletinCard = () => {
-        let highestBox = 0;
+        $('.cards-equal-height').each((_, elementEqualHeight) => {
+            let highestBox = 0;
+            const excerpts = $('.card-bulletin-excerpt .card', elementEqualHeight);
 
-        $('.cards-equal-height').each((indexEqualHeight, elementEqualHeight) => {
-            $('.card-bulletin-excerpt', elementEqualHeight).each((indexExcerpt, elementExcerpt) => {
-                const currentBulletinHeight = $(elementExcerpt).height();
-
-                if (currentBulletinHeight > highestBox) {
-                    highestBox = currentBulletinHeight;
-                }
+            excerpts.each((_, elementExcerpt) => {
+                highestBox = Math.max(highestBox, $(elementExcerpt).height());
             });
 
-            $('.card-bulletin-excerpt', elementEqualHeight).height(highestBox);
+            excerpts.height(highestBox);
         });
     };
 
     resizeBulletinCard();
 
     $(window).resize(() => {
-        $('.card-bulletin-excerpt').css({'height': ''});
+        $('.card-bulletin-excerpt .card').css({'height': ''});
 
         resizeBulletinCard();
     });
