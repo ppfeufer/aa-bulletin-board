@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [2.3.5] - 2025-05-05
+
 ### Changed
 
 - JavaScript refactored
