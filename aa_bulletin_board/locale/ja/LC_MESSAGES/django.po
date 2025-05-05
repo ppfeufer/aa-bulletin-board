@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Xrandier <xrandier@gmail.com>, 2024.
 # Anata_no_Usiro <yt23542354m@gmail.com>, 2024.
+# KM Heon <kmheon75@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-04-09 10:02+0200\n"
-"PO-Revision-Date: 2024-08-05 10:10+0000\n"
-"Last-Translator: Anata_no_Usiro <yt23542354m@gmail.com>\n"
+"POT-Creation-Date: 2025-05-05 20:14+0200\n"
+"PO-Revision-Date: 2025-04-12 09:24+0000\n"
+"Last-Translator: KM Heon <kmheon75@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_bulletin_board/apps.py:22
@@ -76,11 +77,11 @@ msgstr "グループの制限"
 
 #: aa_bulletin_board/models.py:123
 msgid "Bulletin"
-msgstr ""
+msgstr "速報"
 
 #: aa_bulletin_board/models.py:124
 msgid "Bulletins"
-msgstr ""
+msgstr "速報"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
