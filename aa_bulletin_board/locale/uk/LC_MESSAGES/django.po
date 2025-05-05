@@ -5,13 +5,14 @@
 # "Andrii M." <elfleg0las88@gmail.com>, 2023, 2024.
 # Kristof <kristof@teh.ninja>, 2023, 2024.
 # M <skrypets@gmail.com>, 2025.
+# s0k0l -_- <salarysalo@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-04-09 10:02+0200\n"
-"PO-Revision-Date: 2025-03-23 13:24+0000\n"
-"Last-Translator: M <skrypets@gmail.com>\n"
+"POT-Creation-Date: 2025-05-05 20:14+0200\n"
+"PO-Revision-Date: 2025-04-10 07:05+0000\n"
+"Last-Translator: s0k0l -_- <salarysalo@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +62,7 @@ msgstr "Вміст"
 #. Translators: This is the date and time the bulletin has been created
 #: aa_bulletin_board/models.py:91
 msgid "Created"
-msgstr "Створено"
+msgstr "Створений"
 
 #. Translators: This is the date and time the bulletin has been updated
 #: aa_bulletin_board/models.py:97
