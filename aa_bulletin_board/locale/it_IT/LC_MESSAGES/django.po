@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-06-03 09:55+0200\n"
+"POT-Creation-Date: 2025-07-08 09:46+0200\n"
 "PO-Revision-Date: 2024-12-22 21:15+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Italian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/it/>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Bulletin Board v{__version__}"
 msgstr ""
 
-#: aa_bulletin_board/constants.py:13
+#: aa_bulletin_board/constants.py:9
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
