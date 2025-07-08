@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [2.4.1] - 2025-07-08
+
 ### Removed
 
 - Unused constants
