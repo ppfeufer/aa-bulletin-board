@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Custom CSS reduced
+
 ## [2.4.1] - 2025-07-08
 
 ### Removed
