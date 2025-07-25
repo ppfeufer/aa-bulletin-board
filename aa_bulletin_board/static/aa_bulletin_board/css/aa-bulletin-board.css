@@ -1,35 +1,12 @@
 @media all {
-    .aa-bulletin-board-header-addition {
-        display: block;
-    }
-
-    .aa-bulletin-board .cards-equal-height {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .aa-bulletin-board .cards-equal-height .card {
-        width: 100%;
-    }
-
-    .aa-bulletin-board .cards-equal-height .card-bulletin-excerpt {
-        margin-bottom: 0.5rem;
-        width: 100%;
-    }
-
     .aa-bulletin-board .card-bulletin-excerpt .card-body {
         height: 200px;
         mask-image: linear-gradient(rgb(0 0 0), transparent);
         overflow: hidden;
-        padding: 1rem;
     }
 
     .aa-bulletin-board .card-bulletin-excerpt .card-footer-read-more-button {
         padding: 0.625rem 1rem;
-    }
-
-    .aa-bulletin-board .django-ckeditor-widget {
-        display: initial !important;
     }
 
     .aa-bulletin-board img {
