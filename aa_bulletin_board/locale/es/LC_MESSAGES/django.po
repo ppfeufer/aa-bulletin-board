@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Zigor Fernandez Moreno <sietehierros@gmail.com>, 2023, 2024.
-# Peter Pfeufer <info@ppfeufer.de>, 2023, 2024.
+# Peter Pfeufer <info@ppfeufer.de>, 2023, 2024, 2025.
 # Geovanny David Morales De la cruz <moralesgeovanny1996@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-07-08 09:46+0200\n"
-"PO-Revision-Date: 2024-12-02 17:40+0000\n"
+"POT-Creation-Date: 2025-08-04 20:11+0200\n"
+"PO-Revision-Date: 2025-07-29 20:18+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.8.4\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_bulletin_board/apps.py:22
@@ -38,6 +38,7 @@ msgid "Restrict this bulletin to certain groups. If no group restrictions are in
 msgstr "Restringir este anuncio a ciertos grupos. Si no existen restricciones de grupo, todos los que tengan acceso a este módulo pueden leer este anuncio."
 
 #: aa_bulletin_board/forms.py:112
+#, fuzzy
 msgid "You have forgotten the content!"
 msgstr "Ha olvidado el contenido"
 
@@ -115,33 +116,23 @@ msgid "No bulletins found."
 msgstr "Tablón de Anuncios"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
-#, fuzzy
-#| msgid "Edit Bulletin"
 msgid "Edit bulletin"
 msgstr "Editar Anuncio"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
-#, fuzzy
-#| msgid "Create New Bulletin"
 msgid "Create new bulletin"
 msgstr "Crear nuevo Anuncio"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
-#, fuzzy
-#| msgid "Update Bulletin"
 msgid "Update bulletin"
 msgstr "Actualizar Anuncio"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
-#, fuzzy
-#| msgid "Create Bulletin"
 msgid "Create bulletin"
 msgstr "Crear Anuncio"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:4
-#, fuzzy
-#| msgid "Add Bulletin"
 msgid "Add bulletin"
 msgstr "Agregar Anuncio"
 
@@ -159,8 +150,6 @@ msgid "Bulletin \"{bulletin__title}\" created."
 msgstr "Se ha creado el Anuncio «{bulletin__title}»."
 
 #: aa_bulletin_board/views.py:141
-#, fuzzy
-#| msgid "The bulletin you are looking for does not exist, or you don't have access to it."
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "El anuncio que busca no existe, o no tiene acceso a él."
 
