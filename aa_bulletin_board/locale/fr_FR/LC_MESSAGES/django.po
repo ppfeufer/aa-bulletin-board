@@ -6,20 +6,21 @@
 # Hexo <ghostcig@free.fr>, 2024.
 # Houbi_Houba <paul.lacape@live.fr>, 2024.
 # balbozorre <loic.petiot2002@gmail.com>, 2024, 2025.
+# The “Devcutter” Guy <mick162534@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-07-08 09:46+0200\n"
-"PO-Revision-Date: 2025-05-20 16:24+0000\n"
-"Last-Translator: balbozorre <loic.petiot2002@gmail.com>\n"
+"POT-Creation-Date: 2025-08-04 20:11+0200\n"
+"PO-Revision-Date: 2025-08-03 04:24+0000\n"
+"Last-Translator: The “Devcutter” Guy <mick162534@gmail.com>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.11.4\n"
+"X-Generator: Weblate 5.12.2\n"
 
 #. Translators: This is the app name and version, which will appear in the Django Backend
 #: aa_bulletin_board/apps.py:22
@@ -36,9 +37,8 @@ msgid "Bulletin Board"
 msgstr "Tableau d'affichage"
 
 #: aa_bulletin_board/forms.py:63
-#, fuzzy
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
-msgstr "Restreignez ce bulletin à certains groupes. Si aucune restriction de groupe n'est en place, tous ceux qui ont accès à ce module peuvent lire ce bulletin."
+msgstr "Restreindre ce bulletin à certains groupes. Si aucune restriction de groupe n’est définie, toute personne ayant accès à ce module pourra lire ce bulletin."
 
 #: aa_bulletin_board/forms.py:112
 msgid "You have forgotten the content!"
@@ -49,9 +49,8 @@ msgid "Can access this app"
 msgstr "Peut accéder à cette application"
 
 #: aa_bulletin_board/models.py:73
-#, fuzzy
 msgid "Can manage (add/change/remove) bulletins"
-msgstr "Peut gérer (ajouter/modifier/supprimer) des bulletins"
+msgstr "Peut gérer (ajouter/modifier/supprimer) les bulletins"
 
 #: aa_bulletin_board/models.py:82
 #, fuzzy
