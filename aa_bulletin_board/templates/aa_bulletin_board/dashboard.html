@@ -15,7 +15,7 @@
                                     <i
                                         class="fa-regular fa-eye-slash aa-bulletin-board-marker-group-restrictions float-end"
                                         title="{% blocktranslate count group_count=bulletin.groups.all|length %}This bulletin is restricted to the following group:{% plural %}This bulletin is restricted to the following groups:{% endblocktranslate %}<br>{{ bulletin.groups.all|join:', ' }}"
-                                        data-bs-toggle="tooltip"
+                                        data-bs-tooltip="aa-bulletin-board"
                                         data-bs-html="true"
                                     ></i>
                                 {% endif %}

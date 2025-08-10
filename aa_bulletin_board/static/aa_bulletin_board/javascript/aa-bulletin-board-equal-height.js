@@ -1,3 +1,5 @@
+/* global bootstrap */
+
 $(document).ready(() => {
     'use strict';
 
@@ -22,8 +24,9 @@ $(document).ready(() => {
         resizeBulletinCard();
     });
 
-    $('.aa-bulletin-board-marker-group-restrictions').tooltip({
-        placement: 'bottom',
-        html: true
-    });
+    // Initialize Bootstrap tooltips
+    [].slice.call(document.querySelectorAll('[data-bs-tooltip="aa-bulletin-board"]'))
+        .map((tooltipTriggerEl) => {
+            return new bootstrap.Tooltip(tooltipTriggerEl, {html: true});
+        });
 });
