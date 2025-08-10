@@ -4,15 +4,11 @@ $(document).ready(() => {
     'use strict';
 
     const resizeBulletinCard = () => {
-        $('.cards-equal-height').each((_, elementEqualHeight) => {
-            let highestBox = 0;
-            const excerpts = $('.card-bulletin-excerpt .card', elementEqualHeight);
+        $('.cards-equal-height').each((_, container) => {
+            const excerpts = $('.card-bulletin-excerpt .card', container);
+            const maxHeight = Math.max(...excerpts.map((_, el) => $(el).height()).get());
 
-            excerpts.each((_, elementExcerpt) => {
-                highestBox = Math.max(highestBox, $(elementExcerpt).height());
-            });
-
-            excerpts.height(highestBox);
+            excerpts.height(maxHeight);
         });
     };
 
