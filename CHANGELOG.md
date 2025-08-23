@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- Switch to Terser for JavaScript compression
 - JavaScript refactored
 
 ## [2.4.2] - 2025-08-04
