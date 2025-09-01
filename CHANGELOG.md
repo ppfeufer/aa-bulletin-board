@@ -35,10 +35,13 @@ Section Order:
 ### Security
 -->
 
+## [2.4.3] - 2025-09-01
+
 ### Changed
 
 - Switch to Terser for JavaScript compression
 - JavaScript refactored
+- Translations updated
 
 ## [2.4.2] - 2025-08-04
 
