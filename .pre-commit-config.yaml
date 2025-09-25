@@ -130,6 +130,7 @@ repos:
         additional_dependencies:
           # eslint itself needs to be here when using additional_dependencies.
           - eslint@9.34.0 # https://github.com/eslint/eslint/releases/latest
+          - eslint-plugin-deprecate@0.8.7 # https://github.com/AlexMost/eslint-plugin-deprecate/tags
           - globals@16.3.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint

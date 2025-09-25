@@ -3,6 +3,7 @@
     "devDependencies": {
         "csso-cli": "^4.0.2",
         "eslint": "^9.34.0",
+        "eslint-plugin-deprecate": "^0.8.7",
         "globals": "^16.3.0",
         "stylelint": "^16.23.1",
         "stylelint-config-standard": "^39.0.0",
