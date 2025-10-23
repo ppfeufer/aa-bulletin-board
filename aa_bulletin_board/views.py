@@ -95,7 +95,10 @@ def create_bulletin(request: WSGIRequest) -> HttpResponse:
             )
 
             messages.success(
-                request=request, message=_(f'Bulletin "{bulletin__title}" created.')
+                request=request,
+                message=_('Bulletin "{bulletin_title}" created.').format(
+                    bulletin_title=bulletin__title
+                ),
             )
 
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
@@ -192,7 +195,10 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
             bulletin.save()
 
             messages.success(
-                request=request, message=_(f'Bulletin "{bulletin__title}" updated.')
+                request=request,
+                message=_('Bulletin "{bulletin_title}" updated.').format(
+                    bulletin_title=bulletin__title
+                ),
             )
 
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
@@ -224,7 +230,10 @@ def remove_bulletin(request: WSGIRequest, slug: str) -> HttpResponseRedirect:
         bulletin: Bulletin = Bulletin.objects.get(slug=slug)
 
         messages.success(
-            request=request, message=_(f'Bulletin "{bulletin.title}" deleted.')
+            request=request,
+            message=_('Bulletin "{bulletin_title}" deleted.').format(
+                bulletin_title=bulletin.title
+            ),
         )
 
         bulletin.delete()

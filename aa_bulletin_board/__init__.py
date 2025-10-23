@@ -2,8 +2,9 @@
 App init
 """
 
-# AA Bulletin Board
-from aa_bulletin_board.constants import APP_TITLE
+# Django
+from django.utils.translation import gettext_lazy as _
 
 __version__ = "2.4.3"
-__title__ = APP_TITLE
+__title__ = "Bulletin Board"
+__title_translated__ = _("Bulletin Board")

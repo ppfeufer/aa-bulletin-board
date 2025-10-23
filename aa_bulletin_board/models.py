@@ -18,7 +18,7 @@ from django.utils.translation import gettext as _
 from django_ckeditor_5.fields import CKEditor5Field
 
 # AA Bulletin Board
-from aa_bulletin_board.constants import APP_TITLE
+from aa_bulletin_board import __title_translated__
 from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.managers import BulletinManager
 
@@ -65,7 +65,7 @@ class General(models.Model):
         Meta definitions
         """
 
-        verbose_name = APP_TITLE
+        verbose_name = __title_translated__
         managed = False
         default_permissions = ()
         permissions = (
