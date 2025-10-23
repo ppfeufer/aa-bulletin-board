@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Bulletin Board 2.4.3\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-09-01 21:17+0200\n"
+"POT-Creation-Date: 2025-10-23 13:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:22
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr ""
-
-#: aa_bulletin_board/constants.py:9
+#: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
@@ -144,31 +138,31 @@ msgstr ""
 msgid "Join our team of translators!"
 msgstr ""
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:99
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" created."
+msgid "Bulletin \"{bulletin_title}\" created."
 msgstr ""
 
-#: aa_bulletin_board/views.py:141
+#: aa_bulletin_board/views.py:144
 msgid ""
 "The bulletin you are looking for does either not exist, or you don't have "
 "access to it."
 msgstr ""
 
-#: aa_bulletin_board/views.py:168
+#: aa_bulletin_board/views.py:171
 msgid "The bulletin you are trying to edit does not exist."
 msgstr ""
 
-#: aa_bulletin_board/views.py:195
+#: aa_bulletin_board/views.py:199
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr ""
-
-#: aa_bulletin_board/views.py:227
-#, python-brace-format
-msgid "Bulletin \"{bulletin.title}\" deleted."
+msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr ""
 
 #: aa_bulletin_board/views.py:234
+#, python-brace-format
+msgid "Bulletin \"{bulletin_title}\" deleted."
+msgstr ""
+
+#: aa_bulletin_board/views.py:243
 msgid "The bulletin you are trying to delete does not exist."
 msgstr ""

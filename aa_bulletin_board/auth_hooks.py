@@ -7,7 +7,7 @@ from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
 
 # AA Bulletin Board
-from aa_bulletin_board import __title__, urls
+from aa_bulletin_board import __title_translated__, urls
 
 
 class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-methods
@@ -22,7 +22,7 @@ class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-m
 
         MenuItemHook.__init__(
             self,
-            text=__title__,
+            text=__title_translated__,
             classes="fa-solid fa-clipboard-list",
             url_name="aa_bulletin_board:dashboard",
             navactive=["aa_bulletin_board:"],
