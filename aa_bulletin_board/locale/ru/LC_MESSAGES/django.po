@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024.
+# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024, 2025.
 # Nikolay <nick.postnikov@gmail.com>, 2023, 2024.
 # Max <mark25@inbox.ru>, 2023, 2024.
 # Roycce_ <malyasov.roma@mail.ru>, 2024.
@@ -9,24 +9,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-09-01 21:17+0200\n"
-"PO-Revision-Date: 2024-06-07 13:27+0000\n"
-"Last-Translator: Roycce_ <malyasov.roma@mail.ru>\n"
+"POT-Creation-Date: 2025-10-23 13:27+0200\n"
+"PO-Revision-Date: 2025-10-23 11:51+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : (n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.13.3\n"
 
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:22
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr "Доска бюллетеней v{__version__}"
-
-#: aa_bulletin_board/constants.py:9
+#: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
@@ -144,29 +138,33 @@ msgstr "Вы хотите помочь перевести это приложе�
 msgid "Join our team of translators!"
 msgstr "Присоединяйтесь к нашей команде переводчиков!"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:99
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" created."
-msgstr "Бюллетень «{bulletin__title}» создан."
+msgid "Bulletin \"{bulletin_title}\" created."
+msgstr "Бюллетень «{bulletin_title}» создан."
 
-#: aa_bulletin_board/views.py:141
+#: aa_bulletin_board/views.py:144
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "Запрошенный бюллетень не существует или у Вас нет доступа."
 
-#: aa_bulletin_board/views.py:168
+#: aa_bulletin_board/views.py:171
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Бюллетень, который вы пытаетесь отредактировать, не существует."
 
-#: aa_bulletin_board/views.py:195
+#: aa_bulletin_board/views.py:199
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr "Бюллетень «{bulletin__title}» обновлен."
-
-#: aa_bulletin_board/views.py:227
-#, python-brace-format
-msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr "Бюллетень «{bulletin.title}» удален."
+msgid "Bulletin \"{bulletin_title}\" updated."
+msgstr "Бюллетень «{bulletin_title}» обновлен."
 
 #: aa_bulletin_board/views.py:234
+#, python-brace-format
+msgid "Bulletin \"{bulletin_title}\" deleted."
+msgstr "Бюллетень «{bulletin_title}» удален."
+
+#: aa_bulletin_board/views.py:243
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Бюллетень, который вы пытаетесь удалить, не существует."
+
+#, python-brace-format
+#~ msgid "Bulletin Board v{__version__}"
+#~ msgstr "Доска бюллетеней v{__version__}"
