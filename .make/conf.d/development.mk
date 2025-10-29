@@ -4,7 +4,7 @@
 PHONY: dev-install
 dev-install: check-python-venv
 	@echo "Installing $(appname) as editable package …"
-	@pip install -e .
+	@pip install --ignore-requires-python -e .
 
 # Uninstall the app from the current Python environment
 PHONY: dev-uninstall
