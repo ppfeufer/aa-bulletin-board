@@ -8,7 +8,7 @@ from django.urls import path
 # AA Bulletin Board
 from aa_bulletin_board import views
 
-app_name: str = "aa_bulletin_board"
+app_name: str = "aa_bulletin_board"  # pylint: disable=invalid-name
 
 urlpatterns = [
     path(route="", view=views.dashboard, name="dashboard"),
