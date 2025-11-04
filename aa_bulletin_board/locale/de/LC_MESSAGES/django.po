@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-09-01 21:17+0200\n"
-"PO-Revision-Date: 2025-04-25 11:24+0000\n"
+"POT-Creation-Date: 2025-11-04 01:36+0100\n"
+"PO-Revision-Date: 2025-10-25 12:27+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/de/>\n"
 "Language: de\n"
@@ -15,15 +15,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.11\n"
+"X-Generator: Weblate 5.14\n"
 
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:22
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr "Bulletin Board v{__version__}"
-
-#: aa_bulletin_board/constants.py:9
+#: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
@@ -139,29 +133,33 @@ msgstr "Du möchtest helfen diese App in Deine Sprache zu übersetzen oder die b
 msgid "Join our team of translators!"
 msgstr "Tritt unserm Team von Übersetzern bei!"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:99
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" created."
-msgstr "Bulletin „{bulletin__title}“ erstellt."
+msgid "Bulletin \"{bulletin_title}\" created."
+msgstr "Bulletin „{bulletin_title}“ erstellt."
 
-#: aa_bulletin_board/views.py:141
+#: aa_bulletin_board/views.py:144
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "Dieses Bulletin existiert entweder nicht oder Du hast keinen Zugriff darauf."
 
-#: aa_bulletin_board/views.py:168
+#: aa_bulletin_board/views.py:171
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Das Bulletin das Du bearbeiten möchtest scheint nicht zu existieren."
 
-#: aa_bulletin_board/views.py:195
+#: aa_bulletin_board/views.py:199
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr "Bulletin „{bulletin__title}“ aktualisiert."
-
-#: aa_bulletin_board/views.py:227
-#, python-brace-format
-msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr "Bulletin „{bulletin.title}“ gelöscht."
+msgid "Bulletin \"{bulletin_title}\" updated."
+msgstr "Bulletin „{bulletin_title}“ aktualisiert."
 
 #: aa_bulletin_board/views.py:234
+#, python-brace-format
+msgid "Bulletin \"{bulletin_title}\" deleted."
+msgstr "Bulletin „{bulletin_title}“ gelöscht."
+
+#: aa_bulletin_board/views.py:243
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Das Bulletin das Du versuchst zu löschen scheint nicht zu existieren."
+
+#, python-brace-format
+#~ msgid "Bulletin Board v{__version__}"
+#~ msgstr "Bulletin Board v{__version__}"

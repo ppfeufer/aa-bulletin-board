@@ -5,29 +5,23 @@
 # Dehao Wu <wudehao2000@163.com>, 2024.
 # SAM_FPS <sam_fps@163.com>, 2024.
 # MxdHana <236833425@qq.com>, 2024.
-# Peter Pfeufer <info@ppfeufer.de>, 2024.
+# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-09-01 21:17+0200\n"
-"PO-Revision-Date: 2024-05-28 16:27+0000\n"
+"POT-Creation-Date: 2025-11-04 01:36+0100\n"
+"PO-Revision-Date: 2025-10-23 11:52+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
-"Language-Team: Chinese (Simplified) <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified Han script) <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.13.3\n"
 
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:22
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr "公告栏v{__version__}"
-
-#: aa_bulletin_board/constants.py:9
+#: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
@@ -142,29 +136,33 @@ msgstr "您想帮助将此应用程序翻译成您的母语或改进现有的翻
 msgid "Join our team of translators!"
 msgstr "加入我们的翻译团队吧！"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:99
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" created."
-msgstr "公告“{bulletin__title}”已创建。"
+msgid "Bulletin \"{bulletin_title}\" created."
+msgstr "公告“{bulletin_title}”已创建。"
 
-#: aa_bulletin_board/views.py:141
+#: aa_bulletin_board/views.py:144
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "您正在查看的公告不存在，或您没有权限访问。"
 
-#: aa_bulletin_board/views.py:168
+#: aa_bulletin_board/views.py:171
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "您尝试编辑的公告不存在。"
 
-#: aa_bulletin_board/views.py:195
+#: aa_bulletin_board/views.py:199
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr "公告“{bulletin__title}”已更新。"
-
-#: aa_bulletin_board/views.py:227
-#, python-brace-format
-msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr "公告“{bulletin.title}”已删除。"
+msgid "Bulletin \"{bulletin_title}\" updated."
+msgstr "公告“{bulletin_title}”已更新。"
 
 #: aa_bulletin_board/views.py:234
+#, python-brace-format
+msgid "Bulletin \"{bulletin_title}\" deleted."
+msgstr "公告“{bulletin_title}”已删除。"
+
+#: aa_bulletin_board/views.py:243
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "您要删除的公告不存在。"
+
+#, python-brace-format
+#~ msgid "Bulletin Board v{__version__}"
+#~ msgstr "公告栏v{__version__}"
