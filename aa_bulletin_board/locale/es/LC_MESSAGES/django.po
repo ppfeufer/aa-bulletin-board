@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-09-01 21:17+0200\n"
-"PO-Revision-Date: 2025-07-29 20:18+0000\n"
+"POT-Creation-Date: 2025-11-04 01:36+0100\n"
+"PO-Revision-Date: 2025-10-23 11:51+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/es/>\n"
 "Language: es\n"
@@ -17,15 +17,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12.2\n"
+"X-Generator: Weblate 5.13.3\n"
 
-#. Translators: This is the app name and version, which will appear in the Django Backend
-#: aa_bulletin_board/apps.py:22
-#, python-brace-format
-msgid "Bulletin Board v{__version__}"
-msgstr "Tablón de Anuncios v{__version__}"
-
-#: aa_bulletin_board/constants.py:9
+#: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
@@ -144,29 +138,33 @@ msgstr "¿Quieres ayudar a traducir esta aplicación a tu idioma o mejorar la tr
 msgid "Join our team of translators!"
 msgstr "¡Únete a nuestro equipo de traductores!"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:99
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" created."
-msgstr "Se ha creado el Anuncio «{bulletin__title}»."
+msgid "Bulletin \"{bulletin_title}\" created."
+msgstr "Se ha creado el Anuncio «{bulletin_title}»."
 
-#: aa_bulletin_board/views.py:141
+#: aa_bulletin_board/views.py:144
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "El anuncio que busca no existe, o no tiene acceso a él."
 
-#: aa_bulletin_board/views.py:168
+#: aa_bulletin_board/views.py:171
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "El anuncio que intenta editar no existe."
 
-#: aa_bulletin_board/views.py:195
+#: aa_bulletin_board/views.py:199
 #, python-brace-format
-msgid "Bulletin \"{bulletin__title}\" updated."
-msgstr "Se ha actualizado el Anuncio «{bulletin__title}»."
-
-#: aa_bulletin_board/views.py:227
-#, python-brace-format
-msgid "Bulletin \"{bulletin.title}\" deleted."
-msgstr "Se ha eliminado el Anuncio «{bulletin.title}»."
+msgid "Bulletin \"{bulletin_title}\" updated."
+msgstr "Se ha actualizado el Anuncio «{bulletin_title}»."
 
 #: aa_bulletin_board/views.py:234
+#, python-brace-format
+msgid "Bulletin \"{bulletin_title}\" deleted."
+msgstr "Se ha eliminado el Anuncio «{bulletin_title}»."
+
+#: aa_bulletin_board/views.py:243
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "El anuncio que intenta eliminar no existe."
+
+#, python-brace-format
+#~ msgid "Bulletin Board v{__version__}"
+#~ msgstr "Tablón de Anuncios v{__version__}"
