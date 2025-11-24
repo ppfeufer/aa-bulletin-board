@@ -10,17 +10,17 @@ from faker import Faker
 
 # Django
 from django.contrib.auth.models import Group
-from django.test import TestCase
 from django.urls import reverse
 
 # AA Bulletin Board
 from aa_bulletin_board.models import Bulletin
+from aa_bulletin_board.tests import BaseTestCase
 from aa_bulletin_board.tests.utils import create_fake_user
 
 fake = Faker()
 
 
-class TestAccess(TestCase):
+class TestAccess(BaseTestCase):
     """
     Test access to the module
     """
