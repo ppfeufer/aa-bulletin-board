@@ -3,13 +3,14 @@ Test the settings
 """
 
 # Django
-from django.test import TestCase, override_settings
+from django.test import override_settings
 
 # AA Bulletin Board
 from aa_bulletin_board.app_settings import debug_enabled
+from aa_bulletin_board.tests import BaseTestCase
 
 
-class TestSettings(TestCase):
+class TestSettings(BaseTestCase):
     """
     Test the settings
     """

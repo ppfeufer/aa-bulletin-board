@@ -13,17 +13,8 @@ from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
-# Alliance Auth
-from allianceauth.services.hooks import get_extension_logger
-
-# Alliance Auth (External Libs)
-from app_utils.logging import LoggerAddTag
-
 # AA Bulletin Board
-from aa_bulletin_board import __title__
 from aa_bulletin_board.forms import Bulletin, BulletinForm
-
-logger = LoggerAddTag(my_logger=get_extension_logger(name=__name__), prefix=__title__)
 
 
 @login_required

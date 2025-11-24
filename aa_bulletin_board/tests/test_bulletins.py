@@ -8,19 +8,19 @@ from faker import Faker
 # Django
 from django.contrib.auth.models import Group, User
 from django.contrib.messages import get_messages
-from django.test import TestCase
 from django.urls import reverse
 
 # AA Bulletin Board
 from aa_bulletin_board.forms import BulletinForm
 from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.models import Bulletin, get_sentinel_user
+from aa_bulletin_board.tests import BaseTestCase
 from aa_bulletin_board.tests.utils import create_fake_user
 
 fake = Faker()
 
 
-class TestGetSentinelUser(TestCase):
+class TestGetSentinelUser(BaseTestCase):
     """
     Tests for the sentinel user
     """
@@ -57,7 +57,7 @@ class TestGetSentinelUser(TestCase):
         self.assertEqual(first=user.username, second="deleted")
 
 
-class TestBulletins(TestCase):
+class TestBulletins(BaseTestCase):
     """
     Test Bulletins
     """

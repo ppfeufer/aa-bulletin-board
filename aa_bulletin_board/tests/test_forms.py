@@ -4,7 +4,6 @@ Test for aa_bulletin_board.forms
 
 # Django
 from django.contrib.auth.models import Group
-from django.test import TestCase
 
 # AA Bulletin Board
 from aa_bulletin_board.forms import (
@@ -12,9 +11,10 @@ from aa_bulletin_board.forms import (
     SpecialModelChoiceIterator,
     SpecialModelMultipleChoiceField,
 )
+from aa_bulletin_board.tests import BaseTestCase
 
 
-class TestSpecialModelChoiceIterator(TestCase):
+class TestSpecialModelChoiceIterator(BaseTestCase):
     """
     Tests for SpecialModelChoiceIterator
     """
@@ -55,7 +55,7 @@ class TestSpecialModelChoiceIterator(TestCase):
         self.assertIn(("", "Select a group"), choices)
 
 
-class TestSpecialModelMultipleChoiceField(TestCase):
+class TestSpecialModelMultipleChoiceField(BaseTestCase):
     """
     Tests for SpecialModelMultipleChoiceField
     """
@@ -105,7 +105,7 @@ class TestSpecialModelMultipleChoiceField(TestCase):
         self.assertEqual(list(field.widget.choices), [])
 
 
-class TestBulletinForm(TestCase):
+class TestBulletinForm(BaseTestCase):
     """
     Tests for BulletinForm
     """
