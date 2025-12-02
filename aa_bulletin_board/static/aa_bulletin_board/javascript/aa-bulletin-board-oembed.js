@@ -12,7 +12,7 @@ $(document).ready(() => {
      */
     const youtubeOembedToIframe = (url) => {
         const videoId = new URLSearchParams(new URL(url).search).get('v'); // jshint ignore:line
-        const videoUrl = `https://www.youtube-nocookie.com/embed/${videoId}?si=aq0pZbTkkMJ8UjRc`;
+        const videoUrl = `https://www.youtube-nocookie.com/embed/${videoId}`;
         const divClasses = 'oembed-video youtube-oembed-video';
         const iframeTitle = 'YouTube video player';
         const iframeAllow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';

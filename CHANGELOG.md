@@ -36,6 +36,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Removed
+
+- Unnecessary URL parameter
+
 ## [2.5.0] - 2025-12-02
 
 ### Changed
