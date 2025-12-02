@@ -36,6 +36,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- YouTube oEmbed code updated
+
 ### Removed
 
 - `allianceauth-app-utils` as dependency
