@@ -4,20 +4,22 @@
 # Xrandier <xrandier@gmail.com>, 2024.
 # Anata_no_Usiro <yt23542354m@gmail.com>, 2024.
 # KM Heon <kmheon75@gmail.com>, 2025.
+# Dexsar <dexsar.paf@gmail.com>, 2025.
+# Peter Pfeufer <info@ppfeufer.de>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-11-04 01:36+0100\n"
-"PO-Revision-Date: 2025-04-12 09:24+0000\n"
-"Last-Translator: KM Heon <kmheon75@gmail.com>\n"
+"POT-Creation-Date: 2025-12-02 02:09+0100\n"
+"PO-Revision-Date: 2025-11-24 12:56+0000\n"
+"Last-Translator: Dexsar <dexsar.paf@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.14.3\n"
 
 #: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -80,86 +82,86 @@ msgstr "速報"
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:19
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:36
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:20
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:37
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
-msgstr[0] ""
+msgstr[0] "この掲示は、以下のグループに限定されます："
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
-msgstr ""
+msgstr "続きを読む"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:47
 msgid "No bulletins found."
-msgstr ""
+msgstr "お知らせはありません。"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Edit bulletin"
-msgstr ""
+msgstr "掲示板を編集する"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
 msgid "Create new bulletin"
-msgstr ""
+msgstr "新しい掲示板を作成する"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Update bulletin"
-msgstr ""
+msgstr "掲示板を更新する"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
 msgid "Create bulletin"
-msgstr ""
+msgstr "掲示板を作成する"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/common/bulletin-board-management.html:4
 msgid "Add bulletin"
-msgstr ""
+msgstr "掲示板を追加する"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid "Do you want to help translate this app into your language or improve the existing translation?"
-msgstr ""
+msgstr "このアプリをあなたの言語に翻訳するお手伝いをしたり、既存の翻訳を改善したりしませんか？"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
-msgstr ""
+msgstr "翻訳者チームに参加しましょう！"
 
-#: aa_bulletin_board/views.py:99
+#: aa_bulletin_board/views.py:90
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
-msgstr ""
+msgstr "「{bulletin_title}」という掲示板が作成されました。"
 
-#: aa_bulletin_board/views.py:144
+#: aa_bulletin_board/views.py:135
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
-msgstr ""
+msgstr "お探しの掲示板は存在しません、またはアクセス権限がありません。"
 
-#: aa_bulletin_board/views.py:171
+#: aa_bulletin_board/views.py:162
 msgid "The bulletin you are trying to edit does not exist."
 msgstr ""
 
-#: aa_bulletin_board/views.py:199
+#: aa_bulletin_board/views.py:190
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr ""
 
-#: aa_bulletin_board/views.py:234
+#: aa_bulletin_board/views.py:225
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr ""
 
-#: aa_bulletin_board/views.py:243
+#: aa_bulletin_board/views.py:234
 msgid "The bulletin you are trying to delete does not exist."
-msgstr ""
+msgstr "削除しようとしている掲示板は存在しません。"
 
 #, python-brace-format
 #~ msgid "Bulletin Board v{__version__}"
