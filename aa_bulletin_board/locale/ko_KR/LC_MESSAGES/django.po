@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-11-04 01:36+0100\n"
+"POT-Creation-Date: 2025-12-02 02:09+0100\n"
 "PO-Revision-Date: 2025-10-23 11:51+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ko/>\n"
@@ -150,32 +150,32 @@ msgstr "이 앱을 번역하거나 기존 번역을 개선하고 싶으신가요
 msgid "Join our team of translators!"
 msgstr "번역가 팀에 참여하세요!"
 
-#: aa_bulletin_board/views.py:99
+#: aa_bulletin_board/views.py:90
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "불레틴 “{bulletin_title}” 생성됨."
 
-#: aa_bulletin_board/views.py:144
+#: aa_bulletin_board/views.py:135
 #, fuzzy
 #| msgid "The bulletin you are looking for does not exist, or you don't have access to it."
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "찾는 불레틴이 없거나, 열람 권한이 없습니다."
 
-#: aa_bulletin_board/views.py:171
+#: aa_bulletin_board/views.py:162
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "수정하려는 불레틴이 없습니다."
 
-#: aa_bulletin_board/views.py:199
+#: aa_bulletin_board/views.py:190
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr "불레틴 “{bulletin_title}” 업데이트됨."
 
-#: aa_bulletin_board/views.py:234
+#: aa_bulletin_board/views.py:225
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr "불레틴 “{bulletin_title}” 삭제됨."
 
-#: aa_bulletin_board/views.py:243
+#: aa_bulletin_board/views.py:234
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "삭제하려는 불레틴이 없습니다."
 

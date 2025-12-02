@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-11-04 01:36+0100\n"
+"POT-Creation-Date: 2025-12-02 02:09+0100\n"
 "PO-Revision-Date: 2025-10-23 11:51+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/es/>\n"
@@ -138,30 +138,30 @@ msgstr "¿Quieres ayudar a traducir esta aplicación a tu idioma o mejorar la tr
 msgid "Join our team of translators!"
 msgstr "¡Únete a nuestro equipo de traductores!"
 
-#: aa_bulletin_board/views.py:99
+#: aa_bulletin_board/views.py:90
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "Se ha creado el Anuncio «{bulletin_title}»."
 
-#: aa_bulletin_board/views.py:144
+#: aa_bulletin_board/views.py:135
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "El anuncio que busca no existe, o no tiene acceso a él."
 
-#: aa_bulletin_board/views.py:171
+#: aa_bulletin_board/views.py:162
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "El anuncio que intenta editar no existe."
 
-#: aa_bulletin_board/views.py:199
+#: aa_bulletin_board/views.py:190
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr "Se ha actualizado el Anuncio «{bulletin_title}»."
 
-#: aa_bulletin_board/views.py:234
+#: aa_bulletin_board/views.py:225
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr "Se ha eliminado el Anuncio «{bulletin_title}»."
 
-#: aa_bulletin_board/views.py:243
+#: aa_bulletin_board/views.py:234
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "El anuncio que intenta eliminar no existe."
 

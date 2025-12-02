@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2025-11-04 01:36+0100\n"
+"POT-Creation-Date: 2025-12-02 02:09+0100\n"
 "PO-Revision-Date: 2025-10-23 11:52+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Czech <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/cs/>\n"
@@ -136,30 +136,30 @@ msgstr "Chceš pomoc s překladem této aplikace do tvého jazyka, nebo vylepši
 msgid "Join our team of translators!"
 msgstr "Připoj se k našemu týmu překladatelů!"
 
-#: aa_bulletin_board/views.py:99
+#: aa_bulletin_board/views.py:90
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "Nástěnka \"{bulletin_title}\" vytvořena."
 
-#: aa_bulletin_board/views.py:144
+#: aa_bulletin_board/views.py:135
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "Nástěnka kterou hledáte buďto neexistuje, nebo k ní nemáte přístup."
 
-#: aa_bulletin_board/views.py:171
+#: aa_bulletin_board/views.py:162
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Nástěnka kterou chcete upravit neexistuje."
 
-#: aa_bulletin_board/views.py:199
+#: aa_bulletin_board/views.py:190
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr "Nástěnka \"{bulletin_title}\" aktualizována."
 
-#: aa_bulletin_board/views.py:234
+#: aa_bulletin_board/views.py:225
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr "Nástěnka \"{bulletin_title}\" smazána."
 
-#: aa_bulletin_board/views.py:243
+#: aa_bulletin_board/views.py:234
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Nástěnku kterou se snažíte smazat neexistuje."
 
