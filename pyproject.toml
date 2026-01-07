@@ -39,7 +39,7 @@ dynamic = [
 ]
 dependencies = [
     "allianceauth>=4.6,<5",
-    "django-ckeditor-5>=0.2.14",
+    "django-ckeditor-5>=0.2.19",
     "unidecode",
 ]
 optional-dependencies.tests-allianceauth-latest = [

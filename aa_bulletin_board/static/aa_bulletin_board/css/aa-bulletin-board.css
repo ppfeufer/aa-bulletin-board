@@ -75,12 +75,16 @@
 /* CKEditor 5 (WYSIWYG editor)
 ------------------------------------------------------------------------------------- */
 @media all {
+    .aa-bulletin-board .ck-content {
+        color: var(--bs-body-color);
+    }
+
     .aa-bulletin-board .ck-rounded-corners {
         --ck-border-radius: var(--bs-border-radius);
     }
 
     .aa-bulletin-board .ck-editor__editable {
-        color: initial;
+        color: var(--ck-content-font-color);
     }
 
     .aa-bulletin-board .ck-word-count {
