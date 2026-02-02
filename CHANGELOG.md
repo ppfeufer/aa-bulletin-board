@@ -36,6 +36,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.5.3] - 2026-02-02
+
+### Changed
+
+- Translations updated
+
 ## [2.5.2] - 2026-01-07
 
 ### Fixed
@@ -1122,6 +1128,7 @@ python manage.py migrate
 [2.5.0]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.4.4...v2.5.0 "v2.5.0"
 [2.5.1]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.0...v2.5.1 "v2.5.1"
 [2.5.2]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.1...v2.5.2 "v2.5.2"
-[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.2...HEAD "In Development"
+[2.5.3]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.2...v2.5.3 "v2.5.3"
+[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.3...HEAD "In Development"
 [keep a changelog]: https://keepachangelog.com/en/1.0.0/ "Keep a Changelog"
 [semantic versioning]: https://semver.org/spec/v2.0.0.html "Semantic Versioning"
