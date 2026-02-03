@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024, 2025.
+# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-01-07 18:53+0100\n"
-"PO-Revision-Date: 2025-10-25 12:27+0000\n"
+"POT-Creation-Date: 2026-02-02 20:18+0100\n"
+"PO-Revision-Date: 2026-01-28 15:53+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: German <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/de/>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -127,7 +127,7 @@ msgstr "Bulletin hinzufügen"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:5
 msgid "Do you want to help translate this app into your language or improve the existing translation?"
-msgstr "Du möchtest helfen diese App in Deine Sprache zu übersetzen oder die bestehende Übersetzung verbessern?"
+msgstr "Du möchtest helfen diese App in Deine Sprache zu übersetzen oder die bestehende Übersetzung zu verbessern?"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/partials/footer/app-translation-footer.html:8
 msgid "Join our team of translators!"
