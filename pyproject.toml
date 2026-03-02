@@ -56,10 +56,8 @@ urls.GitHub = "https://github.com/ppfeufer/aa-bulletin-board"
 urls.Tracker = "https://github.com/ppfeufer/aa-bulletin-board/issues"
 urls.Translation = "https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/"
 
-[tool.hatch.build]
-include = [
+[tool.hatch]
+build.include = [
     "/aa_bulletin_board",
 ]
-
-[tool.hatch.version]
-path = "aa_bulletin_board/__init__.py"
+version.path = "aa_bulletin_board/__init__.py"
