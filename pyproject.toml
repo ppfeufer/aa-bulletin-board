@@ -42,6 +42,12 @@ dependencies = [
     "django-ckeditor-5>=0.2.19",
     "unidecode",
 ]
+optional-dependencies.tests-allianceauth-development = [
+    "allianceauth @ git+https://gitlab.com/allianceauth/allianceauth#egg=master",
+    "coverage",
+    "django-webtest",
+    "faker",
+]
 optional-dependencies.tests-allianceauth-latest = [
     "coverage",
     "django-webtest",
@@ -61,3 +67,4 @@ build.include = [
     "/aa_bulletin_board",
 ]
 version.path = "aa_bulletin_board/__init__.py"
+metadata.allow-direct-references = true
