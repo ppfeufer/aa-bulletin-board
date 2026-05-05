@@ -32,9 +32,20 @@ Section Order:
 ### Deprecated
 ### Removed
 ### Security
+### Miscelaneous
 -->
 
 <!-- Your changes go here -->
+
+## [2.5.5] - 2026-05-05
+
+### Changed
+
+- Translations updated
+
+### Miscelaneous
+
+- Ready for Alliance Auth v5
 
 ## [2.5.4] - 2026-03-02
 
@@ -1136,6 +1147,7 @@ python manage.py migrate
 [2.5.2]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.1...v2.5.2 "v2.5.2"
 [2.5.3]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.2...v2.5.3 "v2.5.3"
 [2.5.4]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.3...v2.5.4 "v2.5.4"
-[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.4...HEAD "In Development"
+[2.5.5]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.4...v2.5.5 "v2.5.5"
+[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.5...HEAD "In Development"
 [keep a changelog]: https://keepachangelog.com/en/1.0.0/ "Keep a Changelog"
 [semantic versioning]: https://semver.org/spec/v2.0.0.html "Semantic Versioning"
