@@ -32,7 +32,7 @@ Section Order:
 ### Deprecated
 ### Removed
 ### Security
-### Miscelaneous
+### Miscellaneous
 -->
 
 <!-- Your changes go here -->
@@ -43,7 +43,7 @@ Section Order:
 
 - Translations updated
 
-### Miscelaneous
+### Miscellaneous
 
 - Ready for Alliance Auth v5
 
