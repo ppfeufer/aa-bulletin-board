@@ -4,6 +4,7 @@ Test utilities
 
 # Standard Library
 import re
+import secrets
 
 # Django
 from django.contrib.auth.models import User
@@ -89,3 +90,16 @@ def response_content_to_str(response: WSGIRequest) -> str:
     """
 
     return response.content.decode(response.charset)
+
+
+def random_id(n: int = 8) -> int:
+    """
+    Generate a random ID
+
+    :param n: Length of the ID
+    :type n: int, optional (default=8)
+    :return: A random ID
+    :rtype: int
+    """
+
+    return secrets.randbits(n)

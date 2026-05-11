@@ -15,7 +15,7 @@ from aa_bulletin_board.forms import BulletinForm
 from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.models import Bulletin, get_sentinel_user
 from aa_bulletin_board.tests import BaseTestCase
-from aa_bulletin_board.tests.utils import create_fake_user
+from aa_bulletin_board.tests.utils import create_fake_user, random_id
 
 fake = Faker()
 
@@ -75,20 +75,20 @@ class TestBulletins(BaseTestCase):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(
-            character_id=1001, character_name="Peter Parker"
+        cls.user_without_access = create_fake_user(
+            character_id=random_id(), character_name="Peter Parker"
         )
 
         # User can access bulletins
-        cls.user_1002 = create_fake_user(
-            character_id=1002,
+        cls.user_with_basic_access = create_fake_user(
+            character_id=random_id(),
             character_name="Bruce Wayne",
             permissions=["aa_bulletin_board.basic_access"],
         )
 
         # User can manage bulletins
-        cls.user_1003 = create_fake_user(
-            character_id=1003,
+        cls.user_with_management_access = create_fake_user(
+            character_id=random_id(),
             character_name="Clark Kent",
             permissions=[
                 "aa_bulletin_board.basic_access",
@@ -109,10 +109,10 @@ class TestBulletins(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title=bulletin_title,
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
-        self.client.force_login(user=self.user_1003)
+        self.client.force_login(user=self.user_with_management_access)
 
         # when
         response = self.client.get(
@@ -143,9 +143,9 @@ class TestBulletins(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title=fake.sentence(),
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
-        self.client.force_login(user=self.user_1003)
+        self.client.force_login(user=self.user_with_management_access)
 
         # when
         response = self.client.get(
@@ -176,9 +176,9 @@ class TestBulletins(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title=fake.sentence(),
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
-        self.client.force_login(user=self.user_1003)
+        self.client.force_login(user=self.user_with_management_access)
 
         # when
         response = self.client.get(
@@ -206,7 +206,7 @@ class TestBulletins(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="дрифтерке, рорки в док",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         self.assertEqual(first=bulletin.slug, second="drifterke-rorki-v-dok")
@@ -230,7 +230,7 @@ class TestBulletins(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Foobar",
             content=dirty_message,
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         self.assertEqual(first=bulletin.content, second=cleaned_message)
@@ -246,19 +246,19 @@ class TestBulletins(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="This is a bulletin",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         bulletin_2 = Bulletin.objects.create(
             title="This is a bulletin",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         bulletin_3 = Bulletin.objects.create(
             title="This is a bulletin",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         self.assertEqual(first=bulletin.slug, second="this-is-a-bulletin")
@@ -276,7 +276,7 @@ class TestBulletins(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="This is a bulletin",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         self.assertEqual(first=str(bulletin), second="This is a bulletin")
