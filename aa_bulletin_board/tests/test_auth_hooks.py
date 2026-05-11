@@ -10,7 +10,7 @@ from django.urls import reverse
 
 # AA Bulletin Board
 from aa_bulletin_board.tests import BaseTestCase
-from aa_bulletin_board.tests.utils import create_fake_user
+from aa_bulletin_board.tests.utils import create_fake_user, random_id
 
 
 class TestHooks(BaseTestCase):
@@ -30,13 +30,13 @@ class TestHooks(BaseTestCase):
         super().setUpClass()
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(
-            character_id=1001, character_name="Peter Parker"
+        cls.user_without_access = create_fake_user(
+            character_id=random_id(), character_name="Peter Parker"
         )
 
         # User can access bulletins
-        cls.user_1002 = create_fake_user(
-            character_id=1002,
+        cls.user_with_basic_access = create_fake_user(
+            character_id=random_id(),
             character_name="Bruce Wayne",
             permissions=["aa_bulletin_board.basic_access"],
         )
@@ -70,7 +70,7 @@ class TestHooks(BaseTestCase):
         :rtype:
         """
 
-        self.login(user=self.user_1002)
+        self.login(user=self.user_with_basic_access)
 
         response = self.client.get(path=reverse(viewname="authentication:dashboard"))
 
@@ -86,7 +86,7 @@ class TestHooks(BaseTestCase):
         :rtype:
         """
 
-        self.login(user=self.user_1001)
+        self.login(user=self.user_without_access)
 
         response = self.client.get(path=reverse(viewname="authentication:dashboard"))
 

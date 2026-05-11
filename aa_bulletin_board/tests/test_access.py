@@ -15,7 +15,7 @@ from django.urls import reverse
 # AA Bulletin Board
 from aa_bulletin_board.models import Bulletin
 from aa_bulletin_board.tests import BaseTestCase
-from aa_bulletin_board.tests.utils import create_fake_user
+from aa_bulletin_board.tests.utils import create_fake_user, random_id
 
 fake = Faker()
 
@@ -38,20 +38,20 @@ class TestAccess(BaseTestCase):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(
-            character_id=1001, character_name="Peter Parker"
+        cls.user_without_access = create_fake_user(
+            character_id=random_id(), character_name="Peter Parker"
         )
 
         # User can access bulletins
-        cls.user_1002 = create_fake_user(
-            character_id=1002,
+        cls.user_with_basic_access = create_fake_user(
+            character_id=random_id(),
             character_name="Bruce Wayne",
             permissions=["aa_bulletin_board.basic_access"],
         )
 
         # User can manage bulletins
-        cls.user_1003 = create_fake_user(
-            character_id=1003,
+        cls.user_with_management_access = create_fake_user(
+            character_id=random_id(),
             character_name="Clark Kent",
             permissions=[
                 "aa_bulletin_board.basic_access",
@@ -68,7 +68,7 @@ class TestAccess(BaseTestCase):
         """
 
         # given
-        self.client.force_login(user=self.user_1002)
+        self.client.force_login(user=self.user_with_basic_access)
 
         # when
         res = self.client.get(path=reverse(viewname="aa_bulletin_board:dashboard"))
@@ -88,9 +88,9 @@ class TestAccess(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Physics",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
-        self.client.force_login(user=self.user_1002)
+        self.client.force_login(user=self.user_with_basic_access)
 
         # when
         res = self.client.get(
@@ -99,7 +99,7 @@ class TestAccess(BaseTestCase):
                 kwargs={"slug": bulletin.slug},
             )
         )
-        result = Bulletin.objects.user_has_access(user=self.user_1002)
+        result = Bulletin.objects.user_has_access(user=self.user_with_basic_access)
 
         # then
         self.assertEqual(first=res.status_code, second=HTTPStatus.OK)
@@ -114,7 +114,7 @@ class TestAccess(BaseTestCase):
         """
 
         # given
-        self.client.force_login(user=self.user_1001)
+        self.client.force_login(user=self.user_without_access)
 
         # when
         res = self.client.get(path=reverse(viewname="aa_bulletin_board:dashboard"))
@@ -134,9 +134,9 @@ class TestAccess(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Physics",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
-        self.client.force_login(user=self.user_1001)
+        self.client.force_login(user=self.user_without_access)
 
         # when
         res = self.client.get(
@@ -161,11 +161,11 @@ class TestAccess(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Physics",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         # when
-        result = Bulletin.objects.user_has_access(user=self.user_1003)
+        result = Bulletin.objects.user_has_access(user=self.user_with_management_access)
 
         # then
         self.assertIn(member=bulletin, container=result)
@@ -185,12 +185,12 @@ class TestAccess(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Physics",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
         bulletin.groups.add(self.group)
 
         # when
-        result = Bulletin.objects.user_has_access(user=self.user_1003)
+        result = Bulletin.objects.user_has_access(user=self.user_with_management_access)
 
         # then
         self.assertIn(member=bulletin, container=result)
@@ -207,11 +207,11 @@ class TestAccess(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Physics",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
 
         # when
-        result = Bulletin.objects.user_has_access(user=self.user_1002)
+        result = Bulletin.objects.user_has_access(user=self.user_with_basic_access)
 
         # then
         self.assertIn(member=bulletin, container=result)
@@ -228,13 +228,13 @@ class TestAccess(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Physics",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1001,
+            created_by=self.user_without_access,
         )
         bulletin.groups.add(self.group)
-        self.user_1001.groups.add(self.group)
+        self.user_without_access.groups.add(self.group)
 
         # when
-        result = Bulletin.objects.user_has_access(user=self.user_1001)
+        result = Bulletin.objects.user_has_access(user=self.user_without_access)
 
         # then
         self.assertIn(member=bulletin, container=result)
@@ -252,12 +252,12 @@ class TestAccess(BaseTestCase):
         bulletin = Bulletin.objects.create(
             title="Physics",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1002,
+            created_by=self.user_with_basic_access,
         )
         bulletin.groups.add(self.group)
 
         # when
-        result = Bulletin.objects.user_has_access(user=self.user_1002)
+        result = Bulletin.objects.user_has_access(user=self.user_with_basic_access)
 
         # then
         self.assertNotIn(member=bulletin, container=result)

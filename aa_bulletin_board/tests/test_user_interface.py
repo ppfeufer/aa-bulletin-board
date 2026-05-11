@@ -13,7 +13,7 @@ from django.urls import reverse
 # AA Bulletin Board
 from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.models import Bulletin
-from aa_bulletin_board.tests.utils import create_fake_user
+from aa_bulletin_board.tests.utils import create_fake_user, random_id
 
 fake = Faker()
 
@@ -36,20 +36,20 @@ class TestBulletinUI(WebTest):
         cls.group = Group.objects.create(name="Superhero")
 
         # User cannot access bulletins
-        cls.user_1001 = create_fake_user(
-            character_id=1001, character_name="Peter Parker"
+        cls.user_without_access = create_fake_user(
+            character_id=random_id(), character_name="Peter Parker"
         )
 
         # User can access bulletins
-        cls.user_1002 = create_fake_user(
-            character_id=1002,
+        cls.user_with_basic_access = create_fake_user(
+            character_id=random_id(),
             character_name="Bruce Wayne",
             permissions=["aa_bulletin_board.basic_access"],
         )
 
         # User can manage bulletins
-        cls.user_1003 = create_fake_user(
-            character_id=1003,
+        cls.user_with_management_access = create_fake_user(
+            character_id=random_id(),
             character_name="Clark Kent",
             permissions=[
                 "aa_bulletin_board.basic_access",
@@ -69,9 +69,9 @@ class TestBulletinUI(WebTest):
         bulletin = Bulletin.objects.create(
             title="Test Bulletin",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1002,
+            created_by=self.user_with_basic_access,
         )
-        self.app.set_user(user=self.user_1002)
+        self.app.set_user(user=self.user_with_basic_access)
 
         # when
         page = self.app.get(
@@ -97,7 +97,7 @@ class TestBulletinUI(WebTest):
         """
 
         # given
-        self.app.set_user(user=self.user_1002)
+        self.app.set_user(user=self.user_with_basic_access)
 
         # when
         page = self.app.get(
@@ -116,7 +116,7 @@ class TestBulletinUI(WebTest):
         """
 
         # given
-        self.app.set_user(user=self.user_1003)
+        self.app.set_user(user=self.user_with_management_access)
 
         # when
         page = self.app.get(url=reverse(viewname="aa_bulletin_board:create_bulletin"))
@@ -139,9 +139,9 @@ class TestBulletinUI(WebTest):
         bulletin = Bulletin.objects.create(
             title="Test Bulletin",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1002,
+            created_by=self.user_with_basic_access,
         )
-        self.app.set_user(user=self.user_1003)
+        self.app.set_user(user=self.user_with_management_access)
 
         # when
         page = self.app.get(
@@ -167,7 +167,7 @@ class TestBulletinUI(WebTest):
         """
 
         # given
-        self.app.set_user(user=self.user_1003)
+        self.app.set_user(user=self.user_with_management_access)
 
         # when
         page = self.app.get(
@@ -186,7 +186,7 @@ class TestBulletinUI(WebTest):
         """
 
         # given
-        self.app.set_user(user=self.user_1003)
+        self.app.set_user(user=self.user_with_management_access)
         page = self.app.get(url=reverse(viewname="aa_bulletin_board:create_bulletin"))
         dirty_message = (
             'this is a script test. <script type="text/javascript">alert('
@@ -199,6 +199,19 @@ class TestBulletinUI(WebTest):
         form = page.forms["aa-bulletin-board-bulletin-form"]
         form["title"] = "Message Cleanup Test"
         form["content"] = dirty_message
+
+        # Ensure CSRF cookie is present for webtest (Django requires a CSRF cookie
+        # in addition to the hidden csrfmiddlewaretoken input). Extract the token
+        # from the form and set it as the csrftoken cookie so the POST passes
+        # Django's CSRF validation when running under webtest.
+        try:
+            csrf_token = form["csrfmiddlewaretoken"].value
+            self.app.set_cookie("csrftoken", csrf_token)
+        except Exception:
+            # If the token is not present for some reason, let the submit fail
+            # so the test surface shows the real error.
+            pass
+
         form.submit().follow()
 
         # then
@@ -217,9 +230,9 @@ class TestBulletinUI(WebTest):
         bulletin = Bulletin.objects.create(
             title="Test Bulletin 2",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1002,
+            created_by=self.user_with_basic_access,
         )
-        self.app.set_user(user=self.user_1003)
+        self.app.set_user(user=self.user_with_management_access)
 
         # when
         page = self.app.get(
@@ -237,6 +250,19 @@ class TestBulletinUI(WebTest):
         form = page.forms["aa-bulletin-board-bulletin-form"]
         form["title"] = "Message Cleanup Test"
         form["content"] = dirty_message
+
+        # Ensure CSRF cookie is present for webtest (Django requires a CSRF cookie
+        # in addition to the hidden csrfmiddlewaretoken input). Extract the token
+        # from the form and set it as the csrftoken cookie so the POST passes
+        # Django's CSRF validation when running under webtest.
+        try:
+            csrf_token = form["csrfmiddlewaretoken"].value
+            self.app.set_cookie("csrftoken", csrf_token)
+        except Exception:
+            # If the token is not present for some reason, let the submit fail
+            # so the test surface shows the real error.
+            pass
+
         form.submit().follow()
 
         # then
@@ -254,12 +280,25 @@ class TestBulletinUI(WebTest):
         :rtype:
         """
 
-        self.app.set_user(user=self.user_1003)
+        self.app.set_user(user=self.user_with_management_access)
         page = self.app.get(url=reverse(viewname="aa_bulletin_board:create_bulletin"))
 
         # when
         form = page.forms["aa-bulletin-board-bulletin-form"]
         form["content"] = "Lorem Ipsum"
+
+        # Ensure CSRF cookie is present for webtest (Django requires a CSRF cookie
+        # in addition to the hidden csrfmiddlewaretoken input). Extract the token
+        # from the form and set it as the csrftoken cookie so the POST passes
+        # Django's CSRF validation when running under webtest.
+        try:
+            csrf_token = form["csrfmiddlewaretoken"].value
+            self.app.set_cookie("csrftoken", csrf_token)
+        except Exception:
+            # If the token is not present for some reason, let the submit fail
+            # so the test surface shows the real error.
+            pass
+
         page = form.submit()
 
         # then
@@ -282,9 +321,9 @@ class TestBulletinUI(WebTest):
         bulletin = Bulletin.objects.create(
             title="Test Bulletin",
             content=f"<p>{fake.sentence()}</p>",
-            created_by=self.user_1002,
+            created_by=self.user_with_basic_access,
         )
-        self.app.set_user(user=self.user_1003)
+        self.app.set_user(user=self.user_with_management_access)
 
         # when
         page = self.app.get(
@@ -297,6 +336,19 @@ class TestBulletinUI(WebTest):
         form = page.forms["aa-bulletin-board-bulletin-form"]
         form["title"] = ""
         form["content"] = "Lorem Ipsum"
+
+        # Ensure CSRF cookie is present for webtest (Django requires a CSRF cookie
+        # in addition to the hidden csrfmiddlewaretoken input). Extract the token
+        # from the form and set it as the csrftoken cookie so the POST passes
+        # Django's CSRF validation when running under webtest.
+        try:
+            csrf_token = form["csrfmiddlewaretoken"].value
+            self.app.set_cookie("csrftoken", csrf_token)
+        except Exception:
+            # If the token is not present for some reason, let the submit fail
+            # so the test surface shows the real error.
+            pass
+
         page = form.submit()
 
         # then
