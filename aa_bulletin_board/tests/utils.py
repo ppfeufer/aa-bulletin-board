@@ -92,12 +92,12 @@ def response_content_to_str(response: WSGIRequest) -> str:
     return response.content.decode(response.charset)
 
 
-def random_id(n: int = 8) -> int:
+def random_id(n: int = 26) -> int:
     """
     Generate a random ID
 
     :param n: Length of the ID
-    :type n: int, optional (default=8)
+    :type n: int, optional (default=26 (8 digits in base36))
     :return: A random ID
     :rtype: int
     """
