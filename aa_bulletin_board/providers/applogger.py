@@ -1,5 +1,5 @@
 """
-Providers for the AA Bulletin Board app.
+AppLogger provider
 """
 
 # Standard Library
