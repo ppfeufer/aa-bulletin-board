@@ -13,8 +13,14 @@ from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
+# Alliance Auth
+from allianceauth.services.hooks import get_extension_logger
+
 # AA Bulletin Board
 from aa_bulletin_board.forms import Bulletin, BulletinForm
+from aa_bulletin_board.providers.applogger import AppLogger
+
+logger = AppLogger(get_extension_logger(name=__name__))
 
 
 @login_required
@@ -28,6 +34,8 @@ def dashboard(request: WSGIRequest) -> HttpResponse:
     :return:
     :rtype:
     """
+
+    logger.debug(f"Dashboard opened by user: {request.user}")
 
     bulletins = (
         Bulletin.objects.prefetch_related(
@@ -92,6 +100,10 @@ def create_bulletin(request: WSGIRequest) -> HttpResponse:
                 ),
             )
 
+            logger.debug(
+                f'Bulletin "{bulletin__title}" created by user: {request.user}'
+            )
+
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
 
     context = {"form": form, "bulletin": False}
@@ -116,6 +128,8 @@ def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
     :return:
     :rtype:
     """
+
+    logger.debug(f"User {request.user} is trying to view bulletin with slug: {slug}")
 
     try:
         bulletin: Bulletin = Bulletin.objects.user_has_access(request.user).get(
@@ -156,6 +170,10 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
 
     try:
         bulletin: Bulletin = Bulletin.objects.get(slug=slug)
+
+        logger.debug(
+            f"User {request.user} is trying to edit bulletin: {bulletin.title}"
+        )
     except Bulletin.DoesNotExist:
         messages.warning(
             request=request,
@@ -191,6 +209,8 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
                     bulletin_title=bulletin__title
                 ),
             )
+
+            logger.debug(f"User {request.user} has updated bulletin: {bulletin__title}")
 
             return redirect(to="aa_bulletin_board:view_bulletin", slug=bulletin.slug)
 
@@ -228,6 +248,8 @@ def remove_bulletin(request: WSGIRequest, slug: str) -> HttpResponseRedirect:
         )
 
         bulletin.delete()
+
+        logger.debug(f'Bulletin "{bulletin.title}" deleted by user {request.user}.')
     except Bulletin.DoesNotExist:
         messages.warning(
             request=request,
