@@ -37,6 +37,14 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Some basic debug logging
+
+### Changed
+
+- Providers are now modular
+
 ## [2.5.5] - 2026-05-05
 
 ### Changed
