@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-05-05 12:54+0200\n"
+"POT-Creation-Date: 2026-06-02 09:27+0200\n"
 "PO-Revision-Date: 2024-05-10 13:57+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Slovak <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/sk/>\n"
@@ -136,29 +136,29 @@ msgstr ""
 msgid "Join our team of translators!"
 msgstr ""
 
-#: aa_bulletin_board/views.py:90
+#: aa_bulletin_board/views.py:98
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr ""
 
-#: aa_bulletin_board/views.py:135
+#: aa_bulletin_board/views.py:149
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr ""
 
-#: aa_bulletin_board/views.py:162
+#: aa_bulletin_board/views.py:180
 msgid "The bulletin you are trying to edit does not exist."
 msgstr ""
 
-#: aa_bulletin_board/views.py:190
+#: aa_bulletin_board/views.py:208
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr ""
 
-#: aa_bulletin_board/views.py:225
+#: aa_bulletin_board/views.py:245
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr ""
 
-#: aa_bulletin_board/views.py:234
+#: aa_bulletin_board/views.py:256
 msgid "The bulletin you are trying to delete does not exist."
 msgstr ""
