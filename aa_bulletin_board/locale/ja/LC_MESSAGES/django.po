@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-05-05 12:54+0200\n"
+"POT-Creation-Date: 2026-06-02 09:27+0200\n"
 "PO-Revision-Date: 2026-01-28 15:53+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ja/>\n"
@@ -136,30 +136,30 @@ msgstr "このアプリをあなたの言語に翻訳するお手伝いをした
 msgid "Join our team of translators!"
 msgstr "翻訳者チームに参加しましょう！"
 
-#: aa_bulletin_board/views.py:90
+#: aa_bulletin_board/views.py:98
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "「{bulletin_title}」という掲示板が作成されました。"
 
-#: aa_bulletin_board/views.py:135
+#: aa_bulletin_board/views.py:149
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "お探しの掲示板は存在しません、またはアクセス権限がありません。"
 
-#: aa_bulletin_board/views.py:162
+#: aa_bulletin_board/views.py:180
 msgid "The bulletin you are trying to edit does not exist."
 msgstr ""
 
-#: aa_bulletin_board/views.py:190
+#: aa_bulletin_board/views.py:208
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr ""
 
-#: aa_bulletin_board/views.py:225
+#: aa_bulletin_board/views.py:245
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr ""
 
-#: aa_bulletin_board/views.py:234
+#: aa_bulletin_board/views.py:256
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "削除しようとしている掲示板は存在しません。"
 
