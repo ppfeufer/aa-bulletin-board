@@ -37,6 +37,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.6.0] - 2026-06-02
+
 ### Added
 
 - Some basic debug logging
@@ -44,6 +46,7 @@ Section Order:
 ### Changed
 
 - Providers are now modular
+- Translations updated
 
 ## [2.5.5] - 2026-05-05
 
@@ -1156,6 +1159,7 @@ python manage.py migrate
 [2.5.3]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.2...v2.5.3 "v2.5.3"
 [2.5.4]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.3...v2.5.4 "v2.5.4"
 [2.5.5]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.4...v2.5.5 "v2.5.5"
-[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.5...HEAD "In Development"
+[2.6.0]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.5...v2.6.0 "v2.6.0"
+[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.6.0...HEAD "In Development"
 [keep a changelog]: https://keepachangelog.com/en/1.0.0/ "Keep a Changelog"
 [semantic versioning]: https://semver.org/spec/v2.0.0.html "Semantic Versioning"
