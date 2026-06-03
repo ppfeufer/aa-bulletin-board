@@ -12,7 +12,7 @@
 [![Translation status](https://weblate.ppfeufer.de/widget/alliance-auth-apps/aa-bulletin-board/svg-badge.svg)](https://weblate.ppfeufer.de/engage/alliance-auth-apps/)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://github.com/ppfeufer/aa-bulletin-board/blob/master/CODE_OF_CONDUCT.md)
 [![Discord](https://img.shields.io/discord/399006117012832262?label=discord)](https://discord.gg/fjnHAmk)
-[![Alliance Auth Compatibility](https://img.shields.io/badge/Alliance_Auth-v4_%7C_v5-brightgreen)](https://gitlab.com/allianceauth/allianceauth)
+[![Alliance Auth Compatibility](https://img.shields.io/badge/Alliance_Auth-v5-brightgreen)](https://gitlab.com/allianceauth/allianceauth)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N8CL1BY)
 
@@ -57,13 +57,11 @@ these kinds of changes. For your own sanity, and mine :-)
 >
 > Please make sure you meet all preconditions before you proceed.
 
-- AA Bulletin Board is a plugin for Alliance Auth. If you don't have Alliance Auth
-  running already, please install it first before proceeding. (see the official
-  [AA installation guide](https://allianceauth.readthedocs.io/en/latest/installation/allianceauth.html)
-  or details)
-- Aa Bulletin Board needs a couple of changes made to your Webserver and Alliance
-  Auth configuration. So make sure you know how to do so. The steps needed will be
-  described in this document, but you need to understand what will be changed.
+> [!NOTE]
+>
+> Aa Bulletin Board needs a couple of changes made to your Webserver and Alliance
+> Auth configuration. So make sure you know how to do so. The steps needed will be
+> described in this document, but you need to understand what will be changed.
 
 ### Step 1: Install the Package<a name="step-1-install-the-package"></a>
 
