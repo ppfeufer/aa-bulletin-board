@@ -66,7 +66,7 @@ jobs:
           - '3.11'  # [EOL] End of Life: 31 Dec 2027
           - '3.12'  # [EOL] End of Life: 31 Dec 2028
           - '3.13'  # [EOL] End of Life: 31 Oct 2029
-#          - '3.14'  # [EOL] End of Life: 31 Oct 2030
+          - '3.14'  # [EOL] End of Life: 31 Oct 2030
         # MySQL versions to test against
         database:
           # https://endoflife.date/mysql
