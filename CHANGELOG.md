@@ -43,6 +43,16 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.0.1] - 2026-07-06
+
+### Added
+
+- Support for Python 3.14
+
+### Changed
+
+- Translations updated
+
 ## [3.0.0] - 2026-06-07
 
 > [!IMPORTANT]
@@ -1180,6 +1190,7 @@ python manage.py migrate
 [2.5.5]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.4...v2.5.5 "v2.5.5"
 [2.6.0]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.5.5...v2.6.0 "v2.6.0"
 [3.0.0]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.6.0...v3.0.0 "v3.0.0"
-[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.0.0...HEAD "In Development"
+[3.0.1]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.0.0...v3.0.1 "v3.0.1"
+[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.0.1...HEAD "In Development"
 [keep a changelog]: https://keepachangelog.com/en/1.0.0/ "Keep a Changelog"
 [semantic versioning]: https://semver.org/spec/v2.0.0.html "Semantic Versioning"
