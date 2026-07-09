@@ -2,8 +2,8 @@
 Test for aa_bulletin_board.forms
 """
 
-# Django
-from django.contrib.auth.models import Group
+# Alliance Auth
+from allianceauth.groupmanagement.models import Group
 
 # AA Bulletin Board
 from aa_bulletin_board.forms import (

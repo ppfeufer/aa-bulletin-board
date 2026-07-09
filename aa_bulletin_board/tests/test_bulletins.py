@@ -6,9 +6,12 @@ Test bulletins
 from faker import Faker
 
 # Django
-from django.contrib.auth.models import Group, User
 from django.contrib.messages import get_messages
 from django.urls import reverse
+
+# Alliance Auth
+from allianceauth.authentication.models import User
+from allianceauth.groupmanagement.models import Group
 
 # AA Bulletin Board
 from aa_bulletin_board.forms import BulletinForm
