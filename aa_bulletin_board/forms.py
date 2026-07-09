@@ -4,10 +4,12 @@ Forms definition
 
 # Django
 from django import forms
-from django.contrib.auth.models import Group
 from django.core.exceptions import ValidationError
 from django.forms import ModelForm
 from django.utils.translation import gettext_lazy as _
+
+# Alliance Auth
+from allianceauth.groupmanagement.models import Group
 
 # CKEditor
 from django_ckeditor_5.widgets import CKEditor5Widget

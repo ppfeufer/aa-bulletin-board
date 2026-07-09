@@ -9,10 +9,13 @@ from typing import ClassVar
 import unidecode
 
 # Django
-from django.contrib.auth.models import Group, User
 from django.db import models, transaction
 from django.utils.text import slugify
 from django.utils.translation import gettext as _
+
+# Alliance Auth
+from allianceauth.authentication.models import User
+from allianceauth.groupmanagement.models import Group
 
 # CKEditor
 from django_ckeditor_5.fields import CKEditor5Field

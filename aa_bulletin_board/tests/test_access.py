@@ -9,8 +9,10 @@ from http import HTTPStatus
 from faker import Faker
 
 # Django
-from django.contrib.auth.models import Group
 from django.urls import reverse
+
+# Alliance Auth
+from allianceauth.groupmanagement.models import Group
 
 # AA Bulletin Board
 from aa_bulletin_board.models import Bulletin

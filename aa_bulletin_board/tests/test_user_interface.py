@@ -7,8 +7,10 @@ from django_webtest import WebTest
 from faker import Faker
 
 # Django
-from django.contrib.auth.models import Group
 from django.urls import reverse
+
+# Alliance Auth
+from allianceauth.groupmanagement.models import Group
 
 # AA Bulletin Board
 from aa_bulletin_board.helper.string import string_cleanup
