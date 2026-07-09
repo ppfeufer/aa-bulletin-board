@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
-"POT-Creation-Date: 2026-07-06 17:57+0000\n"
+"Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
+"POT-Creation-Date: 2026-07-09 09:59+0200\n"
 "PO-Revision-Date: 2025-10-23 11:51+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/fr/>\n"
@@ -30,53 +30,53 @@ msgstr ""
 msgid "Bulletin Board"
 msgstr "Tableau d'affichage"
 
-#: aa_bulletin_board/forms.py:63
+#: aa_bulletin_board/forms.py:65
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr "Restreindre ce bulletin à certains groupes. Si aucune restriction de groupe n’est définie, toute personne ayant accès à ce module pourra lire ce bulletin."
 
-#: aa_bulletin_board/forms.py:112
+#: aa_bulletin_board/forms.py:114
 msgid "You have forgotten the content!"
 msgstr "Vous avez oublié le contenu !"
 
-#: aa_bulletin_board/models.py:72
+#: aa_bulletin_board/models.py:75
 msgid "Can access this app"
 msgstr "Peut accéder à cette application"
 
-#: aa_bulletin_board/models.py:73
+#: aa_bulletin_board/models.py:76
 msgid "Can manage (add/change/remove) bulletins"
 msgstr "Peut gérer (ajouter/modifier/supprimer) les bulletins"
 
-#: aa_bulletin_board/models.py:82
+#: aa_bulletin_board/models.py:85
 msgid "Title"
 msgstr "Titre"
 
-#: aa_bulletin_board/models.py:85
+#: aa_bulletin_board/models.py:88
 msgid "Content"
 msgstr "Contenu"
 
 #. Translators: This is the date and time the bulletin has been created
-#: aa_bulletin_board/models.py:91
+#: aa_bulletin_board/models.py:94
 msgid "Created"
 msgstr "Créé"
 
 #. Translators: This is the date and time the bulletin has been updated
-#: aa_bulletin_board/models.py:97
+#: aa_bulletin_board/models.py:100
 msgid "Updated"
 msgstr "Mis à jour"
 
-#: aa_bulletin_board/models.py:106
+#: aa_bulletin_board/models.py:109
 msgid "User"
 msgstr "Utilisateur"
 
-#: aa_bulletin_board/models.py:112
+#: aa_bulletin_board/models.py:115
 msgid "Group restrictions"
 msgstr "Restrictions de groupe"
 
-#: aa_bulletin_board/models.py:123
+#: aa_bulletin_board/models.py:126
 msgid "Bulletin"
 msgstr "Bulletin"
 
-#: aa_bulletin_board/models.py:124
+#: aa_bulletin_board/models.py:127
 msgid "Bulletins"
 msgstr "Bulletins"
 
