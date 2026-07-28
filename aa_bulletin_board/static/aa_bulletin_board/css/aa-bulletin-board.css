@@ -39,13 +39,13 @@
     }
 }
 
-@media all and (min-width: 768px) {
+@media all and (width >= 768px) {
     .aa-bulletin-board .cards-equal-height .card-bulletin-excerpt {
         width: calc(100% / 2);
     }
 }
 
-@media all and (min-width: 1200px) {
+@media all and (width >= 1200px) {
     .aa-bulletin-board .cards-equal-height .card-bulletin-excerpt {
         width: calc(100% / 3);
     }
