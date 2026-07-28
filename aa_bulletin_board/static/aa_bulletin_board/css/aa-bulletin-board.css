@@ -1,41 +1,50 @@
 @media all {
-    .aa-bulletin-board .card-bulletin-excerpt .card-body {
-        height: 200px;
-        mask-image: linear-gradient(rgb(0 0 0), transparent);
-        overflow: hidden;
-    }
+    .aa-bulletin-board {
+        .card-bulletin-excerpt {
+            .card-body {
+                height: 200px;
+                mask-image: linear-gradient(rgb(0 0 0), transparent);
+                overflow: hidden;
+            }
 
-    .aa-bulletin-board .card-bulletin-excerpt .card-footer-read-more-button {
-        padding: 0.625rem 1rem;
-    }
+            .card-footer-read-more-button {
+                padding: 0.625rem 1rem;
+            }
+        }
 
-    .aa-bulletin-board img {
-        height: auto !important; /* to override inline style added by CKEditor */
-        max-width: 100%;
+        img {
+            height: auto !important; /* to override inline style added by CKEditor */
+            max-width: 100%;
+        }
     }
 }
 
 /* SumoSelect
 ------------------------------------------------------------------------------------- */
 @media all {
-    .aa-bulletin-board .SumoSelect p {
-        border-radius: var(--bs-border-radius);
-        height: auto;
-    }
+    .aa-bulletin-board {
+        .SumoSelect {
+            color: rgb(54 54 54);
+            display: inherit;
 
-    .aa-bulletin-board .SumoSelect {
-        color: rgb(54 54 54);
-        display: inherit;
-    }
+            p {
+                border-radius: var(--bs-border-radius);
+                height: auto;
+            }
 
-    .aa-bulletin-board .SumoSelect > .CaptionCont > label > i {
-        background-image: none;
-    }
+            > .CaptionCont {
+                > label > i {
+                    background-image: none;
+                }
 
-    .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
-        background-color: transparent;
-        color: rgb(62 68 76);
-        opacity: 1;
+                > span.placeholder {
+                    background-color: transparent;
+                    color: rgb(62 68 76);
+                    opacity: 1;
+                }
+            }
+        }
+
     }
 }
 
@@ -54,42 +63,48 @@
 /* Fix for oEmbed videos
 ------------------------------------------------------------------------------------- */
 @media all {
-    .aa-bulletin-board figure.media .oembed-video {
-        height: auto;
-        max-width: 100%;
-        overflow: hidden;
-        padding-bottom: 56.25%;
-        position: relative;
-    }
+    .aa-bulletin-board {
+        figure.media {
+            .oembed-video {
+                height: auto;
+                max-width: 100%;
+                overflow: hidden;
+                padding-bottom: 56.25%;
+                position: relative;
 
-    .aa-bulletin-board figure.media .oembed-video > iframe {
-        height: 100%;
-        left: 0;
-        max-height: 100vh;
-        position: absolute;
-        top: 0;
-        width: 100%;
+                > iframe {
+                    height: 100%;
+                    left: 0;
+                    max-height: 100vh;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
 /* CKEditor 5 (WYSIWYG editor)
 ------------------------------------------------------------------------------------- */
 @media all {
-    .aa-bulletin-board .ck-content {
-        color: var(--bs-body-color);
-    }
+    .aa-bulletin-board {
+        .ck-content {
+            color: var(--bs-body-color);
+        }
 
-    .aa-bulletin-board .ck-rounded-corners {
-        --ck-border-radius: var(--bs-border-radius);
-    }
+        .ck-rounded-corners {
+            --ck-border-radius: var(--bs-border-radius);
+        }
 
-    .aa-bulletin-board .ck-editor__editable {
-        color: var(--ck-content-font-color);
-    }
+        .ck-editor__editable {
+            color: var(--ck-content-font-color);
+        }
 
-    .aa-bulletin-board .ck-word-count {
-        color: var(--bs-secondary-color) !important;
+        .ck-word-count {
+            color: var(--bs-secondary-color) !important;
 
-        --bs-text-opacity: 1;
+            --bs-text-opacity: 1;
+        }
     }
 }
