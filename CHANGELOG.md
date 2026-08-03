@@ -43,9 +43,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.1.1] - 2026-08-03
+
 ### Changed
 
-- CSS modernized
+- CSS modernized (If you have an older browser that can't handle the new CSS, update your browser…)
+- Translations updated
 
 ## [3.1.0] - 2026-07-09
 
@@ -1209,6 +1212,7 @@ python manage.py migrate
 [3.0.0]: https://github.com/ppfeufer/aa-bulletin-board/compare/v2.6.0...v3.0.0 "v3.0.0"
 [3.0.1]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.0.0...v3.0.1 "v3.0.1"
 [3.1.0]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.0.1...v3.1.0 "v3.1.0"
-[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.1.0...HEAD "In Development"
+[3.1.1]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.1.0...v3.1.1 "v3.1.1"
+[in development]: https://github.com/ppfeufer/aa-bulletin-board/compare/v3.1.1...HEAD "In Development"
 [keep a changelog]: https://keepachangelog.com/en/1.0.0/ "Keep a Changelog"
 [semantic versioning]: https://semver.org/spec/v2.0.0.html "Semantic Versioning"
