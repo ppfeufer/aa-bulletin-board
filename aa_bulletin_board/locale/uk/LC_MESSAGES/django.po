@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-07-09 09:59+0200\n"
+"POT-Creation-Date: 2026-08-03 20:15+0200\n"
 "PO-Revision-Date: 2026-06-28 21:24+0000\n"
 "Last-Translator: s0k0l -_- <salarysalo@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/uk/>\n"
@@ -165,7 +165,3 @@ msgstr "Бюлетень «{bulletin_title}» вилучено."
 #: aa_bulletin_board/views.py:256
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Бюлетень, яке ви намагаєтеся видалити, не існує."
-
-#, python-brace-format
-#~ msgid "Bulletin Board v{__version__}"
-#~ msgstr "Дошка оголошень v{__version__}"
