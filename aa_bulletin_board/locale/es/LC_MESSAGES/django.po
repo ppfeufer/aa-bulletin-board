@@ -4,12 +4,13 @@
 # Zigor Fernandez Moreno <sietehierros@gmail.com>, 2023, 2024.
 # Peter Pfeufer <info@ppfeufer.de>, 2023, 2024, 2025, 2026.
 # Geovanny David Morales De la cruz <moralesgeovanny1996@gmail.com>, 2023, 2024.
+# Dik <richardz117@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-07-09 09:59+0200\n"
-"PO-Revision-Date: 2026-06-26 17:57+0000\n"
+"POT-Creation-Date: 2026-08-03 20:15+0200\n"
+"PO-Revision-Date: 2026-08-03 18:30+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Spanish <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/es/>\n"
 "Language: es\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6.1\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -32,9 +33,8 @@ msgid "Restrict this bulletin to certain groups. If no group restrictions are in
 msgstr "Restringir este anuncio a ciertos grupos. Si no existen restricciones de grupo, todos los que tengan acceso a este módulo pueden leer este anuncio."
 
 #: aa_bulletin_board/forms.py:114
-#, fuzzy
 msgid "You have forgotten the content!"
-msgstr "Ha olvidado el contenido"
+msgstr "¡Has olvidado el contenido!"
 
 #: aa_bulletin_board/models.py:75
 msgid "Can access this app"
@@ -42,7 +42,7 @@ msgstr "Puede acceder esta aplicacion"
 
 #: aa_bulletin_board/models.py:76
 msgid "Can manage (add/change/remove) bulletins"
-msgstr ""
+msgstr "Puede administrar (añadir/modificar/eliminar) boletines"
 
 #: aa_bulletin_board/models.py:85
 msgid "Title"
@@ -96,8 +96,8 @@ msgstr "Borrar"
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:17
 msgid "This bulletin is restricted to the following group:"
 msgid_plural "This bulletin is restricted to the following groups:"
-msgstr[0] "Este anuncio está restringido a los siguiente grupo:"
-msgstr[1] "Este anuncio está restringido a los siguientes grupos:"
+msgstr[0] "Este anuncio está restringido para el siguiente grupo:"
+msgstr[1] "Este anuncio está restringido para los siguientes grupos:"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:33
 msgid "Read more"
@@ -105,7 +105,7 @@ msgstr "Leer más"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/dashboard.html:47
 msgid "No bulletins found."
-msgstr ""
+msgstr "No se encontraron boletines."
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
 msgid "Edit bulletin"
@@ -162,7 +162,3 @@ msgstr "Se ha eliminado el Anuncio «{bulletin_title}»."
 #: aa_bulletin_board/views.py:256
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "El anuncio que intenta eliminar no existe."
-
-#, python-brace-format
-#~ msgid "Bulletin Board v{__version__}"
-#~ msgstr "Tablón de Anuncios v{__version__}"

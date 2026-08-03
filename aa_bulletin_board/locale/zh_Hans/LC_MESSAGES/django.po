@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-07-09 09:59+0200\n"
+"POT-Creation-Date: 2026-08-03 20:15+0200\n"
 "PO-Revision-Date: 2025-10-23 11:52+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Chinese (Simplified Han script) <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/zh_Hans/>\n"
@@ -162,7 +162,3 @@ msgstr "公告“{bulletin_title}”已删除。"
 #: aa_bulletin_board/views.py:256
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "您要删除的公告不存在。"
-
-#, python-brace-format
-#~ msgid "Bulletin Board v{__version__}"
-#~ msgstr "公告栏v{__version__}"

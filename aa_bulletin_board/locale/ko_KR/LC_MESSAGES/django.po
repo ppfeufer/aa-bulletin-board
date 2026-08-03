@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-07-09 09:59+0200\n"
+"POT-Creation-Date: 2026-08-03 20:15+0200\n"
 "PO-Revision-Date: 2026-06-26 17:57+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ko/>\n"
@@ -176,7 +176,3 @@ msgstr "불레틴 “{bulletin_title}” 삭제됨."
 #: aa_bulletin_board/views.py:256
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "삭제하려는 불레틴이 없습니다."
-
-#, python-brace-format
-#~ msgid "Bulletin Board v{__version__}"
-#~ msgstr "불레틴 보드 v{__version__}"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-07-09 09:59+0200\n"
-"PO-Revision-Date: 2026-04-18 04:23+0000\n"
+"POT-Creation-Date: 2026-08-03 20:15+0200\n"
+"PO-Revision-Date: 2026-08-03 18:30+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Dutch <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/nl/>\n"
 "Language: nl_NL\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.2\n"
+"X-Generator: Weblate 2026.7.1\n"
 
 #: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -35,15 +35,15 @@ msgstr ""
 
 #: aa_bulletin_board/models.py:75
 msgid "Can access this app"
-msgstr ""
+msgstr "Heeft toegang tot applicatie"
 
 #: aa_bulletin_board/models.py:76
 msgid "Can manage (add/change/remove) bulletins"
-msgstr ""
+msgstr "Kan bulletins (toevoegen/aanpassen/verwijderen) beheren"
 
 #: aa_bulletin_board/models.py:85
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: aa_bulletin_board/models.py:88
 msgid "Content"
