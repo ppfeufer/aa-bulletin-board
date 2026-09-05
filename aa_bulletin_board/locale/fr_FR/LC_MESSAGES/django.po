@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # erka Ekanon <M6musicT@hotmail.fr>, 2024.
-# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025.
+# Peter Pfeufer <info@ppfeufer.de>, 2024, 2025, 2026.
 # Hexo <ghostcig@free.fr>, 2024.
 # Houbi_Houba <paul.lacape@live.fr>, 2024.
 # balbozorre <loic.petiot2002@gmail.com>, 2024, 2025.
@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
 "POT-Creation-Date: 2026-08-03 20:15+0200\n"
-"PO-Revision-Date: 2026-07-20 10:25+0000\n"
-"Last-Translator: Hugo REGIBO <hugo@hugoregibo.be>\n"
+"PO-Revision-Date: 2026-08-07 19:44+0000\n"
+"Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: French <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
@@ -121,7 +121,7 @@ msgstr "Créer un nouveau bulletin"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Update bulletin"
-msgstr ""
+msgstr "Bulletin de mise à jour"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
 msgid "Create bulletin"
