@@ -21,6 +21,18 @@
         </div>
 
         <div class="aa-bulletin-board-body">
+            {% translate "Your browser does not support the video element." as l10nVideoElementNotSupported %}
+
+            <script>
+                const aaBulletinBoardJsSettingsDefaults = {
+                    l10n: {
+                        video: {
+                            elementNotSupported: "{{ l10nVideoElementNotSupported|escapejs }}"
+                        }
+                    }
+                };
+            </script>
+
             {% block aabulletinboard_body %}{% endblock %}
         </div>
 

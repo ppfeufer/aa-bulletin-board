@@ -66,19 +66,17 @@
     .aa-bulletin-board {
         figure.media {
             .oembed-video {
-                height: auto;
-                max-width: 100%;
-                overflow: hidden;
-                padding-bottom: 56.25%;
-                position: relative;
+                &.youtube-video {
+                    aspect-ratio: 16 / 9;
+                }
 
-                > iframe {
+                > iframe.youtube-video {
                     height: 100%;
-                    left: 0;
-                    max-height: 100vh;
-                    position: absolute;
-                    top: 0;
                     width: 100%;
+                }
+
+                > video {
+                    max-height: 625px;
                 }
             }
         }
