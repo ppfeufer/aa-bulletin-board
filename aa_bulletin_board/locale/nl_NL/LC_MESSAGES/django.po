@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-08-03 20:15+0200\n"
+"POT-Creation-Date: 2026-09-07 20:41+0200\n"
 "PO-Revision-Date: 2026-08-18 23:44+0000\n"
 "Last-Translator: Ron Koster <r.koster23@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/nl/>\n"
@@ -75,6 +75,10 @@ msgstr "Bulletin"
 #: aa_bulletin_board/models.py:127
 msgid "Bulletins"
 msgstr "Bulletins"
+
+#: aa_bulletin_board/templates/aa_bulletin_board/base.html:24
+msgid "Your browser does not support the video element."
+msgstr ""
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
