@@ -8,9 +8,9 @@
 # s0k0l -_- <salarysalo@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-09-07 20:41+0200\n"
+"Project-Id-Version: AA Bulletin Board\n"
+"Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
+"POT-Creation-Date: 2026-09-08 15:33+0200\n"
 "PO-Revision-Date: 2026-06-28 21:24+0000\n"
 "Last-Translator: s0k0l -_- <salarysalo@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/uk/>\n"

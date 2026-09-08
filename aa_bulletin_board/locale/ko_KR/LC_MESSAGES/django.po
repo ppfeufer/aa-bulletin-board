@@ -8,9 +8,9 @@
 # SiO4 <hohoit0078@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/ppfeufer/aa-bulletin-board/issues\n"
-"POT-Creation-Date: 2026-09-07 20:41+0200\n"
+"Project-Id-Version: AA Bulletin Board\n"
+"Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
+"POT-Creation-Date: 2026-09-08 15:33+0200\n"
 "PO-Revision-Date: 2026-06-26 17:57+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ko/>\n"
