@@ -16,6 +16,11 @@ __pycache__
 /coverage.xml
 alliance_auth.sqlite3
 
+/*.min.css
+/*.min.css.map
+/*.min.js
+/*.min.js.map
+
 /aa_bulletin_board/locale/en/
 .esi-compatibility-date
 .make/myauth-path

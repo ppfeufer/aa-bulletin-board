@@ -13,7 +13,6 @@ $(document).ready(() => {
         );
     }
 
-
     /**
      * Get the MIME type for a given video file extension
      *
@@ -89,7 +88,7 @@ $(document).ready(() => {
         const allowedVideoFormats = ['mp4'];
 
         // Helper: build a regex-friendly alternation from allowed formats
-        const allowedFormatsPattern = allowedVideoFormats.map(f => f.replace(/[^a-z0-9]/gi, '')).join('|');
+        const allowedFormatsPattern = allowedVideoFormats.map((f) => f.replace(/[^a-z0-9]/gi, '')).join('|');
 
         // Replace explicit links (<a href="...mp4">) with <video>, but only when
         // the link is the only content on its line/parent (no other text or elements).
