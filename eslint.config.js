@@ -38,6 +38,8 @@ export default defineConfig([
             '@stylistic/indent': ['error', 4, {
                 SwitchCase: 1
             }],
+            // https://eslint.style/rules/indent-binary-ops
+            '@stylistic/indent-binary-ops': ['error', 4],
             // https://eslint.style/rules/object-curly-spacing
             '@stylistic/object-curly-spacing': ['error', 'never'],
             // https://eslint.style/rules/quotes
