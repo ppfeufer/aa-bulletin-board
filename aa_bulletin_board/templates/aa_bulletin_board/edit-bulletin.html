@@ -1,8 +1,6 @@
 {% extends "aa_bulletin_board/base.html" %}
 
-{% load django_bootstrap5 %}
-{% load i18n %}
-{% load static %}
+{% load django_bootstrap5 i18n static %}
 
 {% block page_title %}
     {% translate "Bulletin Board" as app_name %}
@@ -16,7 +14,7 @@
     {% endif %}
 
     » {{ app_name }}
-{% endblock %}
+{% endblock page_title %}
 
 {% block aabulletinboard_header %}
     {% if bulletin %}
@@ -25,7 +23,7 @@
         {% translate "Create new bulletin" as header_text %}
         {% include "framework/header/page-header.html" with title=header_text %}
     {% endif %}
-{% endblock %}
+{% endblock aabulletinboard_header %}
 
 {% block aabulletinboard_body %}
     <div class="card">
@@ -51,7 +49,7 @@
             </form>
         </div>
     </div>
-{% endblock %}
+{% endblock aabulletinboard_body %}
 
 {% block extra_javascript %}
     {% include "aa_bulletin_board/bundles/sumoselect-js.html" %}
@@ -64,10 +62,10 @@
             {okCancelInMulti: true, selectAll: true}
         );
     </script>
-{% endblock %}
+{% endblock extra_javascript %}
 
 {% block extra_css %}
     {% include "aa_bulletin_board/bundles/ckeditor5-css.html" %}
     {% include "aa_bulletin_board/bundles/sumoselect-css.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
-{% endblock %}
+{% endblock extra_css %}

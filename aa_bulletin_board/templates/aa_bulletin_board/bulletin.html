@@ -6,7 +6,7 @@
 
 {% block aabulletinboard_header %}
     {% include "framework/header/page-header.html" with title=bulletin.title %}
-{% endblock %}
+{% endblock aabulletinboard_header %}
 
 {% block aabulletinboard_body %}
     {% if bulletin %}
@@ -29,13 +29,13 @@
             </div>
         </div>
     {% endif %}
-{% endblock %}
+{% endblock aabulletinboard_body %}
 
 {% block extra_css %}
     {% include "aa_bulletin_board/bundles/ckeditor5-css.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
-{% endblock %}
+{% endblock extra_css %}
 
 {% block extra_javascript %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-oembed-js.html" %}
-{% endblock %}
+{% endblock extra_javascript %}
