@@ -47,14 +47,14 @@
             {% translate "No bulletins found." %}
         </div>
     {% endif %}
-{% endblock %}
+{% endblock aabulletinboard_body %}
 
 {% block extra_javascript %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-oembed-js.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-equal-height-js.html" %}
-{% endblock %}
+{% endblock extra_javascript %}
 
 {% block extra_css %}
     {% include "aa_bulletin_board/bundles/ckeditor5-css.html" %}
     {% include "aa_bulletin_board/bundles/aa-bulletin-board-css.html" %}
-{% endblock %}
+{% endblock extra_css %}
