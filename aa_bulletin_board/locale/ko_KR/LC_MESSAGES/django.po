@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Bulletin Board\n"
 "Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
-"POT-Creation-Date: 2026-10-06 09:15+0200\n"
+"POT-Creation-Date: 2026-10-09 11:54+0200\n"
 "PO-Revision-Date: 2026-06-26 17:57+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Korean <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ko/>\n"
@@ -25,15 +25,15 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:6
 msgid "Bulletin Board"
 msgstr "불레틴 보드"
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:81
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr "불레틴 보드의 항목을 그룹별로 열람을 제한할 수 있습니다. 그룹 제한이 없다면, 모듈의 접근 권한이 있는 모든 사용자가 이 항목을 열람할 수 있습니다."
 
-#: aa_bulletin_board/forms.py:114
+#: aa_bulletin_board/forms.py:130
 msgid "You have forgotten the content!"
 msgstr "내용을 잊어버리셨군요!"
 
@@ -84,7 +84,7 @@ msgid "Your browser does not support the video element."
 msgstr ""
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:32
 msgid "Back"
 msgstr "뒤로"
 
@@ -113,26 +113,26 @@ msgstr "더보기"
 msgid "No bulletins found."
 msgstr ""
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:9
 #, fuzzy
 #| msgid "Edit Bulletin"
 msgid "Edit bulletin"
 msgstr "불레틴 수정"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:12
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:23
 #, fuzzy
 #| msgid "Create New Bulletin"
 msgid "Create new bulletin"
 msgstr "새 불레틴 생성"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:43
 #, fuzzy
 #| msgid "Update Bulletin"
 msgid "Update bulletin"
 msgstr "불레틴 업데이트"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 #, fuzzy
 #| msgid "Create Bulletin"
 msgid "Create bulletin"
@@ -152,31 +152,31 @@ msgstr "이 앱을 번역하거나 기존 번역을 개선하고 싶으신가요
 msgid "Join our team of translators!"
 msgstr "번역가 팀에 참여하세요!"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:107
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "불레틴 “{bulletin_title}” 생성됨."
 
-#: aa_bulletin_board/views.py:149
+#: aa_bulletin_board/views.py:158
 #, fuzzy
 #| msgid "The bulletin you are looking for does not exist, or you don't have access to it."
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "찾는 불레틴이 없거나, 열람 권한이 없습니다."
 
-#: aa_bulletin_board/views.py:180
+#: aa_bulletin_board/views.py:189
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "수정하려는 불레틴이 없습니다."
 
-#: aa_bulletin_board/views.py:208
+#: aa_bulletin_board/views.py:217
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr "불레틴 “{bulletin_title}” 업데이트됨."
 
-#: aa_bulletin_board/views.py:245
+#: aa_bulletin_board/views.py:254
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr "불레틴 “{bulletin_title}” 삭제됨."
 
-#: aa_bulletin_board/views.py:256
+#: aa_bulletin_board/views.py:265
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "삭제하려는 불레틴이 없습니다."
