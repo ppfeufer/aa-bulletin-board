@@ -2,13 +2,19 @@
 AppLogger provider
 """
 
+__lazy_modules__ = ["collections.abc", "typing"]
+
 # Standard Library
 import logging
-from collections.abc import MutableMapping
-from typing import Any
+from typing import TYPE_CHECKING
 
 # AA Bulletin Board
 from aa_bulletin_board import __title__
+
+if TYPE_CHECKING:
+    # Standard Library
+    from collections.abc import MutableMapping
+    from typing import Any
 
 
 class AppLogger(logging.LoggerAdapter):
@@ -31,7 +37,9 @@ class AppLogger(logging.LoggerAdapter):
 
         self.prefix = __title__
 
-    def process(self, msg: str, kwargs: MutableMapping[str, Any]):
+    def process(
+        self, msg: str, kwargs: "MutableMapping[str, Any]"
+    ) -> "tuple[str, MutableMapping[str, Any]]":
         """
         Prepares the log message by adding the prefix.
 

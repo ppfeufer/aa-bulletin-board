@@ -2,6 +2,12 @@
 Test bulletins
 """
 
+# Standard Library
+import importlib
+import sys
+import types
+import typing as real_typing
+
 # Third Party
 from faker import Faker
 
@@ -304,3 +310,92 @@ class TestBulletins(BaseTestCase):
 
         self.assertTrue(expr=form.is_valid())
         self.assertEqual(first=form.cleaned_data["content"], second=cleaned_message)
+
+    def test_type_checking_block_imports_wsgi_and_http_types_when_enabled(self) -> None:
+        """
+        Ensure that when typing.TYPE_CHECKING is True at import time the
+        module-level names `WSGIRequest`, `HttpResponse` and
+        `HttpResponseRedirect` are present on the `aa_bulletin_board.views` module
+
+        :return:
+        """
+
+        # Verify Django types are available in this environment, otherwise skip
+        try:
+            # Django
+            from django.core.handlers.wsgi import WSGIRequest  # noqa: F401
+            from django.http import HttpResponse  # noqa: F401
+            from django.http import HttpResponseRedirect  # noqa: F401
+        except Exception:
+            self.skipTest(
+                "Django request/response types unavailable in this environment"
+            )
+
+        module_name = "aa_bulletin_board.views"
+        orig_module = sys.modules.get(module_name)
+        orig_typing = sys.modules.get("typing")
+
+        try:
+            if module_name in sys.modules:
+                del sys.modules[module_name]
+
+            # Create a proxy typing module with TYPE_CHECKING True for import-time
+            proxy = types.ModuleType("typing")
+            proxy.__dict__.update(real_typing.__dict__)
+            proxy.TYPE_CHECKING = True
+            sys.modules["typing"] = proxy
+
+            mod = importlib.import_module(module_name)
+
+            self.assertTrue(hasattr(mod, "WSGIRequest"))
+            self.assertTrue(hasattr(mod, "HttpResponse"))
+            self.assertTrue(hasattr(mod, "HttpResponseRedirect"))
+        finally:
+            if orig_typing is not None:
+                sys.modules["typing"] = orig_typing
+            else:
+                sys.modules.pop("typing", None)
+            if orig_module is not None:
+                sys.modules[module_name] = orig_module
+            else:
+                sys.modules.pop(module_name, None)
+
+    def test_type_checking_block_does_not_import_wsgi_and_http_types_when_disabled(
+        self,
+    ) -> None:
+        """
+        Ensure that when typing.TYPE_CHECKING is False at import time the
+        module-level names `WSGIRequest`, `HttpResponse` and
+        `HttpResponseRedirect` are not present on the `aa_bulletin_board.views` module.
+
+        :return:
+        """
+
+        module_name = "aa_bulletin_board.views"
+        orig_module = sys.modules.get(module_name)
+        orig_typing = sys.modules.get("typing")
+
+        try:
+            if module_name in sys.modules:
+                del sys.modules[module_name]
+
+            # Create a proxy typing module with TYPE_CHECKING False for import-time
+            proxy = types.ModuleType("typing")
+            proxy.__dict__.update(real_typing.__dict__)
+            proxy.TYPE_CHECKING = False
+            sys.modules["typing"] = proxy
+
+            mod = importlib.import_module(module_name)
+
+            self.assertFalse(hasattr(mod, "WSGIRequest"))
+            self.assertFalse(hasattr(mod, "HttpResponse"))
+            self.assertFalse(hasattr(mod, "HttpResponseRedirect"))
+        finally:
+            if orig_typing is not None:
+                sys.modules["typing"] = orig_typing
+            else:
+                sys.modules.pop("typing", None)
+            if orig_module is not None:
+                sys.modules[module_name] = orig_module
+            else:
+                sys.modules.pop(module_name, None)

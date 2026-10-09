@@ -2,6 +2,11 @@
 Forms definition
 """
 
+__lazy_modules__ = ["collections.abc", "django.forms.models"]
+
+# Standard Library
+from typing import TYPE_CHECKING, Any
+
 # Django
 from django import forms
 from django.core.exceptions import ValidationError
@@ -18,6 +23,13 @@ from django_ckeditor_5.widgets import CKEditor5Widget
 from aa_bulletin_board.helper.string import string_cleanup
 from aa_bulletin_board.models import Bulletin
 
+if TYPE_CHECKING:
+    # Standard Library
+    from collections.abc import Iterator
+
+    # Django
+    from django.forms.models import ModelChoiceIteratorValue
+
 
 class SpecialModelChoiceIterator(forms.models.ModelChoiceIterator):
     """
@@ -25,7 +37,9 @@ class SpecialModelChoiceIterator(forms.models.ModelChoiceIterator):
     given queryset from the database.
     """
 
-    def __iter__(self):
+    def __iter__(
+        self: "SpecialModelChoiceIterator",
+    ) -> "Iterator[tuple[ModelChoiceIteratorValue | str, str]]":
         if self.field.empty_label is not None:
             yield "", self.field.empty_label
 
@@ -43,10 +57,12 @@ class SpecialModelMultipleChoiceField(forms.ModelMultipleChoiceField):
 
     iterator = SpecialModelChoiceIterator
 
-    def _get_queryset(self):
+    def _get_queryset(
+        self: "SpecialModelMultipleChoiceField",
+    ) -> "forms.models.QuerySet":
         return self._queryset
 
-    def _set_queryset(self, queryset):
+    def _set_queryset(self: "SpecialModelMultipleChoiceField", queryset) -> None:
         self._queryset = queryset
         self.widget.choices = self.choices
 
@@ -68,7 +84,7 @@ class BulletinForm(ModelForm):
         ),
     )
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self: "BulletinForm", *args, **kwargs):
         groups_queryset = kwargs.pop("groups_queryset", None)
 
         super().__init__(*args, **kwargs)
@@ -98,7 +114,7 @@ class BulletinForm(ModelForm):
             )
         }
 
-    def clean(self):
+    def clean(self: "BulletinForm") -> dict[str, Any] | None:
         """
         Clean the form
 
@@ -118,7 +134,7 @@ class BulletinForm(ModelForm):
 
         return cleaned_data
 
-    def clean_content(self) -> str:
+    def clean_content(self: "BulletinForm") -> str:
         """
         Cleanup the content
 

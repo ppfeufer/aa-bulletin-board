@@ -23,7 +23,7 @@ from django_ckeditor_5.fields import CKEditor5Field
 # AA Bulletin Board
 from aa_bulletin_board import __title_translated__
 from aa_bulletin_board.helper.string import string_cleanup
-from aa_bulletin_board.managers import BulletinManager
+from aa_bulletin_board.managers import BulletinManager, BulletinManagerBase
 
 
 def get_sentinel_user() -> User:
@@ -115,7 +115,7 @@ class Bulletin(models.Model):
         verbose_name=_("Group restrictions"),
     )
 
-    objects: ClassVar[BulletinManager] = BulletinManager()
+    objects: ClassVar[BulletinManagerBase] = BulletinManager()
 
     class Meta:  # pylint: disable=too-few-public-methods
         """
