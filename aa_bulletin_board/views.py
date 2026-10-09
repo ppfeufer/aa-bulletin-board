@@ -2,12 +2,16 @@
 The views
 """
 
+__lazy_modules__ = ["django.core.handlers.wsgi", "django.http"]
+
+
+# Standard Library
+from typing import TYPE_CHECKING
+
 # Django
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required, permission_required
-from django.core.handlers.wsgi import WSGIRequest
 from django.db.models import Prefetch
-from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -22,10 +26,15 @@ from aa_bulletin_board.providers.applogger import AppLogger
 
 logger = AppLogger(get_extension_logger(name=__name__))
 
+if TYPE_CHECKING:
+    # Django
+    from django.core.handlers.wsgi import WSGIRequest
+    from django.http import HttpResponse, HttpResponseRedirect
+
 
 @login_required
 @permission_required(perm="aa_bulletin_board.basic_access")
-def dashboard(request: WSGIRequest) -> HttpResponse:
+def dashboard(request: "WSGIRequest") -> "HttpResponse":
     """
     Index view
 
@@ -56,7 +65,7 @@ def dashboard(request: WSGIRequest) -> HttpResponse:
 
 @login_required
 @permission_required(perm="aa_bulletin_board.manage_bulletins")
-def create_bulletin(request: WSGIRequest) -> HttpResponse:
+def create_bulletin(request: "WSGIRequest") -> "HttpResponse":
     """
     Edit an existing bulletin
 
@@ -117,7 +126,7 @@ def create_bulletin(request: WSGIRequest) -> HttpResponse:
 
 @login_required
 @permission_required(perm="aa_bulletin_board.basic_access")
-def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
+def view_bulletin(request: "WSGIRequest", slug: str) -> "HttpResponse":
     """
     View a bulletin
 
@@ -156,7 +165,7 @@ def view_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
 
 @login_required
 @permission_required(perm="aa_bulletin_board.manage_bulletins")
-def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
+def edit_bulletin(request: "WSGIRequest", slug: str) -> "HttpResponse":
     """
     Edit an existing bulletin
 
@@ -225,7 +234,7 @@ def edit_bulletin(request: WSGIRequest, slug: str) -> HttpResponse:
 
 @login_required
 @permission_required("aa_bulletin_board.manage_bulletins")
-def remove_bulletin(request: WSGIRequest, slug: str) -> HttpResponseRedirect:
+def remove_bulletin(request: "WSGIRequest", slug: str) -> "HttpResponseRedirect":
     """
     Remove bulletin
 

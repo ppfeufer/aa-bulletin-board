@@ -2,12 +2,21 @@
 Hook into AA
 """
 
+__lazy_modules__ = ["django.core.handlers.wsgi"]
+
+# Standard Library
+from typing import TYPE_CHECKING
+
 # Alliance Auth
 from allianceauth import hooks
 from allianceauth.services.hooks import MenuItemHook, UrlHook
 
 # AA Bulletin Board
 from aa_bulletin_board import __title_translated__, urls
+
+if TYPE_CHECKING:
+    # Django
+    from django.core.handlers.wsgi import WSGIRequest
 
 
 class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-methods
@@ -28,14 +37,14 @@ class AaBulletinBoardMenuItem(MenuItemHook):  # pylint: disable=too-few-public-m
             navactive=["aa_bulletin_board:"],
         )
 
-    def render(self, request):
+    def render(self, request: "WSGIRequest") -> str:
         """
         Check if the user has the permission to view this app
 
-        :param request:
-        :type request:
-        :return:
-        :rtype:
+        :param request: WSGI request
+        :type request: WSGIRequest
+        :return: Rendered menu item or empty string
+        :rtype: str
         """
 
         return (
@@ -50,20 +59,20 @@ def register_menu():
     """
     Register our menu item
 
-    :return:
-    :rtype:
+    :return: Menu item hook
+    :rtype: AaBulletinBoardMenuItem
     """
 
     return AaBulletinBoardMenuItem()
 
 
 @hooks.register("url_hook")
-def register_urls():
+def register_urls() -> UrlHook:
     """
     Register our base url
 
-    :return:
-    :rtype:
+    :return: URL hook
+    :rtype: UrlHook
     """
 
     return UrlHook(

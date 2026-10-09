@@ -54,6 +54,98 @@ class TestSpecialModelChoiceIterator(BaseTestCase):
 
         self.assertIn(("", "Select a group"), choices)
 
+    def test_type_checking_block_imports_names_when_enabled(self):
+        """
+        Ensure that when typing.TYPE_CHECKING is True at import time the
+        module-level names `Iterator` and `ModelChoiceIteratorValue` are
+        available on the `aa_bulletin_board.forms` module.
+        """
+
+        # Standard Library
+        import importlib
+        import sys
+        import types
+        import typing as real_typing
+
+        # Verify Django type is available in this environment, otherwise skip
+        try:
+            # Django
+            from django.forms.models import ModelChoiceIteratorValue  # noqa: F401
+        except Exception:
+            self.skipTest(
+                "Django ModelChoiceIteratorValue unavailable in this environment"
+            )
+
+        module_name = "aa_bulletin_board.forms"
+        orig_module = sys.modules.get(module_name)
+        orig_typing = sys.modules.get("typing")
+
+        try:
+            if module_name in sys.modules:
+                del sys.modules[module_name]
+
+            # Create a proxy typing module with TYPE_CHECKING True for import-time
+            proxy = types.ModuleType("typing")
+            proxy.__dict__.update(real_typing.__dict__)
+            proxy.TYPE_CHECKING = True
+            sys.modules["typing"] = proxy
+
+            mod = importlib.import_module(module_name)
+
+            self.assertTrue(hasattr(mod, "Iterator"))
+            self.assertTrue(hasattr(mod, "ModelChoiceIteratorValue"))
+        finally:
+            if orig_typing is not None:
+                sys.modules["typing"] = orig_typing
+            else:
+                sys.modules.pop("typing", None)
+            if orig_module is not None:
+                sys.modules[module_name] = orig_module
+            else:
+                sys.modules.pop(module_name, None)
+                sys.modules.pop(module_name, None)
+
+    def test_type_checking_block_does_not_import_names_when_disabled(self):
+        """
+        Ensure that when typing.TYPE_CHECKING is False at import time the
+        module-level names `Iterator` and `ModelChoiceIteratorValue` are
+        not present on the `aa_bulletin_board.forms` module.
+        """
+
+        # Standard Library
+        import importlib
+        import sys
+        import types
+        import typing as real_typing
+
+        module_name = "aa_bulletin_board.forms"
+        orig_module = sys.modules.get(module_name)
+        orig_typing = sys.modules.get("typing")
+
+        try:
+            if module_name in sys.modules:
+                del sys.modules[module_name]
+
+            # Create a proxy typing module with TYPE_CHECKING False for import-time
+            proxy = types.ModuleType("typing")
+            proxy.__dict__.update(real_typing.__dict__)
+            proxy.TYPE_CHECKING = False
+            sys.modules["typing"] = proxy
+
+            mod = importlib.import_module(module_name)
+
+            self.assertFalse(hasattr(mod, "Iterator"))
+            self.assertFalse(hasattr(mod, "ModelChoiceIteratorValue"))
+        finally:
+            if orig_typing is not None:
+                sys.modules["typing"] = orig_typing
+            else:
+                sys.modules.pop("typing", None)
+            if orig_module is not None:
+                sys.modules[module_name] = orig_module
+            else:
+                sys.modules.pop(module_name, None)
+
 
 class TestSpecialModelMultipleChoiceField(BaseTestCase):
     """
