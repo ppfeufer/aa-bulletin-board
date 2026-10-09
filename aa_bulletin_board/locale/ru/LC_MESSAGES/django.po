@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Bulletin Board\n"
 "Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
-"POT-Creation-Date: 2026-10-06 09:15+0200\n"
+"POT-Creation-Date: 2026-10-09 11:54+0200\n"
 "PO-Revision-Date: 2025-10-23 11:51+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Russian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ru/>\n"
@@ -24,15 +24,15 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:6
 msgid "Bulletin Board"
 msgstr "Доска бюллетеней"
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:81
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr "Ограничить доступ к бюллетеню для конкретных групп. Если ограничение не задано, у всех пользователей модуля есть доступ к бюллетеню."
 
-#: aa_bulletin_board/forms.py:114
+#: aa_bulletin_board/forms.py:130
 msgid "You have forgotten the content!"
 msgstr "Вы забыли содержание!"
 
@@ -83,7 +83,7 @@ msgid "Your browser does not support the video element."
 msgstr ""
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:32
 msgid "Back"
 msgstr "Назад"
 
@@ -113,20 +113,20 @@ msgstr "Читать"
 msgid "No bulletins found."
 msgstr "Бюллетеней не найдено."
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:9
 msgid "Edit bulletin"
 msgstr "Редактировать бюллетень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:12
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:23
 msgid "Create new bulletin"
 msgstr "Создание нового бюллетеня"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:43
 msgid "Update bulletin"
 msgstr "Обновить бюллетень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Create bulletin"
 msgstr "Создать бюллетень"
 
@@ -142,29 +142,29 @@ msgstr "Вы хотите помочь перевести это приложе�
 msgid "Join our team of translators!"
 msgstr "Присоединяйтесь к нашей команде переводчиков!"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:107
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "Бюллетень «{bulletin_title}» создан."
 
-#: aa_bulletin_board/views.py:149
+#: aa_bulletin_board/views.py:158
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "Запрошенный бюллетень не существует или у Вас нет доступа."
 
-#: aa_bulletin_board/views.py:180
+#: aa_bulletin_board/views.py:189
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Бюллетень, который вы пытаетесь отредактировать, не существует."
 
-#: aa_bulletin_board/views.py:208
+#: aa_bulletin_board/views.py:217
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr "Бюллетень «{bulletin_title}» обновлен."
 
-#: aa_bulletin_board/views.py:245
+#: aa_bulletin_board/views.py:254
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr "Бюллетень «{bulletin_title}» удален."
 
-#: aa_bulletin_board/views.py:256
+#: aa_bulletin_board/views.py:265
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Бюллетень, который вы пытаетесь удалить, не существует."
