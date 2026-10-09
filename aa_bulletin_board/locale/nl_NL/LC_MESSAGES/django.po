@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Bulletin Board\n"
 "Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
-"POT-Creation-Date: 2026-10-06 09:15+0200\n"
+"POT-Creation-Date: 2026-10-09 11:54+0200\n"
 "PO-Revision-Date: 2026-08-18 23:44+0000\n"
 "Last-Translator: Ron Koster <r.koster23@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/nl/>\n"
@@ -22,15 +22,15 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:6
 msgid "Bulletin Board"
 msgstr "Bulletin Board"
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:81
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr "Beperk dit bericht tot bepaalde groepen. Als er geen groepsbeperkingen zijn, kan iedereen met toegang tot deze module het bericht lezen."
 
-#: aa_bulletin_board/forms.py:114
+#: aa_bulletin_board/forms.py:130
 msgid "You have forgotten the content!"
 msgstr "Je bent de inhoud vergeten!"
 
@@ -81,7 +81,7 @@ msgid "Your browser does not support the video element."
 msgstr ""
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:32
 msgid "Back"
 msgstr "Terug"
 
@@ -109,20 +109,20 @@ msgstr "Lees meer"
 msgid "No bulletins found."
 msgstr "Geen berichten gevonden."
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:9
 msgid "Edit bulletin"
 msgstr "Bericht aanpassen"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:12
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:23
 msgid "Create new bulletin"
 msgstr "Maak nieuw bericht"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:43
 msgid "Update bulletin"
 msgstr "Werk bericht bij"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Create bulletin"
 msgstr "Maak bericht"
 
@@ -138,29 +138,29 @@ msgstr "Wil jij helpen deze app in jou taal te vertalen of de bestaande vertalin
 msgid "Join our team of translators!"
 msgstr "Kom ons team van vertalers versterken!"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:107
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "Bericht \"{bericht_titel}\" gecreëerd"
 
-#: aa_bulletin_board/views.py:149
+#: aa_bulletin_board/views.py:158
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "Het bericht dat je zoekt bestaat niet, of je hebt geen toegang tot het bericht."
 
-#: aa_bulletin_board/views.py:180
+#: aa_bulletin_board/views.py:189
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Het bericht dat je wilt bewerken, bestaat niet."
 
-#: aa_bulletin_board/views.py:208
+#: aa_bulletin_board/views.py:217
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr "Bericht \"{bulletin_title}\" bijgewerkt."
 
-#: aa_bulletin_board/views.py:245
+#: aa_bulletin_board/views.py:254
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr "Bericht \"{bulletin_title}\" verwijderd."
 
-#: aa_bulletin_board/views.py:256
+#: aa_bulletin_board/views.py:265
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Het bericht dat je probeert te verwijderen, bestaat niet."
