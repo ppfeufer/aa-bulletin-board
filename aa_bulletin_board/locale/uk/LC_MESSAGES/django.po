@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AA Bulletin Board\n"
 "Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
-"POT-Creation-Date: 2026-10-06 09:15+0200\n"
+"POT-Creation-Date: 2026-10-09 11:54+0200\n"
 "PO-Revision-Date: 2026-09-20 17:54+0000\n"
 "Last-Translator: s0k0l -_- <salarysalo@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/uk/>\n"
@@ -25,15 +25,15 @@ msgstr ""
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:10
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:5
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:8
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:6
 msgid "Bulletin Board"
 msgstr "Дошка оголошень"
 
-#: aa_bulletin_board/forms.py:65
+#: aa_bulletin_board/forms.py:81
 msgid "Restrict this bulletin to certain groups. If no group restrictions are in place, everyone who has access to this module can read this bulletin."
 msgstr "Обмежте доступ до цього бюлетеня для певних груп. Якщо не встановлено жодних групових обмежень, кожен, хто має доступ до цього модуля, зможе прочитати цей бюлетень."
 
-#: aa_bulletin_board/forms.py:114
+#: aa_bulletin_board/forms.py:130
 msgid "You have forgotten the content!"
 msgstr "Ти забув контент!"
 
@@ -84,7 +84,7 @@ msgid "Your browser does not support the video element."
 msgstr "Твій браузер не підтримує елемент відео."
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:34
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:32
 msgid "Back"
 msgstr "Повернутися"
 
@@ -114,20 +114,20 @@ msgstr "Читати далі"
 msgid "No bulletins found."
 msgstr "Не зайдено бюлетеня."
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:11
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:9
 msgid "Edit bulletin"
 msgstr "Редагувати бюлетень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:14
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:25
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:12
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:23
 msgid "Create new bulletin"
 msgstr "Створити новий бюлетень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:43
 msgid "Update bulletin"
 msgstr "Оновити бюлетень"
 
-#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:47
+#: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:45
 msgid "Create bulletin"
 msgstr "Створити бюлетень"
 
@@ -143,29 +143,29 @@ msgstr "Хочете допомогти перекласти цю програм
 msgid "Join our team of translators!"
 msgstr "Приєднуйтесь до нашої команди перекладачів!"
 
-#: aa_bulletin_board/views.py:98
+#: aa_bulletin_board/views.py:107
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" created."
 msgstr "Створено бюлетень «{bulletin_title}»."
 
-#: aa_bulletin_board/views.py:149
+#: aa_bulletin_board/views.py:158
 msgid "The bulletin you are looking for does either not exist, or you don't have access to it."
 msgstr "Бюлетень, який ви шукаєте, не існує, або у вас немає до нього доступу."
 
-#: aa_bulletin_board/views.py:180
+#: aa_bulletin_board/views.py:189
 msgid "The bulletin you are trying to edit does not exist."
 msgstr "Бюлетень, який ви намагаєтеся відредагувати, не існує."
 
-#: aa_bulletin_board/views.py:208
+#: aa_bulletin_board/views.py:217
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" updated."
 msgstr "Оновлено бюлетень «{bulletin_title}»."
 
-#: aa_bulletin_board/views.py:245
+#: aa_bulletin_board/views.py:254
 #, python-brace-format
 msgid "Bulletin \"{bulletin_title}\" deleted."
 msgstr "Бюлетень «{bulletin_title}» видалено."
 
-#: aa_bulletin_board/views.py:256
+#: aa_bulletin_board/views.py:265
 msgid "The bulletin you are trying to delete does not exist."
 msgstr "Бюлетень, який ви намагаєтесь видалити, не існує."
