@@ -324,8 +324,7 @@ class TestBulletins(BaseTestCase):
         try:
             # Django
             from django.core.handlers.wsgi import WSGIRequest  # noqa: F401
-            from django.http import HttpResponse  # noqa: F401
-            from django.http import HttpResponseRedirect  # noqa: F401
+            from django.http import HttpResponse, HttpResponseRedirect  # noqa: F401
         except Exception:
             self.skipTest(
                 "Django request/response types unavailable in this environment"
