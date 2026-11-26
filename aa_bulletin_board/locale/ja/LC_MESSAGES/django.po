@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: AA Bulletin Board\n"
 "Report-Msgid-Bugs-To: https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/\n"
 "POT-Creation-Date: 2026-11-03 11:18+0100\n"
-"PO-Revision-Date: 2026-01-28 15:53+0000\n"
+"PO-Revision-Date: 2026-11-26 20:11+0000\n"
 "Last-Translator: Peter Pfeufer <info@ppfeufer.de>\n"
 "Language-Team: Japanese <https://weblate.ppfeufer.de/projects/alliance-auth-apps/aa-bulletin-board/ja/>\n"
 "Language: ja\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.11.2\n"
 
 #: aa_bulletin_board/__init__.py:10
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:6
@@ -81,7 +81,7 @@ msgstr "速報"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/base.html:24
 msgid "Your browser does not support the video element."
-msgstr ""
+msgstr "お使いのブラウザは動画再生機能に対応していません。"
 
 #: aa_bulletin_board/templates/aa_bulletin_board/bulletin.html:16
 #: aa_bulletin_board/templates/aa_bulletin_board/edit-bulletin.html:32
